@@ -1,7 +1,8 @@
 import React from 'react';
 
 function Footer() {
-    <footer>
+    return (
+      <footer>
     <div class="container footer-content">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -27,6 +28,7 @@ function Footer() {
       </footer>
     </div>
   </footer>
+    )
 }
 
 export default Footer;
