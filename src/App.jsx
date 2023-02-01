@@ -1,10 +1,11 @@
-import React from 'react'
-
+import React from 'react';
+import Footer from './components/Footer';
 
 
 function App() {
     return (
-        <h1>hi</h1>
+    
+        <Footer />
     )
     
 }
