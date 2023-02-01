@@ -31,3 +31,5 @@ function Footer() {
 }
 
 export default Footer;
+
+// HERE U GO
