@@ -27,7 +27,6 @@ let editorLib = {
     // Set Default Code
     codeEditor.setValue(currentExercise);
     // codeEditor.firstLineNumber(defaultCode3);
-
   }
 }
 
