@@ -3,7 +3,8 @@ import Footer from './Components/Footer';
 import Main from './Components/main/Main';
 import Header from './Components/header/Header'
 import './css/style.css'
-import './activity'
+import Ace from './Components/main/Ace' 
+
 
 
 function App() {
@@ -12,11 +13,12 @@ function App() {
         <Header />
         <Main />
         <Footer />
+        {/* <Ace /> */}
         </>
-
-        
     )
     
 }
+
+
 
 export default App;
