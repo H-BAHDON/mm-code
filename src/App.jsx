@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Main />
         <Footer />
-        {/* <Ace /> */}
+        <Ace /> 
         </>
     )
     
