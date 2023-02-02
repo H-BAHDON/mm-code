@@ -1,4 +1,5 @@
 import React from 'react';
+import Ace from './Ace';
 
 
 
@@ -15,7 +16,7 @@ function Main() {
               memory! It's all for your benefit!</p>
             <button class="nextExercise btn btn-primary" type="button">Next exercise</button>
           </div>
-          
+          <Ace />
           <div class="editor-container">
             <div id="editor"></div>
           </div>
