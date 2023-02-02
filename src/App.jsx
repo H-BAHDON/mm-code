@@ -3,6 +3,7 @@ import Footer from './Components/Footer';
 import Main from './Components/main/Main';
 import Header from './Components/header/Header'
 import './css/style.css'
+import './activity'
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         <Main />
         <Footer />
         </>
+
+        
     )
     
 }
