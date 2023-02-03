@@ -23,8 +23,16 @@ class Main extends Component {
         showLineNumbers: true,
         tabSize: 2,
         }}
+        
+          AceEditor.onCopy = function () { }
+          AceEditor.onCut = function () { }
+          AceEditor.onPaste = function () { }
+          AceEditor.getCopyText = function () { }
+        
+        
+        
   />
-  <Action />
+  
       </div>
     );
   }
