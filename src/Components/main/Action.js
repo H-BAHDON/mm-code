@@ -1,13 +1,16 @@
-import './Ace'
-class Action {
-  constructor() {
-    this.noCheating = () => {
-      AceEditor.onCopy = function () { };
-      AceEditor.onCut = function () { };
-      AceEditor.onPaste = function () { };
-      AceEditor.getCopyText = function () { };
-    };
-  }
-}
 
-export default Action;
+
+// import React from 'react'
+
+
+// function noCheating() {
+//   Main.onCopy = function () { };
+//   Main.onCut = function () { };
+//   Main.onPaste = function () { };
+//   Main.getCopyText = function () { };
+// }
+
+>>>>>>> 7263949497f967df003302deb301e8e71e2c632d
+
+
+// export default noCheating;
