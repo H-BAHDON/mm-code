@@ -8,7 +8,6 @@ function Main() {
     return (
         <main>
         <section class="mainPanel">
-         
           <div class="panel-Description">
             <h1>HTML Structure</h1>
             <p>The code below and the information box on the right hand side will always disappear when you're typing your code.
