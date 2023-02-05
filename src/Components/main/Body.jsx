@@ -3,12 +3,16 @@ import AceEditor from 'react-ace';
 // import Action from './Action'
 
 class Main extends Component { 
+  
   render() {
+
+    function handleOnPaste(e){
+      e.preventDefault();
+    }
+
+
     return ( 
       // <TextEditor />
-
-        
-        
       <div>
         render <AceEditor  
         placeholder="<h1> BH </h1>" 
@@ -20,17 +24,12 @@ class Main extends Component {
             showPrintMargin={true}
              showGutter={true}
              highlightActiveLine={true}
-             onCopy="return false"
-             onPaste="return false"
+             onPaste={handleOnPaste}
              value={`function something(editor) 
              console.log("Okay")
-             
         }`}
-
         setOptions={{
-
       showLineNumbers: true,
-
     tabSize: 2,
 
   }}
