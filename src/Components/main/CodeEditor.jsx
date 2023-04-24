@@ -23,6 +23,20 @@ function CodeEditor() {
     event.preventDefault();
   };
 
+  const handleOnContextMenu = (event) => {
+    event.preventDefault();
+  };
+
+  const handleOnKeyDown = (event) => {
+    // Disable all keyboard shortcuts except Ctrl+A, Ctrl+Z, Ctrl+Y, and Ctrl+X
+    if ((event.ctrlKey || event.metaKey) && !event.shiftKey && !event.altKey) {
+      const keyCode = event.keyCode || event.which || event.charCode;
+      if (keyCode !== 65 && keyCode !== 90 && keyCode !== 89 && keyCode !== 88) {
+        event.preventDefault();
+      }
+    }
+  };
+
   return (
     <AceEditor
       mode="javascript"
@@ -44,6 +58,8 @@ function CodeEditor() {
       onCopy={handleOnCopy}
       onCut={handleOnCut}
       onPaste={handleOnPaste}
+      onContextMenu={handleOnContextMenu}
+      onKeyDown={handleOnKeyDown}
     />
   );
 }
