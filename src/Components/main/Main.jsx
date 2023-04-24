@@ -22,14 +22,14 @@ function Main() {
           <button className="nextExercise btn btn-primary" type="button">Next exercise</button>
         </div>
         <Body />
-        <CodeEditor />
+        {/* <CodeEditor />
         <div className="editor-container">
           <div id="editor" onCopy={handleOnCopy} onPaste={handleOnPaste}></div>
         </div>
         <div className="button">
           <button className="doneButton btn btn-success" type="button">Begin</button>
           <button className="checkButton btn btn-success" type="button" hidden="hidden">Check code</button>
-        </div>
+        </div> */}
       </section>
     </main>
   )
