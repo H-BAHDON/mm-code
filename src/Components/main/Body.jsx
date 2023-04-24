@@ -6,8 +6,8 @@ class Body extends Component {
     return (
       <div className="editor-container">
         <CodeEditor />
-          {/* <button className="doneButton btn btn-success" type="button">Begin</button>
-          <button className="checkButton btn btn-success" type="button" hidden="hidden">Check code</button> */}
+          <button className="doneButton btn btn-success" type="button">Begin</button>
+          <button className="checkButton btn btn-success" type="button" hidden="hidden">Check code</button>
         </div>
     );
   }
