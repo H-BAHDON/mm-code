@@ -1,47 +1,47 @@
 import React, { Component } from 'react';
-import AceEditor from 'react-ace';
-// import Action from './Action'
+// import AceEditor from 'react-ace';
+import CodeEditor from './CodeEditor';
 
-class Main extends Component { 
-  
+class Body extends Component {
+  handleOnCopy = (e) => {
+    e.preventDefault();
+  }
+
+  handleOnCut = (e) => {
+    e.preventDefault();
+  }
+
+  handleOnPaste = (e) => {
+    e.preventDefault();
+  }
+
   render() {
-
-    function handleOnPaste(e){
-      e.preventDefault();
-    }
-
-
-    return ( 
-      // <TextEditor />
+    return (
       <div>
-        render <AceEditor  
-        placeholder="<h1> BH </h1>" 
-             mode="javascript"
-             theme="monokai"  name="blah2"
-             // onLoad={this.noCheating}
-             // onChange={this.noCheating}
-             fontSize={14}
-            showPrintMargin={true}
-             showGutter={true}
-             highlightActiveLine={true}
-             onPaste={handleOnPaste}
-             value={`function something(editor) 
-             console.log("Okay")
-        }`}
-        setOptions={{
-      showLineNumbers: true,
-    tabSize: 2,
-
-  }}
-
-        
-  />
-  
-    </div>
-   );
+        {/* <AceEditor
+          placeholder="<h1> BH </h1>"
+          mode="javascript"
+          theme="monokai"
+          name="blah2"
+          fontSize={14}
+          showPrintMargin={true}
+          showGutter={true}
+          highlightActiveLine={true}
+          onCopy={this.handleOnCopy}
+          onCut={this.handleOnCut}
+          onPaste={this.handleOnPaste}
+          value={`function something(editor) {
+            console.log("Okay")
+          }`}
+          setOptions={{
+            showLineNumbers: true,
+            tabSize: 2,
+          }}
+        /> */}
+        <CodeEditor />
+      </div>
+    );
   }
 }
 
-
-
-export default Main;
+export default Body;
