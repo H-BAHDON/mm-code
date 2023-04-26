@@ -1,102 +1,107 @@
+/* Global styles */
+body {
+  background-color: #141414;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
 
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #232931;
+  padding: 2rem;
+}
 
-  body {
-    background-color: #141414;
-    font-family: 'Montserrat', sans-serif;
-  }
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #232931;
-  }
-  h1{
-    color: #4ECCA3;
-  }
-  p{
-    color: #EEEEEE;
-  }
-  nav{
-  color: white;
-  margin: 1% 0;
-  }
-  footer {
-    background-color: #254B62;
-  }
-  p{
-      font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-  }
+header h1 {
+  color: #4ECCA3;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-  main{
-    color: white;
-    background-color: #393E46;
-    /* background-image: url("");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-  }
-  /* ---------------------------------------------------------------  */
-  /* Nav - Logos */
-  #logo{
-    color: white;
-    margin: 1% 0;
-    /* font-family: 'BhuTuka Expanded One', cursive; */
-  }
-  .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .navbar-light .navbar-nav .nav-link{
-    color: rgb(255 255 255 / 50%);
-  }
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;}
-  .navbar-nav a{
-    padding: 0 10%;
-  }
+header p {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
 
-  .nav-link{
-    color: #EEEEEE;
-  }
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
 
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+}
 
-  /* ---------------------------------------------------------------  */
-  /* Bootstrap style overriding */
+.nav-link {
+  color: #EEEEEE;
+  font-size: 1.2rem;
+  padding: 0 10%;
+}
 
+#logo {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 1rem 0;
+}
 
+/* Main styles */
+main {
+  background-color: #393E46;
+  color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+}
 
-  /* ---------------------------------------------------------------  */
-  /* Main - section */
-  .mainPanel{
-    /* background-image: url("images/html.jpg"); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 200px;
-  }
-  .panel-Description{
-    width: 40%;
-    padding: 1.1% 0%;
-    text-align: center;
-    /* background-color:rgb(0,0,0);opacity:0.5s; */
-  }
-  .button{
-    padding: 5% 5% 5% 5%;
-  }
+.mainPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+}
 
+.panel-Description {
+  width: 40%;
+  padding: 1.1% 0%;
+  text-align: center;
+  font-size:12px;
+  margin-bottom: 2rem;
+}
 
-  /* ---------------------------------------------------------------  */
-  /* Footer - section */
-  .footer-end{
-    display: flex;
-    justify-content: center;
-    color: white;
+.button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #4ECCA3;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  }
+.button:hover {
+  background-color: #2B7A78;
+}
+
+/* Footer styles */
+footer {
+  background-color: #254B62;
+  padding: 2rem;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
   /* ---------------------------------------------------------------  */
 
 
@@ -126,5 +131,3 @@
     width: 100%;
     font-size: 20px;
   }
-
-  
