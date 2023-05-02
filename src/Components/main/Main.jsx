@@ -1,21 +1,18 @@
 import React from 'react';
-import Body from './Body';
+import DescriptionPanel from '../buttons/descriptionPanel';
 import CodeEditor from './CodeEditor';
+import Buttons from '../buttons/buttons';
+
 
 function Main() {
 
   return (
     <main>
-      <section className="mainPanel">
-        <div className="panel-Description">
-          <h1>HTML Memory Building</h1>
-          <p>The code below and the information box on the right hand side will always disappear when you're typing your code.
-          This will help your visual memory along side the exercise improving your muscle
-            memory! It's all for your benefit!</p>
-          <button className="nextExercise btn btn-primary" type="button">Next exercise</button>
-        </div>
-        <Body />
-      </section>
+       <div className="editor-container">
+        <DescriptionPanel/>
+        <CodeEditor />
+        <Buttons />
+      </div>
     </main>
   )
 }

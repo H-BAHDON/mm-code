@@ -1,6 +1,10 @@
-  import React from 'react';
-
+  import { getSelectionRange } from '@testing-library/user-event/dist/utils';
+import React from 'react';
+ 
   function Footer() {
+
+    let thisYear = new Date().getFullYear();
+    
     return (
       <footer>
         <div className="container footer-content">
@@ -10,24 +14,22 @@
                 <svg className="bi" width="30" height="24">
                 </svg>
               </a>
-              <span className="footer-end mb-3 mb-md-0">© 2022 MM-Code</span>
+              <span className="footer-end mb-3 mb-md-0">© {thisYear} MM-Code</span>
             </div>
-
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
               <li className="ms-3"><a className="text-muted" href="#"><svg className="bi" width="24" height="24">
                     <use href="#twitter"></use>
                   </svg></a></li>
               <li className="ms-3"><a className="text-muted" href="#"><svg className="bi" width="24" height="24">
-                    
                   </svg></a></li>
-              <li className="ms-3"><a className="text-muted" href="#"><svg className="bi" width="24" height="24">
-                    
+              <li className="ms-3"><a className="text-muted" href="#"><svg className="bi" width="24" height="24"> 
                   </svg></a></li>
             </ul>
           </footer>
         </div>
       </footer>
     );
+
   }
 
   export default Footer;

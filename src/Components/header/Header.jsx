@@ -14,7 +14,6 @@ function Header() {
           <div className="navbar-nav">
             <a className="nav-item nav-link" href="htmlExercise/mainHtml.html">HTML</a>
             <a className="nav-item nav-link" href="CssExercise/mainCSS.html">CSS</a>
-            <a className="nav-item nav-link" href="#">Bootstrap</a>
             <a className="nav-item nav-link" href="JavascriptExercise/MainJS.html">Javascript</a>
           </div>
         </div>

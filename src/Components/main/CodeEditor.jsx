@@ -16,11 +16,11 @@ function CodeEditor() {
       mode="javascript"
       theme="dracula"
       fontSize={14}
-      width="100%"
-      height="100%"
-      placeholder={sampleCode}
-      showPrintMargin={true}
-      // value = {sampleCode}
+      width= "50%"
+      height= "46%"
+      // placeholder={sampleCode}
+      showPrintMargin={false}
+      value = {sampleCode}
       showGutter={true}
       editorProps={{ $blockScrolling: false }}
       setOptions={{

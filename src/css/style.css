@@ -1,3 +1,5 @@
+
+
 /* Global styles */
 body {
   background-color: #141414;
@@ -5,7 +7,10 @@ body {
   color: #fff;
 }
 
+
+
 /* Header styles */
+/* Styles for header */
 header {
   display: flex;
   flex-direction: column;
@@ -15,55 +20,111 @@ header {
 }
 
 header h1 {
-  color: #4ECCA3;
+  color: #ffffff;
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Rowdies', cursive;
+  letter-spacing: 6px;
 }
 
 header p {
-  color: #EEEEEE;
+  color: #fff;
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
+/* Styles for navbar */
 nav {
   display: flex;
   justify-content: center;
   margin: 1rem 0;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.2rem;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+a{
+  text-decoration: none;
 }
 
-.nav-link {
-  color: #EEEEEE;
-  font-size: 1.2rem;
-  padding: 0 10%;
-}
-
-#logo {
-  font-size: 2.5rem;
+nav a {
   color: #fff;
-  margin: 1rem 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
+nav a:hover {
+  color: #4ECCA3;
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+                                /* HEADER CSS */
+
+
+                                /* #logo {
+                                  flex-grow: 1;
+                                } */
+                                
+                                #logo .logo-title {
+                                  font-weight: 600;
+                                  text-transform: uppercase;
+                                }
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+                                /* NAVBAR CSS */
+
+                                .navbar {
+                                  flex-grow: 2;
+                                }
+                                
+                                .navbar-nav {
+                                  display: flex;
+                                  justify-content: flex-end;
+                                }
+                                
+                                .nav-item {
+                                  margin-left: 20px;
+                                  font-size: 18px;
+                                  font-weight: 500;
+                                  color: #333333;
+                                  text-transform: uppercase;
+                                  transition: all 0.3s ease;
+                                }
+                                
+                                .nav-item:hover {
+                                  color: #008080;
+                                }
+                                
+                                .nav-link {
+                                  color: inherit;
+                                  text-decoration: none;
+                                }
+
+/* ----------------------------------------------------------------------------------- */
+
+                                /* MAIN Panel CSS */
 /* Main styles */
 main {
   background-color: #393E46;
   color: #fff;
-  padding: 2rem;
-  min-height: 100vh;
 }
 
 .mainPanel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 200px;
 }
 
 .panel-Description {
@@ -74,26 +135,66 @@ main {
   margin-bottom: 2rem;
 }
 
-.button {
-  padding: 1rem;
-  font-size: 1.2rem;
-  background-color: #4ECCA3;
+.panel-Description h1{
+font-family: 'Montserrat', sans-serif;
+font-size: 2rem;
+color: #232931;
+}
+
+.panel-Description p{
+  font-family: 'Montserrat', sans-serif;;
+  margin: 20px;
+}
+
+.panel-Description button{
+  background-color: #232931;
   color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  
+}
+
+
+
+/* ----------------------------------------------------------------------------------- */
+
+                                /* Button CSS */
+.ace_editor{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.editor-Buttons {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 22px;
+}
+
+.doneButton {
+  background-color: #232931;
+  color: #fff;
+}
+
+.checkButton{
+  background-color: #232931;
+  color: #fff;
 }
 
 .button:hover {
   background-color: #2B7A78;
 }
 
+
+/* ----------------------------------------------------------------------------------- */
+                                /* Footer CSS */
+
 /* Footer styles */
+
 footer {
-  background-color: #254B62;
+  background-color: #232931;
   padding: 2rem;
+  font-family:monospace;
 }
 
 .footer-end {
@@ -102,21 +203,11 @@ footer {
   color: #fff;
   font-size: 1.2rem;
 }
+/* ----------------------------------------------------------------------------------- */
 
-  /* ---------------------------------------------------------------  */
+                                /* Editor CSS */
 
 
-
-
-  /* ---------------------------------------------------------------  */
-
-  /* css for the coding-exercise-workplace */
-
-  .editor-container {
-    width: 55%;
-    height: 450px;
-    position: relative;
-  }
 
   .ace_content{
     height: 0px;
