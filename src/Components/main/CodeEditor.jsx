@@ -1,26 +1,39 @@
-import React, { useState } from 'react';
-import AceEditor from 'react-ace';
-import 'ace-builds/src-noconflict/mode-javascript';
-import 'ace-builds/src-noconflict/theme-dracula';
-import 'ace-builds/src-noconflict/ext-language_tools';
+import React, { useEffect } from "react";
+import AceEditor from "react-ace";
+import "ace-builds/src-noconflict/mode-javascript";
+import "ace-builds/src-noconflict/theme-dracula";
+import "ace-builds/src-noconflict/ext-language_tools";
 
 function CodeEditor() {
-  
   let sampleCode = `function Greeting() {
     console.log("Hello World");
   };`;
 
-  return (
+  useEffect(() => {
+    const stop = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      console.log(e);
+    };
 
+    const aceEditor = document.querySelector(".ace_editor");
+    aceEditor.addEventListener("paste", stop, true);
+
+    return () => {
+      aceEditor.removeEventListener("paste", stop, true);
+    };
+  }, []);
+
+  return (
     <AceEditor
       mode="javascript"
       theme="dracula"
       fontSize={14}
-      width= "50%"
-      height= "46%"
-      // placeholder={sampleCode}
+      width="50%"
+      height="46%"
+      placeholder={sampleCode}
       showPrintMargin={false}
-      value = {sampleCode}
+      value={sampleCode}
       showGutter={true}
       editorProps={{ $blockScrolling: false }}
       setOptions={{
