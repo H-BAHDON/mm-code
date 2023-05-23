@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "lang": "JavaScript",
+    "code": "function Greeting() {\n    console.log('Hello World');\n}"
+  },
+  {
+    "id": 2,
+    "lang": "JavaScript",
+    "code": "function addNumbers(a, b) {\n    return a + b;\n}"
+  },
+  {
+    "id": 3,
+    "lang": "JavaScript",
+    "code": "function multiplyNumbers(a, b) {\n    return a * b;\n}"
+  },
+  {
+    "id": 4,
+    "lang": "JavaScript",
+    "code": "const fruits = ['apple', 'banana', 'orange'];\nconsole.log(fruits.length);"
+  },
+  {
+    "id": 5,
+    "lang": "JavaScript",
+    "code": "let x = 5;\nif (x > 0) {\n    console.log('Positive number');\n} else {\n    console.log('Negative number');\n}"
+  }
+]

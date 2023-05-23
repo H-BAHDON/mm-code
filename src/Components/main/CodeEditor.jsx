@@ -4,11 +4,7 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
 
-function CodeEditor() {
-  let sampleCode = `function Greeting() {
-    console.log("Hello World");
-  };`;
-
+function CodeEditor({ userCode, setUserCode, initialCode }) {
   useEffect(() => {
     const stop = (e) => {
       e.stopPropagation();
@@ -24,6 +20,10 @@ function CodeEditor() {
     };
   }, []);
 
+  const handleCodeChange = (value) => {
+    setUserCode(value);
+  };
+
   return (
     <AceEditor
       mode="javascript"
@@ -31,9 +31,9 @@ function CodeEditor() {
       fontSize={14}
       width="50%"
       height="46%"
-      placeholder={sampleCode}
+      placeholder={initialCode}
       showPrintMargin={false}
-      value={sampleCode}
+      value={userCode}
       showGutter={true}
       editorProps={{ $blockScrolling: false }}
       setOptions={{
@@ -43,6 +43,7 @@ function CodeEditor() {
         showLineNumbers: true,
         tabSize: 1,
       }}
+      onChange={handleCodeChange}
     />
   );
 }
