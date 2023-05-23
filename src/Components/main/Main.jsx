@@ -8,13 +8,22 @@ function Main() {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
   const [resultText, setResultText] = useState("");
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
 
   useEffect(() => {
     // Get a random code from the test.json file
-    const randomIndex = Math.floor(Math.random() * Data.length);
+    const randomIndex = generateRandomExerciseIndex();
     const randomCode = Data[randomIndex].code;
     setInitialCode(randomCode);
   }, []);
+
+  const generateRandomExerciseIndex = () => {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * Data.length);
+    } while (randomIndex === currentExerciseIndex); // Ensure the new index is different
+    return randomIndex;
+  };
 
   const handleCheckCode = () => {
     // Define the expected code
@@ -43,10 +52,19 @@ function Main() {
     setResultText("");
   };
 
+  const handleNextExercise = () => {
+    const randomIndex = generateRandomExerciseIndex();
+    const randomCode = Data[randomIndex].code;
+    setCurrentExerciseIndex(randomIndex);
+    setInitialCode(randomCode);
+    setUserCode("");
+    setResultText("");
+  };
+
   return (
     <main>
       <div className="editor-container">
-        <DescriptionPanel />
+        <DescriptionPanel onNextExercise={handleNextExercise} />
         <p className="result-text">{resultText}</p>
         <CodeEditor
           userCode={userCode}
