@@ -37,6 +37,9 @@ function Main() {
     }
   };
 
+  const handleResetCode = () => {
+    setUserCode("");
+  };
 
   return (
     <main>
@@ -47,7 +50,10 @@ function Main() {
           setUserCode={setUserCode}
           initialCode={initialCode}
         />
-        <Buttons handleCheckCode={handleCheckCode} />
+        <Buttons
+          handleCheckCode={handleCheckCode}
+          handleResetCode={handleResetCode}
+        />
       </div>
     </main>
   );
