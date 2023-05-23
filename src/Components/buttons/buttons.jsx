@@ -44,7 +44,7 @@ function Buttons({ handleCheckCode, handleResetCode, initialCode }) {
           <div className="modal-overlay" onClick={handleCloseModal}></div>
           <div className="modal-content">
             <div className="modal-header">
-              <h3>Initial Code</h3>
+              <h3>Code</h3>
             </div>
             <div className="modal-body">
               <pre>{initialCode}</pre>

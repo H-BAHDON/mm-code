@@ -4,25 +4,33 @@ import CodeEditor from "./CodeEditor";
 import Buttons from "../buttons/buttons";
 import Data from "../../test.json";
 
-function Main() {
+function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
   const [resultText, setResultText] = useState("");
-  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
 
   useEffect(() => {
-    // Get a random code from the test.json file
-    const randomIndex = generateRandomExerciseIndex();
-    const randomCode = Data[randomIndex].code;
-    setInitialCode(randomCode);
-  }, []);
+    generateRandomCode();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exerciseLanguage]);
 
-  const generateRandomExerciseIndex = () => {
+  useEffect(() => {
+    handleResetCode();
+  }, [exerciseLanguage]);
+
+
+  const generateRandomCode = () => {
+    const filteredData = Data.filter(
+      (exercise) => exercise.lang === exerciseLanguage
+    );
     let randomIndex;
     do {
-      randomIndex = Math.floor(Math.random() * Data.length);
-    } while (randomIndex === currentExerciseIndex); // Ensure the new index is different
-    return randomIndex;
+      randomIndex = Math.floor(Math.random() * filteredData.length);
+    } while (randomIndex === currentExerciseIndex);
+    const randomCode = filteredData[randomIndex].code;
+    setInitialCode(randomCode);
+    setCurrentExerciseIndex(randomIndex);
   };
 
   const handleCheckCode = () => {
@@ -53,10 +61,7 @@ function Main() {
   };
 
   const handleNextExercise = () => {
-    const randomIndex = generateRandomExerciseIndex();
-    const randomCode = Data[randomIndex].code;
-    setCurrentExerciseIndex(randomIndex);
-    setInitialCode(randomCode);
+    generateRandomCode();
     setUserCode("");
     setResultText("");
   };
@@ -70,6 +75,7 @@ function Main() {
           userCode={userCode}
           setUserCode={setUserCode}
           initialCode={initialCode}
+          exerciseLanguage={exerciseLanguage}
         />
         <Buttons
           handleCheckCode={handleCheckCode}

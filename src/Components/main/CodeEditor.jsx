@@ -4,7 +4,7 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
 
-function CodeEditor({ userCode, setUserCode, initialCode }) {
+function CodeEditor({ userCode, setUserCode, initialCode, exerciseLanguage }) {
   useEffect(() => {
     const stop = (e) => {
       e.stopPropagation();
@@ -26,7 +26,7 @@ function CodeEditor({ userCode, setUserCode, initialCode }) {
 
   return (
     <AceEditor
-      mode="javascript"
+      mode={exerciseLanguage}
       theme="dracula"
       fontSize={14}
       width="50%"

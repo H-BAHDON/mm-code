@@ -99,6 +99,7 @@ nav a:hover {
                                   color: #333333;
                                   text-transform: uppercase;
                                   transition: all 0.3s ease;
+                                  cursor: pointer;
                                 }
                                 
                                 .nav-item:hover {

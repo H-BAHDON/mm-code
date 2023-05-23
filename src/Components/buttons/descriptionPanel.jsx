@@ -9,7 +9,7 @@ function DescriptionPanel({ onNextExercise }) {
     <main>
       <section className="mainPanel">
         <div className="panel-Description">
-          <h1>HTML Muscle Memory</h1>
+          <h1>Syntax Muscle Memory</h1>
           <p>
             The code below will disappear as soon as you start typing! If you
             wish to see the code again, click the 'Reset' button below the text

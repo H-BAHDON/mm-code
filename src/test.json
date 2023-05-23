@@ -1,27 +1,77 @@
 [
   {
     "id": 1,
-    "lang": "JavaScript",
+    "lang": "javascript",
     "code": "function Greeting() {\n    console.log('Hello World');\n}"
   },
   {
     "id": 2,
-    "lang": "JavaScript",
+    "lang": "javascript",
     "code": "function addNumbers(a, b) {\n    return a + b;\n}"
   },
   {
     "id": 3,
-    "lang": "JavaScript",
+    "lang": "javascript",
     "code": "function multiplyNumbers(a, b) {\n    return a * b;\n}"
   },
   {
     "id": 4,
-    "lang": "JavaScript",
+    "lang": "javascript",
     "code": "const fruits = ['apple', 'banana', 'orange'];\nconsole.log(fruits.length);"
   },
   {
     "id": 5,
-    "lang": "JavaScript",
+    "lang": "javascript",
     "code": "let x = 5;\nif (x > 0) {\n    console.log('Positive number');\n} else {\n    console.log('Negative number');\n}"
+  },
+  {
+    "id": 6,
+    "lang": "html",
+    "code": "<h1>Hello, World!</h1>"
+  },
+  {
+    "id": 7,
+    "lang": "html",
+    "code": "<p>This is a paragraph.</p>"
+  },
+  {
+    "id": 8,
+    "lang": "html",
+    "code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>"
+  },
+  {
+    "id": 9,
+    "lang": "html",
+    "code": "<a href=\"https://www.example.com\">Visit Example</a>"
+  },
+  {
+    "id": 10,
+    "lang": "html",
+    "code": "<img src=\"image.jpg\" alt=\"Image\">"
+  },
+  {
+    "id": 11,
+    "lang": "css",
+    "code": "body {\n    background-color: #f2f2f2;\n}"
+  },
+  {
+    "id": 12,
+    "lang": "css",
+    "code": "h1 {\n    color: red;\n}"
+  },
+  {
+    "id": 13,
+    "lang": "css",
+    "code": "p {\n    font-size: 18px;\n}"
+  },
+  {
+    "id": 14,
+    "lang": "css",
+    "code": "div {\n    border: 1px solid black;\n}"
+  },
+  {
+    "id": 15,
+    "lang": "css",
+    "code": ".container {\n    width: 100%;\n    height: 300px;\n    background-color: lightblue;\n}"
   }
 ]
