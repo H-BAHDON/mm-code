@@ -7,6 +7,7 @@ import Data from "../../test.json";
 function Main() {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
+  const [resultText, setResultText] = useState("");
 
   useEffect(() => {
     // Get a random code from the test.json file
@@ -31,20 +32,22 @@ function Main() {
 
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
-      console.log("Bravo! You did it.");
+      setResultText("Bravo! You did it.");
     } else {
-      console.log("Try again.");
+      setResultText("Try again.");
     }
   };
 
   const handleResetCode = () => {
     setUserCode("");
+    setResultText("");
   };
 
   return (
     <main>
       <div className="editor-container">
         <DescriptionPanel />
+        <p className="result-text">{resultText}</p>
         <CodeEditor
           userCode={userCode}
           setUserCode={setUserCode}
