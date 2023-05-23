@@ -56,6 +56,7 @@ function Main() {
         <Buttons
           handleCheckCode={handleCheckCode}
           handleResetCode={handleResetCode}
+          initialCode={initialCode}
         />
       </div>
     </main>
