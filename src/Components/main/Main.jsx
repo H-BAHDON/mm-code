@@ -9,16 +9,18 @@ function Main({ exerciseLanguage }) {
   const [initialCode, setInitialCode] = useState("");
   const [resultText, setResultText] = useState("");
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
+  const [nextButton, setNextButton] = useState(true);
+  const [checkButton, setCheckButton] = useState(false);
+  const [score, setScores] = useState(0)
 
   useEffect(() => {
     generateRandomCode();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exerciseLanguage]);
 
   useEffect(() => {
     handleResetCode();
   }, [exerciseLanguage]);
-
 
   const generateRandomCode = () => {
     const filteredData = Data.filter(
@@ -50,6 +52,8 @@ function Main({ exerciseLanguage }) {
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
       setResultText("Bravo! You did it.");
+      setNextButton(false);
+      setCheckButton(true)
     } else {
       setResultText("Try again.");
     }
@@ -58,19 +62,39 @@ function Main({ exerciseLanguage }) {
   const handleResetCode = () => {
     setUserCode("");
     setResultText("");
+    setNextButton(true);
+    setCheckButton(false);
   };
 
   const handleNextExercise = () => {
     generateRandomCode();
     setUserCode("");
     setResultText("");
+    setNextButton(true);
+    setCheckButton(false);
+  };
+
+  const handleSkipExercise = () => {
+    generateRandomCode();
+    setUserCode("");
+    setResultText("");
+    setNextButton(true);
+    setCheckButton(false);
   };
 
   return (
     <main>
       <div className="editor-container">
-        <DescriptionPanel onNextExercise={handleNextExercise} />
-        <p className="result-text">{resultText}</p>
+        <DescriptionPanel
+          onNextExercise={handleNextExercise}
+          onSkipExercise={handleSkipExercise}
+          nextButton={nextButton}
+        />
+        <div className="results">
+          <p className="result-text">{resultText}</p>
+          <p className="scores">Your Score(s): {score}</p>
+        </div>
+
         <CodeEditor
           userCode={userCode}
           setUserCode={setUserCode}
@@ -81,6 +105,7 @@ function Main({ exerciseLanguage }) {
           handleCheckCode={handleCheckCode}
           handleResetCode={handleResetCode}
           initialCode={initialCode}
+          checkButton={checkButton}
         />
       </div>
     </main>

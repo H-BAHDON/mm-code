@@ -1,10 +1,12 @@
 import React from "react";
 
-function DescriptionPanel({ onNextExercise }) {
+function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
   const handleNextExercise = () => {
     onNextExercise(); // Call the parent component's callback function
   };
-
+  const handleSkipExercise = () => {
+    onSkipExercise(); // Call the parent component's callback function
+  };
   return (
     <main>
       <section className="mainPanel">
@@ -21,13 +23,26 @@ function DescriptionPanel({ onNextExercise }) {
             The more creative and attractive the pages look, the more interesting the project will be and the 
             more time people would spend on the website. E.g., when they hover over the title, it pops up saying 
             'this title was made using HTML and CSS'. */}
-          <button
-            className="nextExercise btn btn-success"
-            type="button"
-            onClick={handleNextExercise}
-          >
-            Next exercise
-          </button>
+          <div className="header-Buttons">
+            <button
+              className="nextExercise btn btn-success"
+              type="button"
+              onClick={handleNextExercise}
+              disabled={nextButton}
+            >
+              Next exercise
+            </button>
+            <button
+              className="nextExercise btn btn-success"
+              type="button"
+              onClick={handleSkipExercise}
+            >
+              Skip
+            </button>
+            <button className="help btn btn-success" type="button">
+              ?
+            </button>
+          </div>
         </div>
       </section>
     </main>

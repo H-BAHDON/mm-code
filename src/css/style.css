@@ -132,7 +132,7 @@ main {
 }
 
 .panel-Description {
-  width: 40%;
+  
   padding: 1.1% 0%;
   text-align: center;
   font-size:12px;
@@ -143,11 +143,14 @@ main {
 font-family: 'Montserrat', sans-serif;
 font-size: 2rem;
 color: #232931;
+
 }
 
 .panel-Description p{
+  padding: 0 30rem;
   font-family: 'Montserrat', sans-serif;;
   margin: 20px;
+  text-align: center;
 }
 
 .panel-Description button{
@@ -170,9 +173,10 @@ color: #232931;
 .editor-Buttons {
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
-  padding: 22px;
+  padding: 2rem;
+  margin: 0 6rem;
 }
 
 .doneButton {
@@ -229,10 +233,6 @@ footer {
   }
 
 /* -------------shayan------------ */
-  .result-text{
-    text-align: center;
-  }
-
 
   .modal {
   position: fixed;
@@ -282,3 +282,27 @@ footer {
 .modal-footer button {
   margin-left: 10px;
 }
+
+.header-Buttons{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.help {
+  border-radius: 50px;
+}
+
+.results{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15rem;
+}
+
+.scores{
+ 
+}
+
+.result-text{
+    text-align: center;
+  }

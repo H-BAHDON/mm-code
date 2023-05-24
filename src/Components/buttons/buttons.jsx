@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-function Buttons({ handleCheckCode, handleResetCode, initialCode }) {
+function Buttons({
+  handleCheckCode,
+  handleResetCode,
+  initialCode,
+  checkButton,
+}) {
   const handleReset = () => {
     handleResetCode();
   };
@@ -9,7 +14,7 @@ function Buttons({ handleCheckCode, handleResetCode, initialCode }) {
 
   const handleShowModal = () => {
     setShowModal(true);
-    console.log(showModal)
+    console.log(showModal);
   };
 
   const handleCloseModal = () => {
@@ -36,6 +41,7 @@ function Buttons({ handleCheckCode, handleResetCode, initialCode }) {
         className="checkButton btn btn-success"
         type="button"
         onClick={handleCheckCode}
+        disabled={checkButton}
       >
         Check code
       </button>
