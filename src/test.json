@@ -2,76 +2,91 @@
   {
     "id": 1,
     "lang": "javascript",
-    "code": "function Greeting() {\n    console.log('Hello World');\n}"
+    "code": "function Greeting() {\n    console.log('Hello World');\n}",
+    "score": 3
   },
   {
     "id": 2,
     "lang": "javascript",
-    "code": "function addNumbers(a, b) {\n    return a + b;\n}"
+    "code": "function addNumbers(a, b) {\n    return a + b;\n}",
+    "score": 3
   },
   {
     "id": 3,
     "lang": "javascript",
-    "code": "function multiplyNumbers(a, b) {\n    return a * b;\n}"
+    "code": "function multiplyNumbers(a, b) {\n    return a * b;\n}",
+    "score": 3
   },
   {
     "id": 4,
     "lang": "javascript",
-    "code": "const fruits = ['apple', 'banana', 'orange'];\nconsole.log(fruits.length);"
+    "code": "const fruits = ['apple', 'banana', 'orange'];\nconsole.log(fruits.length);",
+    "score": 4
   },
   {
     "id": 5,
     "lang": "javascript",
-    "code": "let x = 5;\nif (x > 0) {\n    console.log('Positive number');\n} else {\n    console.log('Negative number');\n}"
+    "code": "let x = 5;\nif (x > 0) {\n    console.log('Positive number');\n} else {\n    console.log('Negative number');\n}",
+    "score": 5
   },
   {
     "id": 6,
     "lang": "html",
-    "code": "<h1>Hello, World!</h1>"
+    "code": "<h1>Hello, World!</h1>",
+    "score": 1
   },
   {
     "id": 7,
     "lang": "html",
-    "code": "<p>This is a paragraph.</p>"
+    "code": "<p>This is a paragraph.</p>",
+    "score": 1
   },
   {
     "id": 8,
     "lang": "html",
-    "code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>"
+    "code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
+    "score": 2
   },
   {
     "id": 9,
     "lang": "html",
-    "code": "<a href=\"https://www.example.com\">Visit Example</a>"
+    "code": "<a href=\"https://www.example.com\">Visit Example</a>",
+    "score": 2
   },
   {
     "id": 10,
     "lang": "html",
-    "code": "<img src=\"image.jpg\" alt=\"Image\">"
+    "code": "<img src=\"image.jpg\" alt=\"Image\">",
+    "score": 2
   },
   {
     "id": 11,
     "lang": "css",
-    "code": "body {\n    background-color: #f2f2f2;\n}"
+    "code": "body {\n    background-color: #f2f2f2;\n}",
+    "score": 2
   },
   {
     "id": 12,
     "lang": "css",
-    "code": "h1 {\n    color: red;\n}"
+    "code": "h1 {\n    color: red;\n}",
+    "score": 2
   },
   {
     "id": 13,
     "lang": "css",
-    "code": "p {\n    font-size: 18px;\n}"
+    "code": "p {\n    font-size: 18px;\n}",
+    "score": 2
   },
   {
     "id": 14,
     "lang": "css",
-    "code": "div {\n    border: 1px solid black;\n}"
+    "code": "div {\n    border: 1px solid black;\n}",
+    "score": 2
   },
   {
     "id": 15,
     "lang": "css",
-    "code": ".container {\n    width: 100%;\n    height: 300px;\n    background-color: lightblue;\n}"
+    "code": ".container {\n    width: 100%;\n    height: 300px;\n    background-color: lightblue;\n}",
+    "score": 3
   }
 ]

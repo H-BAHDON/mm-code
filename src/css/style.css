@@ -295,14 +295,11 @@ footer {
 
 .results{
   display: flex;
-  justify-content: space-evenly;
-  gap: 15rem;
-}
-
-.scores{
- 
+  justify-content: center;
 }
 
 .result-text{
-    text-align: center;
-  }
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}

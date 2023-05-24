@@ -12,6 +12,7 @@ function Main({ exerciseLanguage }) {
   const [nextButton, setNextButton] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
   const [score, setScores] = useState(0)
+  const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
 
   useEffect(() => {
     generateRandomCode();
@@ -31,7 +32,9 @@ function Main({ exerciseLanguage }) {
       randomIndex = Math.floor(Math.random() * filteredData.length);
     } while (randomIndex === currentExerciseIndex);
     const randomCode = filteredData[randomIndex].code;
+    const randomCodeScore = filteredData[randomIndex].score;
     setInitialCode(randomCode);
+    setCurrentExerciseScore(randomCodeScore)
     setCurrentExerciseIndex(randomIndex);
   };
 
@@ -51,11 +54,12 @@ function Main({ exerciseLanguage }) {
 
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
-      setResultText("Bravo! You did it.");
+      setResultText(`Bravo! You did it. ${currentExerciseScore} scores for you!`);
       setNextButton(false);
       setCheckButton(true)
+      setScores((preScores) => preScores + currentExerciseScore);
     } else {
-      setResultText("Try again.");
+      setResultText("Sorry you are missing something! Keep Continue.");
     }
   };
 
@@ -91,8 +95,10 @@ function Main({ exerciseLanguage }) {
           nextButton={nextButton}
         />
         <div className="results">
-          <p className="result-text">{resultText}</p>
-          <p className="scores">Your Score(s): {score}</p>
+          <div className="result-text">
+            <p className="">{resultText}</p>
+            <p className="scores">Your Score(s): {score}</p>
+          </div>
         </div>
 
         <CodeEditor
