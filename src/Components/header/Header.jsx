@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/style.css";
 
 function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
+  const [activeTab, setActiveTab] = useState("html");
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <header>
       <div id="logo">
@@ -10,14 +16,38 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
       <nav className="navbar navbar-expand-lg">
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <p className="nav-item nav-link" onClick={handleHTMLClick}>
-              HTML
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "html" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("html");
+                handleHTMLClick();
+              }}
+            >
+              html
             </p>
-            <p className="nav-item nav-link" onClick={handleCSSClick}>
-              CSS
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "css" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("css");
+                handleCSSClick();
+              }}
+            >
+              css
             </p>
-            <p className="nav-item nav-link" onClick={handleJavaScriptClick}>
-              JavaScript
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "javascript" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("javascript");
+                handleJavaScriptClick();
+              }}
+            >
+              javascript
             </p>
           </div>
         </div>
