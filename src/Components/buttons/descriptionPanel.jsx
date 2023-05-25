@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
+  const [showModal, setShowModal] = useState(false);
+
   const handleNextExercise = () => {
-    onNextExercise(); // Call the parent component's callback function
+    onNextExercise();
   };
+
   const handleSkipExercise = () => {
-    onSkipExercise(); // Call the parent component's callback function
+    onSkipExercise();
   };
+
+  const handleHelpClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <main>
       <section className="mainPanel">
@@ -26,17 +38,6 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             Please note that clicking the 'Reset' button will erase any code you
             have written in the editor, so use it carefully.
           </p>
-          {/* <p>
-            The code below will disappear as soon as you start typing! If you
-            wish to see the code again, click the 'Reset' button below the text
-            editor. If you accurately write out the code without any errors, you
-            can click 'Next Exercise'. If, however, the code is too difficult
-            for you to practice with, you can 'Skip' to the next!
-          </p> */}
-          {/* The wordings could be more playful, but understandable. Especially for the home page. 
-            The more creative and attractive the pages look, the more interesting the project will be and the 
-            more time people would spend on the website. E.g., when they hover over the title, it pops up saying 
-            'this title was made using HTML and CSS'. */}
           <div className="header-Buttons">
             <button
               className="nextExercise btn btn-success"
@@ -53,12 +54,34 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             >
               Skip
             </button>
-            <button className="help btn btn-success" type="button">
+            <button
+              className="help btn btn-success"
+              type="button"
+              onClick={handleHelpClick}
+            >
               ?
             </button>
           </div>
         </div>
       </section>
+
+      {showModal && (
+        <div className="modal" onClick={handleCloseModal}>
+          <div className="modal-content">
+            <h2>Rules</h2>
+            <p>
+              - You are not allowed to paste code on this editor.
+              <br />
+              - HTML code has a score range of 1-3.
+              <br />
+              - CSS code has a score range of 2-3.
+              <br />
+              - JavaScript code has a score range of 3-5.
+              <br />- If you refresh the website, all scores will be lost.
+            </p>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
