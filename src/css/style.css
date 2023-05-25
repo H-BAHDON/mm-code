@@ -132,7 +132,10 @@ main {
 }
 
 .panel-Description {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 1.1% 0%;
   text-align: center;
   font-size:12px;
@@ -147,10 +150,10 @@ color: #232931;
 }
 
 .panel-Description p{
-  padding: 0 30rem;
+  width: 50%;
   font-family: 'Montserrat', sans-serif;;
   margin: 20px;
-  text-align: center;
+  text-align: justify;
 }
 
 .panel-Description button{
