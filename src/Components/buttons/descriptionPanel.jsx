@@ -25,18 +25,24 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
         <div className="panel-Description">
           <h1>Syntax Muscle Memory</h1>
           <p>
-            To begin the exercise, the placeholder code below will disappear as
-            soon as you start typing in the editor. If you need to reference the
-            exercise code again, simply click the 'Code' button located below
-            the editor to display it as a placeholder. Each exercise has a
-            different difficulty level and corresponding score. Once you have
-            written your code, click the 'Check Code' button to verify its
-            accuracy. If your code is correct, you will be awarded the score
-            associated with that exercise, and you can proceed to the next one.
-            If you find an exercise too challenging, you can click the 'Skip'
-            button to move to the next exercise without earning any score.
-            Please note that clicking the 'Reset' button will erase any code you
-            have written in the editor, so use it carefully.
+            At the top of the page, you can choose which programming languages
+            you want to practice: HTML, CSS, or JavaScript. Simply click on the
+            respective language button, and the exercises will be filtered to
+            display only the code snippets from that language.
+            <br />
+            <br /> To begin the exercise, the placeholder code below will
+            disappear as soon as you start typing in the editor. If you need to
+            reference the exercise code again, simply click the 'Code' button
+            located below the editor to display it.
+            Each exercise has a different difficulty level and
+            corresponding score. Once you have written your code, click the
+            'Check Code' button to verify its accuracy. If your code is correct,
+            you will be awarded the score associated with that exercise, and you
+            can proceed to the next one. If you find an exercise too
+            challenging, you can click the 'Skip' button to move to the next
+            exercise without earning any score. Please note that clicking the
+            'Reset' button will erase any code you have written in the editor,
+            so use it carefully.
           </p>
           <div className="header-Buttons">
             <button
