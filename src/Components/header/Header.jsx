@@ -1,20 +1,54 @@
-import React from 'react';
-import '../../css/style.css'; 
+import React, { useState } from "react";
+import "../../css/style.css";
 
-function Header() {
+function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
+  const [activeTab, setActiveTab] = useState("html");
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <header>
       <div id="logo">
-        <a href="#">
-          <h1 className="logo-title">MM-Code</h1>
-        </a>
+        <h1 className="logo-title">MM-Code</h1>
       </div>
       <nav className="navbar navbar-expand-lg">
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link" href="htmlExercise/mainHtml.html">HTML</a>
-            <a className="nav-item nav-link" href="CssExercise/mainCSS.html">CSS</a>
-            <a className="nav-item nav-link" href="JavascriptExercise/MainJS.html">Javascript</a>
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "html" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("html");
+                handleHTMLClick();
+              }}
+            >
+              html
+            </p>
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "css" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("css");
+                handleCSSClick();
+              }}
+            >
+              css
+            </p>
+            <p
+              className={`nav-item nav-link ${
+                activeTab === "javascript" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("javascript");
+                handleJavaScriptClick();
+              }}
+            >
+              javascript
+            </p>
           </div>
         </div>
       </nav>

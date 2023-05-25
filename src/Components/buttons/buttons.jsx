@@ -1,15 +1,70 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 
-class button extends Component {
-  render() {
-    return (
-      <div className="editor-Buttons">
-          <button className="doneButton btn btn-success" type="button">Reset</button>
-          <button className="checkButton btn btn-success" type="button">Check code</button>
+function Buttons({
+  handleCheckCode,
+  handleResetCode,
+  initialCode,
+  checkButton,
+}) {
+  const handleReset = () => {
+    handleResetCode();
+  };
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+    console.log(showModal);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  return (
+    <div className="editor-Buttons">
+      <button
+        className="doneButton btn btn-success"
+        type="button"
+        onClick={handleReset}
+      >
+        Reset
+      </button>
+      <button
+        className="checkButton btn btn-success"
+        type="button"
+        onClick={handleShowModal}
+      >
+        Code
+      </button>
+      <button
+        className="checkButton btn btn-success"
+        type="button"
+        onClick={handleCheckCode}
+        disabled={checkButton}
+      >
+        Check code
+      </button>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-overlay" onClick={handleCloseModal}></div>
+          <div className="modal-content">
+            <div className="modal-header">
+              <h3>Code</h3>
+            </div>
+            <div className="modal-body">
+              <pre>{initialCode}</pre>
+            </div>
+            <div className="modal-footer">
+              <button className="btn btn-secondary" onClick={handleCloseModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-    );
-  }
-
+  );
 }
 
-export default button;
+export default Buttons;
