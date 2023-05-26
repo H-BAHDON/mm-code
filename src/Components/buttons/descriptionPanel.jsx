@@ -48,17 +48,17 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             <button
               className="nextExercise btn btn-success"
               type="button"
-              onClick={handleNextExercise}
-              disabled={nextButton}
+              onClick={handleSkipExercise}
             >
-              Next exercise
+              Skip
             </button>
             <button
               className="nextExercise btn btn-success"
               type="button"
-              onClick={handleSkipExercise}
+              onClick={handleNextExercise}
+              disabled={nextButton}
             >
-              Skip
+              Next exercise
             </button>
           </div>
         </div>
