@@ -24,7 +24,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
       <section className="mainPanel">
         <div className="panel-Description">
           {/* <h1>Programming Muscle Memory</h1> */}
-          <p>
+          {/* <p>
             Simply click on the respective language button above, and the exercises will be filtered to
             display only the code snippets from that language.
             <br />
@@ -36,7 +36,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             If you find an exercise too challenging, you can click the 'Skip' button to move to the next exercise without 
             earning any score. Please note that clicking the 'Reset' button will erase any code you have written in the editor, 
             so use it carefully.
-          </p>
+          </p> */}
           <div className="header-Buttons">
             <button
               className="nextExercise btn btn-success"
