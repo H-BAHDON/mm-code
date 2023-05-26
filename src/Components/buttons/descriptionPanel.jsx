@@ -83,7 +83,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               - CSS code has a score range of 2-3.
               <br />
               - JavaScript code has a score range of 3-5.
-              <br />- If you refresh the website, all scores will be lost.
+              <br />- If you refresh the website, all scores will be lost!
             </p>
           </div>
         </div>
