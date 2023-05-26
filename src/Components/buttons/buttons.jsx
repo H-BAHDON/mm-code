@@ -43,7 +43,7 @@ function Buttons({
         onClick={handleCheckCode}
         disabled={checkButton}
       >
-        Check code
+        Check Code
       </button>
       {showModal && (
         <div className="modal">
