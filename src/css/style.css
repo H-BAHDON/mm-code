@@ -156,6 +156,7 @@ color: #034d23;
   font-family: 'Montserrat', sans-serif;;
   margin: 20px;
   text-align: justify;
+  padding: 0;
 }
 
 .panel-Description button{
@@ -180,7 +181,7 @@ color: #034d23;
   justify-content: space-evenly;
   flex-direction: row;
   padding: 2rem;
-  margin: 0 6rem;
+  margin: 0 5rem;
 }
 
 .doneButton {
