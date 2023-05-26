@@ -179,6 +179,8 @@ color: #034d23;
   flex-direction: row;
   padding: 2rem;
   margin: 0 5rem;
+  justify-content: center;
+  gap: 14rem;
 }
 
 .doneButton {
@@ -287,7 +289,7 @@ footer {
 
 .header-Buttons{
   display: flex;
-  gap: 14rem;
+  gap: 13rem;
   justify-content: center;
 }
 
