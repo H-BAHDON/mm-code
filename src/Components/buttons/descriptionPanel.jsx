@@ -23,7 +23,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
     <main>
       <section className="mainPanel">
         <div className="panel-Description">
-          <h1>Programming Muscle Memory</h1>
+          {/* <h1>Programming Muscle Memory</h1> */}
           <p>
             Simply click on the respective language button above, and the exercises will be filtered to
             display only the code snippets from that language.
