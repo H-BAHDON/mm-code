@@ -64,6 +64,7 @@ nav a:hover {
 
 
 
+
 /* ----------------------------------------------------------------------------------- */
 
                                 /* HEADER CSS */
@@ -210,7 +211,7 @@ footer {
 }
 
 .footer-end {
-  display: flex;
+  text-align: center;
   justify-content: center;
   color: #fff;
   font-size: 1.2rem;
