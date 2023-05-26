@@ -1,24 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
 
-function CodeEditor({ userCode, setUserCode, initialCode, exerciseLanguage }) {
+function CodeEditor({
+  userCode,
+  setUserCode,
+  initialCode,
+  exerciseLanguage,
+  showModal,
+}) {
+  const editorRef = useRef(null);
+
   useEffect(() => {
-    const stop = (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      console.log(e);
-    };
-
-    const aceEditor = document.querySelector(".ace_editor");
-    aceEditor.addEventListener("paste", stop, true);
-
-    return () => {
-      aceEditor.removeEventListener("paste", stop, true);
-    };
-  }, []);
+    if (!showModal) {
+      // Focus the editor when the modal is closed
+      editorRef.current?.editor.focus();
+    }
+  }, [showModal]);
 
   const handleCodeChange = (value) => {
     setUserCode(value);
@@ -44,6 +44,7 @@ function CodeEditor({ userCode, setUserCode, initialCode, exerciseLanguage }) {
         tabSize: 1,
       }}
       onChange={handleCodeChange}
+      ref={editorRef} // Assign the ref to the AceEditor component
     />
   );
 }

@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Buttons({
   handleCheckCode,
   handleResetCode,
   initialCode,
   checkButton,
+  showModal,
+  onShowModal,
+  onCloseModal,
 }) {
   const handleReset = () => {
     handleResetCode();
   };
 
-  const [showModal, setShowModal] = useState(false);
-
   const handleShowModal = () => {
-    setShowModal(true);
-    console.log(showModal);
+    onShowModal();
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    onCloseModal();
   };
 
   return (
     <div className="editor-Buttons">
-       <button
+      <button
         className="checkButton btn btn-success"
         type="button"
         onClick={handleShowModal}
