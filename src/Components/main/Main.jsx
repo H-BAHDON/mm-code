@@ -11,8 +11,9 @@ function Main({ exerciseLanguage }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
   const [nextButton, setNextButton] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
-  const [score, setScores] = useState(0)
+  const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
+  const [showModal, setShowModal] = useState(false); // Add showModal state
 
   useEffect(() => {
     generateRandomCode();
@@ -34,7 +35,7 @@ function Main({ exerciseLanguage }) {
     const randomCode = filteredData[randomIndex].code;
     const randomCodeScore = filteredData[randomIndex].score;
     setInitialCode(randomCode);
-    setCurrentExerciseScore(randomCodeScore)
+    setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
   };
 
@@ -54,9 +55,11 @@ function Main({ exerciseLanguage }) {
 
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
-      setResultText(`Bravo! You did it. ${currentExerciseScore} scores for you!`);
+      setResultText(
+        `Bravo! You did it. ${currentExerciseScore} scores for you!`
+      );
       setNextButton(false);
-      setCheckButton(true)
+      setCheckButton(true);
       setScores((preScores) => preScores + currentExerciseScore);
     } else {
       setResultText("Sorry you are missing something! Keep Continue.");
@@ -86,6 +89,14 @@ function Main({ exerciseLanguage }) {
     setCheckButton(false);
   };
 
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <main>
       <div className="editor-container">
@@ -106,12 +117,16 @@ function Main({ exerciseLanguage }) {
           setUserCode={setUserCode}
           initialCode={initialCode}
           exerciseLanguage={exerciseLanguage}
+          showModal={showModal} // Pass showModal prop to CodeEditor
         />
         <Buttons
           handleCheckCode={handleCheckCode}
           handleResetCode={handleResetCode}
           initialCode={initialCode}
           checkButton={checkButton}
+          showModal={showModal} // Pass showModal prop to Buttons
+          onShowModal={handleShowModal}
+          onCloseModal={handleCloseModal}
         />
       </div>
     </main>
