@@ -35,7 +35,7 @@ function Buttons({
         type="button"
         onClick={handleShowModal}
       >
-        Code
+        What's The Code
       </button>
       <button
         className="checkButton btn btn-success"
