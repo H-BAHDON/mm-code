@@ -38,6 +38,13 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             so use it carefully.
           </p> */}
           <div className="header-Buttons">
+          <button
+              className="help btn btn-success"
+              type="button"
+              onClick={handleHelpClick}
+            >
+               Rules
+            </button>
             <button
               className="nextExercise btn btn-success"
               type="button"
@@ -52,13 +59,6 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               onClick={handleSkipExercise}
             >
               Skip
-            </button>
-            <button
-              className="help btn btn-success"
-              type="button"
-              onClick={handleHelpClick}
-            >
-               Rules
             </button>
           </div>
         </div>
