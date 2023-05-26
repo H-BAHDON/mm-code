@@ -23,19 +23,19 @@ function Buttons({
 
   return (
     <div className="editor-Buttons">
+       <button
+        className="checkButton btn btn-success"
+        type="button"
+        onClick={handleShowModal}
+      >
+        What's The Code
+      </button>
       <button
         className="doneButton btn btn-success"
         type="button"
         onClick={handleReset}
       >
         Reset
-      </button>
-      <button
-        className="checkButton btn btn-success"
-        type="button"
-        onClick={handleShowModal}
-      >
-        What's The Code
       </button>
       <button
         className="checkButton btn btn-success"
