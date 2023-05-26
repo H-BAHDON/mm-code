@@ -174,7 +174,6 @@ color: #034d23;
 
 }
 
-
 .editor-Buttons {
   color: #fff;
   display: flex;
@@ -290,7 +289,7 @@ footer {
 
 .header-Buttons{
   display: flex;
-  gap: 1rem;
+  gap: 14rem;
   justify-content: center;
 }
 
