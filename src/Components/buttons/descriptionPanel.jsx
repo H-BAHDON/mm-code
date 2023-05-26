@@ -65,7 +65,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               type="button"
               onClick={handleHelpClick}
             >
-              ?
+               Rules
             </button>
           </div>
         </div>
