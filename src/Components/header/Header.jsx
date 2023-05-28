@@ -17,7 +17,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <p
-              className={`nav-item nav-link ${
+              className={`nav-item-html nav-link ${
                 activeTab === "html" ? "active" : ""
               }`}
               onClick={() => {
@@ -28,7 +28,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
               html
             </p>
             <p
-              className={`nav-item nav-link ${
+              className={`nav-item-css nav-link ${
                 activeTab === "css" ? "active" : ""
               }`}
               onClick={() => {
@@ -39,7 +39,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
               css
             </p>
             <p
-              className={`nav-item nav-link ${
+              className={`nav-item-javascript nav-link ${
                 activeTab === "javascript" ? "active" : ""
               }`}
               onClick={() => {

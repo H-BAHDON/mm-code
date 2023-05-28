@@ -99,8 +99,11 @@ nav a:hover {
                                   display: flex;
                                   justify-content: flex-end;
                                 }
-                                
-                                .navbar-nav .nav-item {       
+
+
+                                /* HTML BUTTON CSS */
+
+                                .navbar-nav .nav-item-html {       
                                   margin-left: 20px;
                                   font-weight: 500;
                                   color: #fff;
@@ -110,14 +113,54 @@ nav a:hover {
                                   font-size: 18px;
                                 }
 
-                                .navbar-nav .nav-item:hover {
-                                 color: #008080;
+                                .navbar-nav .nav-item-html:hover {
+                                 color: #f06529;
                                 
                                 }
-                                .navbar-nav .nav-item.active {
-                                  color: #008080;
+
+                                .navbar-nav .nav-item-html.active {
+                                  color: #f06529;
                                 }
 
+
+                                /* CSS BUTTON CSS */
+
+                                .navbar-nav .nav-item-css {       
+                                  margin-left: 20px;
+                                  font-weight: 500;
+                                  color: #fff;
+                                  text-transform: uppercase;
+                                  transition: all 0.3s ease;
+                                  cursor: pointer;
+                                  font-size: 18px;
+                                }
+
+                                .navbar-nav .nav-item-css:hover {
+                                  color: #2965f1;
+                                 
+                                 }
+                                 .navbar-nav .nav-item-css.active {
+                                   color: #2965f1;
+                                 }
+                                /* JAVASCRIPT BUTTON CSS */
+
+                                .navbar-nav .nav-item-javascript {       
+                                  margin-left: 20px;
+                                  font-weight: 500;
+                                  color: #fff;
+                                  text-transform: uppercase;
+                                  transition: all 0.3s ease;
+                                  cursor: pointer;
+                                  font-size: 18px;
+                                }
+
+                                .navbar-nav .nav-item-javascript:hover {
+                                  color: #f7df1e;
+                                 
+                                 }
+                                 .navbar-nav .nav-item-javascript.active {
+                                   color: #f7df1e;
+                                 }
 
                                 .nav-link {
                                   color: inherit;
