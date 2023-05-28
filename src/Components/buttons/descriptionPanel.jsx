@@ -1,7 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
-  const [showModal, setShowModal] = useState(false);
+function DescriptionPanel({
+  onNextExercise,
+  onSkipExercise,
+  nextButton,
+  showGuide,
+  onShowGuide,
+  onCloseGuide,
+}) {
+
 
   const handleNextExercise = () => {
     onNextExercise();
@@ -12,11 +19,11 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
   };
 
   const handleHelpClick = () => {
-    setShowModal(true);
+    onShowGuide()
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    onCloseGuide()
   };
 
   return (
@@ -38,12 +45,12 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
             so use it carefully.
           </p> */}
           <div className="header-Buttons">
-          <button
+            <button
               className="help btn btn-success"
               type="button"
               onClick={handleHelpClick}
             >
-               Guide
+              Guide
             </button>
             <button
               className="nextExercise btn btn-success"
@@ -64,31 +71,31 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
         </div>
       </section>
 
-      {showModal && (
+      {showGuide && (
         <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content">
             <h2>Guide</h2>
             <p>
-              - Each exercise will give you a different score depending on it's difficulty.
+              - Each exercise will give you a different score depending on it's
+              difficulty.
               <br />
               <br />
               - This score will range from 1-5 per exercise.
               <br />
               <br />
-              - The 'Next Exercise' button will be enabled once your code has been verified using
-              the 'Check Code' button.
+              - The 'Next Exercise' button will be enabled once your code has
+              been verified using the 'Check Code' button.
               <br />
               <br />
-              - Use the button 'What's The Code' to view the code again. 
+              - Use the button 'What's The Code' to view the code again.
               <br />
               <br />
               - Use the 'Skip' button to skip an exercise.
               <br />
               <br />
-              - You will not be able to paste code on this editor ;) 
+              - You will not be able to paste code on this editor ;)
               <br />
-              <br />
-              - If you refresh the website, all scores will be lost!
+              <br />- If you refresh the website, all scores will be lost!
             </p>
           </div>
         </div>

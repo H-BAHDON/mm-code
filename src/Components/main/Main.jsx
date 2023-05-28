@@ -8,15 +8,23 @@ import Confetti from "react-confetti";
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
+
   const [resultText, setResultText] = useState("");
+
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
+
   const [nextButton, setNextButton] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
+  const [skipButton,setSkipButton] = useState(false)
+
   const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
+
   const [showModal, setShowModal] = useState(false);
+  const [showGuide, setShowGuide] = useState(false)
+
   const [showConfetti, setShowConfetti] = useState(false);
-  const [confettiShown, setConfettiShown] = useState(false); // New state variable
+  const [confettiShown, setConfettiShown] = useState(false);
 
   useEffect(() => {
     generateRandomCode();
@@ -26,6 +34,18 @@ function Main({ exerciseLanguage }) {
   useEffect(() => {
     handleResetCode();
   }, [exerciseLanguage]);
+
+  const sentences = [
+    `Bravo! You did it. ${currentExerciseScore} score(s) for you!`,
+    `Great job! You earned ${currentExerciseScore} score(s)!`,
+    `Congratulations! You completed the exercise and scored ${currentExerciseScore} point(s)!`,
+    `Well done! You got ${currentExerciseScore} more score(s)! Keep it up!`,
+  ];
+
+  const getRandomSentence = () => {
+    const randomIndex = Math.floor(Math.random() * sentences.length);
+    return sentences[randomIndex];
+  };
 
   const generateRandomCode = () => {
     const filteredData = Data.filter(
@@ -58,13 +78,13 @@ function Main({ exerciseLanguage }) {
 
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
-      setResultText(
-        `Bravo! You did it. ${currentExerciseScore} score(s) for you!`
-      );
-      setNextButton(false);
-      setCheckButton(true);
       const newScore = score + currentExerciseScore;
       setScores(newScore);
+      const randomSentence = getRandomSentence();
+      setResultText(randomSentence);
+      setNextButton(false);
+      setCheckButton(true);
+      
 
       // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
       if (newScore >= 20 && newScore <= 24 && !confettiShown) {
@@ -73,6 +93,15 @@ function Main({ exerciseLanguage }) {
         setResultText(`Wow you got ${newScore} scores so far. Well done!`);
       } else {
         setShowConfetti(false);
+      }
+
+      // Check if the user's score is between 10 and 14 and the confetti hasn't been shown yet
+      if (newScore >= 10 && newScore <= 14 && !confettiShown) {
+        setShowConfetti(true);
+        setConfettiShown(true); // Update the confettiShown state
+        setResultText(`Wow you got ${newScore} scores so far. Well done!`);
+      } else if (newScore >= 15 && newScore <= 19) {
+        setConfettiShown(false);
       }
     } else {
       setResultText("Sorry you are missing something! Keep Continue.");
@@ -100,6 +129,7 @@ function Main({ exerciseLanguage }) {
     setResultText("");
     setNextButton(true);
     setCheckButton(false);
+    setSkipButton(!skipButton)
   };
 
   const handleShowModal = () => {
@@ -108,6 +138,14 @@ function Main({ exerciseLanguage }) {
 
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleShowGuide = () => {
+    setShowGuide(true);
+  };
+
+  const handleCloseGuide = () => {
+    setShowGuide(false);
   };
 
   const handleConfettiComplete = () => {
@@ -120,6 +158,9 @@ function Main({ exerciseLanguage }) {
           onNextExercise={handleNextExercise}
           onSkipExercise={handleSkipExercise}
           nextButton={nextButton}
+          showGuide={showGuide}
+          onShowGuide={handleShowGuide}
+          onCloseGuide={handleCloseGuide}
         />
         <div className="results">
           <div className="result-text">
@@ -134,6 +175,9 @@ function Main({ exerciseLanguage }) {
           initialCode={initialCode}
           exerciseLanguage={exerciseLanguage}
           showModal={showModal}
+          nextButton={nextButton}
+          skipButton={skipButton}
+          showGuide={showGuide}
         />
         <Buttons
           handleCheckCode={handleCheckCode}
@@ -151,6 +195,7 @@ function Main({ exerciseLanguage }) {
             recycle={false}
             numberOfPieces={300}
             gravity={0.1}
+            confettiProps={{ run: 4 }}
             onConfettiComplete={handleConfettiComplete}
           />
         )}
