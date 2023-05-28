@@ -50,6 +50,9 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
               javascript
             </p>
           </div>
+          {/* <div>
+            <h3 class="sitedescription">MM-Code is a website aimed at improving the muscle memory of software developers.</h3>
+          </div> */}
         </div>
       </nav>
     </header>
