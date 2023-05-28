@@ -69,17 +69,17 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
           <div className="modal-content">
             <h2>Guide</h2>
             <p>
-              - Each exercise will give you a different score depending on difficulty.
+              - Each exercise will give you a different score depending on it's difficulty.
               <br />
               <br />
               - This score will range from 1-5 per exercise.
               <br />
               <br />
-              - The 'Next Exercise' button will be enabled once you have checked that your code is correct using
+              - The 'Next Exercise' button will be enabled once your code has been verified using
               the 'Check Code' button.
               <br />
               <br />
-              - Click the button 'What's The Code' to see the code again. 
+              - Use the button 'What's The Code' to view the code again. 
               <br />
               <br />
               - Use the 'Skip' button to skip an exercise.
