@@ -23,6 +23,7 @@ function Buttons({
 
   return (
     <div className="editor-Buttons">
+      
       <button
         className="checkButton btn btn-success"
         type="button"

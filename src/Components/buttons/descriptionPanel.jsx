@@ -79,6 +79,9 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               the 'Check Code' button.
               <br />
               <br />
+              - Click the button 'What's The Code' to see the code again. 
+              <br />
+              <br />
               - Use the 'Skip' button to skip an exercise.
               <br />
               <br />
