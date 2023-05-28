@@ -8,15 +8,21 @@ import Confetti from "react-confetti";
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
+
   const [resultText, setResultText] = useState("");
+
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
+
   const [nextButton, setNextButton] = useState(true);
   const [checkButton, setCheckButton] = useState(false);
-  const [score, setScores] = useState(0);
+
+  const [score, setScores] = useState(9);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
+
   const [showModal, setShowModal] = useState(false);
+
   const [showConfetti, setShowConfetti] = useState(false);
-  const [confettiShown, setConfettiShown] = useState(false); // New state variable
+  const [confettiShown, setConfettiShown] = useState(false);
 
   useEffect(() => {
     generateRandomCode();
@@ -73,6 +79,15 @@ function Main({ exerciseLanguage }) {
         setResultText(`Wow you got ${newScore} scores so far. Well done!`);
       } else {
         setShowConfetti(false);
+      }
+      
+      // Check if the user's score is between 10 and 14 and the confetti hasn't been shown yet
+      if (newScore >= 10 && newScore <= 14 && !confettiShown) {
+        setShowConfetti(true);
+        setConfettiShown(true); // Update the confettiShown state
+        setResultText(`Wow you got ${newScore} scores so far. Well done!`);
+      } else if (newScore >= 15 && newScore <= 19) {
+        setConfettiShown(false);
       }
     } else {
       setResultText("Sorry you are missing something! Keep Continue.");
@@ -151,6 +166,7 @@ function Main({ exerciseLanguage }) {
             recycle={false}
             numberOfPieces={300}
             gravity={0.1}
+            confettiProps={{ run: 4 }}
             onConfettiComplete={handleConfettiComplete}
           />
         )}
