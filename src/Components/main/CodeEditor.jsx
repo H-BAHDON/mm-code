@@ -10,6 +10,9 @@ function CodeEditor({
   initialCode,
   exerciseLanguage,
   showModal,
+  nextButton,
+  skipButton,
+  showGuide,
 }) {
   const editorRef = useRef(null);
 
@@ -18,7 +21,11 @@ function CodeEditor({
       // Focus the editor when the modal is closed
       editorRef.current?.editor.focus();
     }
-  }, [showModal]);
+  }, [showModal, nextButton, skipButton, showGuide]);
+
+  useEffect(() => {
+    editorRef.current?.editor.focus();
+  }, []);
 
   const handleCodeChange = (value) => {
     setUserCode(value);
