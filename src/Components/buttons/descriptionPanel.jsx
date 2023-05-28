@@ -43,7 +43,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               type="button"
               onClick={handleHelpClick}
             >
-               Rules
+               Guide
             </button>
             <button
               className="nextExercise btn btn-success"
@@ -58,7 +58,7 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
               onClick={handleNextExercise}
               disabled={nextButton}
             >
-              Next exercise
+              Next Exercise
             </button>
           </div>
         </div>
@@ -67,16 +67,25 @@ function DescriptionPanel({ onNextExercise, onSkipExercise, nextButton }) {
       {showModal && (
         <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content">
-            <h2>Rules</h2>
+            <h2>Guide</h2>
             <p>
-              - You are not allowed to paste code on this editor.
+              - Each exercise will give you a different score depending on difficulty.
               <br />
-              - HTML code has a score range of 1-3.
               <br />
-              - CSS code has a score range of 2-3.
+              - This score will range from 1-5 per exercise.
               <br />
-              - JavaScript code has a score range of 3-5.
-              <br />- If you refresh the website, all scores will be lost!
+              <br />
+              - The 'Next Exercise' button will be enabled once you have checked that your code is correct using
+              the 'Check Code' button.
+              <br />
+              <br />
+              - Use the 'Skip' button to skip an exercise.
+              <br />
+              <br />
+              - You will not be able to paste code on this editor ;) 
+              <br />
+              <br />
+              - If you refresh the website, all scores will be lost!
             </p>
           </div>
         </div>
