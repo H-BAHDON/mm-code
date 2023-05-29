@@ -31,6 +31,20 @@ function CodeEditor({
     setUserCode(value);
   };
 
+  useEffect(() => {
+    const stop = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    };
+
+    const aceEditor = document.querySelector(".ace_editor");
+    aceEditor.addEventListener("paste", stop, true);
+
+    return () => {
+      aceEditor.removeEventListener("paste", stop, true);
+    };
+  }, []);
+
   return (
     <div className="editor">
       <AceEditor
