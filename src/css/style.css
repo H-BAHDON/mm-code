@@ -216,12 +216,12 @@ color: #034d23;
 /* ----------------------------------------------------------------------------------- */
 
                                 /* Button CSS */
-.ace_editor{
+/* .ace_editor{
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
-.editor-Buttons {
+/* .editor-Buttons {
   color: #fff;
   display: flex;
   justify-content: space-evenly;
@@ -230,9 +230,9 @@ color: #034d23;
   margin: 0 5rem;
   justify-content: center;
   gap: 14rem;
-}
+} */
 
-.doneButton {
+/* .doneButton {
   background-color: #232931;
   color: #fff;
 }
@@ -240,12 +240,16 @@ color: #034d23;
 .checkButton{
   background-color: #232931;
   color: #fff;
-}
+} */
 
 .button:hover {
   background-color: #2B7A78;
 }
 
+.btn.disabled-button{
+background-color: #232931;
+  color: #fff;
+}
 
 /* ----------------------------------------------------------------------------------- */
                                 /* Footer CSS */
@@ -355,4 +359,23 @@ footer {
   width: 50%;
   display: flex;
   justify-content: space-between;
+}
+
+.main-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: .5rem;
+}
+
+.editor{
+  width: 50%;
+}
+
+.main-bottom, .main-top{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
 }

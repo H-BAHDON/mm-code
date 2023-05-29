@@ -32,27 +32,31 @@ function CodeEditor({
   };
 
   return (
-    <AceEditor
-      mode={exerciseLanguage}
-      theme="dracula"
-      fontSize={18}
-      width="50%"
-      height="46%"
-      placeholder={initialCode}
-      showPrintMargin={false}
-      value={userCode}
-      showGutter={true}
-      editorProps={{ $blockScrolling: false }}
-      setOptions={{
-        enableBasicAutocompletion: true,
-        enableLiveAutocompletion: true,
-        enableSnippets: true,
-        showLineNumbers: true,
-        tabSize: 1,
-      }}
-      onChange={handleCodeChange}
-      ref={editorRef} // Assign the ref to the AceEditor component
-    />
+    <div className="editor">
+      <AceEditor
+        mode={exerciseLanguage}
+        theme="dracula"
+        fontSize={18}
+        width="100%"
+        placeholder={initialCode}
+        showPrintMargin={false}
+        value={userCode}
+        showGutter={true}
+        editorProps={{ $blockScrolling: false }}
+        setOptions={{
+          enableBasicAutocompletion: true,
+          enableLiveAutocompletion: true,
+          enableSnippets: true,
+          showLineNumbers: true,
+          tabSize: 1,
+        }}
+        onLoad={(editor) => {
+          editor.textInput.getElement().ariaLabel = "editorTextarea";
+        }}
+        onChange={handleCodeChange}
+        ref={editorRef} // Assign the ref to the AceEditor component
+      />
+    </div>
   );
 }
 
