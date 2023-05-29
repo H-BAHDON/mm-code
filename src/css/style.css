@@ -176,13 +176,13 @@ main {
   color: #fff;
 }
 
-.mainPanel {
+/* .mainPanel {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
-.panel-Description {
+/* .panel-Description {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +191,7 @@ main {
   text-align: center;
   font-size:12px;
   margin-bottom: 2rem;
-}
+} */
 /* 
 .panel-Description h1{
 font-family: 'Montserrat', sans-serif;
@@ -200,7 +200,7 @@ color: #034d23;
 
 } */
 
-.panel-Description p{
+/* .panel-Description p{
   width: 50%;
   font-family: 'Montserrat', sans-serif;;
   margin: 20px;
@@ -210,7 +210,7 @@ color: #034d23;
 .panel-Description button{
   background-color: #232931;
   color: #fff;
-}
+} */
 
 
 /* ----------------------------------------------------------------------------------- */
@@ -340,26 +340,11 @@ footer {
   margin-left: 10px;
 }
 
-.header-Buttons{
-  display: flex;
-  gap: 13rem;
-  justify-content: center;
-}
-
-.help {
-  border-radius: 50%;
-}
-
-.results{
-  display: flex;
-  justify-content: center;
-}
-
 .result-text{
-  width: 50%;
   display: flex;
   justify-content: space-between;
-}
+  width: 50%;
+} 
 
 .main-center{
   display: flex;
@@ -370,12 +355,18 @@ footer {
 }
 
 .editor{
-  width: 50%;
+  width: 60%;
 }
 
 .main-bottom, .main-top{
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
   padding: 1rem 0;
+  width: 55%;
+}
+
+.editor-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

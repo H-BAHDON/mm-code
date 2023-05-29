@@ -153,12 +153,11 @@ function Main({ exerciseLanguage }) {
   return (
     <main>
       <div className="editor-container">
-        <div className="results">
           <div className="result-text">
-            <p className="">{resultText}</p>
+            <p className="scores-text">{resultText}</p>
             <p className="scores">Your Score(s): {score}</p>
           </div>
-        </div>
+        
         <div className="main-top">
           <ButtonOfPage nameButton="What's The Code" handle={handleShowModal} />
           <ButtonOfPage
