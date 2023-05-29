@@ -50,6 +50,9 @@ function CodeEditor({
         showLineNumbers: true,
         tabSize: 1,
       }}
+      onLoad={(editor) => {
+  editor.textInput.getElement().ariaLabel = "editorTextarea";
+}}
       onChange={handleCodeChange}
       ref={editorRef} // Assign the ref to the AceEditor component
     />
