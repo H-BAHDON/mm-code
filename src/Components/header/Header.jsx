@@ -13,9 +13,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
       <div id="logo">
         <h1 className="logo-title">MM-Code</h1>
       </div>
-      <nav className="navbar navbar-expand-lg">
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
+          <nav className="navbar">
             <p
               className={`nav-item-html nav-link ${
                 activeTab === "html" ? "active" : ""
@@ -49,12 +47,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
             >
               javascript
             </p>
-          </div>
-          {/* <div>
-            <h3 class="sitedescription">MM-Code is a website aimed at improving the muscle memory of software developers.</h3>
-          </div> */}
-        </div>
-      </nav>
+          </nav>
     </header>
   );
 }

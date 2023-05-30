@@ -1,12 +1,10 @@
-
-
 /* Global styles */
 body {
   background-color: #141414;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
-
+/* ----------------------------------------------------------------------------------- */
 /* Header styles */
 /* Styles for header */
 header {
@@ -17,249 +15,105 @@ header {
   padding: 0.5rem;
 }
 
-header h1 {
+.logo-title {
+  font-weight: 600;
+  text-transform: uppercase;
   color: #ffffff;
   font-size: 3rem;
   margin-bottom: 1rem;
   text-align: center;
   font-weight: bold;
-  font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
   letter-spacing: 6px;
 }
 
-header p {
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
   color: #fff;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.5px;
-}
-
-/* Styles for navbar */
-nav {
-  display: flex;
-  justify-content: center;
-  margin: 0.3rem 0;
-}
-
-a{
-  text-decoration: none;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 1px solid transparent;
 }
 
-nav a:hover {
-  color: #4ECCA3;
+.nav-item-html:hover,
+.navbar .nav-item-html.active {
+  color: #f06529;
+  border: 1px solid #f06529;
 }
 
-/* .sitedescription {
-  margin-top: 70px;
-  text-align: centre;
-  font-size: 15px;
-} */
+.nav-item-css:hover,
+.navbar .nav-item-css.active {
+  color: #2965f1;
+  border: 1px solid #2965f1;
+}
 
-
-
-
-
-/* ----------------------------------------------------------------------------------- */
-
-                                /* HEADER CSS */
-
-
-                                /* #logo {
-                                  flex-grow: 1;
-                                } */
-                                
-                                #logo .logo-title {
-                                  font-weight: 600;
-                                  text-transform: uppercase;
-                                }
-
-
+.nav-item-javascript:hover,
+.navbar .nav-item-javascript.active {
+  color: #f7df1e;
+  border: 1px solid #f7df1e;
+}
 
 /* ----------------------------------------------------------------------------------- */
 
-                                /* NAVBAR CSS */
-
-                                .navbar {
-                                  flex-grow: 2;
-                                }
-                                
-                                .navbar-nav {
-                                  display: flex;
-                                  justify-content: flex-end;
-                                }
-
-
-                                /* HTML BUTTON CSS */
-
-                                .navbar-nav .nav-item-html {       
-                                  margin-left: 20px;
-                                  font-weight: 500;
-                                  color: #fff;
-                                  text-transform: uppercase;
-                                  transition: all 0.3s ease;
-                                  cursor: pointer;
-                                  font-size: 18px;
-                                }
-
-                                .navbar-nav .nav-item-html:hover {
-                                 color: #f06529;
-                                
-                                }
-
-                                .navbar-nav .nav-item-html.active {
-                                  color: #f06529;
-                                }
-
-
-                                /* CSS BUTTON CSS */
-
-                                .navbar-nav .nav-item-css {       
-                                  margin-left: 20px;
-                                  font-weight: 500;
-                                  color: #fff;
-                                  text-transform: uppercase;
-                                  transition: all 0.3s ease;
-                                  cursor: pointer;
-                                  font-size: 18px;
-                                }
-
-                                .navbar-nav .nav-item-css:hover {
-                                  color: #2965f1;
-                                 
-                                 }
-                                 .navbar-nav .nav-item-css.active {
-                                   color: #2965f1;
-                                 }
-                                /* JAVASCRIPT BUTTON CSS */
-
-                                .navbar-nav .nav-item-javascript {       
-                                  margin-left: 20px;
-                                  font-weight: 500;
-                                  color: #fff;
-                                  text-transform: uppercase;
-                                  transition: all 0.3s ease;
-                                  cursor: pointer;
-                                  font-size: 18px;
-                                }
-
-                                .navbar-nav .nav-item-javascript:hover {
-                                  color: #f7df1e;
-                                 
-                                 }
-                                 .navbar-nav .nav-item-javascript.active {
-                                   color: #f7df1e;
-                                 }
-
-                                .nav-link {
-                                  color: inherit;
-                                  text-decoration: none;
-                                }
-
-/* ----------------------------------------------------------------------------------- */
-
-                                /* MAIN Panel CSS */
+/* MAIN Panel CSS */
 /* Main styles */
 main {
-  background-color: #393E46;
+  background-color: #393e46;
   color: #fff;
 }
 
-/* .mainPanel {
+.main-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.editor {
+  width: 60%;
+}
+
+.main-bottom,
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 59%;
+}
+
+.editor-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
-
-/* .panel-Description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1.1% 0%;
-  text-align: center;
-  font-size:12px;
-  margin-bottom: 2rem;
-} */
-/* 
-.panel-Description h1{
-font-family: 'Montserrat', sans-serif;
-font-size: 2rem;
-color: #034d23;
-
-} */
-
-/* .panel-Description p{
-  width: 50%;
-  font-family: 'Montserrat', sans-serif;;
-  margin: 20px;
-  text-align: justify;
 }
-
-.panel-Description button{
-  background-color: #232931;
-  color: #fff;
-} */
-
-
-/* ----------------------------------------------------------------------------------- */
-
-                                /* Button CSS */
-/* .ace_editor{
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* .editor-Buttons {
-  color: #fff;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  padding: 2rem;
-  margin: 0 5rem;
-  justify-content: center;
-  gap: 14rem;
-} */
-
-/* .doneButton {
-  background-color: #232931;
-  color: #fff;
+/* buttons */
+.guide-button {
+  position: absolute;
+  margin: 1rem 2rem;
 }
-
-.checkButton{
-  background-color: #232931;
-  color: #fff;
-} */
-
-/* .button:hover {
-  background-color: #2B7A78;
-} */
-
-/* .btn.disabled-button{
-background-color: #232931;
-  color: #fff;
-} */
-
 /* ----------------------------------------------------------------------------------- */
-                                /* Footer CSS */
+/* Footer CSS */
 
 /* Footer styles */
 
 footer {
   background-color: #232931;
   padding: 2rem;
-  font-family:monospace;
+  font-family: monospace;
 }
 
 .footer-end {
@@ -269,29 +123,9 @@ footer {
   font-size: 1.2rem;
 }
 /* ----------------------------------------------------------------------------------- */
+/* -------------Modal------------ */
 
-                                /* Editor CSS */
-
-
-
-  .ace_content{
-    height: 0px;
-  }
-
-  #editor {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    font-size: 20px;
-  }
-
-/* -------------shayan------------ */
-
-  .modal {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -340,43 +174,8 @@ footer {
   margin-left: 10px;
 }
 
-/* .result-text{
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}  */
-
-.main-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: .5rem;
-}
-
-.editor{
-  width: 60%;
-}
-
-.main-bottom, .main-top{
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 0;
-  width: 55%;
-}
-
-.editor-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.guide-button{
-  position: absolute;
-  margin: 1rem 2rem;
-}
-
-
+/* ----------------------------------------------------------------------------------- */
+/* Scores */
 .scores-text {
   font-weight: bold;
 }
@@ -392,9 +191,9 @@ footer {
 }
 
 .scores-text.correct {
-  animation: celebrate 1.5s ease-in-out infinite, blink-green 2s ease-in-out infinite;
+  animation: celebrate 1.5s ease-in-out infinite,
+    blink-green 2s ease-in-out infinite;
 }
-
 
 .scores-text.wrong {
   animation: blink-red 3s ease-in-out infinite;
