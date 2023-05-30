@@ -1,10 +1,12 @@
 import React from 'react'
 
-function ButtonOfPage({handle, nameButton, handleBoolean}) {
+function ButtonOfPage({handle, nameButton, handleBoolean, styleButton}) {
   return (
     <>
       <button
-        className={`btn btn-success ${handleBoolean ? "disabled-button" : ""}`}
+        className={`btn ${styleButton} ${
+          handleBoolean ? "disabled-button" : ""
+        } `}
         onClick={handle}
         disabled={handleBoolean}
       >

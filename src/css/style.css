@@ -242,14 +242,14 @@ color: #034d23;
   color: #fff;
 } */
 
-.button:hover {
+/* .button:hover {
   background-color: #2B7A78;
-}
+} */
 
-.btn.disabled-button{
+/* .btn.disabled-button{
 background-color: #232931;
   color: #fff;
-}
+} */
 
 /* ----------------------------------------------------------------------------------- */
                                 /* Footer CSS */
@@ -340,11 +340,11 @@ footer {
   margin-left: 10px;
 }
 
-.result-text{
+/* .result-text{
   display: flex;
   justify-content: space-between;
   width: 50%;
-} 
+}  */
 
 .main-center{
   display: flex;
@@ -374,4 +374,54 @@ footer {
 .guide-button{
   position: absolute;
   margin: 2rem;
+}
+
+
+.scores-text {
+  font-weight: bold;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.scores-text.correct {
+  animation: celebrate 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.scores-text.wrong {
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes celebrate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-2deg);
+  }
+  75% {
+    transform: rotateZ(2deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: red;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
 }

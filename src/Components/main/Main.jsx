@@ -9,18 +9,20 @@ function Main({ exerciseLanguage }) {
   const [initialCode, setInitialCode] = useState("");
 
   const [resultText, setResultText] = useState("");
+  const [resultTextVisible, setResultTextVisible] = useState(true);
+  const [resultTextClass, setResultTextClass] = useState("");
 
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
 
-  const [nextButton, setNextButton] = useState(true);
-  const [checkButton, setCheckButton] = useState(false);
-  const [skipButton,setSkipButton] = useState(false)
+  const [nextButton, setNextButton] = useState(false);
+  // const [checkButton, setCheckButton] = useState(false);
+  const [skipButton, setSkipButton] = useState(false);
 
   const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
 
   const [showModal, setShowModal] = useState(false);
-  const [showGuide, setShowGuide] = useState(false)
+  const [showGuide, setShowGuide] = useState(false);
 
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
@@ -30,9 +32,9 @@ function Main({ exerciseLanguage }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exerciseLanguage]);
 
-  useEffect(() => {
-    handleResetCode();
-  }, [exerciseLanguage]);
+  // useEffect(() => {
+  //   // handleResetCode();
+  // }, [exerciseLanguage]);
 
   const sentences = [
     `Bravo! You did it. ${currentExerciseScore} score(s) for you!`,
@@ -81,9 +83,10 @@ function Main({ exerciseLanguage }) {
       setScores(newScore);
       const randomSentence = getRandomSentence();
       setResultText(randomSentence);
-      setNextButton(false);
-      setCheckButton(true);
-      
+      setResultTextVisible(true);
+      setResultTextClass("correct");
+      setNextButton(true);
+      // setCheckButton(false);
 
       // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
       if (newScore >= 20 && newScore <= 24 && !confettiShown) {
@@ -104,31 +107,34 @@ function Main({ exerciseLanguage }) {
       }
     } else {
       setResultText("Sorry you are missing something! Keep Continue.");
+      setResultTextVisible(true);
+      setResultTextClass("wrong");
     }
   };
 
-  const handleResetCode = () => {
-    setUserCode("");
-    setResultText("");
-    setNextButton(true);
-    setCheckButton(false);
-  };
+  // const handleResetCode = () => {
+  //   setUserCode("");
+  //   setResultText("");
+  //   setNextButton(true);
+  //   setCheckButton(false);
+  // };
 
   const handleNextExercise = () => {
     generateRandomCode();
     setUserCode("");
-    setResultText("");
-    setNextButton(true);
-    setCheckButton(false);
+    setNextButton(false);
+    setResultTextVisible(false);
+    // setCheckButton(false);
   };
 
   const handleSkipExercise = () => {
+    setResultTextVisible(false);
     generateRandomCode();
     setUserCode("");
-    setResultText("");
-    setNextButton(true);
-    setCheckButton(false);
-    setSkipButton(!skipButton)
+    setNextButton(false);
+    // setCheckButton(false);
+
+    setSkipButton(!skipButton);
   };
 
   const handleShowModal = () => {
@@ -153,20 +159,28 @@ function Main({ exerciseLanguage }) {
   return (
     <main>
       <div className="guide-button">
-        <ButtonOfPage nameButton="Guide" handle={handleShowGuide} />
+        <ButtonOfPage
+          nameButton="Guide"
+          handle={handleShowGuide}
+          styleButton={"btn-success"}
+        />
       </div>
       <div className="editor-container">
-        <div className="result-text">
-          <p className="scores-text">{resultText}</p>
-          <p className="scores">Your Score(s): {score}</p>
-        </div>
-
         <div className="main-top">
-          <ButtonOfPage nameButton="What's The Code" handle={handleShowModal} />
           <ButtonOfPage
-            nameButton="Check Code"
-            handle={handleCheckCode}
-            handleBoolean={checkButton}
+            nameButton="What's The Code"
+            handle={handleShowModal}
+            styleButton={"btn-success"}
+          />
+          <ButtonOfPage
+            nameButton="Skip"
+            handle={handleSkipExercise}
+            styleButton={"btn-success"}
+          />
+          <ButtonOfPage
+            nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
+            handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
+            styleButton={nextButton ? "btn-primary" : "btn-success"}
           />
         </div>
         <div className="main-center">
@@ -180,15 +194,19 @@ function Main({ exerciseLanguage }) {
             skipButton={skipButton}
             showGuide={showGuide}
           />
-          <ButtonOfPage
-            nameButton="Next Exercise"
-            handle={handleNextExercise}
-            handleBoolean={nextButton}
-          />
         </div>
         <div className="main-bottom">
-          <ButtonOfPage nameButton="Reset" handle={handleResetCode} />
-          <ButtonOfPage nameButton="Skip" handle={handleSkipExercise} />
+          {/* <ButtonOfPage nameButton="Reset" handle={handleResetCode} /> */}
+
+          <p
+            className={`scores-text ${
+              resultTextVisible ? "fade-in" : "fade-out"
+            }
+            ${resultTextClass}`}
+          >
+            {resultText}
+          </p>
+          <p className="scores">Your Score(s): {score}</p>
         </div>
         {showConfetti && (
           <Confetti
