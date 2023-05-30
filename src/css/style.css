@@ -373,7 +373,7 @@ footer {
 
 .guide-button{
   position: absolute;
-  margin: 2rem;
+  margin: 1rem 2rem;
 }
 
 
@@ -392,29 +392,35 @@ footer {
 }
 
 .scores-text.correct {
-  animation: celebrate 1s ease-in-out;
-  animation-iteration-count: infinite;
+  animation: celebrate 1.5s ease-in-out infinite, blink-green 2s ease-in-out infinite;
 }
 
+
 .scores-text.wrong {
-  animation: blink 1s ease-in-out infinite;
+  animation: blink-red 3s ease-in-out infinite;
 }
 @keyframes celebrate {
   0% {
     transform: rotateZ(0deg);
   }
-  25% {
-    transform: rotateZ(-2deg);
+  12.5% {
+    transform: rotateZ(-1deg);
   }
-  75% {
-    transform: rotateZ(2deg);
+  37.5% {
+    transform: rotateZ(1deg);
+  }
+  62.5% {
+    transform: rotateZ(-1deg);
+  }
+  87.5% {
+    transform: rotateZ(1deg);
   }
   100% {
     transform: rotateZ(0deg);
   }
 }
 
-@keyframes blink {
+@keyframes blink-red {
   0% {
     color: red;
   }
@@ -423,5 +429,17 @@ footer {
   }
   100% {
     color: red;
+  }
+}
+
+@keyframes blink-green {
+  0% {
+    color: green;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: green;
   }
 }

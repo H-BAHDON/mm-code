@@ -13,6 +13,7 @@ function CodeEditor({
   nextButton,
   skipButton,
   showGuide,
+  checkButton,
 }) {
   const editorRef = useRef(null);
 
@@ -21,7 +22,7 @@ function CodeEditor({
       // Focus the editor when the modal is closed
       editorRef.current?.editor.focus();
     }
-  }, [showModal, nextButton, skipButton, showGuide]);
+  }, [showModal, nextButton, skipButton, showGuide, checkButton]);
 
   useEffect(() => {
     editorRef.current?.editor.focus();

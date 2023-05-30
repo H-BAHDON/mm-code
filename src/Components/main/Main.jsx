@@ -15,7 +15,7 @@ function Main({ exerciseLanguage }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
 
   const [nextButton, setNextButton] = useState(false);
-  // const [checkButton, setCheckButton] = useState(false);
+  const [checkButton, setCheckButton] = useState(false);
   const [skipButton, setSkipButton] = useState(false);
 
   const [score, setScores] = useState(0);
@@ -86,7 +86,7 @@ function Main({ exerciseLanguage }) {
       setResultTextVisible(true);
       setResultTextClass("correct");
       setNextButton(true);
-      // setCheckButton(false);
+      setCheckButton(!checkButton);
 
       // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
       if (
@@ -128,6 +128,7 @@ function Main({ exerciseLanguage }) {
       setResultText("Sorry you are missing something! Keep Continue.");
       setResultTextVisible(true);
       setResultTextClass("wrong");
+      setCheckButton(!checkButton);
     }
   };
 
@@ -143,7 +144,7 @@ function Main({ exerciseLanguage }) {
     setUserCode("");
     setNextButton(false);
     setResultTextVisible(false);
-    // setCheckButton(false);
+    setCheckButton(!checkButton);
   };
 
   const handleSkipExercise = () => {
@@ -151,7 +152,7 @@ function Main({ exerciseLanguage }) {
     generateRandomCode();
     setUserCode("");
     setNextButton(false);
-    // setCheckButton(false);
+    
 
     setSkipButton(!skipButton);
   };
@@ -181,7 +182,7 @@ function Main({ exerciseLanguage }) {
         <ButtonOfPage
           nameButton="Guide"
           handle={handleShowGuide}
-          styleButton={"btn-success"}
+          styleButton={"btn-warning"}
         />
       </div>
       <div className="editor-container">
@@ -212,6 +213,7 @@ function Main({ exerciseLanguage }) {
             nextButton={nextButton}
             skipButton={skipButton}
             showGuide={showGuide}
+            checkButton={checkButton}
           />
         </div>
         <div className="main-bottom">
