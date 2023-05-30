@@ -152,12 +152,15 @@ function Main({ exerciseLanguage }) {
   };
   return (
     <main>
+      <div className="guide-button">
+        <ButtonOfPage nameButton="Guide" handle={handleShowGuide} />
+      </div>
       <div className="editor-container">
-          <div className="result-text">
-            <p className="scores-text">{resultText}</p>
-            <p className="scores">Your Score(s): {score}</p>
-          </div>
-        
+        <div className="result-text">
+          <p className="scores-text">{resultText}</p>
+          <p className="scores">Your Score(s): {score}</p>
+        </div>
+
         <div className="main-top">
           <ButtonOfPage nameButton="What's The Code" handle={handleShowModal} />
           <ButtonOfPage
@@ -167,7 +170,6 @@ function Main({ exerciseLanguage }) {
           />
         </div>
         <div className="main-center">
-          <ButtonOfPage nameButton="Guide" handle={handleShowGuide} />
           <CodeEditor
             userCode={userCode}
             setUserCode={setUserCode}
