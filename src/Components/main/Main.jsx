@@ -263,6 +263,7 @@ function Main({ exerciseLanguage }) {
         )}
         {showGuide && (
           <div className="modal" onClick={handleCloseGuide}>
+            <div className="modal-overlay" onClick={handleCloseGuide}></div>
             <div className="modal-content">
               <h2>Guide</h2>
               <p>
