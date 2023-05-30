@@ -89,7 +89,16 @@ function Main({ exerciseLanguage }) {
       // setCheckButton(false);
 
       // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
-      if (newScore >= 20 && newScore <= 24 && !confettiShown) {
+      if (
+        (newScore >= 20 && newScore <= 24 && !confettiShown) ||
+        (newScore >= 30 && newScore <= 34 && !confettiShown) ||
+        (newScore >= 40 && newScore <= 44 && !confettiShown) ||
+        (newScore >= 50 && newScore <= 54 && !confettiShown) ||
+        (newScore >= 60 && newScore <= 64 && !confettiShown) ||
+        (newScore >= 70 && newScore <= 74 && !confettiShown) ||
+        (newScore >= 80 && newScore <= 84 && !confettiShown) ||
+        (newScore >= 90 && newScore <= 94 && !confettiShown)
+      ) {
         setShowConfetti(true);
         setConfettiShown(true); // Update the confettiShown state
         setResultText(`Wow you got ${newScore} scores so far. Well done!`);
@@ -102,7 +111,17 @@ function Main({ exerciseLanguage }) {
         setShowConfetti(true);
         setConfettiShown(true); // Update the confettiShown state
         setResultText(`Wow you got ${newScore} scores so far. Well done!`);
-      } else if (newScore >= 15 && newScore <= 19) {
+      } else if (
+        (newScore >= 15 && newScore <= 19) ||
+        (newScore >= 25 && newScore <= 29) ||
+        (newScore >= 35 && newScore <= 39) ||
+        (newScore >= 45 && newScore <= 49) ||
+        (newScore >= 55 && newScore <= 59) ||
+        (newScore >= 65 && newScore <= 69) ||
+        (newScore >= 75 && newScore <= 79) ||
+        (newScore >= 85 && newScore <= 89) ||
+        (newScore >= 95 && newScore <= 99)
+      ) {
         setConfettiShown(false);
       }
     } else {
