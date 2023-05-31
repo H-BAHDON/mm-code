@@ -13,14 +13,14 @@ function Main({ exerciseLanguage }) {
   const [resultTextVisible, setResultTextVisible] = useState(true);
   const [resultTextClass, setResultTextClass] = useState("");
 
-  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
-
   const [nextButton, setNextButton] = useState(false);
   const [checkButton, setCheckButton] = useState(false);
   const [skipButton, setSkipButton] = useState(false);
 
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
   const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
+  const [currentExerciseExplanation, setCurrentExerciseExplanation] = useState("")
 
   const [showModal, setShowModal] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
@@ -68,9 +68,11 @@ function Main({ exerciseLanguage }) {
     } while (randomIndex === currentExerciseIndex);
     const randomCode = filteredData[randomIndex].code;
     const randomCodeScore = filteredData[randomIndex].score;
+    const randomCodeExplanation = filteredData[randomIndex].explanation;
     setInitialCode(randomCode);
     setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
+    setCurrentExerciseExplanation(randomCodeExplanation)
   };
 
   const handleCheckCode = () => {
@@ -259,6 +261,10 @@ function Main({ exerciseLanguage }) {
               </div>
               <div className="modal-body">
                 <pre>{initialCode}</pre>
+                <div className="modal-header">
+                  <h3>Explanation</h3>
+                </div>
+                <p>{currentExerciseExplanation}</p>
               </div>
               <div className="modal-footer">
                 <button
