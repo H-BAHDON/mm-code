@@ -77,7 +77,7 @@ function CodeEditor({
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 1,
-          readOnly: showModal || showGuide, // Make the editor read-only when the modal is open
+          readOnly: showModal || showGuide || checkButton // Make the editor read-only when the modal is open
         }}
         onLoad={(editor) => {
           editor.textInput.getElement().ariaLabel = "editorTextarea";
