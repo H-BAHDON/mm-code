@@ -73,7 +73,7 @@ function CodeEditor({
         editorProps={{ $blockScrolling: false }}
         setOptions={{
           enableBasicAutocompletion: true,
-          enableLiveAutocompletion: true,
+          enableLiveAutocompletion: false,
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 1,
