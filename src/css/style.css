@@ -186,6 +186,10 @@ footer {
   font-weight: bold;
 }
 
+.score{
+  font-weight: bold;
+}
+
 .fade-in {
   opacity: 1;
   transition: opacity 1s ease-in;

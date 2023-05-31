@@ -47,11 +47,20 @@ function Main({ exerciseLanguage }) {
   // }, [exerciseLanguage]);
 
   const sentences = [
-    `Bravo! You did it. ${currentExerciseScore} score(s) for you!`,
-    `Great job! You earned ${currentExerciseScore} score(s)!`,
-    `Congratulations! You completed the exercise and scored ${currentExerciseScore} point(s)!`,
-    `Well done! You got ${currentExerciseScore} more score(s)! Keep it up!`,
+    `Bravo! You did it. ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "score" : "scores"
+    } for you!`,
+    `Great job! You earned ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "score" : "scores"
+    }!`,
+    `Congratulations! You completed the exercise and scored ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "point" : "points"
+    }!`,
+    `Well done! You got ${currentExerciseScore} more ${
+      currentExerciseScore === 1 ? "score" : "scores"
+    }! Keep it up!`,
   ];
+
 
   const getRandomSentence = () => {
     const randomIndex = Math.floor(Math.random() * sentences.length);
@@ -98,7 +107,7 @@ function Main({ exerciseLanguage }) {
       setResultTextVisible(true);
       setResultTextClass("correct");
       setNextButton(true);
-      setCheckButton(!checkButton);
+      setCheckButton(true);
 
       // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
       if (
@@ -113,7 +122,7 @@ function Main({ exerciseLanguage }) {
       ) {
         setShowConfetti(true);
         setConfettiShown(true); // Update the confettiShown state
-        setResultText(`Wow you got ${newScore} scores so far. Well done!`);
+        setResultText(`Wow you got ${newScore} score so far. Well done!`);
       } else {
         setShowConfetti(false);
       }
@@ -122,7 +131,7 @@ function Main({ exerciseLanguage }) {
       if (newScore >= 10 && newScore <= 14 && !confettiShown) {
         setShowConfetti(true);
         setConfettiShown(true); // Update the confettiShown state
-        setResultText(`Wow you got ${newScore} scores so far. Well done!`);
+        setResultText(`Wow you got ${newScore} score so far. Well done!`);
       } else if (
         (newScore >= 15 && newScore <= 19) ||
         (newScore >= 25 && newScore <= 29) ||
@@ -140,7 +149,7 @@ function Main({ exerciseLanguage }) {
       setResultText("Sorry you are missing something! Keep Continue.");
       setResultTextVisible(true);
       setResultTextClass("wrong");
-      setCheckButton(!checkButton);
+      setCheckButton(false);
     }
   };
 
@@ -156,7 +165,7 @@ function Main({ exerciseLanguage }) {
     setUserCode("");
     setNextButton(false);
     setResultTextVisible(false);
-    setCheckButton(!checkButton);
+    setCheckButton(false);
   };
 
   const handleSkipExercise = () => {
@@ -164,8 +173,7 @@ function Main({ exerciseLanguage }) {
     generateRandomCode();
     setUserCode("");
     setNextButton(false);
-    
-
+    setCheckButton(false)
     setSkipButton(!skipButton);
   };
 
@@ -208,11 +216,13 @@ function Main({ exerciseLanguage }) {
             nameButton="Skip"
             handle={handleSkipExercise}
             styleButton={"btn-success"}
+            handleBoolean={checkButton}
           />
           <ButtonOfPage
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
+            
           />
         </div>
         <div className="main-center">
@@ -239,7 +249,7 @@ function Main({ exerciseLanguage }) {
           >
             {resultText}
           </p>
-          <p className="scores">Your Score(s): {score}</p>
+          <p className="score">Your Score: {score}</p>
         </div>
         {showConfetti && (
           <Confetti
