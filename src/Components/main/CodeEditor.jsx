@@ -22,14 +22,26 @@ function CodeEditor({
       // Focus the editor when the modal is closed
       editorRef.current?.editor.focus();
     }
-  }, [showModal, nextButton, skipButton, showGuide, checkButton]);
+  }, [showModal, nextButton, skipButton, showGuide, checkButton,exerciseLanguage]);
 
   useEffect(() => {
     editorRef.current?.editor.focus();
   }, []);
 
+   useEffect(() => {
+     if (
+       exerciseLanguage
+     ) {
+       // Clear the editor when exerciseLanguage changes
+       setUserCode("");
+     }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [exerciseLanguage]);
+
   const handleCodeChange = (value) => {
-    setUserCode(value);
+    if (!showModal && !showGuide) {
+      setUserCode(value);
+    }
   };
 
   useEffect(() => {
@@ -65,6 +77,7 @@ function CodeEditor({
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 1,
+          readOnly: showModal || showGuide, // Make the editor read-only when the modal is open
         }}
         onLoad={(editor) => {
           editor.textInput.getElement().ariaLabel = "editorTextarea";
