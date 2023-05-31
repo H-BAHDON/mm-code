@@ -35,11 +35,15 @@ function Main({ exerciseLanguage }) {
   };
 
     useEffect(() => {
-      generateRandomCode();
+      generateRandomCode()
+      setResultText("");
+      setNextButton(false)
+      setCheckButton(false)
       document.addEventListener('keydown', handleKeyPress);
       return () => {
         document.removeEventListener('keydown', handleKeyPress);
-      };    // eslint-disable-next-line react-hooks/exhaustive-deps
+      };    
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [exerciseLanguage]);
 
   // useEffect(() => {
