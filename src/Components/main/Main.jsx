@@ -39,12 +39,23 @@ function Main({ exerciseLanguage }) {
       setResultTextVisible(false);
       setNextButton(false)
       setCheckButton(false)
+
+      let scores = localStorage.getItem("score");
+      if (scores) {
+        setScores(parseInt(scores));
+      }
+
       document.addEventListener('keydown', handleKeyPress);
       return () => {
         document.removeEventListener('keydown', handleKeyPress);
       };    
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [exerciseLanguage]);
+
+    useEffect(() => {
+      localStorage.setItem("score", score.toString());
+    }, [score]);
+  
 
   // useEffect(() => {
   //   // handleResetCode();
