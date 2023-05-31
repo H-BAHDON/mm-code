@@ -36,7 +36,7 @@ function Main({ exerciseLanguage }) {
 
     useEffect(() => {
       generateRandomCode()
-      setResultText("");
+      setResultTextVisible(false);
       setNextButton(false)
       setCheckButton(false)
       document.addEventListener('keydown', handleKeyPress);
@@ -52,16 +52,16 @@ function Main({ exerciseLanguage }) {
 
   const sentences = [
     `Bravo! You did it. ${currentExerciseScore} ${
-      currentExerciseScore === 1 ? "score" : "scores"
+      currentExerciseScore === 1 ? "point" : "points"
     } for you!`,
     `Great job! You earned ${currentExerciseScore} ${
-      currentExerciseScore === 1 ? "score" : "scores"
+      currentExerciseScore === 1 ? "point" : "points"
     }!`,
     `Congratulations! You completed the exercise and scored ${currentExerciseScore} ${
       currentExerciseScore === 1 ? "point" : "points"
     }!`,
     `Well done! You got ${currentExerciseScore} more ${
-      currentExerciseScore === 1 ? "score" : "scores"
+      currentExerciseScore === 1 ? "point" : "points"
     }! Keep it up!`,
   ];
 
