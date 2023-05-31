@@ -54,6 +54,7 @@ function CodeEditor({
         fontSize={18}
         width="100%"
         placeholder={initialCode}
+        className="placeholder-color"
         showPrintMargin={false}
         value={userCode}
         showGutter={true}

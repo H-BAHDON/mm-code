@@ -4,6 +4,11 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
+
+.placeholder-color .ace_placeholder {
+  color: rgba(255, 255, 255, 0.262); 
+  font-size: 17px;
+}
 /* ----------------------------------------------------------------------------------- */
 /* Header styles */
 /* Styles for header */
