@@ -51,7 +51,7 @@ function CodeEditor({
       <AceEditor
         mode={exerciseLanguage}
         theme="dracula"
-        fontSize={18}
+        fontSize={17}
         width="100%"
         placeholder={initialCode}
         className="placeholder-color"
