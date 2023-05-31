@@ -7,6 +7,7 @@ import ButtonOfPage from "../buttons/ButtonOfPage";
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
+  
 
   const [resultText, setResultText] = useState("");
   const [resultTextVisible, setResultTextVisible] = useState(true);
@@ -27,10 +28,19 @@ function Main({ exerciseLanguage }) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
 
-  useEffect(() => {
-    generateRandomCode();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [exerciseLanguage]);
+  const handleKeyPress = (event) => {
+    if (event.altKey && event.key === 'Shift') {
+      setShowModal((prevShowModal) => !prevShowModal);
+    }
+  };
+
+    useEffect(() => {
+      generateRandomCode();
+      document.addEventListener('keydown', handleKeyPress);
+      return () => {
+        document.removeEventListener('keydown', handleKeyPress);
+      };    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [exerciseLanguage]);
 
   // useEffect(() => {
   //   // handleResetCode();
