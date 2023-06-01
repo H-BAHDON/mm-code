@@ -215,7 +215,7 @@ function Main({ exerciseLanguage }) {
     <main>
       <div className="guide-button">
         <ButtonOfPage
-          nameButton="Guide"
+          nameButton="Guide Me!"
           handle={handleShowGuide}
           styleButton={"btn-warning"}
         />
@@ -306,28 +306,28 @@ function Main({ exerciseLanguage }) {
           <div className="modal" onClick={handleCloseGuide}>
             <div className="modal-overlay" onClick={handleCloseGuide}></div>
             <div className="modal-content">
-              <h2>Guide Me!</h2>
+              <h2>Your Guide 📜</h2>
               <p>
-                - Select the language you will like to improve your muscle memory on using the options on the navbar.
+                🔳 Select a language from the navbar to enhance your muscle memory.
                 <br />
                 <br />
-                - You will gain 2 points for each successful exercise!
+                🔳 For every successful exercise, you will gain 2 points!
                 <br />
                 <br />
-                - Use the button 'What's The Code' to view the code again.
+                🔳 To view the code again, click on the 'What's The Code' button.
                 <br />
                 <br />
-                - Once your code has been verified using the 'Check Code' button, the 
-                'Check Code' button will turn into a 'Next Exercise' button.
+                🔳 Once your code has been verified by using the 'Check Code' button, it will 
+                automatically change to a 'Next Exercise' button.
                 <br />
                 <br />
-                - Use the 'Skip' button to skip any exercise.
+                🔳 Use the 'Skip' button to skip any exercise.
                 <br />
                 <br />
-                - You will not be able to paste code on this editor!
+                🔳 You will not be able to paste code on this editor! 👀
                 <br />
                 <br />
-                - Your score will be reset every 24 hours!
+                🔳 Your score will refresh like a new day every 24 hours!
               </p>
             </div>
           </div>
