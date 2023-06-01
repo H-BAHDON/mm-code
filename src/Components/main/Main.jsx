@@ -306,28 +306,28 @@ function Main({ exerciseLanguage }) {
           <div className="modal" onClick={handleCloseGuide}>
             <div className="modal-overlay" onClick={handleCloseGuide}></div>
             <div className="modal-content">
-              <h2>Guide</h2>
+              <h2>Guide Me!</h2>
               <p>
-                - Each exercise will give you a different score depending on
-                it's difficulty.
+                - Select the language you will like to improve your muscle memory on using the options on the navbar.
                 <br />
                 <br />
-                - This score will range from 1-5 per exercise.
-                <br />
-                <br />
-                - The 'Next Exercise' button will be enabled once your code has
-                been verified using the 'Check Code' button.
+                - You will gain 2 points for each successful exercise!
                 <br />
                 <br />
                 - Use the button 'What's The Code' to view the code again.
                 <br />
                 <br />
-                - Use the 'Skip' button to skip an exercise.
+                - Once your code has been verified using the 'Check Code' button, the 
+                'Check Code' button will turn into a 'Next Exercise' button.
+                <br />
+                <br />
+                - Use the 'Skip' button to skip any exercise.
                 <br />
                 <br />
                 - You will not be able to paste code on this editor!
                 <br />
-                <br />- If you refresh the website, all scores will be lost!
+                <br />
+                - Your score will be reset every 24 hours!
               </p>
             </div>
           </div>
