@@ -11,7 +11,8 @@ body {
 }
 /* ----------------------------------------------------------------------------------- */
 /* Header styles */
-/* Styles for header */
+/* Styles for header */ 
+/* */
 header {
   display: flex;
   flex-direction: column;
