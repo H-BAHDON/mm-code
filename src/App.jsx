@@ -1,37 +1,24 @@
-import React, { useState } from "react";
-// import Footer from "./Components/Footer/Footer";
-// import Main from "./Components/main/Main";
-// import Header from "./Components/header/Header";
+import React from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./css/style.css";
+
+
+//Pages
+import Platform from "./Pages/Platform";
+import Home from "./Pages/Home";
 import Login from "./Components/reg&login/Login"
 
 function App() {
-  // const [exerciseLanguage, setExerciseLanguage] = useState("html");
 
-  // const handleHTMLClick = () => {
-  //   setExerciseLanguage("html");
-  // };
-
-  // const handleJavaScriptClick = () => {
-  //   setExerciseLanguage("javascript");
-  // };
-
-  // const handleCSSClick = () => {
-  //   setExerciseLanguage("css");
-  // };
-
-  return (
-    <>
-      {/* <Header
-        handleHTMLClick={handleHTMLClick}
-        handleJavaScriptClick={handleJavaScriptClick}
-        handleCSSClick={handleCSSClick}
-      />
-      <Main exerciseLanguage={exerciseLanguage} />
-      <Footer /> */}
-      <Login />
-    </>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/Platform" element={<Platform/>}/>
+                <Route path="/account" element={<Login/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
