@@ -18,7 +18,7 @@ export default function Signup({onSigninClick}) {
     };
 
     return (
-      <div className="box">
+     
     <div className="form">
         <h2>SIGN UP</h2>
         <form onSubmit={handleSignup}>
@@ -28,6 +28,7 @@ export default function Signup({onSigninClick}) {
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     required
+                    autocomplete="off"
                 />
                 <span>Full Name</span>
                 <i></i>
@@ -38,6 +39,7 @@ export default function Signup({onSigninClick}) {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
+                    autocomplete="off"
                 />
                 <span>Username</span>
                 <i></i>
@@ -48,6 +50,7 @@ export default function Signup({onSigninClick}) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    autocomplete="off"
                 />
                 <span>Email</span>
                 <i></i>
@@ -58,6 +61,7 @@ export default function Signup({onSigninClick}) {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
+                    autocomplete="off"
                 />
                 <span>Password</span>
                 <i></i>
@@ -71,7 +75,7 @@ export default function Signup({onSigninClick}) {
             <input type="submit" value="Sign Up" />
         </form>
     </div>
-</div>
+
 
     );
 }
