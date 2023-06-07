@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import "./css/style.css";
+
 
 
 //Pages
@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/Platform" element={<Platform/>}/>
-                <Route path="/account" element={<Login/>}/>
+                <Route path="/account" element={<Login />}/>
             </Routes>
         </BrowserRouter>
     );
