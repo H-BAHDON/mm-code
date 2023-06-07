@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Signup from './Signup';
 import "./login.css"
+import Header from '../header/Header';
 
 export default function Login() {
   const [showSignup, setShowSignup] = useState(false);
@@ -21,6 +22,8 @@ export default function Login() {
   };
 
   return (
+    <>
+    <Header/>
     <div className="box">
       <div className="form">
         <h2>SIGN IN</h2>
@@ -30,7 +33,7 @@ export default function Login() {
           <i></i>
         </div>
         <div className="inputBox">
-          <input type="password" required />
+          <input type="password" autocomplete="off" required />
           <span>Password</span>
           <i></i>
         </div>
@@ -40,12 +43,13 @@ export default function Login() {
             Sign up
           </a>
         </div>
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" autocomplete="off" />
       </div>
 
       {showSignup && (
         <Signup onSignup={handleSignup} onSigninClick={handleSigninClick} />
       )}
     </div>
+    </>
   );
 }
