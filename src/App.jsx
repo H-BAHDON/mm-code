@@ -1,34 +1,40 @@
 import React, { useState } from "react";
-import Footer from "./Components/Footer/Footer";
-import Main from "./Components/main/Main";
-import Header from "./Components/header/Header";
-import "./css/style.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Pages
+import Platform from "./Pages/Platform";
+import Home from "./Pages/Home";
+import Login from "./Components/reg&login/login";
+import SignUp from "./Components/reg&login/Signup";
 
 function App() {
-  const [exerciseLanguage, setExerciseLanguage] = useState("html");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleHTMLClick = () => {
-    setExerciseLanguage("html");
+  const handleLogin = () => {
+    setIsLoggedIn(true);
   };
 
-  const handleJavaScriptClick = () => {
-    setExerciseLanguage("javascript");
-  };
-
-  const handleCSSClick = () => {
-    setExerciseLanguage("css");
+  const handleLogout = () => {
+    setIsLoggedIn(false);
   };
 
   return (
-    <>
-      <Header
-        handleHTMLClick={handleHTMLClick}
-        handleJavaScriptClick={handleJavaScriptClick}
-        handleCSSClick={handleCSSClick}
-      />
-      <Main exerciseLanguage={exerciseLanguage} />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/platform"
+          element={<Platform isLoggedIn={isLoggedIn} />}
+        />
+        <Route
+          path="/login"
+          element={<Login onLogin={handleLogin} isLoggedIn={isLoggedIn} />}
+        />
+        <Route
+          path="/signup"
+          element={<SignUp onSignup={handleLogin} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

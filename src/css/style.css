@@ -1,8 +1,14 @@
 /* Global styles */
+html, body {
+  min-height: 100%;
+}
 body {
-  background-color: #141414;
+  /* background-color: #141414; */
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  /* line-height: 58.5px; */
+  margin: 0;
+  padding: 0;
 }
 
 .placeholder-color .ace_placeholder {
