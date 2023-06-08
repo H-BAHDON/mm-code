@@ -5,7 +5,7 @@ import Platform from "./Pages/Platform";
 import Home from "./Pages/Home";
 import Login from "./Components/reg&login/login";
 import SignUp from "./Components/reg&login/Signup";
-
+import UserProfile from "./Components/User Dashboard/userProfile"
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -33,6 +33,7 @@ function App() {
           path="/signup"
           element={<SignUp onSignup={handleLogin} />}
         />
+         <Route path="/userprofile" element={<UserProfile/>}/>
       </Routes>
     </BrowserRouter>
   );
