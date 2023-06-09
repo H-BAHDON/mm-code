@@ -26,6 +26,14 @@ export default function Signup({ onSigninClick }) {
 
       if (response.status === 200) {
         console.log('Signup successful');
+
+        // Save user information in session storage
+        sessionStorage.setItem('username', username);
+        sessionStorage.setItem('fullName', fullName);
+
+        // Set the login time in session storage
+        sessionStorage.setItem('loginTime', new Date().getTime());
+
         // Redirect to the /platform page
         navigate('/platform');
       } else {
