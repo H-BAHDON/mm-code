@@ -21,6 +21,7 @@ export default function Platform() {
     const handleCSSClick = () => {
       setExerciseLanguage("css");
     };
+    
   
     return (
         <>
