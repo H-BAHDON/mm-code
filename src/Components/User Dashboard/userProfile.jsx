@@ -230,7 +230,7 @@ export default function UserProfile() {
                 </div>
                 <div className="card shadow border-0 mb-7">
                   <div className="card-header">
-                    <h5 className="mb-0">Contribution</h5>
+                    <h5 className="mb-0">Applications</h5>
                   </div>
                   <Contribution/>
 
