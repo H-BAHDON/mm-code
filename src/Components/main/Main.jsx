@@ -62,10 +62,18 @@ function Main({ exerciseLanguage }) {
   // }, [exerciseLanguage]);
 
   const sentences = [
-    `Bravo! You did it. ${currentExerciseScore} points for you!`,
-    `Great job! You earned ${currentExerciseScore} points!`,
-    `Congratulations! You completed the exercise and scored ${currentExerciseScore} points!`,
-    `Well done! You got ${currentExerciseScore} more points! Keep it up!`,
+    `Bravo! You did it. ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "point" : "points"
+    } for you!`,
+    `Great job! You earned ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "point" : "points"
+    }!`,
+    `Congratulations! You completed the exercise and scored ${currentExerciseScore} ${
+      currentExerciseScore === 1 ? "point" : "points"
+    }!`,
+    `Well done! You got ${currentExerciseScore} more ${
+      currentExerciseScore === 1 ? "point" : "points"
+    }! Keep it up!`,
   ];
 
 
@@ -116,8 +124,17 @@ function Main({ exerciseLanguage }) {
       setNextButton(true);
       setCheckButton(true);
 
-      // Check if the user's score is a multiple of 10 and the confetti hasn't been shown yet
-      if (newScore % 10 === 0 && !confettiShown) {
+      // Check if the user's score is between 20 and 24 and the confetti hasn't been shown yet
+      if (
+        (newScore >= 20 && newScore <= 24 && !confettiShown) ||
+        (newScore >= 30 && newScore <= 34 && !confettiShown) ||
+        (newScore >= 40 && newScore <= 44 && !confettiShown) ||
+        (newScore >= 50 && newScore <= 54 && !confettiShown) ||
+        (newScore >= 60 && newScore <= 64 && !confettiShown) ||
+        (newScore >= 70 && newScore <= 74 && !confettiShown) ||
+        (newScore >= 80 && newScore <= 84 && !confettiShown) ||
+        (newScore >= 90 && newScore <= 94 && !confettiShown)
+      ) {
         setShowConfetti(true);
         setConfettiShown(true); // Update the confettiShown state
         setResultText(`Wow you got ${newScore} score so far. Well done!`);
@@ -125,9 +142,23 @@ function Main({ exerciseLanguage }) {
         setShowConfetti(false);
       }
 
-      // Check if the user's score is not a multiple of 10 and the confetti has been shown
-      if (newScore % 10 !== 0 && confettiShown) {
-        setConfettiShown(false); // Update the confettiShown state
+      // Check if the user's score is between 10 and 14 and the confetti hasn't been shown yet
+      if (newScore >= 10 && newScore <= 14 && !confettiShown) {
+        setShowConfetti(true);
+        setConfettiShown(true); // Update the confettiShown state
+        setResultText(`Wow you got ${newScore} score so far. Well done!`);
+      } else if (
+        (newScore >= 15 && newScore <= 19) ||
+        (newScore >= 25 && newScore <= 29) ||
+        (newScore >= 35 && newScore <= 39) ||
+        (newScore >= 45 && newScore <= 49) ||
+        (newScore >= 55 && newScore <= 59) ||
+        (newScore >= 65 && newScore <= 69) ||
+        (newScore >= 75 && newScore <= 79) ||
+        (newScore >= 85 && newScore <= 89) ||
+        (newScore >= 95 && newScore <= 99)
+      ) {
+        setConfettiShown(false);
       }
     } else {
       setResultText("Sorry you are missing something! Keep Continue.");
