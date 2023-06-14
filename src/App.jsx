@@ -19,12 +19,17 @@ function App() {
     setExerciseLanguage("css");
   };
 
+  const handleReactClick= () => {
+    setExerciseLanguage("react")
+  }
+
   return (
     <>
       <Header
         handleHTMLClick={handleHTMLClick}
         handleJavaScriptClick={handleJavaScriptClick}
         handleCSSClick={handleCSSClick}
+        handleReactClick={handleReactClick}
       />
       <Main exerciseLanguage={exerciseLanguage} />
       <Footer />
