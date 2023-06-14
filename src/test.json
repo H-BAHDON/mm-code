@@ -597,12 +597,30 @@
   "id": 103,
   "lang": "react",
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}",
-   "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
+  "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
   "id": 104,
   "lang": "react",
   "code": "import React, { useState } from 'react';\n\nfunction Input() {\n  const [text, setText] = useState('');\n\n  const handleChange = (event) => {\n    setText(event.target.value);\n  };\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    // Handle form submission\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input type=\"text\" value={text} onChange={handleChange} />\n      <button type=\"submit\">Submit</button>\n    </form>\n  );\n}",
    "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
+},
+{
+  "id": 105,
+  "lang": "react",
+  "code": "import React, { useState, useEffect } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds((prevSeconds) => prevSeconds + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(interval);\n    };\n  }, []);\n\n  return <div>{seconds} seconds have elapsed.</div>;\n}",
+  "explanation": "The `Timer` component in React uses the `useState` hook to manage a `seconds` state variable, which represents the number of seconds elapsed. The `useEffect` hook is used to start an interval that increments the `seconds` state by 1 every second. The component renders the number of seconds elapsed in a `div` element."
+},
+{
+  "id": 106,
+  "lang": "react",
+  "code": "import React from 'react';\n\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n\nexport default Greeting;",
+  "explanation": "The `Greeting` component is a React functional component that accepts a `name` prop. It renders a heading (`h1` element) that greets the user with the provided name. The component is exported as the default export."
+},
+{
+  "id": 107,
+  "lang": "react",
+  "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}",
+  "explanation": "The `Counter` component in React uses the `useState` hook to manage a `count` state variable, which represents a numerical count. It provides two buttons to increment and decrement the count. The count value is displayed using the `p` element."
 }
 ]
