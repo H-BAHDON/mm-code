@@ -62,10 +62,10 @@ function Main({ exerciseLanguage }) {
   // }, [exerciseLanguage]);
 
   const sentences = [
-    `Bravo! You did it. ${currentExerciseScore} points for you!`,
-    `Great job! You earned ${currentExerciseScore} points!`,
-    `Congratulations! You completed the exercise and scored ${currentExerciseScore} points!`,
-    `Well done! You got ${currentExerciseScore} more points! Keep it up!`,
+    `Good stuff! Improving your muscle memory could be one of the most important things in learning. You have earned ${currentExerciseScore} points!`,
+    `Outstanding performance! You have gained ${currentExerciseScore} points!`,
+    `Do you feel like you're improving!? Keep going and you definitely will be! ${currentExerciseScore} points achieved!`,
+    `Admirable job! You have added ${currentExerciseScore} more points to your score. Keep going!`,
   ];
 
 
