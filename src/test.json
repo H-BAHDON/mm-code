@@ -740,7 +740,7 @@
 {
   "id": 113,
   "lang": "react",
-  "code": "const SVGComponent = () => <svg width="100" height="100">\n<circle cx="50" cy="50" r="50" />\n</svg>;",
+  "code": "const SVGComponent = () => <svg width='100' height='100'>\n<circle cx='50' cy='50' r='50' />\n</svg>;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -788,7 +788,7 @@
 {
   "id": 121,
   "lang": "react",
-  "code": "const [isCollapsed, setIsCollapsed] = useState(false);\n\n<div className={`panel ${isCollapsed ? 'collapsed' : ''}`}><div className="panel-header" onClick={() => setIsCollapsed(!isCollapsed)}>Panel Header</div>{!isCollapsed && <div className="panel-content">Panel Content</div>}</div>",
+  "code": "const [isCollapsed, setIsCollapsed] = useState(false);\n\n<div className={`panel ${isCollapsed ? 'collapsed' : ''}`}><div className='panel-header' onClick={() => setIsCollapsed(!isCollapsed)}>Panel Header</div>{!isCollapsed && <div className='panel-content'>Panel Content</div>}</div>",
   "explanation": "This code...to be continued..."
 },
 {
@@ -812,7 +812,7 @@
 {
   "id": 125,
   "lang": "react",
-  "code": "const Greeting = ({ name }) => <div>\nHello, {name}!\n</div>;\nconst App = () => <Greeting name="John" />;",
+  "code": "const Greeting = ({ name }) => <div>\nHello, {name}!\n</div>;\nconst App = () => <Greeting name='John' />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -884,25 +884,25 @@
 {
   "id": 137,
   "lang": "react",
-  "code": "const FragmentComponent = () => <>\n<SomeComponent key="first" />\n<SomeComponent key="second" />\n</>;",
+  "code": "const FragmentComponent = () => <>\n<SomeComponent key='first' />\n<SomeComponent key='second' />\n</>;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 138,
   "lang": "react",
-  "code": "const inputRef = useRef();\nconst handleButtonClick = () => inputRef.current.focus();\nconst MyComponent = () => <div>\n<input ref={inputRef} type="text" />\n<button onClick={handleButtonClick}>Focus Input</button>\n</div>;",
+  "code": "const inputRef = useRef();\nconst handleButtonClick = () => inputRef.current.focus();\nconst MyComponent = () => <div>\n<input ref={inputRef} type='text' />\n<button onClick={handleButtonClick}>Focus Input</button>\n</div>;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 139,
   "lang": "react",
-  "code": "const [formData, setFormData] = useState({ name: '', age: 0 });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst Form = () => <form>\n<input type="text" name="name" value={formData.name} onChange={handleInputChange} />\n<input type="number" name="age" value={formData.age} onChange={handleInputChange} />\n</form>;",
+  "code": "const [formData, setFormData] = useState({ name: '', age: 0 });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst Form = () => <form>\n<input type='text' name='name' value={formData.name} onChange={handleInputChange} />\n<input type='number' name='age' value={formData.age} onChange={handleInputChange} />\n</form>;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 140,
   "lang": "react",
-  "code": "const MyContext = createContext();\nconst MyComponent = () => <MyContext.Provider value="Hello">\n<SomeComponent />\n</MyContext.Provider>;",
+  "code": "const MyContext = createContext();\nconst MyComponent = () => <MyContext.Provider value='Hello'>\n<SomeComponent />\n</MyContext.Provider>;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -914,7 +914,7 @@
 {
   "id": 142,
   "lang": "react",
-  "code": "const [inputValue, setInputValue] = useState('');\nconst handleInputChange = (e) => setInputValue(e.target.value);\nreturn <input type="text" value={inputValue} onChange={handleInputChange} />;",
+  "code": "const [inputValue, setInputValue] = useState('');\nconst handleInputChange = (e) => setInputValue(e.target.value);\nreturn <input type='text' value={inputValue} onChange={handleInputChange} />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -974,13 +974,13 @@
 {
   "id": 152,
   "lang": "react",
-  "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => {\ne.preventDefault();\nif (formData.name && formData.email) {\nconsole.log('Form submitted!', formData);\n} else {\nconsole.log('Please fill in all fields!');\n}};\nreturn <form onSubmit={handleSubmit}><input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" /><input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email" /><button type="submit">Submit</button></form>;",
+  "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => {\ne.preventDefault();\nif (formData.name && formData.email) {\nconsole.log('Form submitted!', formData);\n} else {\nconsole.log('Please fill in all fields!');\n}};\nreturn <form onSubmit={handleSubmit}><input type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Name' /><input type='email' name='email' value={formData.email} onChange={handleInputChange} placeholder='Email' /><button type='submit'>Submit</button></form>;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 153,
   "lang": "react",
-  "code": "return <MyContext.Provider value="Hello">\n<SomeComponent />\n</MyContext.Provider>;",
+  "code": "return <MyContext.Provider value='Hello'>\n<SomeComponent />\n</MyContext.Provider>;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1004,7 +1004,7 @@
 {
   "id": 157,
   "lang": "react",
-  "code": "return <Router>\n<Route path="/about" component={About} />\n<Route path="/contact" component={Contact} />\n</Router>;",
+  "code": "return <Router>\n<Route path='/about' component={About} />\n<Route path='/contact' component={Contact} />\n</Router>;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1058,7 +1058,7 @@
 {
   "id": 166,
   "lang": "react",
-  "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type="text" />;",
+  "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type='text' />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1076,13 +1076,13 @@
 {
   "id": 169,
   "lang": "react",
-  "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type="text" />;",
+  "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type='text' />;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 170,
   "lang": "react",
-  "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => { e.preventDefault(); if (formData.name && formData.email) { console.log('Form submitted!', formData); } else { console.log('Please fill in all fields!'); } };\nreturn <form onSubmit={handleSubmit}><input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Name" /><input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email" /><button type="submit">Submit</button></form>;",
+  "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => { e.preventDefault(); if (formData.name && formData.email) { console.log('Form submitted!', formData); } else { console.log('Please fill in all fields!'); } };\nreturn <form onSubmit={handleSubmit}><input type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Name' /><input type='email' name='email' value={formData.email} onChange={handleInputChange} placeholder='Email' /><button type='submit'>Submit</button></form>;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1118,7 +1118,7 @@
 {
   "id": 185,
   "lang": "react",
-  "code": "import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';\nreturn <Router><nav><ul><li><Link to="/">Home</Link></li><li><Link to="/about">About</Link></li></ul></nav><Switch><Route exact path="/" component={Home} /><Route path="/about" component={About} /></Switch></Router>;" ,
+  "code": "import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';\nreturn <Router><nav><ul><li><Link to='/'>Home</Link></li><li><Link to='/about'>About</Link></li></ul></nav><Switch><Route exact path='/' component={Home} /><Route path='/about' component={About} /></Switch></Router>;" ,
   "explanation": "This code...to be continued..."
 },
 {
@@ -1148,7 +1148,7 @@
 {
   "id": 190,
   "lang": "react",
-  "code":"const App = () => (\n<Router>\n<Switch>\n<Route exact path="/" component={Home} />\n<Route path="/about" component={About} />\n<Route path="/dashboard" component={Dashboard} />\n</Switch>\n</Router>\n);",
+  "code":"const App = () => (\n<Router>\n<Switch>\n<Route exact path='/' component={Home} />\n<Route path='/about' component={About} />\n<Route path='/dashboard' component={Dashboard} />\n</Switch>\n</Router>\n);",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1172,13 +1172,13 @@
 {
   "id": 194,
   "lang": "react",
-  "code": "const modalRoot = document.getElementById('modal-root');\nreturn createPortal(\n<div className="modal">\n{children}\n</div>,\nmodalRoot\n);",
+  "code": "const modalRoot = document.getElementById('modal-root');\nreturn createPortal(\n<div className='modal'>\n{children}\n</div>,\nmodalRoot\n);",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 195,
   "lang": "react",
-  "code": "<Route path="/users/:id" render={({ match }) => <UserDetails id={match.params.id} />} />;",
+  "code": "<Route path='/users/:id' render={({ match }) => <UserDetails id={match.params.id} />} />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1220,13 +1220,13 @@
 {
   "id": 202,
   "lang": "react",
-  "code": "const handleKeyPress = (event) => { if (event.key === 'Enter') { console.log('Enter key pressed'); } };\nreturn <input type="text" onKeyPress={handleKeyPress} />;",
+  "code": "const handleKeyPress = (event) => { if (event.key === 'Enter') { console.log('Enter key pressed'); } };\nreturn <input type='text' onKeyPress={handleKeyPress} />;",
   "explanation": "This code...to be continued..."
 },
 {
   "id": 203,
   "lang": "react",
-  "code": "const [checked, setChecked] = useState(false);\nconst handleCheckboxChange = (event) => { setChecked(event.target.checked); };\nreturn <input type="checkbox" checked={checked} onChange={handleCheckboxChange} />;",
+  "code": "const [checked, setChecked] = useState(false);\nconst handleCheckboxChange = (event) => { setChecked(event.target.checked); };\nreturn <input type='checkbox' checked={checked} onChange={handleCheckboxChange} />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1238,7 +1238,7 @@
 {
   "id": 205,
   "lang": "react",
-  "code": "const ThemeContext = createContext('light');\nreturn (\n<ThemeContext.Provider value="dark">\n<App />\n</ThemeContext.Provider>\n);",
+  "code": "const ThemeContext = createContext('light');\nreturn (\n<ThemeContext.Provider value='dark'>\n<App />\n</ThemeContext.Provider>\n);",
   "explanation":"This code...to be continued..." 
 },
 {
@@ -1268,7 +1268,7 @@
 {
   "id": 210,
   "lang": "react",
-  "code": "const inputRef = useRef(null);\nreturn <input ref={inputRef} type="text" />;",
+  "code": "const inputRef = useRef(null);\nreturn <input ref={inputRef} type='text' />;",
   "explanation": "This code...to be continued..."
 },
 {
@@ -1520,7 +1520,7 @@
 {
   "id": 252,
   "lang": "react",
-  "code": "const ChildComponent = ({ message }) => <div>\n{message}\n</div>;\nconst ParentComponent = () => <ChildComponent message="Hello, World!"/>;",
+  "code": "const ChildComponent = ({ message }) => <div>\n{message}\n</div>;\nconst ParentComponent = () => <ChildComponent message='Hello, World!'/>;",
   "explanation": "This code...to be continued..."
 },
 {
