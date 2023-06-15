@@ -518,7 +518,7 @@
   "id": 90,
   "lang": "react",
   "code": "import React from 'react';\n\nfunction Square({ value, onClick }) {\n  return (\n    <button className=\"square\" onClick={onClick}>\n      {value}\n    </button>\n  );\n}\n\nfunction Board() {\n  const handleClick = () => {\n    // Handle square click\n  };\n\n  return (\n    <div className=\"board\">\n      <div className=\"row\">\n        <Square value=\"1\" onClick={handleClick} />\n        <Square value=\"2\" onClick={handleClick} />\n        <Square value=\"3\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"4\" onClick={handleClick} />\n        <Square value=\"5\" onClick={handleClick} />\n        <Square value=\"6\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"7\" onClick={handleClick} />\n        <Square value=\"8\" onClick={handleClick} />\n        <Square value=\"9\" onClick={handleClick} />\n      </div>\n    </div>\n  );\n}",
-  "score": 3,
+  "score": 2,
   "explanation": "This React code represents a tic-tac-toe game board. The 'Square' component represents an individual square on the board, which receives a 'value' prop and an 'onClick' prop. The 'Board' component renders a 3x3 grid of 'Square' components, passing appropriate values and a click handler to each square. You can handle the square click functionality within the 'handleClick' function in the 'Board' component."
 },
 {
@@ -530,78 +530,91 @@
 {
   "id": 92,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n    </div>\n  );\n}",
   "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
   "id": 93,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction TextInput() {\n  const [text, setText] = useState('');\n\n  const handleChange = (event) => {\n    setText(event.target.value);\n  };\n\n  return (\n    <div>\n      <input type=\"text\" value={text} onChange={handleChange} />\n      <p>You typed: {text}</p>\n    </div>\n  );\n}",
   "explanation": "TextInput is a React component that uses the useState hook to manage a text state. It renders an input field and displays the typed text below it."
 },
 {
   "id": 94,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Toggle() {\n  const [isOn, setIsOn] = useState(false);\n\n  const handleToggle = () => {\n    setIsOn(!isOn);\n  };\n\n  return (\n    <button onClick={handleToggle}>\n      {isOn ? 'ON' : 'OFF'}\n    </button>\n  );\n}",
    "explanation": "Toggle is a React component that uses the useState hook to manage a toggle state. It renders a button that toggles between ON and OFF when clicked."
 },
 {
   "id": 95,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const timer = setInterval(() => {\n      setSeconds((prevSeconds) => prevSeconds + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(timer);\n    };\n  }, []);\n\n  return <p>Seconds: {seconds}</p>;\n}",
    "explanation": "Timer is a React component that uses the useState and useEffect hooks. It renders a timer that increments the seconds state every second."
 },
 {
   "id": 96,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction ListItem({ item }) {\n  return <li>{item}</li>;\n}\n\nfunction List() {\n  const items = ['Item 1', 'Item 2', 'Item 3'];\n\n  return (\n    <ul>\n      {items.map((item) => (\n        <ListItem key={item} item={item} />\n      ))}\n    </ul>\n  );\n}",
    "explanation": "ListItem is a React component that receives an item prop. It renders an <li> element with the item prop as its content."
 },
 {
   "id": 97,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Tabs() {\n  const [activeTab, setActiveTab] = useState(0);\n\n  const handleTabClick = (index) => {\n    setActiveTab(index);\n  };\n\n  const tabs = ['Tab 1', 'Tab 2', 'Tab 3'];\n\n  return (\n    <div>\n      <div>\n        {tabs.map((tab, index) => (\n          <button\n            key={index}\n            onClick={() => handleTabClick(index)}\n            className={index === activeTab ? 'active' : ''}\n          >\n            {tab}\n          </button>\n        ))}\n      </div>\n      <div>\n        {tabs[activeTab]}\n      </div>\n    </div>\n  );\n}",
    "explanation": "Tabs is a React component that uses the useState hook to manage the active tab state. It renders a set of buttons for each tab in an array and updates the active tab when a button is clicked."
 },
 {
   "id": 98,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction Card({ title, content }) {\n  return (\n    <div className=\"card\">\n      <h2>{title}</h2>\n      <p>{content}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <Card title=\"Card 1\" content=\"This is the content of Card 1.\" />\n      <Card title=\"Card 2\" content=\"This is the content of Card 2.\" />\n      <Card title=\"Card 3\" content=\"This is the content of Card 3.\" />\n    </div>\n  );\n}",
    "explanation": "App is a React component that renders multiple Card components with different titles and contents."
 },
 {
   "id": 99,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction Header() {\n  return <h1>My App</h1>;\n}\n\nfunction Content() {\n  return <p>Welcome to my app!</p>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Header />\n      <Content />\n    </div>\n  );\n}",
    "explanation": "App is a React component that renders a Header component followed by a Content component."
 },
 {
   "id": 100,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction Avatar({ src, alt }) {\n  return <img src={src} alt={alt} />;\n}\n\nfunction UserCard({ user }) {\n  return (\n    <div>\n      <Avatar src={user.avatar} alt={user.name} />\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>\n    </div>\n  );\n}",
    "explanation": "UserCard is a React component that renders user information, including an avatar image, name, and email. It receives the user data as props."
 },
 {
   "id": 101,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction Square({ value, onClick }) {\n  return (\n    <button className=\"square\" onClick={onClick}>\n      {value}\n    </button>\n  );\n}\n\nfunction Board() {\n  const handleClick = () => {\n    // Handle square click\n  };\n\n  return (\n    <div className=\"board\">\n      <div className=\"row\">\n        <Square value=\"1\" onClick={handleClick} />\n        <Square value=\"2\" onClick={handleClick} />\n        <Square value=\"3\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"4\" onClick={handleClick} />\n        <Square value=\"5\" onClick={handleClick} />\n        <Square value=\"6\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"7\" onClick={handleClick} />\n        <Square value=\"8\" onClick={handleClick} />\n        <Square value=\"9\" onClick={handleClick} />\n      </div>\n    </div>\n  );\n}",
    "explanation": "Board is a React component that represents a tic-tac-toe board. It renders multiple Square components and handles click events for each square."
 },
 {
   "id": 102,
   "lang": "react",
+  "score": 2,
   "code": "import React from 'react';\n\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Greeting name=\"Alice\" />\n      <Greeting name=\"Bob\" />\n      <Greeting name=\"Charlie\" />\n    </div>\n  );\n}",
   "explanation": "App is a React component that renders multiple Greeting components with different names."
 },
 {
   "id": 103,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}",
    "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
   "id": 104,
   "lang": "react",
+  "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Input() {\n  const [text, setText] = useState('');\n\n  const handleChange = (event) => {\n    setText(event.target.value);\n  };\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    // Handle form submission\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input type=\"text\" value={text} onChange={handleChange} />\n      <button type=\"submit\">Submit</button>\n    </form>\n  );\n}",
    "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 }
