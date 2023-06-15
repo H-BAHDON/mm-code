@@ -22,7 +22,7 @@ function Main({ exerciseLanguage }) {
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
   const [currentExerciseExplanation, setCurrentExerciseExplanation] = useState("")
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModel, setShowModel] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
 
   const [showConfetti, setShowConfetti] = useState(false);
@@ -30,7 +30,7 @@ function Main({ exerciseLanguage }) {
 
   const handleKeyPress = (event) => {
     if (event.altKey && event.key === 'Shift') {
-      setShowModal((prevShowModal) => !prevShowModal);
+      setShowModel((prevShowModel) => !prevShowModel);
     }
   };
 
@@ -184,12 +184,12 @@ function Main({ exerciseLanguage }) {
     setSkipButton(!skipButton);
   };
 
-  const handleShowModal = () => {
-    setShowModal(true);
+  const handleShowModel= () => {
+    setShowModel(true);
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  const handleCloseModel = () => {
+    setShowModel(false);
   };
 
   const handleShowGuide = () => {
@@ -216,7 +216,7 @@ function Main({ exerciseLanguage }) {
         <div className="main-top">
           <ButtonOfPage
             nameButton="What's The Code"
-            handle={handleShowModal}
+            handle={handleShowModel}
             styleButton={"btn-success"}
           />
           <ButtonOfPage
@@ -238,7 +238,7 @@ function Main({ exerciseLanguage }) {
             setUserCode={setUserCode}
             initialCode={initialCode}
             exerciseLanguage={exerciseLanguage}
-            showModal={showModal}
+            showModel={showModel}
             nextButton={nextButton}
             skipButton={skipButton}
             showGuide={showGuide}
@@ -269,24 +269,24 @@ function Main({ exerciseLanguage }) {
             onConfettiComplete={handleConfettiComplete}
           />
         )}
-        {showModal && (
-          <div className="modal">
-            <div className="modal-overlay" onClick={handleCloseModal}></div>
-            <div className="modal-content">
-              <div className="modal-header">
+        {showModel && (
+          <div className="model">
+            <div className="model-overlay" onClick={handleCloseModel}></div>
+            <div className="model-content">
+              <div className="model-header">
                 <h3>Code</h3>
               </div>
-              <div className="modal-body">
+              <div className="model-body">
                 <pre>{initialCode}</pre>
-                <div className="modal-header">
+                <div className="model-header">
                   <h3>Explanation</h3>
                 </div>
                 <p>{currentExerciseExplanation}</p>
               </div>
-              <div className="modal-footer">
+              <div className="model-footer">
                 <button
                   className="btn btn-secondary"
-                  onClick={handleCloseModal}
+                  onClick={handleCloseModel}
                 >
                   Close
                 </button>
@@ -295,9 +295,9 @@ function Main({ exerciseLanguage }) {
           </div>
         )}
         {showGuide && (
-          <div className="modal" onClick={handleCloseGuide}>
-            <div className="modal-overlay" onClick={handleCloseGuide}></div>
-            <div className="modal-content">
+          <div className="model" onClick={handleCloseGuide}>
+            <div className="model-overlay" onClick={handleCloseGuide}></div>
+            <div className="model-content">
               <h2>Your Guide 📜</h2>
               <p>
                 🔳 Select a language from the navbar to enhance your muscle memory.
