@@ -5,20 +5,20 @@
 //   handleResetCode,
 //   initialCode,
 //   checkButton,
-//   showModal,
-//   onShowModal,
-//   onCloseModal,
+//   showModel,
+//   onShowModel,
+//   onCloseModel,
 // }) {
 //   const handleReset = () => {
 //     handleResetCode();
 //   };
 
-//   const handleShowModal = () => {
-//     onShowModal();
+//   const handleShowModel = () => {
+//     onShowModel();
 //   };
 
-//   const handleCloseModal = () => {
-//     onCloseModal();
+//   const handleCloseModel = () => {
+//     onCloseModel();
 //   };
 
 //   return (
@@ -27,7 +27,7 @@
 //       <button
 //         className="checkButton btn btn-success"
 //         type="button"
-//         onClick={handleShowModal}
+//         onClick={handleShowModel}
 //       >
 //         What's The Code
 //       </button>
