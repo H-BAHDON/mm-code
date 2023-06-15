@@ -1148,7 +1148,7 @@
 {
   "id": 190,
   "lang": "react",
-  "code":"const App = () => (\n<Router>\n<Switch>\n<Route exact path='/' component={Home} />\n<Route path='/about' component={About} />\n<Route path='/dashboard' component={Dashboard} />\n</Switch>\n</Router>\n);",
+  "code": "const App = () => (\n<Router>\n<Switch>\n<Route exact path='/' component={Home} />\n<Route path='/about' component={About} />\n<Route path='/dashboard' component={Dashboard} />\n</Switch>\n</Router>\n);",
   "explanation": "This code...to be continued..."
 },
 {

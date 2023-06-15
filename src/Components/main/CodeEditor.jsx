@@ -9,7 +9,7 @@ function CodeEditor({
   setUserCode,
   initialCode,
   exerciseLanguage,
-  showModel,
+  showModal,
   nextButton,
   skipButton,
   showGuide,
@@ -18,11 +18,11 @@ function CodeEditor({
   const editorRef = useRef(null);
 
   useEffect(() => {
-    if (!showModel) {
-      // Focus the editor when the model is closed
+    if (!showModal) {
+      // Focus the editor when the modal is closed
       editorRef.current?.editor.focus();
     }
-  }, [showModel, nextButton, skipButton, showGuide, checkButton,exerciseLanguage]);
+  }, [showModal, nextButton, skipButton, showGuide, checkButton,exerciseLanguage]);
 
   useEffect(() => {
     editorRef.current?.editor.focus();
@@ -39,7 +39,7 @@ function CodeEditor({
    }, [exerciseLanguage]);
 
   const handleCodeChange = (value) => {
-    if (!showModel && !showGuide) {
+    if (!showModal && !showGuide) {
       setUserCode(value);
     }
   };
@@ -77,7 +77,7 @@ function CodeEditor({
           enableSnippets: true,
           showLineNumbers: true,
           tabSize: 1,
-          readOnly: showModel || showGuide || checkButton // Make the editor read-only when the model is open
+          readOnly: showModal || showGuide || checkButton // Make the editor read-only when the modal is open
         }}
         onLoad={(editor) => {
           editor.textInput.getElement().ariaLabel = "editorTextarea";

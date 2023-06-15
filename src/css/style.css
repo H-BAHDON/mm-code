@@ -134,9 +134,9 @@ footer {
   font-size: 1.2rem;
 }
 /* ----------------------------------------------------------------------------------- */
-/* -------------Model------------ */
+/* -------------Modal------------ */
 
-.model {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +148,7 @@ footer {
   color: black;
 }
 
-.model-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -157,7 +157,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.model-content {
+.modal-content {
   max-width: 800px;
   background-color: #fff;
   padding: 20px;
@@ -167,24 +167,24 @@ footer {
   font-size: 18px;
 }
 
-.model-header {
+.modal-header {
   margin-bottom: 10px;
 }
 
-.model-header h3 {
+.modal-header h3 {
   margin: 0;
 }
 
-.model-body {
+.modal-body {
   padding: 10px 0;
   overflow: auto;
 }
 
-.model-footer {
+.modal-footer {
   text-align: right;
 }
 
-.model-footer button {
+.modal-footer button {
   margin-left: 10px;
 }
 
