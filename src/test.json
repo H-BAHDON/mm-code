@@ -425,7 +425,6 @@
     "score": 2,
     "explanation": "This react code demonstrates the usage of 'useState' and 'useEffect' hooks in React. The 'Counter' component maintains a count state using 'useState' and updates the document title using 'useEffect'. The title is updated whenever the count changes."
 },
-
 {
     "id": 62,
     "lang": "react",
@@ -440,14 +439,14 @@
     "score": 2,
     "explanation": "This react code demonstrates the usage of the spread operator. The 'arr1' array contains elements 1, 2, and 3. The spread operator is used to create a new 'arr2' array by adding additional elements (4, 5, and 6) to the end of 'arr1'. The code then logs the contents of 'arr2' to the console."
 },
-
 {
     "id": 64,
     "lang": "react",
     "code": "const person = {\n  name: 'John',\n  age: 25,\n  city: 'New York'\n};\n\nconst { name, age } = person;\n\nconsole.log(name, age);",
     "score": 2,
     "explanation": "This react code demonstrates destructuring an object. The 'person' object has properties 'name', 'age', and 'city'. Using object destructuring, the 'name' and 'age' properties are extracted into variables of the same names. The code then logs the values of 'name' and 'age' to the console."
-}, {
+}, 
+{
     "id": 65,
     "lang": "react",
     "code": "const books = [\n  { title: 'Book 1', author: 'Author 1' },\n  { title: 'Book 2', author: 'Author 2' },\n  { title: 'Book 3', author: 'Author 3' }\n];\n\nconst bookItems = books.map(book => (\n  <div>\n    <h3>{book.title}</h3>\n    <p>Author: {book.author}</p>\n  </div>\n));\n\nreturn <div>{bookItems}</div>;",
@@ -525,6 +524,7 @@
   "id": 77,
   "lang": "react",
   "code": "import React from 'react';\n\nfunction Button({ onClick, children }) {\n  return (\n    <button onClick={onClick}>\n      {children}\n    </button>\n  );\n}",
+  "score": 2,
   "explanation": "Button is a React component that receives two props: onClick and children. It renders a button element that triggers the onClick event handler when clicked. The content between the opening and closing tags of the Button component represents the button's label or inner text."
 },
 {
@@ -532,6 +532,7 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n    </div>\n  );\n}",
+  "score": 2,
   "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
@@ -539,6 +540,7 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction TextInput() {\n  const [text, setText] = useState('');\n\n  const handleChange = (event) => {\n    setText(event.target.value);\n  };\n\n  return (\n    <div>\n      <input type=\"text\" value={text} onChange={handleChange} />\n      <p>You typed: {text}</p>\n    </div>\n  );\n}",
+  "score": 2,
   "explanation": "TextInput is a React component that uses the useState hook to manage a text state. It renders an input field and displays the typed text below it."
 },
 {
@@ -546,20 +548,23 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Toggle() {\n  const [isOn, setIsOn] = useState(false);\n\n  const handleToggle = () => {\n    setIsOn(!isOn);\n  };\n\n  return (\n    <button onClick={handleToggle}>\n      {isOn ? 'ON' : 'OFF'}\n    </button>\n  );\n}",
-   "explanation": "Toggle is a React component that uses the useState hook to manage a toggle state. It renders a button that toggles between ON and OFF when clicked."
+  "score": 2,
+  "explanation": "Toggle is a React component that uses the useState hook to manage a toggle state. It renders a button that toggles between ON and OFF when clicked."
 },
 {
   "id": 81,
   "lang": "react",
   "score": 2,
   "code": "import React, { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const timer = setInterval(() => {\n      setSeconds((prevSeconds) => prevSeconds + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(timer);\n    };\n  }, []);\n\n  return <p>Seconds: {seconds}</p>;\n}",
-   "explanation": "Timer is a React component that uses the useState and useEffect hooks. It renders a timer that increments the seconds state every second."
+  "score": 2,
+  "explanation": "Timer is a React component that uses the useState and useEffect hooks. It renders a timer that increments the seconds state every second."
 },
 {
   "id": 82,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction ListItem({ item }) {\n  return <li>{item}</li>;\n}\n\nfunction List() {\n  const items = ['Item 1', 'Item 2', 'Item 3'];\n\n  return (\n    <ul>\n      {items.map((item) => (\n        <ListItem key={item} item={item} />\n      ))}\n    </ul>\n  );\n}",
+  "score": 2,
    "explanation": "ListItem is a React component that receives an item prop. It renders an <li> element with the item prop as its content."
 },
 {
@@ -567,41 +572,47 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Tabs() {\n  const [activeTab, setActiveTab] = useState(0);\n\n  const handleTabClick = (index) => {\n    setActiveTab(index);\n  };\n\n  const tabs = ['Tab 1', 'Tab 2', 'Tab 3'];\n\n  return (\n    <div>\n      <div>\n        {tabs.map((tab, index) => (\n          <button\n            key={index}\n            onClick={() => handleTabClick(index)}\n            className={index === activeTab ? 'active' : ''}\n          >\n            {tab}\n          </button>\n        ))}\n      </div>\n      <div>\n        {tabs[activeTab]}\n      </div>\n    </div>\n  );\n}",
-   "explanation": "Tabs is a React component that uses the useState hook to manage the active tab state. It renders a set of buttons for each tab in an array and updates the active tab when a button is clicked."
+  "score": 2, 
+  "explanation": "Tabs is a React component that uses the useState hook to manage the active tab state. It renders a set of buttons for each tab in an array and updates the active tab when a button is clicked."
 },
 {
   "id": 84,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction Card({ title, content }) {\n  return (\n    <div className=\"card\">\n      <h2>{title}</h2>\n      <p>{content}</p>\n    </div>\n  );\n}\n\nfunction App() {\n  return (\n    <div>\n      <Card title=\"Card 1\" content=\"This is the content of Card 1.\" />\n      <Card title=\"Card 2\" content=\"This is the content of Card 2.\" />\n      <Card title=\"Card 3\" content=\"This is the content of Card 3.\" />\n    </div>\n  );\n}",
-   "explanation": "App is a React component that renders multiple Card components with different titles and contents."
+  "score": 2, 
+  "explanation": "App is a React component that renders multiple Card components with different titles and contents."
 },
 {
   "id": 85,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction Header() {\n  return <h1>My App</h1>;\n}\n\nfunction Content() {\n  return <p>Welcome to my app!</p>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Header />\n      <Content />\n    </div>\n  );\n}",
-   "explanation": "App is a React component that renders a Header component followed by a Content component."
+  "score": 2, 
+  "explanation": "App is a React component that renders a Header component followed by a Content component."
 },
 {
   "id": 86,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction Avatar({ src, alt }) {\n  return <img src={src} alt={alt} />;\n}\n\nfunction UserCard({ user }) {\n  return (\n    <div>\n      <Avatar src={user.avatar} alt={user.name} />\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>\n    </div>\n  );\n}",
-   "explanation": "UserCard is a React component that renders user information, including an avatar image, name, and email. It receives the user data as props."
+  "score": 2,
+  "explanation": "UserCard is a React component that renders user information, including an avatar image, name, and email. It receives the user data as props."
 },
 {
   "id": 87,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction Square({ value, onClick }) {\n  return (\n    <button className=\"square\" onClick={onClick}>\n      {value}\n    </button>\n  );\n}\n\nfunction Board() {\n  const handleClick = () => {\n    // Handle square click\n  };\n\n  return (\n    <div className=\"board\">\n      <div className=\"row\">\n        <Square value=\"1\" onClick={handleClick} />\n        <Square value=\"2\" onClick={handleClick} />\n        <Square value=\"3\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"4\" onClick={handleClick} />\n        <Square value=\"5\" onClick={handleClick} />\n        <Square value=\"6\" onClick={handleClick} />\n      </div>\n      <div className=\"row\">\n        <Square value=\"7\" onClick={handleClick} />\n        <Square value=\"8\" onClick={handleClick} />\n        <Square value=\"9\" onClick={handleClick} />\n      </div>\n    </div>\n  );\n}",
-   "explanation": "Board is a React component that represents a tic-tac-toe board. It renders multiple Square components and handles click events for each square."
+  "score": 2, 
+  "explanation": "Board is a React component that represents a tic-tac-toe board. It renders multiple Square components and handles click events for each square."
 },
 {
   "id": 88,
   "lang": "react",
   "score": 2,
   "code": "import React from 'react';\n\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Greeting name=\"Alice\" />\n      <Greeting name=\"Bob\" />\n      <Greeting name=\"Charlie\" />\n    </div>\n  );\n}",
+  "score": 2,
   "explanation": "App is a React component that renders multiple Greeting components with different names."
 },
 {
@@ -609,6 +620,7 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}",
+  "score": 2,
   "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
@@ -616,966 +628,1093 @@
   "lang": "react",
   "score": 2,
   "code": "import React, { useState } from 'react';\n\nfunction Input() {\n  const [text, setText] = useState('');\n\n  const handleChange = (event) => {\n    setText(event.target.value);\n  };\n\n  const handleSubmit = (event) => {\n    event.preventDefault();\n    // Handle form submission\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <input type=\"text\" value={text} onChange={handleChange} />\n      <button type=\"submit\">Submit</button>\n    </form>\n  );\n}",
-   "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
+  "score": 2,
+  "explanation": "Counter is a React component that uses the useState hook to manage a count state. It renders a count value and two buttons for incrementing and decrementing the count."
 },
 {
   "id": 91,
   "lang": "react",
   "code": "import React, { useState, useEffect } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds((prevSeconds) => prevSeconds + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(interval);\n    };\n  }, []);\n\n  return <div>{seconds} seconds have elapsed.</div>;\n}",
+  "score": 2,
   "explanation": "The `Timer` component in React uses the `useState` hook to manage a `seconds` state variable, which represents the number of seconds elapsed. The `useEffect` hook is used to start an interval that increments the `seconds` state by 1 every second. The component renders the number of seconds elapsed in a `div` element."
 },
 {
   "id": 92,
   "lang": "react",
   "code": "import React from 'react';\n\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n\nexport default Greeting;",
+  "score": 2,
   "explanation": "The `Greeting` component is a React functional component that accepts a `name` prop. It renders a heading (`h1` element) that greets the user with the provided name. The component is exported as the default export."
 },
 {
   "id": 93,
   "lang": "react",
   "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  const increment = () => {\n    setCount(count + 1);\n  };\n\n  const decrement = () => {\n    setCount(count - 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}",
+  "score": 2,
   "explanation": "The `Counter` component in React uses the `useState` hook to manage a `count` state variable, which represents a numerical count. It provides two buttons to increment and decrement the count. The count value is displayed using the `p` element."
 },
 {
   "id": 94,
   "lang": "react",
   "code": "import React from 'react';\n\nimport ReactDOM from 'react-dom';\n\nclass MyComponent extends React.Component {render() {return <h1>Hello, World!</h1>;}}\n\nReactDOM.render(<MyComponent />, document.getElementById('root'));",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 95,
   "lang": "react",
   "code": "import React from 'react';\n\nclass Counter extends React.Component {constructor(props) {super(props);\n\nthis.state = { count: 0 };}increment() {this.setState({ count: this.state.count + 1 });}render() {return <div><p>Count: {this.state.count}</p><button onClick={() => this.increment()}>Increment</button></div>;}}",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
-{
-  "id": 96,
-  "lang": "react",
-  "code": "import React from 'react';\n\nclass Button extends React.Component {handleClick() {alert('Button clicked!');}render() {return <button onClick={() => this.handleClick()}>Click Me</button>;}}",
-  "explanation": "This code...to be continued..."
-},
-{
-  "id": 97,
-  "lang": "react",
-  "code": "import React from 'react';\n\nclass Greeting extends React.Component {render() {const isLoggedIn = this.props.isLoggedIn;if (isLoggedIn) {return <h1>Welcome back!</h1>;} else {return <h1>Please log in.</h1>;}}}",
-  "explanation": "This code...to be continued..."
-},
-{
-  "id": 98,
-  "lang": "react",
-  "code": "import React from 'react';\n\nclass MyComponent extends React.Component {constructor(props) {super(props);\n\nthis.state = { data: null };}componentDidMount() {fetch('https://api.example.com/data').then(response => response.json()).then(data => this.setState({ data }));}render() {return <div>{this.state.data ? this.state.data : 'Loading...'}</div>;}}",
-  "explanation": "This code...to be continued..."
-},
+
 {
   "id": 99,
   "lang": "react",
   "code": "const numbers = [1, 2, 3, 4, 5];\n\nconst doubled = numbers.map((num) => num * 2);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 100,
   "lang": "react",
   "code": "const items = ['Apple', 'Banana', 'Orange'];\n\nconst itemList = items.map((item) => <li key={item}>{item}</li>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 101,
   "lang": "react",
   "code": "const App = () => <React.Fragment><h1>Title</h1><p>Content</p></React.Fragment>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 102,
   "lang": "react",
   "code": "const isLoggedIn = true;\n\nconst message = isLoggedIn ? 'Welcome back!' : 'Please log in.';",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 103,
   "lang": "react",
   "code": "const MyComponent = ({ prop1, prop2 }) => <div>{prop1} - {prop2}</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 104,
   "lang": "react",
   "code": "const styles = { color: 'red', fontSize: '16px' };\n\nconst StyledText = () => <p style={styles}>Styled Text</p>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 105,
   "lang": "react",
   "code": "import React, { useState, useEffect } from 'react';\n\nconst Counter = () => {const [count, setCount] = useState(0);\n\nuseEffect(() => {document.title = `Count: ${count}`;}, [count]);\n\nreturn <div>Count: {count}</div>;};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 106,
   "lang": "react",
   "code": "const isActive = true;\n\nconst buttonClass = isActive ? 'active' : 'inactive';\n\nconst Button = () => <button className={buttonClass}>Click Me</button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 107,
   "lang": "react",
   "code": "const numbers = [1, 2, 3, 4, 5];\n\nconst evenNumbers = numbers.filter((num) => num % 2 === 0);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 108,
   "lang": "react",
   "code": "const isLoggedIn = true;\n\nconst Greeting = () => <div>{isLoggedIn && <h1>Welcome back!</h1>}</div>;" ,
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 109,
   "lang": "react",
   "code": "const ParentComponent = ({ children }) => <div>{children}</div>;\n\nconst App = () => (<ParentComponent><h1>Child Component 1</h1><p>Child Component 2</p></ParentComponent>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 110,
   "lang": "react",
   "code": "const data = ['Apple', 'Banana', 'Orange'];\n\nconst itemComponents = data.map((item, index) => <Item key={index} name={item} />);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 111,
   "lang": "react",
   "code": "const [isToggled, setIsToggled] = useState(false);\n\nconst handleToggle = () => setIsToggled((prevToggle) => !prevToggle);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 112,
   "lang": "react",
   "code": "const numbers = [1, 2, 3, 4, 5];\n\nconst sum = numbers.reduce((total, num) => total + num, 0);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 113,
   "lang": "react",
   "code": "const SVGComponent = () => <svg width='100' height='100'>\n<circle cx='50' cy='50' r='50' />\n</svg>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 114,
   "lang": "react",
   "code": "const name = 'John';\n\nconst age = 25;\n\nconst user = { name, age };",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 115,
   "lang": "react",
   "code": "const user = { name: 'John', age: 25 };\n\nconst address = user?.address?.city;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 116,
   "lang": "react",
   "code": "const componentType = 'Button';\n\nconst DynamicComponent = React.createElement(componentType, { text: 'Click me' });",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 117,
   "lang": "react",
   "code": "const MyComponent = React.memo(({ prop1, prop2 }) => <div>{prop1} - {prop2}</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 118,
   "lang": "react",
   "code": "const ComponentSelector = ({ type }) => {switch (type) {case 'A': return <ComponentA />\n;case 'B': return <ComponentB />\n;default: return null;}};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 119,
   "lang": "react",
   "code": "const MyLazyComponent = React.lazy(() => import('./MyComponent'));",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 120,
   "lang": "react",
   "code": "const MyComponent = () => <div>\nHello, World!\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 121,
   "lang": "react",
   "code": "const [isCollapsed, setIsCollapsed] = useState(false);\n\n<div className={`panel ${isCollapsed ? 'collapsed' : ''}`}><div className='panel-header' onClick={() => setIsCollapsed(!isCollapsed)}>Panel Header</div>{!isCollapsed && <div className='panel-content'>Panel Content</div>}</div>",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 122,
   "lang": "react",
   "code": "const isVisible = true;\nconst ConditionalComponent = () => isVisible ? <div>\nVisible Content\n</div> : null;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 123,
   "lang": "react",
   "code": "const numbers = [1, 2, 3];\nconst NumberList = () => <ul>{numbers.map((number) => <li key={number}>{number}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 124,
   "lang": "react",
   "code": "const handleClick = () => console.log('Button clicked!');\nconst Button = () => <button onClick={handleClick}>\nClick Me\n</button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 125,
   "lang": "react",
   "code": "const Greeting = ({ name }) => <div>\nHello, {name}!\n</div>;\nconst App = () => <Greeting name='John' />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 126,
   "lang": "react",
   "code": "const styles = {\nbackground: 'red',\ncolor: 'white'\n};\nconst StyledComponent = () => <div style={styles}>\nStyled Content\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 127,
   "lang": "react",
   "code": "const FragmentComponent = () => <>\n<div>First Item</div>\n<div>Second Item</div>\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 128,
   "lang": "react",
   "code": "const [count, setCount] = useState(0);\nconst Counter = () => <div>\nCount: {count}\n<button onClick={() => setCount(count + 1)}>Increment</button>\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 129,
   "lang": "react",
   "code": "useEffect(() => {\nconsole.log('Component mounted!');\n}, []);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 130,
   "lang": "react",
   "code": "const MyContext = React.createContext();\nconst ComponentWithCtx = () => <MyContext.Consumer>{(value) => <div>\nContext Value: {value}\n</div>}</MyContext.Consumer>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 131,
   "lang": "react",
   "code": "const Grandparent = ({ name }) => <Parent name={name} />;\nconst Parent = ({ name }) => <Child name={name} />;\nconst Child = ({ name }) => <div>\nHello, {name}!\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 132,
   "lang": "react",
   "code": "const isLoggedIn = true;\nconst Greeting = () => isLoggedIn ? <div>\nWelcome back!\n</div> : <div>\nPlease log in.\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 133,
   "lang": "react",
   "code": "const Button = styled.button`\nbackground: blue;\ncolor: white;\n`; \nconst StyledComponent = () => <Button>\nClick Me\n</Button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 134,
   "lang": "react",
   "code": "const handleButtonClick = () => console.log('Button clicked!');\nconst Button = ({ onClick }) => <button onClick={onClick}>\nClick Me\n</button>;\nconst App = () => <Button onClick={handleButtonClick} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 135,
   "lang": "react",
   "code":"const users = [{ name: 'John' }, { name: 'Alice' }, { name: 'Bob' }];\nconst UserList = () => <ul>{users.map((user, index) => <li key={index}>{user.name}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 136,
   "lang": "react",
   "code": "const isVisible = false;\nconst ConditionalComponent = () => <div>\n{isVisible && <span>This is visible!</span>}\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 137,
   "lang": "react",
   "code": "const FragmentComponent = () => <>\n<SomeComponent key='first' />\n<SomeComponent key='second' />\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 138,
   "lang": "react",
   "code": "const inputRef = useRef();\nconst handleButtonClick = () => inputRef.current.focus();\nconst MyComponent = () => <div>\n<input ref={inputRef} type='text' />\n<button onClick={handleButtonClick}>Focus Input</button>\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 139,
   "lang": "react",
   "code": "const [formData, setFormData] = useState({ name: '', age: 0 });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst Form = () => <form>\n<input type='text' name='name' value={formData.name} onChange={handleInputChange} />\n<input type='number' name='age' value={formData.age} onChange={handleInputChange} />\n</form>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 140,
   "lang": "react",
   "code": "const MyContext = createContext();\nconst MyComponent = () => <MyContext.Provider value='Hello'>\n<SomeComponent />\n</MyContext.Provider>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 141,
   "lang": "react",
   "code": "const MyComponent = () => {\nconst [count, setCount] = useState(0);\nreturn <div>Count: {count}</div>;\n};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 142,
   "lang": "react",
   "code": "const [inputValue, setInputValue] = useState('');\nconst handleInputChange = (e) => setInputValue(e.target.value);\nreturn <input type='text' value={inputValue} onChange={handleInputChange} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 143,
   "lang": "react",
   "code": "const styles = {\ncolor: 'red',\nfontSize: '16px'\n};\nreturn <div style={styles}>\nStyled Content\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 144,
   "lang": "react",
   "code": "const isActive = true;\nconst className = `box ${isActive ? 'active' : ''}`;\nreturn <div className={className}>\nDynamic Class\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 145,
   "lang": "react",
   "code": "const items = ['Apple', 'Banana', 'Orange'];\nreturn <ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 146,
   "lang": "react",
   "code": "return <MyContext.Consumer>{(value) => <div>\nContext Value: {value}\n</div>}</MyContext.Consumer>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 147,
   "lang": "react",
   "code": "useEffect(() => {\nconsole.log('Component mounted!');\nreturn () => console.log('Component unmounted!');\n}, []);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 148,
   "lang": "react",
   "code": "return <>\n<div>First Child</div>\n<div>Second Child</div>\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 149,
   "lang": "react",
   "code": "return <button onClick={() => console.log('Button clicked!')}>\nClick Me\n</button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 150,
   "lang": "react",
   "code": "MyComponent.propTypes = {\nname: PropTypes.string,\nage: PropTypes.number\n};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 151,
   "lang": "react",
   "code": "const items = ['Apple', 'Banana', 'Orange'];\nreturn <ul>{items.map((item, index) => <li key={index} className={index % 2 === 0 ? 'even' : 'odd'}>{item}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 152,
   "lang": "react",
   "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => {\ne.preventDefault();\nif (formData.name && formData.email) {\nconsole.log('Form submitted!', formData);\n} else {\nconsole.log('Please fill in all fields!');\n}};\nreturn <form onSubmit={handleSubmit}><input type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Name' /><input type='email' name='email' value={formData.email} onChange={handleInputChange} placeholder='Email' /><button type='submit'>Submit</button></form>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 153,
   "lang": "react",
   "code": "return <MyContext.Provider value='Hello'>\n<SomeComponent />\n</MyContext.Provider>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 154,
   "lang": "react",
   "code": "const result = useMemo(() => expensiveComputation(data), [data]);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 155,
   "lang": "react",
   "code": "const withLogger = (WrappedComponent) => {\nconst ComponentWithLogger = (props) => {\nconsole.log('Logging:', props);\nreturn <WrappedComponent {...props} />;\n};\nreturn ComponentWithLogger;\n};\nconst EnhancedComponent = withLogger(MyComponent);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 156,
   "lang": "react",
   "code": "const isLoggedIn = true;\nreturn <div>\n{isLoggedIn ? () => <div>Welcome back!</div> : () => <div>Please log in.</div>}\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 157,
   "lang": "react",
   "code": "return <Router>\n<Route path='/about' component={About} />\n<Route path='/contact' component={Contact} />\n</Router>;",
-  "explanation": "This code...to be continued..."
-},
-{
-  "id": 158,
-  "lang": "react",
-  "code": "const useFetchData = (url) => {\nconst [data, setData] = useState(null);\nuseEffect(() => {\nconst fetchData = async () => {\nconst response = await fetch(url);\nconst result = await response.json();\nsetData(result);\n};\nfetchData();\n}, [url]);\nreturn data;\n};\nconst MyComponent = () => {\nconst data = useFetchData('https://api.example.com/data');\nreturn <div>Data: {data}</div>;\n};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 159,
   "lang": "react",
   "code": "const LazyComponent = lazy(() => import('./LazyComponent'));",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 160,
   "lang": "react",
   "code": "const ErrorBoundary = ({ children }) => {\nconst [hasError, setHasError] = useState(false);\nconst handleOnError = () => setHasError(true);\nif (hasError) {\nreturn <div>Oops, something went wrong!</div>;\n}\nreturn <div onError={handleOnError}>{children}</div>;\n};\nconst App = () => {\nreturn <ErrorBoundary>\n<SomeComponent />\n</ErrorBoundary>;\n};",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 161,
   "lang": "react",
   "code": "const isLoggedIn = true;\nreturn isLoggedIn ? <div>Welcome back!</div> : <div>Please log in.</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 162,
   "lang": "react",
   "code": "return <>\n<div>First Child</div>\n<div>Second Child</div>\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 163,
   "lang": "react",
   "code": "import styles from './styles.module.css';\nreturn <div className={styles.container}>\nStyled Content\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 164,
   "lang": "react",
   "code": "const theme = useContext(ThemeContext);\nreturn <div className={`app ${theme}`}>App content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 165,
   "lang": "react",
   "code": "const MyComponent = React.memo(() => <div>Component content</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 166,
   "lang": "react",
   "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type='text' />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 167,
   "lang": "react",
   "code": "const theme = useContext(ThemeContext);\nreturn <div className={`app ${theme}`}>App content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 168,
   "lang": "react",
   "code": "const styles = { color: 'red', fontSize: '16px' };\nreturn <div style={styles}>Styled Content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 169,
   "lang": "react",
   "code": "const inputRef = useRef();\nconst focusInput = () => inputRef.current.focus();\nreturn <input ref={inputRef} type='text' />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 170,
   "lang": "react",
   "code": "const [formData, setFormData] = useState({ name: '', email: '' });\nconst handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });\nconst handleSubmit = (e) => { e.preventDefault(); if (formData.name && formData.email) { console.log('Form submitted!', formData); } else { console.log('Please fill in all fields!'); } };\nreturn <form onSubmit={handleSubmit}><input type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Name' /><input type='email' name='email' value={formData.email} onChange={handleInputChange} placeholder='Email' /><button type='submit'>Submit</button></form>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 180,
   "lang": "react",
   "code": "const [data, setData] = useState([]);\nuseEffect(() => { fetch('https://api.example.com/data')\n.then(response => response.json())\n.then(data => setData(data)); }, []);\nreturn <ul>{data.map((item, index) => <li key={index}>{item}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 181,
   "lang": "react",
   "code": "const showComponentA = true;\nconst showComponentB = false;\nconst showComponentC = true;\nreturn <>{showComponentA && <ComponentA />}\n{showComponentB && <ComponentB />}\n{showComponentC && <ComponentC />}</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 182,
   "lang": "react",
   "code": "const componentType = 'Button';\nconst Component = componentType === 'Button' ? <Button /> : <Input />;\nreturn Component;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 183,
   "lang": "react",
   "code": "const items = [{ id: 1, name: 'Apple' }, { id: 2, name: 'Banana' }, { id: 3, name: 'Orange' }];\nreturn <ul>{items.map(item => <li key={item.id}>{item.name}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 184,
   "lang": "react",
   "code": "const isLoading = true;\nreturn isLoading ? <div>Loading...</div> : <Component />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 185,
   "lang": "react",
   "code": "import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';\nreturn <Router><nav><ul><li><Link to='/'>Home</Link></li><li><Link to='/about'>About</Link></li></ul></nav><Switch><Route exact path='/' component={Home} /><Route path='/about' component={About} /></Switch></Router>;" ,
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 186,
   "lang": "react",
   "code": "",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 187,
   "lang": "react",
   "code": "const isDarkMode = true;\nconst styles = { background: isDarkMode ? 'black' : 'white', color: isDarkMode ? 'white' : 'black' };\nreturn <div style={styles}>Content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 188,
   "lang": "react",
   "code": "const buttonType = 'primary';\nreturn <Button type={buttonType} />;",
+  "score": 2,
   "explanation":"This code...to be continued..."
 },
 {
   "id": 189,
   "lang": "react",
   "code": "const withLog = (Component) => (props) => { console.log('Logging props:', props); return <Component {...props} />; };\nconst EnhancedComponent = withLog(Component);\nreturn <EnhancedComponent />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 190,
   "lang": "react",
   "code": "const App = () => (\n<Router>\n<Switch>\n<Route exact path='/' component={Home} />\n<Route path='/about' component={About} />\n<Route path='/dashboard' component={Dashboard} />\n</Switch>\n</Router>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 191,
   "lang": "react",
   "code": "const itemsPerPage = 10;\nconst [currentPage, setCurrentPage] = useState(1);\nconst startIdx = (currentPage - 1) * itemsPerPage;\nconst paginatedItems = items.slice(startIdx, startIdx + itemsPerPage);\nreturn (\n<div>\n{paginatedItems.map((item, index) => (\n<div key={index}>{item}</div>\n))}\n<Pagination currentPage={currentPage} totalPages={Math.ceil(items.length / itemsPerPage)} onPageChange={setCurrentPage} />\n</div>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 192,
   "lang": "react",
   "code": "const { state, dispatch } = useContext(AppContext);\nconst handleIncrement = () => { dispatch({ type: 'INCREMENT' }); };\nreturn (\n<div>\n<p>Count: {state.count}</p>\n<button onClick={handleIncrement}>Increment</button>\n</div>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 193,
   "lang": "react",
   "code": "useEffect(() => {\naxios.get('https://api.example.com/data')\n.then(response => { console.log(response.data); })\n.catch(error => { console.log(error); });\n}, []);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 194,
   "lang": "react",
   "code": "const modalRoot = document.getElementById('modal-root');\nreturn createPortal(\n<div className='modal'>\n{children}\n</div>,\nmodalRoot\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 195,
   "lang": "react",
   "code": "<Route path='/users/:id' render={({ match }) => <UserDetails id={match.params.id} />} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 196,
   "lang": "react",
   "code": "const { theme, toggleTheme } = useContext(ThemeContext);\nreturn (\n<div className={`app ${theme}`}>App content</div>\n<button onClick={toggleTheme}>Toggle Theme</button>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 197,
   "lang": "react",
   "code": "const options = [{ value: 'option1', label: 'Option 1' }, { value: 'option2', label: 'Option 2' }];\nreturn (\n<Select options={options} onChange={handleChange} />\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 198,
   "lang": "react",
   "code": "const memoizedValue = useMemo(() => computeExpensiveValue(dep1, dep2), [dep1, dep2]);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 199,
   "lang": "react",
   "code": "const showComponent = condition ? <Component /> : null;\nreturn <div>{showComponent}</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 200,
   "lang": "react",
   "code": "const tableData = [{ id: 1, name: 'John' }, { id: 2, name: 'Jane' }];\nreturn (\n<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Name</th>\n</tr>\n</thead>\n<tbody>\n{tableData.map((item) => (\n<tr key={item.id}>\n<td>{item.id}</td>\n<td>{item.name}</td>\n</tr>\n))}\n</tbody>\n</table>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 201,
   "lang": "react",
   "code": "return (\n<>\n<h1>Title</h1>\n<p>Content</p>\n</>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 202,
   "lang": "react",
   "code": "const handleKeyPress = (event) => { if (event.key === 'Enter') { console.log('Enter key pressed'); } };\nreturn <input type='text' onKeyPress={handleKeyPress} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 203,
   "lang": "react",
   "code": "const [checked, setChecked] = useState(false);\nconst handleCheckboxChange = (event) => { setChecked(event.target.checked); };\nreturn <input type='checkbox' checked={checked} onChange={handleCheckboxChange} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 204,
   "lang": "react",
   "code": "const useCustomHook = () => { /* Custom hook logic */ };\nconst MyComponent = () => { useCustomHook(); return <div>Component content</div>; };",
+  "score": 2,
   "explanation":"This code...to be continued..." 
 },
 {
   "id": 205,
   "lang": "react",
   "code": "const ThemeContext = createContext('light');\nreturn (\n<ThemeContext.Provider value='dark'>\n<App />\n</ThemeContext.Provider>\n);",
+  "score": 2,
   "explanation":"This code...to be continued..." 
 },
 {
   "id": 206,
   "lang": "react",
   "code": "const tabItems = [{ id: 1, title: 'Tab 1', content: 'Content 1' }, { id: 2, title: 'Tab 2', content: 'Content 2' }];\nconst [activeTab, setActiveTab] = useState(1);\nreturn (\n<div>\n<ul>\n{tabItems.map((item) => (\n<li key={item.id} onClick={() => setActiveTab(item.id)}>{item.title}</li>\n))}\n</ul>\n<div>{tabItems.find((item) => item.id === activeTab)?.content}</div>\n</div>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 207,
   "lang": "react",
   "code": "import styles from './Component.module.css';\nreturn <div className={styles.container}>Component content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 208,
   "lang": "react",
   "code": "const withLogging = (WrappedComponent) => (props) => { console.log('Logging props:', props); return <WrappedComponent {...props} />; };\nconst EnhancedComponent = withLogging(Component);\nreturn <EnhancedComponent />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 209,
   "lang": "react",
   "code": "const routes = [{ path: '/', component: Home }, { path: '/about', component: About }];\nreturn <Router>{routes.map((route, index) => <Route key={index} path={route.path} component={route.component} />)}</Router>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 210,
   "lang": "react",
   "code": "const inputRef = useRef(null);\nreturn <input ref={inputRef} type='text' />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 211,
   "lang": "react",
   "code": "const isActive = true;\nreturn <div style={{ color: isActive ? 'blue' : 'red' }}>Content</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 212,
   "lang": "react",
   "code": "const MemoizedComponent = React.memo(Component);\nreturn <MemoizedComponent />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 213,
   "lang": "react",
   "code": "const [isOpen, setIsOpen] = useState(false);\nreturn (\n<div>\n<button onClick={() => setIsOpen(!isOpen)}>Toggle</button>\n{isOpen && <div>Collapsible Content</div>}\n</div>\n);",
-  "explanation": "This code...to be continued..."
-},
-{
-  "id": 214,
-  "lang": "react",
-  "code": "const fetchData = async () => { try { const response = await axios.get('/api/data'); console.log(response.data); } catch (error) { console.error(error); } };\nuseEffect(() => { fetchData(); }, []);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 215,
   "lang": "react",
   "code": "const [modalIsOpen, setModalIsOpen] = useState(false);\nreturn (\n<div>\n<button onClick={() => setModalIsOpen(true)}>Open Modal</button>\n<Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>\nModal Content\n</Modal>\n</div>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 216,
   "lang": "react",
   "code": "const options = [{ value: 'option1', label: 'Option 1' }, { value: 'option2', label: 'Option 2' }];\nreturn (\n<Select options={options} onChange={handleChange} />\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 217,
   "lang": "react",
   "code": "const [modalIsOpen, setModalIsOpen] = useState(false);\nreturn (\n<div>\n<button onClick={() => setModalIsOpen(true)}>Open Modal</button>\n<Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>\nModal Content\n</Modal>\n</div>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 218,
   "lang": "react",
   "code": "const listData = [{ id: 1, title: 'Item 1', children: ['Subitem 1.1', 'Subitem 1.2'] }, { id: 2, title: 'Item 2', children: ['Subitem 2.1', 'Subitem 2.2'] }];\nreturn (\n<ul>\n{listData.map((item) => (\n<li key={item.id}>\n{item.title}\n<ul>\n{item.children.map((child, index) => (\n<li key={index}>{child}</li>\n))}\n</ul>\n</li>\n))}\n</ul>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 219,
   "lang": "react",
   "code": "const AppContext = createContext();\nreturn (\n<AppContext.Provider value={/* context value */}>\n<App />\n</AppContext.Provider>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 220,
   "lang": "react",
   "code": "const AppContext = createContext();\nreturn (\n<AppContext.Provider value={/* context value */}>\n<App />\n</AppContext.Provider>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 221,
   "lang": "react",
   "code": "const [data, setData] = useState(null);\nuseEffect(() => { fetch('/api/data').then((response) => response.json()).then((data) => setData(data)); }, []);\nreturn data ? <div>{data}</div> : <div>Loading...</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 222,
   "lang": "react",
   "code": "return (\n<>\n<Component1 />\n<Component2 />\n<Component3 />\n</>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 223,
   "lang": "react",
   "code": "const tableData = [{ id: 1, name: 'John', age: 25 }, { id: 2, name: 'Jane', age: 30 }];\nreturn (\n<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Name</th>\n<th>Age</th>\n</tr>\n</thead>\n<tbody>\n{tableData.map((row) => (\n<tr key={row.id}>\n<td>{row.id}</td>\n<td>{row.name}</td>\n<td>{row.age}</td>\n</tr>\n))}\n</tbody>\n</table>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 224,
   "lang": "react",
   "code": "const [isOpen, setIsOpen] = useState(false);\nreturn (\n<>\n<button onClick={() => setIsOpen(true)}>Open Modal</button>\n{isOpen && <Modal onClose={() => setIsOpen(false)} />}\n</>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 225,
   "lang": "react",
   "code": "const options = ['Option 1', 'Option 2', 'Option 3'];\nconst [selectedOption, setSelectedOption] = useState('');\nreturn (\n<select value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)}>\n{options.map((option, index) => (\n<option key={index} value={option}>{option}</option>\n))}\n</select>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 226,
   "lang": "react",
   "code": "const ThemeContext = createContext('light');\nreturn (\n<ThemeContext.Provider value={/* theme value */}>\n<App />\n</ThemeContext.Provider>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 227,
   "lang": "react",
   "code": "const items = [{ id: 1, name: 'Item 1' }, { id: 2, name: 'Item 2' }, { id: 3, name: 'Item 3' }];\nconst [filter, setFilter] = useState('');\nreturn (\n<ul>\n{items\n.filter((item) => item.name.includes(filter))\n.map((item) => (\n<li key={item.id}>{item.name}</li>\n))}\n</ul>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 228,
   "lang": "react",
   "code": "const MemoizedComponent = React.memo(Component);\nreturn <MemoizedComponent prop1={value1} prop2={value2} />;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 229,
   "lang": "react",
   "code": "const [isLoggedIn, setIsLoggedIn] = useState(false);\nconst handleLogin = () => setIsLoggedIn(true);\nreturn (\n<>\n{isLoggedIn ? <Dashboard /> : <Login onLogin={handleLogin} />}\n</>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 230,
   "lang": "react",
   "code": "const dispatch = useDispatch();\nconst handleClick = () => {\ndispatch({ type: 'INCREMENT' });\n};\nreturn (\n<button onClick={handleClick}>Increment</button>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 231,
   "lang": "react",
   "code":"const data = [{ id: 1, name: 'John Doe', age: 25 }, { id: 2, name: 'Jane Smith', age: 30 }, { id: 3, name: 'Bob Johnson', age: 35 }];\n\nreturn (<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Name</th>\n<th>Age</th>\n</tr>\n</thead>\n<tbody>{data.map(item => <tr key={item.id}>\n<td>{item.id}</td>\n<td>{item.name}</td>\n<td>{item.age}</td>\n</tr>)}</tbody>\n</table>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 232,
   "lang": "react",
   "code": "const [isOpen, setIsOpen] = useState(false);\nreturn (\n<nav className={`menu ${isOpen ? 'open' : ''}`}>\n<button onClick={() => setIsOpen(!isOpen)}>Toggle Menu</button>\n<ul>\n<li>Home</li>\n<li>About</li>\n<li>Contact</li>\n</ul>\n</nav>\n);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 233,
   "lang": "react",
   "code": "const [isDragging, setIsDragging] = useState(false);\n\nreturn (<div draggable onDragStart={() => setIsDragging(true)} onDragEnd={() => setIsDragging(false)}>Draggable Element</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 234,
   "lang": "react",
   "code": "const [data, setData] = useState(null);\n\nuseEffect(() => { fetch('https://api.example.com/data').then(response => response.json()).then(data => setData(data)); }, []);\n\nreturn (<div>{data ? JSON.stringify(data) : 'Loading...'}</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 235,
   "lang": "react",
   "code": "const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];\nconst [currentIndex, setCurrentIndex] = useState(0);\n\nreturn (<div>\n<button onClick={() => setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : images.length - 1)}>Prev</button>\n<img src={images[currentIndex]}/>\n<button onClick={() => setCurrentIndex(currentIndex < images.length - 1 ? currentIndex + 1 : 0)}>Next</button>\n</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 236,
   "lang": "react",
   "code": "const options = ['Option 1', 'Option 2', 'Option 3'];\n\nreturn (<select>\n{options.map((option, index) => <option key={index} value={option}>{option}</option>)}</select>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 237,
   "lang": "react",
   "code": "const items = ['Item 1', 'Item 2', 'Item 3'];\n\nreturn (<ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 238,
   "lang": "react",
   "code": "const data = [{ id: 1, name: 'John Doe', age: 25 }, { id: 2, name: 'Jane Smith', age: 30 }, { id: 3, name: 'Bob Johnson', age: 35 }];\n\nreturn (<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Name</th>\n<th>Age</th>\n</tr>\n</thead>\n<tbody>{data.map(item => <tr key={item.id}>\n<td>{item.id}</td>\n<td>{item.name}</td>\n<td>{item.age}</td>\n</tr>)}</tbody>\n</table>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 239,
   "lang": "react",
   "code": "const [isDragging, setIsDragging] = useState(false);\n\nreturn (<div draggable onDragStart={() => setIsDragging(true)} onDragEnd={() => setIsDragging(false)}>Draggable Element</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 240,
   "lang": "react",
   "code": "const [isDragging, setIsDragging] = useState(false);\n\nreturn (<div draggable onDragStart={() => setIsDragging(true)} onDragEnd={() => setIsDragging(false)}>Draggable Element</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 241,
   "lang": "react",
   "code": "const [data, setData] = useState(null);\n\nuseEffect(() => { fetch('https://api.example.com/data').then(response => response.json()).then(data => setData(data)); }, []);\n\nreturn (<div>{data ? JSON.stringify(data) : 'Loading...'}</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 242,
   "lang": "react",
-  "code": "const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];\nconst [currentIndex, setCurrentIndex] = useState(0);\n\nreturn (<div>\n<button onClick={() => setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : images.length - 1)}>Prev</button>\n<img src={images[currentIndex]} />\n<button onClick={() => setCurrentIndex(currentIndex < images.length - 1 ? currentIndex + 1 : 0)}>Next</button>\n</div>);",
+  "code": "const images = ['image1.jpg', 'image2.jpg', 'image3.jpg'];\nconst [currentIndex, setCurrentIndex] = useState(0);\n\nreturn (<div>\n<button onClick={() => \nsetCurrentIndex(currentIndex > 0 ? currentIndex - 1 : images.length - 1)}>Prev</button>\n<img src={images[currentIndex]} />\n<button onClick={() => \nsetCurrentIndex(currentIndex < images.length - 1 ? currentIndex + 1 : 0)}>Next</button>\n</div>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 243,
   "lang": "react",
-  "code": "const options = ['Option 1', 'Option 2', 'Option 3'];\n\nreturn (<select>\n{options.map((option, index) => <option key={index} value={option}>{option}</option>)}</select>);",
+  "code": "const options = ['Option 1', 'Option 2', 'Option 3'];\n\nreturn (<select>\n{options.map((option, index) => \n<option key={index} value={option}>{option}</option>)}</select>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 244,
   "lang": "react",
-  "code": "const items = ['Item 1', 'Item 2', 'Item 3'];\n\nreturn (<ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>);",
+  "code": "const items = ['Item 1', 'Item 2', 'Item 3'];\n\nreturn (<ul>{items.map((item, index) => \n<li key={index}>{item}</li>)}</ul>);",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 245,
   "lang": "react",
-  "code": "const MyComponent = () => <div>\nHello, World!\n</div>;",
+  "code": "const MyComponent = () =>\n <div>\nHello, World!\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 246,
   "lang": "react",
-  "code": "const isActive = true;\nconst MyComponent = () => <div className={`box ${isActive ? 'active' : ''}`}></div>;",
+  "code": "const isActive = true;\nconst MyComponent = () =>\n <div className={`box ${isActive ? 'active' : ''}`}></div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 247,
   "lang": "react",
-  "code": "const MyComponent = () => <>\n<h1>Title</h1>\n<p>Content</p>\n</>;",
+  "code": "const MyComponent = () => \n<>\n<h1>Title</h1>\n<p>Content</p>\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 248,
   "lang": "react",
-  "code":"const color = 'red';\nconst MyComponent = () => <div style={{ color }}>\nHello, World!\n</div>;",
+  "code":"const color = 'red';\nconst MyComponent = () =>\n <div style={{ color }}>\nHello, World!\n</div>;",
+  "score": 2,
   "explanation":"This code...to be continued..." 
 },
 {
   "id": 249,
   "lang": "react",
-  "code": "const data = { name: 'John', age: 25, city: 'New York' };\nconst MyComponent = () => <ul>{Object.entries(data).map(([key, value]) => <li key={key}>{`${key}: ${value}`}</li>)}</ul>;",
+  "code": "const data = { name: 'John', age: 25, city: 'New York' };\nconst MyComponent = () =>\n <ul>{Object.entries(data).map(([key, value]) =>\n <li key={key}>{`${key}: ${value}`}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 250,
   "lang": "react",
   "code": "const MyComponent = () => <>\n<h1>Title</h1>\n<p>Content</p>\n</>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 251,
   "lang": "react",
   "code": "const data = ['Apple', 'Banana', 'Orange'];\nconst MyComponent = () => <ul>{data.map((item, index) => <li key={index}>{item}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 252,
   "lang": "react",
-  "code": "const ChildComponent = ({ message }) => <div>\n{message}\n</div>;\nconst ParentComponent = () => <ChildComponent message='Hello, World!'/>;",
+  "code": "const ChildComponent = ({ message }) => \n<div>\n{message}\n</div>;\nconst ParentComponent = () => <ChildComponent message='Hello, World!'/>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 253,
   "lang": "react",
   "code": "const showContent = true;\nconst MyComponent = () => <div>\n{showContent && <p>Content</p>}\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 254,
   "lang": "react",
-  "code": "const handleClick = () => console.log('Button clicked!');\nconst MyComponent = () => <button onClick={handleClick}>\nClick me\n</button>;",
+  "code": "const handleClick = () => \nconsole.log('Button clicked!');\nconst MyComponent = () => <button onClick={handleClick}>\nClick me\n</button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 255,
   "lang": "react",
   "code": "const handleClick = () => console.log('Button clicked!');\nconst MyComponent = () => <button onClick={handleClick}>\nClick me\n</button>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 256,
   "lang": "react",
-  "code": "const [count, setCount] = useState(0);\nconst MyComponent = () => <div>\nCount: {count}\n</div>;",
+  "code": "const [count, setCount] = useState(0);\nconst MyComponent = () =>\n <div>\nCount: {count}\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 257,
   "lang": "react",
-  "code": "const data = { name: 'John', age: 25 };\nconst MyComponent = () => <ul>{Object.entries(data).map(([key, value]) => <li key={key}>{`${key}: ${value}`}</li>)}</ul>;",
+  "code": "const data = { name: 'John', age: 25 };\nconst MyComponent = () =>\n <ul>{Object.entries(data).map(([key, value]) => <li key={key}>{`${key}: ${value}`}</li>)}</ul>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 258,
   "lang": "react",
   "code": "const isLoggedIn = true;\nconst MyComponent = () => <div>\n{isLoggedIn ? <p>Welcome, User!</p> : <p>Please log in.</p>}\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 },
 {
   "id": 259,
   "lang": "react",
-  "code": "import styles from './MyComponent.module.css';\nconst MyComponent = () => <div className={styles.container}>\nHello, World!\n</div>;",
+  "code": "import styles from './MyComponent.module.css';\nconst MyComponent = () => \n<div className={styles.container}>\nHello, World!\n</div>;",
+  "score": 2,
   "explanation": "This code...to be continued..."
 }
 ]
