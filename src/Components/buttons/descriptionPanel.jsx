@@ -22,7 +22,7 @@
 //     onShowGuide()
 //   };
 
-//   const handleCloseModal = () => {
+//   const handleCloseModel = () => {
 //     onCloseGuide()
 //   };
 
