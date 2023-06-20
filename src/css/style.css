@@ -71,6 +71,11 @@ header {
   color: #f7df1e;
   border: 1px solid #f7df1e;
 }
+.nav-item-react:hover,
+.navbar .nav-item-react.active {
+  color: #61DBFB;
+  border: 1px solid #61DBFB;
+}
 
 /* ----------------------------------------------------------------------------------- */
 
@@ -90,7 +95,7 @@ main {
 }
 
 .editor {
-  width: 60%;
+  width: 70%;
 }
 
 .main-bottom,
@@ -153,7 +158,7 @@ footer {
 }
 
 .modal-content {
-  max-width: 500px;
+  max-width: 800px;
   background-color: #fff;
   padding: 20px;
   border: 10px solid #ccc;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../css/style.css";
 
-function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
+function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick }) {
   const [activeTab, setActiveTab] = useState("html");
 
   const handleTabClick = (tabName) => {
@@ -46,6 +46,17 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
               }}
             >
               javascript
+            </p>
+            <p
+              className={`nav-item-react nav-link ${
+                activeTab === "react" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("react");
+                handleReactClick();
+              }}
+            >
+              React
             </p>
           </nav>
     </header>
