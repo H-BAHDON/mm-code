@@ -92,10 +92,10 @@
       {
         "id": 14,
         "lang": "html",
-        "code": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>25</td>\n  </tr>\n</table>",
+        "code": "<table>\n\t<tr>\n\t\t<th>Name</th>\n\t\t<th>Age</th>\n\t</tr>\n\t<tr>\n\t\t<td>John</td>\n\t\t<td>25</td>\n\t</tr>\n</table>",
         "score": 2,
         "explanation": "This HTML code represents a table element (<table>) with two table rows (<tr>). The first row contains two table header cells (<th>) with the texts 'Name' and 'Age'. The second row contains two table data cells (<td>) with the texts 'John' and '25'."
-      },
+      },      
       {
         "id": 15,
         "lang": "html",
@@ -687,15 +687,15 @@
       {
         "id": 99,
         "lang": "html",
-        "code": "<s>\n This text has been struck through.\n </s>",
+        "code": "",
         "score": 2,
-        "explanation": "This HTML code represents an s element (<s>) used to mark up text that has been struck through or is no longer accurate. It is commonly used to indicate deleted or deprecated content."
+        "explanation": ""
       },
       {
         "id": 100,
         "lang": "html",
-        "code": "<details>\n <summary>Click to expand</summary>\n <p>This is the hidden content that will be revealed.</p>\n </details>",
+        "code": "",
         "score": 2,
-        "explanation": "This HTML code represents a details element (<details>) used to create a disclosure widget or collapsible section. The summary element (<summary>) provides a clickable heading for the disclosure, and the content within the details element remains hidden until the user expands it."
+        "explanation": ""
       }
 ]
