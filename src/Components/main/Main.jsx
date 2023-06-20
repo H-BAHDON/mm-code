@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import CodeEditor from "./CodeEditor";
-import Data from "../../test.json";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../buttons/ButtonOfPage";
+
+// ---------------------------
+// import exercises
+import htmlData from "../../Exercise/htmlExercise.json"
+import cssData from "../../Exercise/cssExercise.json"
+import reactData from "../../Exercise/reactExercise.json"
+import javascriptData from "../../Exercise/javascriptExercise.json"
+
+
+// ---------------------------
 
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
@@ -76,28 +85,33 @@ function Main({ exerciseLanguage }) {
 
   const generateRandomCode = () => {
     let filteredData;
+    let data;
+  
     if (exerciseLanguage === "javascript" || exerciseLanguage === "react") {
-      filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      data = exerciseLanguage === "javascript" ? javascriptData : reactData;
+      filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
     } else if (exerciseLanguage === "html") {
-      filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else if (exerciseLanguage === "css") {
-      filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else {
       return;
     }
+  
     let randomIndex;
     do {
       randomIndex = Math.floor(Math.random() * filteredData.length);
     } while (randomIndex === currentExerciseIndex);
+  
     const randomCode = filteredData[randomIndex].code;
     const randomCodeScore = filteredData[randomIndex].score;
     const randomCodeExplanation = filteredData[randomIndex].explanation;
+  
     setInitialCode(randomCode);
     setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
     setCurrentExerciseExplanation(randomCodeExplanation);
   };
-  
   
 
   const handleCheckCode = () => {
@@ -105,13 +119,13 @@ function Main({ exerciseLanguage }) {
     if (exerciseLanguage === "javascript") {
       expectedCode = initialCode;
     } else if (exerciseLanguage === "react") {
-      const filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = reactData.filter((exercise) => exercise.lang === exerciseLanguage);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "html") {
-      const filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "css") {
-      const filteredData = Data.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else {
       return;
