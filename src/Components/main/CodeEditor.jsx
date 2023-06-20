@@ -3,6 +3,7 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
+import 'ace-builds/src-noconflict/mode-jsx';
 
 function CodeEditor({
   userCode,
@@ -44,25 +45,26 @@ function CodeEditor({
     }
   };
 
-  useEffect(() => {
-    const stop = (e) => {
-      e.stopPropagation();
-      e.preventDefault();
-    };
+  // useEffect(() => {
+  //   const stop = (e) => {
+  //     e.stopPropagation();
+  //     e.preventDefault();
+  //   };
 
-    const aceEditor = document.querySelector(".ace_editor");
-    aceEditor.addEventListener("paste", stop, true);
+  //   // const aceEditor = document.querySelector(".ace_editor");
+  //   // aceEditor.addEventListener("paste", stop, true);
 
-    return () => {
-      aceEditor.removeEventListener("paste", stop, true);
-    };
-  }, []);
+  //   return () => {
+  //     aceEditor.removeEventListener("paste", stop, true);
+  //   };
+  // }, []);
 
   return (
     <div className="editor">
+    
       <AceEditor
-        mode={exerciseLanguage}
-        theme="dracula"
+        mode={exerciseLanguage === 'react' ? 'javascript' : exerciseLanguage}
+        theme="twilight"
         fontSize={17}
         width="100%"
         placeholder={initialCode}

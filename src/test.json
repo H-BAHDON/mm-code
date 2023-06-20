@@ -418,76 +418,87 @@
     "code": ".error {\n    color: red;\n}",
     "score": 2,
     "explanation": "This CSS code targets elements with the class 'error' and sets their text color to red."
-  }, {
+  }, 
+  
+  
+  
+  
+  {
     "id": 61,
     "lang": "react",
     "code": "function Counter() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}",
     "score": 2,
     "explanation": "This react code demonstrates the usage of 'useState' and 'useEffect' hooks in React. The 'Counter' component maintains a count state using 'useState' and updates the document title using 'useEffect'. The title is updated whenever the count changes."
-},
-{
+  },
+  {
     "id": 62,
     "lang": "react",
     "code": "const numbers = [1, 2, 3, 4, 5];\n\nconst doubledNumbers = numbers.map(num => num * 2);\n\nconsole.log(doubledNumbers);",
     "score": 2,
     "explanation": "This react code demonstrates the usage of arrow functions. The 'numbers' array contains numbers 1 to 5. The 'map' method is used with an arrow function to create a new 'doubledNumbers' array by doubling each number in the 'numbers' array. The code then logs the contents of 'doubledNumbers' to the console."
-},
-{
+  },
+  {
     "id": 63,
     "lang": "react",
     "code": "const arr1 = [1, 2, 3];\nconst arr2 = [...arr1, 4, 5, 6];\n\nconsole.log(arr2);",
     "score": 2,
     "explanation": "This react code demonstrates the usage of the spread operator. The 'arr1' array contains elements 1, 2, and 3. The spread operator is used to create a new 'arr2' array by adding additional elements (4, 5, and 6) to the end of 'arr1'. The code then logs the contents of 'arr2' to the console."
-},
-{
+  },
+  {
     "id": 64,
     "lang": "react",
     "code": "const person = {\n  name: 'John',\n  age: 25,\n  city: 'New York'\n};\n\nconst { name, age } = person;\n\nconsole.log(name, age);",
     "score": 2,
     "explanation": "This react code demonstrates destructuring an object. The 'person' object has properties 'name', 'age', and 'city'. Using object destructuring, the 'name' and 'age' properties are extracted into variables of the same names. The code then logs the values of 'name' and 'age' to the console."
-}, 
-{
+  },
+  {
     "id": 65,
     "lang": "react",
     "code": "const books = [\n  { title: 'Book 1', author: 'Author 1' },\n  { title: 'Book 2', author: 'Author 2' },\n  { title: 'Book 3', author: 'Author 3' }\n];\n\nconst bookItems = books.map(book => (\n  <div>\n    <h3>{book.title}</h3>\n    <p>Author: {book.author}</p>\n  </div>\n));\n\nreturn <div>{bookItems}</div>;",
     "score": 2,
     "explanation": "This react code demonstrates the usage of lists and the 'map' method in React. The 'books' array contains objects representing books with 'title' and 'author' properties. Using the 'map' method, a new array 'bookItems' is created by mapping each book object to a JSX element that displays the book's title and author. Finally, the 'bookItems' array is rendered within a parent div element."
-}, {
+  },
+  {
     "id": 66,
     "lang": "react",
     "code": "const numbers = [1, 2, 3, 4, 5];\n\nconst sum = numbers.reduce((acc, curr) => acc + curr, 0);\n\nconsole.log(sum);",
     "score": 2,
     "explanation": "This react code demonstrates the usage of the 'reduce' method. The 'numbers' array contains numbers 1 to 5. The 'reduce' method is used to calculate the sum of all the numbers in the array. The code initializes the accumulator 'acc' to 0 and adds each element 'curr' to it. The final sum is then logged to the console."
-}, {
-    "id": 67,
-    "lang": "react",
-    "code": "function Header() {\n  return <h1>Welcome to my website</h1>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Header />\n      <p>This is the content of my website.</p>\n    </div>\n  );\n}",
-    "score": 2,
-    "explanation": "This react code demonstrates the usage of components in React. The 'Header' component renders a welcome message. The 'App' component renders the 'Header' component and displays some content below it. The components are nested within the JSX structure."
-}, {
-    "id": 68,
-    "lang": "react",
-    "code": "function Button() {\n  const handleClick = () => {\n    console.log('Button clicked');\n  };\n\n  return <button onClick={handleClick}>Click me</button>;\n}",
-    "score": 2,
-    "explanation": "This react code demonstrates the usage of events in React. The 'Button' component defines a 'handleClick' function that logs a message when the button is clicked. The 'onClick' event is attached to the button, and when clicked, it triggers the 'handleClick' function."
-}, {
-    "id": 69,
-    "lang": "react",
-    "code": "function Greeting({ name }) {\n  return name ? <p>Hello, {name}!</p> : <p>Hello, Guest!</p>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Greeting name=\"John\" />\n      <Greeting />\n    </div>\n  );\n}",
-    "score": 2,
-    "explanation": "This react code demonstrates the usage of conditionals in React. The 'Greeting' component receives a 'name' prop and displays a personalized greeting if the 'name' is provided. If the 'name' is not provided, it displays a default greeting for guests. The 'App' component renders two 'Greeting' components, one with a name prop and another without."
-}, {
-    "id": 70,
-    "lang": "react",
-    "code": "const items = ['Item 1', 'Item 2', 'Item 3'];\n\nconst itemElements = items.map((item, index) => (\n  <li key={index}>{item}</li>\n));\n\nreturn <ul>{itemElements}</ul>;",
-    "score": 2,
-    "explanation": "This react code demonstrates the usage of lists and the 'map' method in React. The 'items' array contains strings representing items. Using the 'map' method, a new array 'itemElements' is created by mapping each item to a JSX 'li' element with a unique 'key' attribute. Finally, the 'itemElements' array is rendered within a 'ul' element."
-}, {
-    "id": 71,
-    "lang": "react",
-    "code": "import React, { useState, useEffect } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n\n  const handleIncrement = () => {\n    setCount(count + 1);\n  };\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={handleIncrement}>Increment</button>\n    </div>\n  );\n}",
-    "score": 2,
-    "explanation": "This react code demonstrates the usage of hooks, specifically 'useState' and 'useEffect', in React. The 'Counter' component maintains a count state using 'useState' and updates the document title using 'useEffect'. The 'handleIncrement' function is used to increment the count when the button is clicked."
+  }
+,{
+  "id": 67,
+  "lang": "react",
+  "code": "function Header() {\n  return <h1>Welcome to my website</h1>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Header />\n      <p>This is the content of my website.</p>\n    </div>\n  );\n}",
+  "score": 2,
+  "explanation": "This react code demonstrates the usage of components in React. The 'Header' component renders a welcome message. The 'App' component renders the 'Header' component and displays some content below it. The components are nested within the JSX structure."
+},
+{
+  "id": 68,
+  "lang": "react",
+  "code": "function Button() {\n  const handleClick = () => {\n    console.log('Button clicked');\n  };\n\n  return <button onClick={handleClick}>Click me</button>;\n}",
+  "score": 2,
+  "explanation": "This react code demonstrates the usage of events in React. The 'Button' component defines a 'handleClick' function that logs a message when the button is clicked. The 'onClick' event is attached to the button, and when clicked, it triggers the 'handleClick' function."
+},
+{
+  "id": 69,
+  "lang": "react",
+  "code": "function Greeting({ name }) {\n  return name ? <p>Hello, {name}!</p> : <p>Hello, Guest!</p>;\n}\n\nfunction App() {\n  return (\n    <div>\n      <Greeting name=\"John\" />\n      <Greeting />\n    </div>\n  );\n}",
+  "score": 2,
+  "explanation": "This react code demonstrates the usage of conditionals in React. The 'Greeting' component receives a 'name' prop and displays a personalized greeting if the 'name' is provided. If the 'name' is not provided, it displays a default greeting for guests. The 'App' component renders two 'Greeting' components, one with a name prop and another without."
+},
+{
+  "id": 70,
+  "lang": "react",
+  "code": "const items = ['Item 1', 'Item 2', 'Item 3'];\n\nconst itemElements = items.map((item, index) => (\n  <li key={index}>{item}</li>\n));\n\nreturn <ul>{itemElements}</ul>;",
+  "score": 2,
+  "explanation": "This react code demonstrates the usage of lists and the 'map' method in React. The 'items' array contains strings representing items. Using the 'map' method, a new array 'itemElements' is created by mapping each item to a JSX 'li' element with a unique 'key' attribute. Finally, the 'itemElements' array is rendered within a 'ul' element."
+},
+{
+  "id": 71,
+  "lang": "react",
+  "code": "import React, { useState, useEffect } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n\n  const handleIncrement = () => {\n    setCount(count + 1);\n  };\n",
+   "score": 2,
+   "explanation": "This react code demonstrates the usage of hooks, specifically 'useState' and 'useEffect', in React. The 'Counter' component maintains a count state using 'useState' and updates the document title using 'useEffect'. The 'handleIncrement' function is used to increment the count when the button is clicked."
 }, {
     "id": 72,
     "lang": "react",
