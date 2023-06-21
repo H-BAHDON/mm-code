@@ -687,15 +687,15 @@
       {
         "id": 99,
         "lang": "html",
-        "code": "",
+        "code": "<s>\n This text has been struck through.\n </s>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents an s element (<s>) used to mark up text that has been struck through or is no longer accurate. It is commonly used to indicate deleted or deprecated content."
       },
       {
         "id": 100,
         "lang": "html",
-        "code": "",
+        "code": "<details>\n <summary>Click to expand</summary>\n <p>This is the hidden content that will be revealed.</p>\n </details>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a details element (<details>) used to create a disclosure widget or collapsible section. The summary element (<summary>) provides a clickable heading for the disclosure, and the content within the details element remains hidden until the user expands it."
       }
 ]
