@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../css/style.css";
+import "./header.css";
 
 function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick }) {
   const [activeTab, setActiveTab] = useState("html");
