@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import CodeEditor from "./CodeEditor";
+import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
-import ButtonOfPage from "../buttons/ButtonOfPage";
-
+import ButtonOfPage from "../common/buttons/ButtonOfPage";
+import "./main.css"
 // ---------------------------
 // import exercises
 import htmlData from "../../Exercise/htmlExercise.json"
