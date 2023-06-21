@@ -274,117 +274,425 @@
       {
         "id": 40,
         "lang": "html",
-        "code": "",
+        "code": "<time datetime=\"2023-06-21\">June 21, 2023</time>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a time element (<time>) used to mark up a specific time or date. The datetime attribute provides the date and time in a machine-readable format for browsers and search engines. The text within the time element represents the human-readable date or time display for users."
       },
       {
         "id": 41,
         "lang": "html",
-        "code": "",
+        "code": "<blockquote>\n <p>\"The greatest glory in living lies not in never falling, but in rising every time we fall.\"</p>\n  <footer> - Nelson Mandela</footer>\n </blockquote>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
       },
       {
         "id": 42,
         "lang": "html",
-        "code": "",
+        "code": "<dl>\n <dt>HTML</dt>\n <dd>A markup language for creating web pages.</dd>\n <dt>CSS</dt>\n <dd>A stylesheet language used for styling web pages.</dd>\n <dt>JavaScript</dt>\n <dd>A programming language used for adding interactivity to web pages.</dd>\n </dl>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a definition list element (<dl>) used to present a list of terms and their corresponding descriptions. The term is defined using the definition term element (<dt>), and the description is provided using the definition description element (<dd>). This structure is useful for creating glossaries or lists of definitions."
       },
       {
         "id": 43,
         "lang": "html",
-        "code": "",
+        "code": "<aside>\n <h3>Advertisement</h3>\n <img src=\"ad.jpg\" alt=\"Advertisement\">\n <p>Check out our latest products!</p>\n </aside>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
       },
       {
         "id": 44,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <h1>Welcome to My Website</h1>\n <p>This is the homepage of my website.</p>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a div element (<div>) used as a container or a division within the webpage. It contains a heading element (<h1>) for the website title and a paragraph element (<p>) for the introductory text. The div element is a versatile and commonly used element for grouping and styling content."
       },
       {
         "id": 45,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"email\", indicating that it is specifically for capturing email addresses. It can help enforce email validation and provide a specific keyboard layout on mobile devices."
       },
       {
         "id": 46,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Enter your password\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"password\", indicating that it is intended for capturing sensitive information like passwords. The characters entered in this field are usually masked or hidden for security reasons."
       },
       {
         "id": 47,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"date\" id=\"birthdate\" name=\"birthdate\" placeholder=\"Enter your birthdate\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"date\", allowing users to select a date from a calendar or enter it manually. It helps ensure that the input follows a specific date format."
       },
       {
         "id": 48,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"number\" id=\"age\" name=\"age\" placeholder=\"Enter your age\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"number\", indicating that it is used for capturing numeric values. It may include additional attributes like min, max, or step to define constraints or increment/decrement rules."
       },
       {
         "id": 49,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"checkbox\" id=\"subscribe\" name=\"subscribe\">\n <label for=\"subscrib\">Subscribe to our newsletter</label>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"checkbox\", allowing users to select or deselect a particular option. The associated <label> element provides a visible description or label for the checkbox, enhancing usability and accessibility. "
       },
       {
         "id": 50,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"range\" id=\"volume\" name=\"volume\" min=\"0\" max=\"100\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"range\", providing a slider control for selecting a value within a specified range. In this example, the range is set from 0 to 100. It is often used for settings like volume or brightness adjustments."
       },
       {
         "id": 51,
         "lang": "html",
-        "code": "",
+        "code": "<select id=\"country\" name=\"country\">\n <option value=\"uk\">United Kingdom</option>\n <option value=\"de\">Germany</option>\n <option value=\"es\">Spain</option>\n </select>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This <select> element creates a dropdown select menu. Users can choose one option from the list. Each option is defined using the <option> element, where the value attribute represents the selected value and the text content represents the visible option."
       },
       {
         "id": 52,
         "lang": "html",
-        "code": "",
+        "code": "<textarea id=\"message\" name=\"message\" placeholder=\"Enter your message\"></textarea>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This <textarea> element allows users to enter multi-line text. It is useful for capturing longer messages or comments. The placeholder attribute provides a hint or example text to guide the user's input."
       },
       {
         "id": 53,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"color\" id=\"favorite-color\" name=\"favorite-color\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"color\", allowing users to select a color using a color picker. It displays a color swatch and a picker interface to choose a specific color value."
       },
       {
         "id": 54,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"url\" id=\"website-url\" name=\"website-url\" placeholder=\"Enter website URL\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"url\", intended for capturing a valid URL. It can help with URL validation and may provide specific validation feedback to users."
       },
       {
         "id": 55,
+        "lang": "html",
+        "code": "<input type=\"search\" id=\"search-term\" name=\"search-term\" placeholder=\"Search...\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"search\", designed for search queries. It can have specific browser behavior, such as displaying a clear button or providing search suggestions."
+      },
+      {
+        "id": 56,
+        "lang": "html",
+        "code": "<input type=\"time\" id=\"meeting-time\" name=\"meeting-time\" placeholder=\"Enter meeting time\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"time\", allowing users to select or enter a specific time. It provides a time picker interface and enforces time format constraints."
+      },
+      {
+        "id": 57,
+        "lang": "html",
+        "code": "<input type=\"checkbox\" id=\"hobby1\" name=\"hobby[]\" value=\"reading\">\n <label for=\"hobby1\">Reading</label>\n\n <input type=\"checkbox\" id=\"hobby2\" name=\"hobby[]\" value=\"painting\">\n <label for=\"hobby2\">Painting</label>\n\n <input type=\"checkbox\" id=\"hobby3\" name=\"hobby[]\" value=\"gardening\">\n <label for=\"hobby3\">Gardening</label>",
+        "score": 2,
+        "explanation": "These input elements have the type attribute set to \"checkbox\" and the same name attribute with an additional empty pair of square brackets (name=\"hobby[]\"). This creates a group of checkboxes where users can select multiple options. The selected values are submitted as an array in the form data."
+      },
+      {
+        "id": 58,
+        "lang": "html",
+        "code": "<input type=\"tel\" id=\"phone-number\" name=\"phone-number\" placeholder=\"Enter your phone number\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"tel\", designed for capturing telephone numbers. It can help enforce input validation and may provide specific keyboard layouts on mobile devices."
+      },
+      {
+        "id": 59,
+        "lang": "html",
+        "code": "<label>\n <input type=\"checkbox\" id=\"agree-terms\" name=\"agree-terms\">\n I agree to the terms and conditions\n </label>",
+        "score": 2,
+        "explanation": "This input element is wrapped in a <label> element to associate the text with the checkbox. It allows users to check or uncheck a specific option, such as agreeing to terms and conditions. Clicking on the label will also toggle the checkbox state."
+      },
+      {
+        "id": 60,
+        "lang": "html",
+        "code": "<input type=\"submit\" value=\"Submit\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"submit\", creating a button that submits the form data to the server when clicked. It is commonly used as the final step in a form to trigger form submission."
+      },
+      {
+        "id": 61,
+        "lang": "html",
+        "code": "<input type=\"image\" src=\"submit-button.png\" alt=\"Submit\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"image\" and includes an image file as the source (src) attribute. It creates a clickable image that submits the form when clicked. The image serves as the button representation."
+      },
+      {
+        "id": 62,
+        "lang": "html",
+        "code": "<input type=\"range\" id=\"slider\" name=\"slider\" min=\"0\" max=\"100\" value=\"50\">\n <output for=\"slider\"></output>",
+        "score": 2,
+        "explanation": "This input element is a range slider (type=\"range\") with minimum and maximum values specified by the min and max attributes. The initial value is set to 50 using the value attribute. The <output> element, associated with the slider through the for attribute, displays the current value of the slider."
+      },
+      {
+        "id": 63,
+        "lang": "html",
+        "code": "<select id=\"colors\" name=\"colors\" multiple>\n <option value=\"red\">Red</option>\n <option value=\"blue\">Blue</option>\n <option value=\"green\">Green</option>\n </select>",
+        "score": 2,
+        "explanation": "This <select> element has the multiple attribute, allowing users to select multiple options simultaneously. They can hold down the Ctrl key (or Command key on macOS) to make multiple selections. The selected values are submitted as an array in the form data."
+      },
+      {
+        "id": 64,
+        "lang": "html",
+        "code": "<input type=\"datetime-local\" id=\"meeting-time\" name=\"meeting-time\">",
+        "score": 2,
+        "explanation": "This input element has the type attribute set to \"datetime-local\", providing a combined date and time picker for selecting a specific date and time. It allows users to choose a date and time using a graphical interface."
+      },
+      {
+        "id": 65,
+        "lang": "html",
+        "code": "<label for=\"password\">Password:</label>\n <input type=\"password\" id=\"password\" name=\"password\">\n <label for=\"confirm-password\">Confirm Password:</label>\n <input type=\"password\" id=\"confirm-password\" name=\"confirm-password\">",
+        "score": 2,
+        "explanation": "This example includes two password input fields. The first password input (type=\"password\") allows users to enter their password, while the second input serves as a confirmation field to re-enter the password. The labels associated with each input provide descriptive text for the respective fields."
+      },
+      {
+        "id": 66,
         "lang": "html",
         "code": "",
         "score": 2,
         "explanation": ""
       },
       {
-        "id": 56,
+        "id": 67,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 68,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 69,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 70,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 71,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 72,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 73,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 74,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 75,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 76,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 77,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 78,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 79,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 80,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 81,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 82,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 83,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 84,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 85,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 86,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 87,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 88,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 89,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 90,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 91,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 92,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 93,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 94,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 95,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 96,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 97,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 98,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 99,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 100,
         "lang": "html",
         "code": "",
         "score": 2,
