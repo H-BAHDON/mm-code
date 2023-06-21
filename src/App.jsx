@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Footer from "./Components/Footer/Footer";
 import Main from "./Components/main/Main";
 import Header from "./Components/header/Header";
-import "./css/style.css";
+import "./assets/style.css";
 
 function App() {
   const [exerciseLanguage, setExerciseLanguage] = useState("html");
