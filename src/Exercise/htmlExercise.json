@@ -638,51 +638,51 @@
       {
         "id": 92,
         "lang": "html",
-        "code": "",
+        "code": "<a href=\"#section\">Jump to Section</a>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents an anchor element (<a>) used to create a hyperlink that allows users to jump to a specific section within the same webpage. The href attribute contains the identifier (#section) of the target section to which the link will navigate when clicked."
       },
       {
         "id": 93,
         "lang": "html",
-        "code": "",
+        "code": "<footer>\n <p>&copy; 2023 My Website</p>\n </footer>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a footer element (<footer>) used to define the footer section of a webpage. In this example, it contains a paragraph element (<p>) displaying the copyright symbol followed by the year and the name of the website."
       },
       {
         "id": 94,
         "lang": "html",
-        "code": "",
+        "code": "<footer>\n <ul>\n <li><a href=\"https://facebook.com\">Facebook</a></li>\n <li><a href=\"https://twitter.com\">Twitter</a></li>\n <li><a href=\"https://instagram.com\">Instagram</a></li>\n </ul>\n <p>&copy; 2023 My Website</p>\n </footer>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet showcases a <footer> element with links to social media profiles. Each link is represented by an <a> tag and can direct users to the respective social media platforms."
       },
       {
         "id": 95,
         "lang": "html",
-        "code": "",
+        "code": "<mark>This text is highlighted.</mark>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a mark element (<mark>) used to highlight or mark specific text within a document. It is often used to draw attention to important or significant information."
       },
       {
         "id": 96,
         "lang": "html",
-        "code": "",
+        "code": "<nav>\n <ul>\n <li class=\"active\"><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"services.html\">Services</a></li>\n </ul>\n </nav>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet highlights the active menu item by adding the active class to the corresponding <li> element. This can be useful for indicating the current page or section."
       },
       {
         "id": 97,
         "lang": "html",
-        "code": "",
+        "code": "<main>\n <h1>Welcome to My Website</h1>\n <p>This is the main content of the webpage.</p>\n </main>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a main element (<main>) used to identify the main content section of a webpage. It typically includes important content that is unique to the page and excludes content such as navigation menus or footers."
       },
       {
         "id": 98,
         "lang": "html",
-        "code": "",
+        "code": "<img src=\"image.jpg\" alt=\"Image Description\" onclick=\"console.log('Image clicked!')\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet displays an image and logs a message to the console when the image is clicked. The onclick attribute triggers the console.log() statement."
       },
       {
         "id": 99,
