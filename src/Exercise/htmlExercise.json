@@ -1,138 +1,138 @@
 [
     {
-        "id": 6,
+        "id": 1,
         "lang": "html",
         "code": "<h5>Hello, World!</h5>",
         "score": 2,
         "explanation": "This HTML code displays the text 'Hello, World!' as a heading level 5."
       },
       {
-        "id": 7,
+        "id": 2,
         "lang": "html",
         "code": "<p>This is a paragraph.</p>",
         "score": 2,
         "explanation": "This HTML code creates a paragraph containing the text 'This is a paragraph.'."
       },
       {
-        "id": 8,
+        "id": 3,
         "lang": "html",
         "code": "<ul class=\"list\" >\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
         "score": 2,
         "explanation": "This HTML code defines an unordered list with a class 'list' and contains three list items: 'Item 1', 'Item 2', and 'Item 3'."
       },
       {
-        "id": 9,
+        "id": 4,
         "lang": "html",
         "code": "<a href=\"https://www.example.com\">Visit Example</a>",
         "score": 2,
         "explanation": "This HTML code creates a hyperlink with the text 'Visit Example' that points to the URL 'https://www.example.com'."
       },
       {
-        "id": 10,
+        "id": 5,
         "lang": "html",
         "code": "<img src=\"image.webp\" alt=\"Image\">",
         "score": 2,
         "explanation": "This HTML code inserts an image with the source 'image.webp' and the alternate text 'Image'."
       },{
-        "id": 31,
+        "id": 6,
         "lang": "html",
         "code": "<h2>Welcome to My Website</h2>",
         "score": 2,
         "explanation": "This HTML code represents a level 2 heading element (<h2>) displaying the text 'Welcome to My Website'."
       },
       {
-        "id": 32,
+        "id": 7,
         "lang": "html",
         "code": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
         "score": 2,
         "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'."
       },
       {
-        "id": 33,
+        "id": 8,
         "lang": "html",
         "code": "<div class=\"container\">\n  <h3>Content</h3>\n  <p>This is some content.</p>\n</div>",
         "score": 2,
         "explanation": "This HTML code represents a <div> element with the class 'container'. It contains a level 3 heading element (<h3>) displaying the text 'Content', and a paragraph element (<p>) containing the text 'This is some content'."
       },
       {
-        "id": 34,
+        "id": 9,
         "lang": "html",
         "code": "<a href=\"#\">Click Me</a>",
         "score": 2,
         "explanation": "This HTML code represents a hyperlink element (<a>) with the 'href' attribute set to '#' and displaying the text 'Click Me'."
       },
       {
-        "id": 35,
+        "id": 10,
         "lang": "html",
         "code": "<img src=\"image.jpg\" alt=\"Image\">",
         "score": 2,
         "explanation": "This HTML code represents an image element (<img>) with the 'src' attribute set to 'image.jpg' and the 'alt' attribute set to 'Image'."
       },
       {
-        "id": 36,
+        "id": 11,
         "lang": "html",
         "code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
         "score": 2,
         "explanation": "This HTML code represents an unordered list element (<ul>) containing three list item elements (<li>) with the texts 'Item 1', 'Item 2', and 'Item 3'."
       },
       {
-        "id": 37,
+        "id": 12,
         "lang": "html",
         "code": "<input type=\"text\" placeholder=\"Enter your name\">",
         "score": 2,
         "explanation": "This HTML code represents an input element (<input>) with the 'type' attribute set to 'text' and the 'placeholder' attribute set to 'Enter your name'."
       },
       {
-        "id": 38,
+        "id": 13,
         "lang": "html",
         "code": "<h4>About Us</h4>\n<p>We are a team of developers.</p>",
         "score": 2,
         "explanation": "This HTML code represents a level 4 heading element (<h4>) displaying the text 'About Us', followed by a paragraph element (<p>) containing the text 'We are a team of developers'."
       },
       {
-        "id": 39,
+        "id": 14,
         "lang": "html",
         "code": "<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>25</td>\n  </tr>\n</table>",
         "score": 2,
         "explanation": "This HTML code represents a table element (<table>) with two table rows (<tr>). The first row contains two table header cells (<th>) with the texts 'Name' and 'Age'. The second row contains two table data cells (<td>) with the texts 'John' and '25'."
       },
       {
-        "id": 40,
+        "id": 15,
         "lang": "html",
         "code": "<form action=\"/submit\" method=\"POST\">\n  <input type=\"text\" name=\"username\" placeholder=\"Enter your username\">\n  <input type=\"password\" name=\"password\" placeholder=\"Enter your password\">\n  <button type=\"submit\">Submit</button>\n</form>",
         "score": 2,
         "explanation": "This HTML code represents a form element (<form>) with the 'action' attribute set to '/submit' and the 'method' attribute set to 'POST'. Inside the form, there are two input elements (<input>) - one with 'type' set to 'text' and 'name' set to 'username', and the other with 'type' set to 'password' and 'name' set to 'password'. Both inputs have placeholder attributes. Lastly, there is a button element (<button>) with 'type' set to 'submit' and displaying the text 'Submit'."
       },
       {
-        "id": 41,
+        "id": 16,
         "lang": "html",
         "code": "<nav>\n  <a href=\"#\">Home</a>\n  <a href=\"#\">About</a>\n  <a href=\"#\">Contact</a>\n</nav>",
         "score": 2,
         "explanation": "This HTML code represents a navigation element (<nav>). Inside the navigation element, there are three hyperlink elements (<a>) with 'href' attributes set to '#' and displaying the texts 'Home', 'About', and 'Contact'."
       },
       {
-        "id": 42,
+        "id": 17,
         "lang": "html",
         "code": "<label for=\"name\">Name:</label>\n<input type=\"text\" id=\"name\" name=\"name\">",
         "score": 2,
         "explanation": "This HTML code represents a label element (<label>) with the 'for' attribute set to 'name' and displaying the text 'Name:'. It is followed by an input element (<input>) with the 'type' attribute set to 'text', the 'id' attribute set to 'name', and the 'name' attribute set to 'name'."
       },
       {
-        "id": 43,
+        "id": 18,
         "lang": "html",
         "code": "<header>\n  <h1>My Website</h1>\n</header>",
         "score": 2,
         "explanation": "This HTML code represents a header element (<header>) containing a level 1 heading element (<h1>) displaying the text 'My Website'."
       },
       {
-        "id": 44,
+        "id": 19,
         "lang": "html",
         "code": "<section>\n  <h2>Section Title</h2>\n  <p>This is some content in a section.</p>\n</section>",
         "score": 2,
         "explanation": "This HTML code represents a section element (<section>) containing a level 2 heading element (<h2>) displaying the text 'Section Title', followed by a paragraph element (<p>) containing the text 'This is some content in a section'."
       },
       {
-        "id": 45,
+        "id": 20,
         "lang": "html",
         "code": "<footer>\n  <p>&copy; 2023 My Website</p>\n</footer>",
         "score": 2,
