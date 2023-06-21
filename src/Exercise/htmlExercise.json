@@ -456,37 +456,37 @@
       {
         "id": 66,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"timerange\" id=\"working-hours\" name=\"working-hours\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has the type attribute set to \"timerange\". It provides a range picker specifically designed for selecting a time range, such as working hours or availability slots. Similar to the \"gradient\" type, the \"timerange\" input type may not be supported in all browsers."
       },
       {
         "id": 67,
         "lang": "html",
-        "code": "",
+        "code": "<input type=\"text\" id=\"city\" name=\"city\" list=\"city-list\">\n <datalist id=\"city-list\">\n <option value=\"London\">\n <option value=\"New York\">\n <option value=\"Rome\"></datalist>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This input element has an associated <datalist> element that provides a list of predefined options for autocomplete. When users type in the input field, matching options from the datalist will be displayed as suggestions. In this example, the datalist suggests cities: London, New York, and Rome."
       },
       {
         "id": 68,
         "lang": "html",
-        "code": "",
+        "code": "<table>\n <tr>\n <th>Name</th>\n <th>Age</th>\n <th>Country</th>\n </tr>\n <tr>\n <td>John Doe</td>\n <td>30</td>\n <td>USA</td>\n </tr>\n  <tr>\n <td>Jane Smith</td>\n <td>25</td>\n <td>Canada</td>\n </tr>\n </table>",
         "score": 2,
-        "explanation": ""
+        "explanation": "The given HTML code represents a table structure with three columns: \"Name,\" \"Age,\" and \"Country.\" The <table> element defines the table, and the <tr> element is used to create a table row. Within the first row, the <th> elements represent table headers, specifying the column names. The subsequent rows are defined using <tr> elements, and the <td> elements contain the actual data for each column, representing the names, ages, and countries of two individuals. This table structure allows for organized display and presentation of tabular data on a webpage."
       },
       {
         "id": 69,
         "lang": "html",
-        "code": "",
+        "code": "<table>\n <tr>\n <th colspan=\"2\">Personal Information</th>\n </tr>\n <tr>\n <td rowspan=\"2\">John Doe</td>\n <td>30</td>\n </tr>\n <tr>\n <td>USA</td>\n </tr>\n </table>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This table showcases the usage of rowspan and colspan attributes. The first row has a header cell that spans across two columns using colspan=\"2\". The second row has a data cell with rowspan=\"2\", causing it to span two rows. It represents the personal information of John Doe, including his age and country."
       },
       {
         "id": 70,
         "lang": "html",
-        "code": "",
+        "code": "<table>\n <caption>Employee Information</caption>\n <tr>\n <th>Name</th>\n <th>Age</th>\n </tr>\n <tr>\n <td>John Doe</td>\n <td>30</td>\n </tr>\n <tr>\n <td>Jane Smith</td>\n <td>25</td>\n </tr>\n </table>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This table includes a <caption> element to provide a caption or title for the table. In this case, it denotes that the table contains employee information. The table structure and data are the same as the initial example."
       },
       {
         "id": 71,
