@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./header.css"
+import "../../css/style.css";
+
 function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick }) {
   const [activeTab, setActiveTab] = useState("html");
 
@@ -57,6 +58,18 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
             >
               React
             </p>
+            <p
+              className={`nav-item-react nav-link ${
+                activeTab === "sql" ? "active" : ""
+              }`}
+              onClick={() => {
+                handleTabClick("sql");
+                handleSqlClick();
+              }}
+            >
+              SQL
+            </p>
+
           </nav>
     </header>
   );

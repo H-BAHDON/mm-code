@@ -38,7 +38,7 @@ function CodeEditor({
        // Clear the editor when exerciseLanguage changes
        setUserCode("");
      }
-   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //  eslint-disable-next-line react-hooks/exhaustive-deps
    }, [exerciseLanguage]);
 
   const handleCodeChange = (value) => {
@@ -47,23 +47,23 @@ function CodeEditor({
     }
   };
 
-  // useEffect(() => {
-  //   const stop = (e) => {
-  //     e.stopPropagation();
-  //     e.preventDefault();
-  //   };
+  useEffect(() => {
+    const stop = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    };
 
-  //   // const aceEditor = document.querySelector(".ace_editor");
-  //   // aceEditor.addEventListener("paste", stop, true);
+    const aceEditor = document.querySelector(".ace_editor");
+    aceEditor.addEventListener("paste", stop, true);
 
-  //   return () => {
-  //     aceEditor.removeEventListener("paste", stop, true);
-  //   };
-  // }, []);
+    return () => {
+      aceEditor.removeEventListener("paste", stop, true);
+    };
+  }, []);
 
   return (
     <div className="editor">
-    
+
       <AceEditor
         mode={exerciseLanguage === 'react' ? 'javascript' : exerciseLanguage}
         theme="twilight"

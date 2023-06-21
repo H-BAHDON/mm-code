@@ -9,14 +9,14 @@ import htmlData from "../../Exercise/htmlExercise.json"
 import cssData from "../../Exercise/cssExercise.json"
 import reactData from "../../Exercise/reactExercise.json"
 import javascriptData from "../../Exercise/javascriptExercise.json"
-
+import SQLData from "../../Exercise/SqlExercise.json"
 
 // ---------------------------
 
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
-  
+
 
   const [resultText, setResultText] = useState("");
   const [resultTextVisible, setResultTextVisible] = useState(true);
@@ -57,14 +57,14 @@ function Main({ exerciseLanguage }) {
       document.addEventListener('keydown', handleKeyPress);
       return () => {
         document.removeEventListener('keydown', handleKeyPress);
-      };    
+      };
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [exerciseLanguage]);
 
     useEffect(() => {
       localStorage.setItem("score", score.toString());
     }, [score]);
-  
+
 
   // useEffect(() => {
   //   // handleResetCode();
@@ -82,11 +82,12 @@ function Main({ exerciseLanguage }) {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
   };
+  //
 
   const generateRandomCode = () => {
     let filteredData;
     let data;
-  
+
     if (exerciseLanguage === "javascript" || exerciseLanguage === "react") {
       data = exerciseLanguage === "javascript" ? javascriptData : reactData;
       filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
@@ -94,25 +95,27 @@ function Main({ exerciseLanguage }) {
       filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else if (exerciseLanguage === "css") {
       filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+    }else if (exerciseLanguage === "sql") {
+      filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else {
       return;
     }
-  
+
     let randomIndex;
     do {
       randomIndex = Math.floor(Math.random() * filteredData.length);
     } while (randomIndex === currentExerciseIndex);
-  
+
     const randomCode = filteredData[randomIndex].code;
     const randomCodeScore = filteredData[randomIndex].score;
     const randomCodeExplanation = filteredData[randomIndex].explanation;
-  
+
     setInitialCode(randomCode);
     setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
     setCurrentExerciseExplanation(randomCodeExplanation);
   };
-  
+
 
   const handleCheckCode = () => {
     let expectedCode;
@@ -127,10 +130,13 @@ function Main({ exerciseLanguage }) {
     } else if (exerciseLanguage === "css") {
       const filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
       expectedCode = filteredData[currentExerciseIndex].code;
+    }else if (exerciseLanguage === "sql") {
+      const filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
     } else {
       return;
     }
-  
+
     // Remove spaces, convert to lowercase, and replace quotes for comparison
     const formattedUserCode = userCode
       .replace(/\s/g, "")
@@ -140,7 +146,7 @@ function Main({ exerciseLanguage }) {
       .replace(/\s/g, "")
       .toLowerCase()
       .replace(/['"]/g, "");
-  
+
     // Check if the formatted user code matches the formatted expected code
     if (formattedUserCode === formattedExpectedCode) {
       const newScore = score + currentExerciseScore;
@@ -151,7 +157,7 @@ function Main({ exerciseLanguage }) {
       setResultTextClass("correct");
       setNextButton(true);
       setCheckButton(true);
-  
+
       // Check if the user's score is a multiple of 10 and the confetti hasn't been shown yet
       if (newScore % 10 === 0 && !confettiShown) {
         setShowConfetti(true);
@@ -160,7 +166,7 @@ function Main({ exerciseLanguage }) {
       } else {
         setShowConfetti(false);
       }
-  
+
       // Check if the user's score is not a multiple of 10 and the confetti has been shown
       if (newScore % 10 !== 0 && confettiShown) {
         setConfettiShown(false); // Update the confettiShown state
@@ -172,7 +178,7 @@ function Main({ exerciseLanguage }) {
       setCheckButton(false);
     }
   };
-  
+
 
   // const handleResetCode = () => {
   //   setUserCode("");
@@ -243,7 +249,7 @@ function Main({ exerciseLanguage }) {
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
-            
+
           />
         </div>
         <div className="main-center">
@@ -323,7 +329,7 @@ function Main({ exerciseLanguage }) {
                 🔳 To view the code again, click on the 'What's The Code' button.
                 <br />
                 <br />
-                🔳 Once your code has been verified by using the 'Check Code' button, it will 
+                🔳 Once your code has been verified by using the 'Check Code' button, it will
                 automatically change to a 'Next Exercise' button.
                 <br />
                 <br />

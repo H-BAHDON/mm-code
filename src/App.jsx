@@ -23,6 +23,10 @@ function App() {
     setExerciseLanguage("react")
   }
 
+  const handleSqlClick = () =>{
+    setExerciseLanguage("sql")
+  }
+
   return (
     <>
       <Header
@@ -30,6 +34,7 @@ function App() {
         handleJavaScriptClick={handleJavaScriptClick}
         handleCSSClick={handleCSSClick}
         handleReactClick={handleReactClick}
+        handleSqlClick={handleSqlClick}
       />
       <Main exerciseLanguage={exerciseLanguage} />
       <Footer />
