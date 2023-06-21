@@ -137,5 +137,257 @@
         "code": "<footer>\n  <p>&copy; 2023 My Website</p>\n</footer>",
         "score": 2,
         "explanation": "This HTML code represents a footer element (<footer>) containing a paragraph element (<p>) displaying the text '&copy; 2023 My Website'."
+      },
+      {
+        "id": 21,
+        "lang": "html",
+        "code": "<p>Hello, World!</p>",
+        "score": 2,
+        "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Hello, World!'. It is a commonly used phrase in programming tutorials and examples to illustrate basic output."
+      },
+      {
+        "id": 22,
+        "lang": "html",
+        "code": "<a href=\"https://www.example.com\">Visit Example.com</a>",
+        "score": 2,
+        "explanation": "This HTML code represents an anchor element (<a>) with a hyperlink reference attribute (href) set to 'https://www.example.com'. The anchor text 'Visit Example.com' will be displayed on the webpage, and clicking on it will redirect the user to the specified URL."
+      },
+      {
+        "id": 23,
+        "lang": "html",
+        "code": "<img src=\"image.jpg\" alt=\"A beautiful landscape\">",
+        "score": 2,
+        "explanation": "This HTML code represents an image element (<img>) with a source attribute (src) set to \"image.jpg\". The alt attribute provides alternative text \"A beautiful landscape\" that is displayed when the image cannot be loaded or for accessibility purposes."
+      },
+      {
+        "id": 24,
+        "lang": "html",
+        "code": "<ul>\n <li>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</li>\n </ul>",
+        "score": 2,
+        "explanation": "This HTML code represents an unordered list element (<ul>) with three list item elements (<li>). Each list item displays a different item: \"Item 1\", \"Item 2\", and \"Item 3\". This structure creates a bulleted list on the webpage."
+      },
+      {
+        "id": 25,
+        "lang": "html",
+        "code": "<h1>Welcome to My Website</h1>",
+        "score": 2,
+        "explanation": "This HTML code represents a heading element (<h1>) displaying the text \"Welcome to My Website\". The <h1> element is commonly used as the main heading on a webpage, indicating its importance and prominence."
+      },
+      {
+        "id": 26,
+        "lang": "html",
+        "code": "<form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n <input type=\"submit\" value=\"Submit\">\n </form>",
+        "score": 2,
+        "explanation": "This HTML code represents a form element (<form>) containing a label element (<label>) and two input elements (<input>). The label \"Name:\" is associated with the input field using the for attribute. The first input field is a text input, and the second one is a submit button. Users can enter their name in the text field and submit the form using the button."
+      },
+      {
+        "id": 27,
+        "lang": "html",
+        "code": "<table>\n <tr>\n <th>Name</th>\n <th>Age</th>\n </tr>\n <tr>\n <td>John</td>\n <td>25</td>\n </tr>\n <tr>\n <td>Jane</td>\n <td>25</td>\n </tr>\n </table>",
+        "score": 2,
+        "explanation": "This HTML code represents a table element (<table>) with three table row elements (<tr>). The first row contains table header cells (<th>) specifying the columns' names: \"Name\" and \"Age\". The subsequent rows contain table data cells (<td>) with corresponding values. This structure creates a tabular representation of data."
+      },
+      {
+        "id": 28,
+        "lang": "html",
+        "code": "<div class=\"container\">\n <h2>About Us</h2>\n <p>Welcome to our website! We provide top-notch services and strive to meet your needs.</p>\n </div>",
+        "score": 2,
+        "explanation": "This HTML code represents a div element (<div>) with the CSS class \"container\". It contains a heading element (<h2>) with the text \"About Us\" and a paragraph element (<p>) with a welcoming message. The div element is commonly used for grouping and styling purposes, allowing the content within it to be styled or positioned as a unit."
+      },
+      {
+        "id": 29,
+        "lang": "html",
+        "code": "<nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"contact.html\">Contact</a></li>\n </ul>\n </nav>",
+        "score": 2,
+        "explanation": "This HTML code represents a navigation element (<nav>) containing an unordered list (<ul>) of navigation links. Each list item (<li>) contains an anchor element (<a>) with a specific href attribute, representing different pages of a website. Clicking on these links will navigate the user to the corresponding pages."
+      },
+      {
+        "id": 30,
+        "lang": "html",
+        "code": "<header>\n <h1>My Website</h1>\n <nav>\n <a href=\"home.html\">Home</a>\n <a href=\"about.html\">About</a>\n <a href=\"contact.html\">Contact</a>\n </nav>\n </header>",
+        "score": 2,
+        "explanation": "This HTML code represents a header element (<header>) containing a heading element (<h1>) with the text \"My Website\" and a navigation section. The navigation section consists of multiple anchor elements (<a>) representing links to different pages. The header element is commonly used to define the top section of a webpage, typically containing the site's logo, main heading, and primary navigation menu."
+      },
+      {
+        "id": 31,
+        "lang": "html",
+        "code": "<ol>\n <li>First step</li>\n <li>Second step</li>\n <li>Third step</li>\n </ol>",
+        "score": 2,
+        "explanation": "This HTML code represents an ordered list element (<ol>) with three list item elements (<li>). Each list item represents a step or item in a sequence. The numbers (or other symbols) are automatically generated and displayed by the browser, indicating the order of the items."
+      },
+      {
+        "id": 32,
+        "lang": "html",
+        "code": "<textarea rows=\"4\" cols=\"50\">\n Enter your message here...\n </textarea>",
+        "score": 2,
+        "explanation": "This HTML code represents a textarea element (<textarea>) with specified rows and columns. The rows attribute sets the visible number of lines, while the cols attribute sets the visible width in characters. Users can enter text or messages within the textarea, and the specified dimensions define the display area."
+      },
+      {
+        "id": 33,
+        "lang": "html",
+        "code": "<aside>\n <h3>Related Links</h3>\n <ul>\n <li><a href=\"article1.html\">Article 1</a></li>\n <li><a href=\"article2.html\">Article 2</a></li>\n <li><a href=\"article3.html\">Article 3</a></li>\n </ul>\n </aside>",
+        "score": 2,
+        "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
+      },
+      {
+        "id": 34,
+        "lang": "html",
+        "code": "<blockquote>\n <p\"The only way to do great work is to love what you do.\"</p>\n <cite>- Steve Jobs</cite>\n </blockquote>",
+        "score": 2,
+        "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
+      },
+      {
+        "id": 35,
+        "lang": "html",
+        "code": "<video src=\"video.mp4\" controls>\n </video>",
+        "score": 2,
+        "explanation": "This HTML code represents a video element (<video>) with a source attribute (src) set to \"video.mp4\". The controls attribute enables the default video controls, allowing users to play, pause, and adjust the playback. The text within the video element serves as a fallback message for browsers that do not support the video tag."
+      },
+      {
+        "id": 36,
+        "lang": "html",
+        "code": "<select>\n <option value=\"bmw\">BMW</option>\n  <option value=\"Mercedes\">Mercedes</option>\n <option value=\"audi\">Audi</option>\n </select>",
+        "score": 2,
+        "explanation": "The HTML code you provided represents a select element, which is used to create a dropdown menu on a webpage. The select element is denoted by the <select> tags.       Inside the select element, you can have multiple option elements, which are represented by the <option> tags. Each option element represents a choice that the user can select from the dropdown menu. The text between the opening and closing option tags defines the visible text that the user sees in the dropdown menu."
+      },
+      {
+        "id": 37,
+        "lang": "html",
+        "code": "<article>\n <h2>Article Title</h2>\n <p>You can write sentences/paragprahs between these 'p' tags.</p> </article>",
+        "score": 2,
+        "explanation": "The <article> element in HTML is used to wrap self-contained content on a webpage, like blog posts or news articles. It typically includes an <h2> for the title and a <p> for the main text. It helps organize and identify independent sections of content."
+      },
+      {
+        "id": 38,
+        "lang": "html",
+        "code": "<progress value=\"50\" max=\"100\"></progress>",
+        "score": 2,
+        "explanation": "This HTML code represents a progress element (<progress>) used to display the progress of a task. The value attribute represents the current progress, and the max attribute sets the maximum value. In this example, the progress bar is filled halfway (50%) to represent the completion of the task."
+      },
+      {
+        "id": 39,
+        "lang": "html",
+        "code": "<details>\n <summary>Click to expand</summary>\n <p>Additional details or information can be revealed here.</p>\n </details>",
+        "score": 2,
+        "explanation": "This HTML code represents a details element (<details>) used to create a collapsible section on a webpage. The summary element (<summary>) provides a clickable heading for the section. When clicked, the section expands or collapses, revealing or hiding the enclosed content, in this case, the paragraph element (<p>) with additional details or information."
+      },
+      {
+        "id": 40,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 41,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 42,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 43,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 44,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 45,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 46,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 47,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 48,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 49,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 50,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 51,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 52,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 53,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 54,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 55,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 56,
+        "lang": "html",
+        "code": "",
+        "score": 2,
+        "explanation": ""
       }
 ]
