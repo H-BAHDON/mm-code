@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../../css/style.css";
-
+import "./header.css"
 function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick }) {
   const [activeTab, setActiveTab] = useState("html");
 
@@ -9,7 +8,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
   };
 
   return (
-    <header>
+    <header className="mainHeader">
       <div id="logo">
         <h1 className="logo-title">MM-Code</h1>
       </div>
