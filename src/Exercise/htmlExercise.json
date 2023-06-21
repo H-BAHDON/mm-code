@@ -169,9 +169,9 @@
       {
         "id": 25,
         "lang": "html",
-        "code": "<h1>Welcome to My Website</h1>",
+        "code": "<blockquote>\n <p>\"Repetition is the mother of all skills.\"</p>\n <footer>- Founder</footer>\n </blockquote>",
         "score": 2,
-        "explanation": "This HTML code represents a heading element (<h1>) displaying the text \"Welcome to My Website\". The <h1> element is commonly used as the main heading on a webpage, indicating its importance and prominence."
+        "explanation": "This code encapsulates a testimonial quote within a <blockquote> element. The quote is wrapped in a <p> element, and the source of the quote is specified in the <footer> element. It is a visually distinct way to highlight positive feedback or endorsements."
       },
       {
         "id": 26,
@@ -232,7 +232,7 @@
       {
         "id": 34,
         "lang": "html",
-        "code": "<blockquote>\n <p\"The only way to do great work is to love what you do.\"</p>\n <cite>- Steve Jobs</cite>\n </blockquote>",
+        "code": "<blockquote>\n <p\"Every expert was once a beginner..\"</p>\n <cite>- Rutherford B.Hayes</cite>\n </blockquote>",
         "score": 2,
         "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
       },
@@ -486,154 +486,154 @@
         "lang": "html",
         "code": "<table>\n <caption>Employee Information</caption>\n <tr>\n <th>Name</th>\n <th>Age</th>\n </tr>\n <tr>\n <td>John Doe</td>\n <td>30</td>\n </tr>\n <tr>\n <td>Jane Smith</td>\n <td>25</td>\n </tr>\n </table>",
         "score": 2,
-        "explanation": "This table includes a <caption> element to provide a caption or title for the table. In this case, it denotes that the table contains employee information. The table structure and data are the same as the initial example."
-      },
+        "explanation": "The provided HTML code represents a table structure displaying \"Employee Information.\" The <table> element defines the table, and the <caption> element provides a caption or title for the table. The table consists of two columns specified by the <th> elements: \"Name\" and \"Age.\" Each subsequent row, defined by the <tr> element, contains data cells represented by the <td> elements. In this case, the table displays information about two employees, including their names and ages. This table structure allows for clear presentation and organization of employee data within a webpage."
+      },  
       {
         "id": 71,
         "lang": "html",
-        "code": "",
+        "code": "<form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\">\n <button type=\"submit\">Submit</button>\n</form>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code represents a form structure using the <form> element. It includes a label for the input field and an input element of type \"text\" for users to enter their name. The submit button triggers form submission when clicked."
       },
       {
         "id": 72,
         "lang": "html",
-        "code": "",
+        "code": "<h3>Our Mission</h3>\n <p>We strive to make a positive impact by creating innovative solutions and fostering sustainable practices.</p>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code represents a section heading (<h3>) that introduces a specific aspect or goal of the company. The accompanying paragraph (<p>) provides a description or statement related to the mission, giving more information or context."
       },
       {
         "id": 73,
         "lang": "html",
-        "code": "",
+        "code": "<h3>Contact Us</h3>\n <address>\n <p>123 Main Street, City, State</p>\n <p>Phone: 777-123-4567</p>\n <p>Email: info@example.com</p>\n </address>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code displays a section heading (<h3>) indicating contact information. The <address> element wraps the company's address, phone number, and email. It is a semantic element in HTML used to mark up contact details."
       },
       {
         "id": 74,
         "lang": "html",
-        "code": "",
+        "code": "<h3>Key Features</h3>\n <ul>\n <li>Advanced security measures</li>\n <li>User-friendly interface</li>\n <li>Seamless integration</li>\n </ul>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code presents a section heading (<h3>) for key features and uses an unordered list (<ul>) to list each feature as a list item (<li>). It provides a concise and organized way to showcase the notable features of a product or service."
       },
       {
         "id": 75,
         "lang": "html",
-        "code": "",
+        "code": "<h1>Welcome to My Website</h1>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This HTML code represents a heading element (<h1>) displaying the text \"Welcome to My Website\". The <h1> element is commonly used as the main heading on a webpage, indicating its importance and prominence."
       },
       {
         "id": 76,
         "lang": "html",
-        "code": "",
+        "code": "<div class=\"team-member\">\n <img src=\"profile.jpg\" alt=\"Profile Picture\">\n <h3>John Doe</h3>\n <p>Lead Developer</p>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code creates a container using the <div> element to represent a team member profile. It includes an image (<img>) for the team member's profile picture, their name (<h3>), and their role or designation (<p>). It can be used to display team member information in a structured manner."
       },
       {
         "id": 77,
         "lang": "html",
-        "code": "",
+        "code": "<img src=\"image.jpg\" alt=\"Image Description\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code embeds an image (image.jpg) into a web page, with the alt attribute providing alternative text for the image."
       },
       {
         "id": 78,
         "lang": "html",
-        "code": "",
+        "code": "<img src=\"image.jpg\" alt=\"Image Description\" width=\"300\" height=\"200\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code displays an image using the <img> element. The src attribute specifies the URL or file path of the image file. The alt attribute provides alternative text that describes the image. In this example, the image's width is set to 300 pixels and height to 200 pixels using the width and height attributes, respectively. This helps control the image's dimensions on the webpage."
       },
       {
         "id": 79,
         "lang": "html",
-        "code": "",
+        "code": "<a href=\"details.html\">\n <img src=\"image.jpg\" alt=\"Image Description\">\n </a>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code creates a clickable image link using the <a> element. The href attribute specifies the destination URL or file path to which the link leads. The <img> element within the anchor tag represents the image. Clicking on the image will navigate the user to the specified destination. It is commonly used for creating image-based navigation or linking to a larger version of the image."
       },
       {
         "id": 80,
         "lang": "html",
-        "code": "",
+        "code": "<figure>\n <img src=\"image.jpg\" alt=\"Image Description\">\n <figcaption>Caption for the image</figcaption>\n </figure>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code wraps the image and its caption using the <figure> element. The <img> element displays the image, and the alt attribute provides alternative text. The <figcaption> element is used to add a caption for the image. It is useful for providing additional context or describing the image in more detail."
       },
       {
         "id": 81,
         "lang": "html",
-        "code": "",
+        "code": "<img src=\"image.jpg\" alt=\"Image Description\" style=\"border-radius: 50%;\">",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code displays an image with rounded corners using inline CSS. The src attribute specifies the image file, while the alt attribute provides alternative text. The style attribute is used to apply CSS rules directly to the <img> element. In this example, the border-radius property is set to 50%, resulting in a circular shape for the image."
       },
       {
         "id": 82,
         "lang": "html",
-        "code": "",
+        "code": "<a href=\"image.jpg\" target=\"_blank\">\n <img src=\"thumbnail.jpg\" alt=\"Image Description\">\n </a>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code creates an image that serves as a download link for a file. The <a> element represents the anchor tag and specifies the file path using the href attribute. In this example, the file is set to \"file.pdf\". The download attribute indicates that the file should be downloaded when the link is clicked. Inside the anchor tag, the <img> element displays the image, with the src attribute specifying the image file and the alt attribute providing alternative text. When the user clicks on the image, the specified file will be downloaded to their device."
       },
       {
         "id": 83,
         "lang": "html",
-        "code": "",
+        "code": "<a href=\"index.html\">\n <img src=\"logo.png\" alt=\"\">\n </a>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code creates an image that acts as a clickable link to the website's home page. The <a> tag specifies the destination using the href attribute, typically set to \"index.html\". The <img> tag displays the website's logo with the src attribute for the image file and the alt attribute for alternative text. When clicked, the image directs the user to the home page, serving as a convenient way to access the main content and navigation options. This demonstrates how the <a> tag with an image creates a link to the home page, enhancing user experience and website navigation."
       },
       {
         "id": 84,
         "lang": "html",
-        "code": "",
+        "code": "<a href=\"contact.html\">\n <img src=\"contact-icon.png\" alt=\"Contact Us\">\n </a>",
         "score": 2,
-        "explanation": ""
+        "explanation": "The code creates an image that acts as a clickable link to the contact us page. The <a> tag specifies the destination using the href attribute, which can be replaced with the actual contact page file path or URL. The <img> tag displays the image using the src attribute for the image file (\"contact-icon.png\" in this example) and the alt attribute for alternative text. When clicked, the image serves as a link that directs users to the specified contact us page. Ensure to replace \"contact-icon.png\" with your actual contact icon image filename and extension."
       },
       {
         "id": 85,
         "lang": "html",
-        "code": "",
+        "code": "<header>\n <nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"services.html\">Services</a></li>\n </ul>\n </nav>\n </header>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code represents a header section with a navigation menu. The navigation menu consists of an unordered list with three list items, each containing a link (<a>) to a different page."
       },
       {
         "id": 86,
         "lang": "html",
-        "code": "",
+        "code": "<header>\n <nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"https://example.com\" target=\"_blank\">External Link</a></li>\n </ul>\n </nav>\n </header>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet includes an external link in the navigation menu. The third menu item has an absolute URL in the href attribute and uses the target=\"_blank\" attribute to open the link"
       },
       {
         "id": 87,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <h2>Section Title</h2>\n <p>This is the content of the section.</p>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code uses the <div> element as a container for grouping content, including a heading (<h2>) and a paragraph (<p>). The <div> element is a versatile and commonly used container in HTML that allows developers to group and organize content, apply styling, and manipulate sections of a webpage using CSS and JavaScript. The div is useful for structuring and dividing content into logical sections for better organization and styling purposes."
       },
       {
         "id": 88,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <img src=\"image.jpg\" alt=\"Image Description\">\n <p>This is a caption for the image.</p>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet combines an image and a caption within a <div> element. The <img> tag is used to display the image, and the <p> tag contains the caption text."
       },
       {
         "id": 89,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <h3>List Title</h3>\n <ul>\n <li>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</li>\n </ul>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet represents a <div> element containing a list. The list is created using the <ul> tag, and each list item is represented by an <li> tag."
       },
       {
         "id": 90,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <h4>Contact Information</h4>\n <form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n <label for=\"email\">Email:</label>\n <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">\n <button type=\"submit\">Submit</button>\n </form>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet demonstrates a <div> element containing a form. The form includes input fields for name and email, along with corresponding <label> tags. The form also has a submit button represented by the <button> tag."
       },
       {
         "id": 91,
         "lang": "html",
-        "code": "",
+        "code": "<div>\n <h3>Steps</h3>\n <ol>\n <li>Step 1</li>\n <li>Step 2</li>\n <li>Step 3</li>\n </ol>\n </div>",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet represents a <div> element containing an ordered list. The list is created using the <ol> tag, and each item is represented by an <li> tag. This can be used to provide a sequence of steps or instructions."
       },
       {
         "id": 92,
