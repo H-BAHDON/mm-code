@@ -34,109 +34,686 @@
     "score": 2,
     "explanation": "This code declares a variable 'x' and assigns it a value of 5. It then checks if 'x' is greater than 0. If it is, it logs the string 'Positive number' to the console; otherwise, it logs 'Negative number'."
   },{
-    "id": 16,
+    "id": 6,
     "lang": "javascript",
     "code": "function power(base, exponent) {\n    return base ** exponent;\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'power' takes two parameters, 'base' and 'exponent', and returns the result of raising the 'base' to the 'exponent'."
   },
   {
-    "id": 17,
+    "id": 7,
     "lang": "javascript",
     "code": "function sumArray(arr) {\n    return arr.reduce((sum, num) => sum + num, 0);\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'sumArray' takes an array as a parameter and uses the 'reduce' method to calculate the sum of all the numbers in the array."
   },
   {
-    "id": 18,
+    "id": 8,
     "lang": "javascript",
     "code": "function capitalize(str) {\n    return str.charAt(0).toUpperCase() + str.slice(1);\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'capitalize' takes a string as a parameter and returns the string with the first character capitalized."
   },
   {
-    "id": 19,
+    "id": 9,
     "lang": "javascript",
     "code": "function reverseArray(arr) {\n    return arr.reverse();\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'reverseArray' takes an array as a parameter and reverses the order of its elements."
   },
   {
-    "id": 20,
+    "id": 10,
     "lang": "javascript",
     "code": "function findAverage(arr) {\n    const sum = arr.reduce((total, num) => total + num, 0);\n    return sum / arr.length;\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'findAverage' takes an array as a parameter, calculates the sum of its elements using the 'reduce' method, and returns the average by dividing the sum by the length of the array."
   },
   {
-    "id": 21,
+    "id": 11,
     "lang": "javascript",
     "code": "function removeFalsyValues(arr) {\n    return arr.filter(Boolean);\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'removeFalsyValues' takes an array as a parameter and uses the 'filter' method with the 'Boolean' function to remove all falsy values (e.g., false, null, 0, '', undefined, NaN) from the array."
   },
   {
-    "id": 22,
+    "id": 12,
     "lang": "javascript",
     "code": "function getRandomNumber(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'getRandomNumber' takes a minimum value 'min' and a maximum value 'max' as parameters. It uses the 'Math.random' function to generate a random number between 'min' and 'max', inclusive, and then rounds it down to the nearest integer using 'Math.floor'."
   },
   {
-    "id": 23,
+    "id": 13,
     "lang": "javascript",
     "code": "function formatDate(date) {\n    const options = { year: 'numeric', month: 'long', day: 'numeric' };\n    return date.toLocaleDateString('en-US', options);\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'formatDate' takes a date object as a parameter. It defines an 'options' object with the desired date formatting options. It then uses the 'toLocaleDateString' method with the 'en-US' locale and the 'options' object to format the date as a string with the full month name, day, and year in numeric format."
   },
   {
-    "id": 24,
+    "id": 14,
     "lang": "javascript",
     "code": "function removeDuplicates(arr) {\n    return [...new Set(arr)];\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'removeDuplicates' takes an array as a parameter. It utilizes the 'Set' object to remove duplicate elements from the array by converting it to a Set and then spreading it back into an array using the spread syntax."
   },
   {
-    "id": 25,
+    "id": 15,
     "lang": "javascript",
     "code": "function calculateHypotenuse(a, b) {\n    return Math.sqrt(a ** 2 + b ** 2);\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'calculateHypotenuse' takes the lengths of the two sides of a right triangle, 'a' and 'b', as parameters. It uses the Pythagorean theorem to calculate and return the length of the hypotenuse by taking the square root of the sum of the squares of 'a' and 'b'."
   },
   {
-    "id": 26,
+    "id": 16,
     "lang": "javascript",
     "code": "function countOccurrences(arr, num) {\n    return arr.filter(item => item === num).length;\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'countOccurrences' takes an array 'arr' and a number 'num' as parameters. It uses the 'filter' method to create a new array containing only the elements that are equal to 'num'. The length of the filtered array is then returned, representing the count of occurrences of 'num' in 'arr'."
   },
   { 
-    "id": 27,
+    "id": 17,
     "lang": "javascript",
     "code": "function getRandomElement(arr) {\n    return arr[Math.floor(Math.random() * arr.length)];\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'getRandomElement' takes an array 'arr' as a parameter. It generates a random index by multiplying 'Math.random()' with the length of the array and flooring the result using 'Math.floor()'. It then returns the element at the randomly generated index from the array."
   },
   {
-    "id": 28,
+    "id": 18,
     "lang": "javascript",
     "code": "function removeFalsyProperties(obj) {\n    return Object.fromEntries(Object.entries(obj).filter(([_, value]) => Boolean(value)));\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'removeFalsyProperties' takes an object 'obj' as a parameter. It uses the 'Object.entries' method to get an array of key-value pairs from the object. It then applies the 'filter' method on the key-value pairs array, keeping only the entries where the value is truthy. Finally, it converts the filtered array back to an object using 'Object.fromEntries' and returns it."
   },
   {
-    "id": 29,
+    "id": 19,
     "lang": "javascript",
     "code": "function truncateString(str, maxLength) {\n    if (str.length > maxLength) {\n        return str.slice(0, maxLength) + '...';\n    }\n    return str;\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'truncateString' takes a string 'str' and a maximum length 'maxLength' as parameters. It checks if the length of the string is greater than the maximum length. If it is, the string is truncated using the 'slice' method to extract the substring from index 0 to 'maxLength', and '...' is appended. If the string is not longer than the maximum length, it is returned as is."
   },
   {
-    "id": 30,
+    "id": 20,
     "lang": "javascript",
     "code": "function getUniqueValues(arr) {\n    return [...new Set(arr)];\n}",
     "score": 2,
     "explanation": "This JavaScript function named 'getUniqueValues' takes an array 'arr' as a parameter. It utilizes the 'Set' object to remove duplicate elements from the array by converting it to a Set and then spreading it back into an array using the spread syntax. The resulting array contains only unique values."
+  },
+  {
+    "id": 21,
+    "lang": "javascript",
+    "code": "console.log('Hello, World!');",
+    "score": 2,
+    "explanation": "This code prints the message \"Hello, World!\" to the console."
+  },
+  {
+    "id": 22,
+    "lang": "javascript",
+    "code": "let name = 'John';",
+    "score": 2,
+    "explanation": "This code declares a variable named name and assigns the value 'John' to it using the let keyword."
+  },
+  {
+    "id": 23,
+    "lang": "javascript",
+    "code": "let firstName = 'John',\n lastName = 'Doe',\n age = 25;",
+    "score": 2,
+    "explanation": "This code snippet declares three variables: firstName, lastName, and age, using the let keyword. The values 'John', 'Doe', and 25 are assigned to the respective variables. It allows you to declare and initialize multiple variables in a single statement."
+  },
+  {
+    "id": 24,
+    "lang": "javascript",
+    "code": "const PI = 3.14159;",
+    "score": 2,
+    "explanation": "Here, a constant variable named PI is declared using the const keyword. The value 3.14159 is assigned to the PI variable. Constants, unlike regular variables, cannot be reassigned once their value is set. In this case, PI is assigned the value 3.14159, which cannot be changed later in the code."
+  },
+  {
+    "id": 25,
+    "lang": "javascript",
+    "code": "let count = 10;\n count = 20; ",
+    "score": 2,
+    "explanation": "This snippet first declares a variable count and assigns it the value 10. Later, the value of count is updated to 20 by assigning a new value to it (count = 20). This demonstrates how a variable's value can be changed or updated during the execution of the program."
+  },
+  {
+    "id": 26,
+    "lang": "javascript",
+    "code": "let message;\n message = 'Hello!';",
+    "score": 2,
+    "explanation": " In this code, a variable named message is declared using the let keyword, but it is not initially assigned a value. Later, the value 'Hello!' is assigned to the message variable. This allows you to declare a variable first and assign a value to it at a later point in the code if needed. These examples showcase various scenarios of variable declaration and assignment in JavaScript, providing a foundation for understanding how to work with variables in the language. "
+  },
+  {
+    "id": 27,
+    "lang": "javascript",
+    "code": "let x = 5;\n let y = x + 3;",
+    "score": 2,
+    "explanation": "In this snippet, a variable x is declared and assigned the value 5. Another variable y is declared and assigned the value of the expression x + 3, which evaluates to 8. This demonstrates that variables can be initialized with the result of an expression."
+  },
+  {
+    "id": 28,
+    "lang": "javascript",
+    "code": "var a = 10;\n var b = 'Hello';",
+    "score": 2,
+    "explanation": "This code snippet uses the var keyword to declare two variables, a and b. The value 10 is assigned to a, and the string 'Hello' is assigned to b. var was the original way to declare variables in JavaScript, but it has been largely replaced by let and const for variable declaration in modern JavaScript."
+  },
+  {
+    "id": 29,
+    "lang": "javascript",
+    "code": "let temperature = 25;\n let isHot = temperature > 30 ? true : false;",
+    "score": 2,
+    "explanation": "In this example, a variable temperature is declared and assigned the value 25. The variable isHot is declared and assigned a value based on a condition. If the temperature is greater than 30, isHot is assigned true; otherwise, it is assigned false. This showcases the use of a conditional (ternary) operator to assign a value to a variable."
+  },
+  {
+    "id": 30,
+    "lang": "javascript",
+    "code": "let firstName = 'John';\n let lastName = 'Doe';\n let fullName = `${firstName} ${lastName}`;",
+    "score": 2,
+    "explanation": "This snippet demonstrates the use of template literals in JavaScript. Two variables, firstName and lastName, are declared and assigned string values. Another variable, fullName, is declared and assigned a value using template literals, which allow the interpolation of variables within a string. The fullName variable will contain the string 'John Doe'."
+  },
+  {
+    "id": 31,
+    "lang": "javascript",
+    "code": "let numbers = [1, 2, 3, 4, 5];\n let firstNumber = numbers[0];",
+    "score": 2,
+    "explanation": "In this code, an array named numbers is declared and assigned an array of numbers. The variable firstNumber is then declared and assigned the value of the first element of the numbers array using array indexing (numbers[0]). This demonstrates how to assign a value to a variable from an array."
+  },
+  {
+    "id": 32,
+    "lang": "javascript",
+    "code": "function square(number) {\n return number * number;\n }\n\n let result = square(5);",
+    "score": 2,
+    "explanation": "n this snippet, a function square is declared that takes a parameter number and returns the square of that number. The variable result is declared and assigned the result of calling the square function with the argument 5. The value 25 will be assigned to the result variable."
+  },
+  {
+    "id": 33,
+    "lang": "javascript",
+    "code": "let firstNumber = 10;\n let secondNumber = firstNumber;",
+    "score": 2,
+    "explanation": "This code snippet declares a variable firstNumber and assigns it the value 10. Another variable secondNumber is declared and assigned the value of firstNumber. The value of firstNumber (which is 10) is copied to secondNumber, resulting in both variables holding the same value."
+  },
+  {
+    "id": 34,
+    "lang": "javascript",
+    "code": "let globalVariable = 'I am a global variable';\n\n function printGlobalVariable() {\n console.log(globalVariable);\n }\n\n printGlobalVariable();",
+    "score": 2,
+    "explanation": "In this example, a variable globalVariable is declared outside of any function, making it a global variable accessible throughout the code. The function printGlobalVariable is declared, which logs the value of globalVariable to the console. When the printGlobalVariable function is called, it outputs the value 'I am a global variable'."
+  },
+  {
+    "id": 35,
+    "lang": "javascript",
+    "code": "let numbers = [1, 2, 3];\n let [a, b, c] = numbers;",
+    "score": 2,
+    "explanation": "This code snippet declares an array numbers with three elements. The variables a, b, and c are declared and assigned the values of the corresponding elements in the numbers array using array destructuring. After execution, a will be 1, b will be 2, and c will be 3."
+  },
+  {
+    "id": 36,
+    "lang": "javascript",
+    "code": "let name;\n let displayName = name || 'Guest';",
+    "score": 2,
+    "explanation": "In this example, a variable name is declared without assigning a value. Another variable displayName is declared and assigned the value of name. However, since name is undefined, the logical OR operator || is used to provide a default value of 'Guest' to displayName. If name had a truthy value, it would be assigned to displayName instead."
+  },
+  {
+    "id": 37,
+    "lang": "javascript",
+    "code": "let sentence = 'Hello, world!';\n let length = sentence.length;",
+    "score": 2,
+    "explanation": "In this snippet, a variable sentence is declared and assigned the string 'Hello, world!'. The variable length is declared and assigned the value of the length property of the sentence string, which represents the number of characters in the string. The length variable will hold the value 13."
+  },
+  {
+    "id": 38,
+    "lang": "javascript",
+    "code": "let age = 20;\n\n if (age >= 18) {\n console.log(\"You are an adult.\");\n }",
+    "score": 2,
+    "explanation": "In this snippet, the variable age is assigned a value of 20. The if statement checks if the age is greater than or equal to 18. If the condition is true, the message \"You are an adult\" is logged to the console."
+  },
+  {
+    "id": 39,
+    "lang": "javascript",
+    "code": "let hour = 14;\n\n if (hour < 12) {\n console.log(\"Good morning!\");\n } else {\n console.log(\"Good afternoon!\");\n }",
+    "score": 2,
+    "explanation": "In this example, the variable hour is assigned a value of 14. The if-else statement checks if the hour is less than 12. If the condition is true, \"Good morning!\" is logged to the console. Otherwise, \"Good afternoon!\" is logged."
+  },
+  {
+    "id": 40,
+    "lang": "javascript",
+    "code": "let score = 85;\n\n if (score >= 90) {\n console.log(\"Excellent!\");\n} else if (score >= 80) {\nconsole.log(\"Good job!\");\n} else {\nconsole.log(\"Keep practicing!\");\n}",
+    "score": 2,
+    "explanation": "This code snippet demonstrates an if-else if-else statement. The variable score is assigned a value of 85. The statement checks the value of score and logs different messages based on the conditions. If score is greater than or equal to 90, \"Excellent!\" is logged. If it is between 80 and 89 (inclusive), \"Good job!\" is logged. Otherwise, \"Keep practicing!\" is logged."
+  },
+  {
+    "id": 41,
+    "lang": "javascript",
+    "code": "let fruits = [\"apple\", \"banana\", \"orange\"];\n\n if (fruits.includes(\"banana\")) {\n console.log(\"Banana is in the fruits array.\");\n} else {\nconsole.log(\"Banana is not in the fruits array.\");\n }",
+    "score": 2,
+    "explanation": "This code snippet demonstrates how to check if a specific value exists in an array using the Array.includes() method. In this case, the array fruits contains different fruits. The if statement"
+  },
+  {
+    "id": 42,
+    "lang": "javascript",
+    "code": "let temperature = 25;\n if (temperature > 30) console.log(\"It's hot!\");\n else if (temperature > 20) console.log(\"It's warm.\");\n else if (temperature > 10) console.log(\"It's cool.\");\n else console.log(\"It's cold!\");",
+    "score": 2,
+    "explanation": "This example uses a nested if-else if-else statement to check the value of the temperature variable. Depending on the temperature range, different messages are logged to the console."
+  },
+  {
+    "id": 43,
+    "lang": "javascript",
+    "code": "let x = 5;\n let y = 10;\n\n if (x > 0)\n if (y > 0)\nconsole.log(\"Both x and y are positive.\");\nelse\nconsole.log(\"x is positive, but y is not.\");\nelse\nconsole.log(\"x is not positive.\");",
+    "score": 2,
+    "explanation": "This example demonstrates a nested if-else statement. It checks if x is positive. If true, it further checks if y is positive. Based on the conditions, the appropriate message is logged to the console."
+  },
+  {
+    "id": 44,
+    "lang": "javascript",
+    "code": "let num = 15;\n\nif (num % 2 === 0) {\n if (num > 10) console.log(\"Even number greater than 10.\");\n else console.log(\"Even number less than or equal to 10.\");\n} else {\nconsole.log(\"Odd number.\");\n}",
+    "score": 2,
+    "explanation": "This example demonstrates nested if-else statements with compound conditions. It checks if num is even. If true, it further checks if num is greater than 10. Based on the conditions, the appropriate message is logged to the console. If num is odd, the \"Odd number.\" message is logged."
+  },
+  {
+    "id": 45,
+    "lang": "javascript",
+    "code": "let marks = 85;\nlet grade = '';\n\n if (marks >= 90) {\n grade = 'A';\n} else if (marks >= 80) {\ngrade = 'B';\n} else if (marks >= 70) {\ngrade = 'C';\n} else {\ngrade = 'D';\n}\n\nconsole.log(`Your grade: ${grade}`);",
+    "score": 2,
+    "explanation": "This code snippet assigns a grade based on the value of the marks variable. Depending on the marks obtained, the if-else if-else statement evaluates the conditions and assigns the appropriate grade ('A', 'B', 'C', or 'D'). The grade is then logged to the console using a template literal."
+  },
+  {
+    "id": 46,
+    "lang": "javascript",
+    "code": "for (let i = 0; i < 5; i++) {\nconsole.log(i);\n}",
+    "score": 2,
+    "explanation": "This snippet showcases a basic for loop. It initializes the loop variable i to 0, sets the loop condition to run until i is less than 5, and increments i by 1 in each iteration. The loop will log the values 0, 1, 2, 3, 4 to the console."
+  },
+  
+  {
+    "id": 47,
+    "lang": "javascript",
+    "code": "let count = 0;\n\n while (count < 5) {\n console.log(count);\n count++;\n}",
+    "score": 2,
+    "explanation": "In this example, a while loop is used. It initializes the count variable to 0. The loop will continue executing as long as count is less than 5. Inside the loop, the current value of count is logged to the console, and then count is incremented by 1. The loop will log the values 0, 1, 2, 3, 4 to the console."
+  },
+  
+  {
+    "id": 48,
+    "lang": "javascript",
+    "code": "let i = 0;\n\n do {\nconsole.log(i);\ni++;\n} while (i < 5);",
+    "score": 2,
+    "explanation": "This snippet demonstrates a do-while loop. It initializes the loop variable i to 0. The code inside the loop logs the value of i to the console and increments i by 1. The loop will run at least once, and then it will continue as long as i is less than 5. It will log the values 0, 1, 2, 3, 4 to the console."
+  },
+  
+  {
+    "id": 49,
+    "lang": "javascript",
+    "code": "const colors = [\"red\", \"green\", \"blue\"];\n\nfor (let color of colors) {\nconsole.log(color);\n}",
+    "score": 2,
+    "explanation": "This snippet demonstrates a for...of loop, which is used to iterate over iterable objects such as arrays. The loop variable color represents each element in the colors array. In each iteration, the current color value is logged to the console. The loop will log the values \"red\", \"green\", and \"blue\" to the console."
+  },
+  
+  {
+    "id": 50,
+    "lang": "javascript",
+    "code": "let i = 1;\n\n \n while (true) {\n console.log(i);\n i++;\n\n if (i > 5) {\n break;\n }\n }",
+    "score": 2,
+    "explanation": "This snippet demonstrates an infinite loop using a while loop. The loop continues indefinitely until the break statement is encountered. In this example, the loop logs the value of i and increments it by 1 in each iteration. The loop is terminated when i becomes greater than 5."
+  },
+
+  {
+    "id": 51,
+    "lang": "javascript",
+    "code": "",
+    "score": 2,
+    "explanation": "This snippet demonstrates an infinite loop using a while loop. The loop continues indefinitely until the break statement is encountered. In this example, the loop logs the value of i and increments it by 1 in each iteration. The loop is terminated when i becomes greater than 5."
+  },
+  {
+    "id": 52,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n\n numbers.forEach((number) => {\n console.log(number);\n });\n",
+    "score": 2,
+    "explanation": "This snippet utilizes the forEach() method to iterate over the elements of the numbers array. The arrow function is executed for each element, and the current element is logged to the console. The output will be the numbers 1, 2, 3, 4, 5 printed on separate lines."
+  },
+  
+  {
+    "id": 53,
+    "lang": "javascript",
+    "code": "for (let i = 5; i >= 1; i--) {\nconsole.log(i);\n}",
+    "score": 2,
+    "explanation": "This snippet showcases a reverse loop using a for loop. It initializes the loop variable i to 5 and decrements i by 1 in each iteration. The loop runs as long as i is greater than or equal to 1. The loop will log the values 5, 4, 3, 2, 1 to the console."
+  },
+  
+  {
+    "id": 54,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n\n for (let number of numbers) {\n console.log(number);\n }",
+    "score": 2,
+    "explanation": "This snippet utilizes a for-of loop to iterate over the elements of the numbers array. The loop variable number represents each element in the array, and it is logged to the console. The output will be the numbers 1, 2, 3, 4, 5 printed on separate lines."
+  },
+  
+  {
+    "id": 55,
+    "lang": "javascript",
+    "code": "const word = \"JavaScript\";\n\n for (let i = 0; i < word.length; i++) {\nconsole.log(word[i]);\n}",
+    "score": 2,
+    "explanation": "This snippet demonstrates a for loop that iterates through each character of a string. The loop variable i represents the index, and it is incremented in each iteration. The character at the current index is accessed using word[i] and logged to the console. The output will be each character of the string \"JavaScript\" printed on separate lines."
+  },
+  
+  {
+    "id": 56,
+    "lang": "javascript",
+    "code": "const colors = [\"red\", \"green\", \"blue\"];\n\n colors.forEach((color) => {\n console.log(color);\n });",
+    "score": 2,
+    "explanation": "In this example, the forEach() method is used to iterate over the elements of the colors array. For each element, the arrow function is executed, and the current element is logged to the console. The output will be the values \"red\", \"green\", and \"blue\" printed on separate lines."
+  },
+  
+  {
+    "id": 57,
+    "lang": "javascript",
+    "code": "const person = {\nname: \"John\",\nage: 30,\ncity: \"New York\"\n};\n\n  Object.values(person).forEach((value) => {\nconsole.log(value);\n});",
+    "score": 2,
+    "explanation": "This snippet utilizes the Object.values() method to retrieve an array of the values in the person object. The forEach() method is then applied to iterate over the values, and the current value is logged to the console. The output will be the values \"John\", 30, and \"New York\" printed on separate lines."
+  },
+  
+  {
+    "id": 58,
+    "lang": "javascript",
+    "code": "const fruits = [\"apple\", \"banana\", \"orange\"];\n\n for (let fruit of fruits) {\n console.log(fruit);\n }",
+    "score": 2,
+    "explanation": "This snippet demonstrates a for-of loop used to iterate over the elements of the fruits array. The loop variable fruit represents each element in the array, and it is logged to the console. The output will be the values \"apple\", \"banana\", and \"orange\" printed on separate lines."
+  },
+  
+  {
+    "id": 59,
+    "lang": "javascript",
+    "code": "function greet() {\nconsole.log(\"Hello!\");\n} \n\ngreet();",
+    "score": 2,
+    "explanation": "This snippet defines a function named greet that logs \"Hello!\" to the console. The function is then invoked by calling greet(), resulting in the message \"Hello!\" being printed."
+  },
+  
+  {
+    "id": 60,
+    "lang": "javascript",
+    "code": "function addNumbers(a, b) {\nreturn a + b;\n}\n\n const result = addNumbers(2, 3);\n console.log(result);",
+    "score": 2,
+    "explanation": "In this example, the addNumbers function takes two parameters, a and b, and returns their sum. The function is invoked with arguments 2 and 3, and the returned value is stored in the result variable. Finally, the value of result is logged to the console, which will output 5."
+  },
+  
+  {
+    "id": 61,
+    "lang": "javascript",
+    "code": "const multiply = (a, b) => a * b;\n\n const result = multiply(2, 4);\n console.log(result);",
+    "score": 2,
+    "explanation": "The code snippet defines a multiplication function called multiply that takes two parameters and returns their product. It then calls the multiply function with arguments 2 and 4, assigns the result to a variable named result, and logs the value of result to the console."
+  },
+  
+  {
+    "id": 62,
+    "lang": "javascript",
+    "code": "const multiply = (a, b) => a * b;\n\n const result = multiply(2, 4);\n console.log(result);",
+    "score": 2,
+    "explanation": "This snippet demonstrates an arrow function named multiply that takes two parameters, a and b, and returns their product. The function is invoked with arguments 2 and 4, and the returned value is stored in the result variable. The value of result is then logged to the console, resulting in 8 being printed."
+  },
+  
+  {
+    "id": 63,
+    "lang": "javascript",
+    "code": "const sayHello = function() {\n console.log(\"Hello!\");\n};\n\n sayHello();",
+    "score": 2,
+    "explanation": "Here, a function expression is assigned to a variable named sayHello. The function doesn't have a name and is defined using the function keyword. It logs \"Hello!\" to the console. The function is invoked by calling sayHello(), which prints the message \"Hello!\"."
+  },
+  
+  {
+    "id": 64,
+    "lang": "javascript",
+    "code": "(function() {\nconsole.log(\"LIFE\");\n })();",
+    "score": 2,
+    "explanation": "This example demonstrates an IIFE, which is a function that is defined and invoked immediately. The function is enclosed in parentheses to denote a function expression, followed by another pair of parentheses to invoke it. In this case, the function logs \"LIFE\" to the console. When the code runs, the message is immediately printed."
+  },
+  {
+    "id": 65,
+    "lang": "javascript",
+    "code": "function greet(name = \"Anonymous\") {\n console.log(`Hello, ${name}!`);\n }\n\n greet(); \n greet(\"John\");",
+    "score": 2,
+    "explanation": "In this example, the greet function takes a parameter name with a default value of \"Anonymous\". If no argument is provided when invoking the function, it uses the default value. Otherwise, it uses the provided argument to greet the person by name."
+  },
+  {
+    "id": 66,
+    "lang": "javascript",
+    "code": "function sum(...numbers) {\n let total = 0;\n for (let num of numbers) {\n total += num;\n }\n return total;\n }\n\n const result = sum(1, 2, 3, 4, 5);\n console.log(result);",
+    "score": 2,
+    "explanation": "This example defines a function sum that uses rest parameters (...numbers) to accept a variable number of arguments. The function sums up all the provided numbers and returns the total."
+  },
+  {
+    "id": 67,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3];\n numbers.push(4);\n console.log(numbers);",
+    "score": 2,
+    "explanation": "The push() method adds one or more elements to the end of an array. In this example, the number 4 is added to the numbers array using the push() method."
+  },
+  {
+    "id": 68,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4];\n numbers.pop();\n console.log(numbers);",
+    "score": 2,
+    "explanation": "The pop() method removes the last element from an array and returns that element. In this example, the last element (4) is removed from the numbers array using pop()."
+  },
+  {
+    "id": 69,
+    "lang": "javascript",
+    "code": "let randomNumber = Math.floor(Math.random() * 10);\n console.log(randomNumber);",
+    "score": 2,
+    "explanation": "This code generates a random integer between 0 and 9 using the Math.random() function and rounding it down with Math.floor(). The result is then logged to the console."
+  },
+  {
+    "id": 70,
+    "lang": "javascript",
+    "code": "let firstName = 'John';\n let lastName = 'Doe';\n let fullName = firstName + ' ' + lastName;\n console.log(fullName);",
+    "score": 2,
+    "explanation": "This code concatenates the firstName and lastName variables with a space in between to form the fullName string. The result is then logged to the console."
+  },
+  {
+    "id": 71,
+    "lang": "javascript",
+    "code": "const fruits = ['Apple', 'Banana', 'Cherry'];\n fruits[1] = 'Orange';\n console.log(fruits);",
+    "score": 2,
+    "explanation": "Array elements can be modified by accessing them with their index and assigning a new value. In this example, the element at index 1 (Banana) is replaced with 'Orange' in the fruits array."
+  },
+  {
+    "id": 72,
+    "lang": "javascript",
+    "code": "const arr1 = [1, 2];\n const arr2 = [3, 4];\n const mergedArray = arr1.concat(arr2);\n console.log(mergedArray);",
+    "score": 2,
+    "explanation": "The concat() method is used to merge two or more arrays. It returns a new array that combines the elements of the original arrays. In this example, arr1 and arr2 are concatenated to create mergedArray."
+  },
+  {
+    "id": 73,
+    "lang": "javascript",
+    "code": "const fruits = ['Apple', 'Banana', 'Cherry', 'Durian'];\n fruits.splice(2, 2);\n console.log(fruits);",
+    "score": 2,
+    "explanation": "The splice() method allows removing elements from an array by specifying the starting index and the number of elements to remove. In this example, starting from index 2, two elements (Cherry and Durian) are removed from the fruits array."
+  },
+  {
+    "id": 74,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4];\n numbers.reverse();\n console.log(numbers);",
+    "score": 2,
+    "explanation": "The reverse() method reverses the order of the elements in an array. In this example, the numbers array is reversed, resulting in [4, 3, 2, 1]."
+  },
+  {
+    "id": 75,
+    "lang": "javascript",
+    "code": "const fruits = ['Apple', 'Orange', 'Banana', 'Cherry'];\n fruits.sort();\n console.log(fruits);",
+    "score": 2,
+    "explanation": "The sort() method is used to sort the elements of an array in place. It arranges the elements alphabetically by default. In this example, the fruits array is sorted in alphabetical order."
+  },
+  {
+    "id": 76,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n const slicedArray = numbers.slice(1, 4);\n console.log(slicedArray);",
+    "score": 2,
+    "explanation": "The slice() method extracts a section of an array and returns a new array. It takes two parameters: the start index (inclusive) and the end index (exclusive). In this example, a portion of the numbers array from index 1 to 4 is extracted, resulting in [2, 3, 4]."
+  },
+  {
+    "id": 77,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n const hasThree = numbers.includes(3);\n console.log(hasThree);",
+    "score": 2,
+    "explanation": "The includes() method checks if a specific element exists in an array. It returns true if the element is found and false otherwise. In this example, it checks if the number 3 is present in the numbers array, which evaluates to true."
+  },
+  {
+    "id": 78,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4];\n const doubledNumbers = numbers.map(num => num * 2);\n console.log(doubledNumbers);",
+    "score": 2,
+    "explanation": "The map() method creates a new array by applying a provided function to each element of the original array. It returns an array of the same length with transformed elements. In this example, each element of the numbers array is doubled using the map() method, resulting in [2, 4, 6, 8]."
+  },
+  {
+    "id": 79,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n const evenNumbers = numbers.filter(num => num % 2 === 0);\n console.log(evenNumbers);",
+    "score": 2,
+    "explanation": "The filter() method creates a new array with all elements that pass a specific condition. It returns an array containing the filtered elements. In this example, it filters out the even numbers from the numbers array."
+  },
+  {
+    "id": 80,
+    "lang": "javascript",
+    "code": "const fruits = ['Apple', 'Banana', 'Cherry', 'Durian'];\n const cherryIndex = fruits.indexOf('Cherry');\n console.log(cherryIndex);",
+    "score": 2,
+    "explanation": "The indexOf() method returns the first index at which a specified element is found in an array. If the element is not found, it returns -1. In this example, it finds the index of the element 'Cherry' in the fruits array."
+  },
+  {
+    "id": 81,
+    "lang": "javascript",
+    "code": "const fruits = ['Apple', 'Banana', 'Cherry'];\n const joinedString = fruits.join(', ');\n console.log(joinedString);",
+    "score": 2,
+    "explanation": "The join() method joins all elements of an array into a string, with an optional separator between the elements. In this example, the fruits array elements are joined into a string with a comma and space as the separator."
+  },
+  {
+    "id": 82,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n console.log(numbers.length);",
+    "score": 2,
+    "explanation": "The length property of an array returns the number of elements in the array. In this example, it prints the length of the numbers array, which is 5."
+  },
+  {
+    "id": 83,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4, 5];\n const found = numbers.find(num => num > 3);\n console.log(found);",
+    "score": 2,
+    "explanation": "The find() method returns the first element in an array that satisfies a specified condition. It returns undefined if no element matches the condition. In this example, it finds the first number greater than 3 in the numbers array."
+  },
+  {
+    "id": 84,
+    "lang": "javascript",
+    "code": "const numbers = [1, 2, 3, 4];\n const doubledAndSquared = numbers.flatMap(num => [num * 2, num ** 2]);\n console.log(doubledAndSquared);",
+    "score": 2,
+    "explanation": "The flatMap() method maps each element of an array to a new array, and then flattens the result into a single array. It is useful for combining mapping and flattening operations. In this example, each number in the numbers array is doubled and squared, resulting in a flattened array."
+  },
+  {
+    "id": 85,
+    "lang": "javascript",
+    "code": "document.getElementById('myButton').addEventListener('click', function() {\n});",
+    "score": 2,
+    "explanation": "This code adds an event listener to a button with the ID \"myButton\" and executes the provided function when the button is clicked."
+  },
+  {
+    "id": 86,
+    "lang": "javascript",
+    "code": "document.getElementById('myElement').classList.add('highlight');",
+    "score": 2,
+    "explanation": "This code adds the CSS class \"highlight\" to an element with the ID \"myElement\". It allows you to dynamically apply styling to elements."
+  },
+  {
+    "id": 87,
+    "lang": "javascript",
+    "code": "setTimeout(function() {\n }, 2000);",
+    "score": 2,
+    "explanation": "This code sets a timer to execute the provided function after a specified delay (in milliseconds). In this example, the function is executed after a 2-second delay."
+  },
+  {
+    "id": 88,
+    "lang": "javascript",
+    "code": "let age = 20;\n let message = (age >= 18) ? 'You are an adult.' : 'You are a minor.';\n console.log(message);",
+    "score": 2,
+    "explanation": "This code uses the conditional (ternary) operator to assign a value to the message variable based on the value of the age variable. If the age is 18 or above, it assigns the first message; otherwise, it assigns the second message."
+  },
+  {
+    "id": 89,
+    "lang": "javascript",
+    "code": "let fruits = ['apple', 'banana'];\n fruits.push('orange');\n console.log(fruits);\n fruits.pop();\n console.log(fruits);",
+    "score": 2,
+    "explanation": "This code demonstrates adding an element to the end of an array using the push() method and removing the last element from the array using the pop() method. The modified array is logged to the console."
+  },
+  {
+    "id": 90,
+    "lang": "javascript",
+    "code": "let currentDate = new Date();\n console.log(currentDate);",
+    "score": 2,
+    "explanation": "This code creates a new Date object representing the current date and time. The result is then logged to the console."
+  },
+  {
+    "id": 91,
+    "lang": "javascript",
+    "code": "let add = (a, b) => a + b;\n console.log(add(2, 3));",
+    "score": 2,
+    "explanation": "This code defines an arrow function add that takes two parameters and returns their sum. The function is then invoked with arguments 2 and 3, and the result is logged to the console."
+  },
+  {
+    "id": 92,
+    "lang": "javascript",
+    "code": "let numbers = [1, 2, 3, 4, 5];\n numbers.forEach(function(number) {\n console.log(number);\n });\n\n let doubledNumbers = numbers.map(function(number) {\n return number * 2;\n });\n console.log(doubledNumbers);",
+    "score": 2,
+    "explanation": "This code showcases the forEach() method for iterating over an array and executing a function for each element. Additionally, it demonstrates the map() method, which creates a new array by applying a transformation function to each element."
+  },
+  {
+    "id": 93,
+    "lang": "javascript",
+    "code": "element.addEventListener('click', function() {\n console.log('Element clicked!');\n });",
+    "score": 2,
+    "explanation": "This code attaches an event listener to an element, allowing you to specify a function to be executed when the event (e.g., 'click') occurs."
+  },
+  {
+    "id": 94,
+    "lang": "javascript",
+    "code": "formElement.addEventListener('submit', function(event) {\n event.preventDefault();\n });",
+    "score": 2,
+    "explanation": "This code adds an event listener to a form element for the 'submit' event and prevents the default form submission behavior using preventDefault()."
+  },
+  {
+    "id": 95,
+    "lang": "javascript",
+    "code": "let element = document.getElementById('myElement');\n element.innerHTML = '<strong>New content</strong>';",
+    "score": 2,
+    "explanation": "This code sets the HTML content of the element with the ID myElement to <strong>New content</strong>, effectively replacing the existing content."
+  },
+  {
+    "id": 96,
+    "lang": "javascript",
+    "code": "let userInput = '<script>alert(\"Hello\");</script>';\n let outputElement = document.getElementById('myOutput');\n outputElement.innerHTML = userInput;",
+    "score": 2,
+    "explanation": "This code showcases the importance of escaping user-generated content before inserting it into the HTML. If userInput is a user-supplied string, setting it directly as innerHTML could potentially execute malicious code. Proper escaping or sanitization is needed before displaying user input."
+  },
+  {
+    "id": 97,
+    "lang": "javascript",
+    "code": "let fruits = ['Apple', 'Banana', 'Orange'];\n document.getElementById('myList').innerHTML = fruits.map(fruit => '<li>' + fruit + '</li>').join('');",
+    "score": 2,
+    "explanation": "This code dynamically creates an HTML list by mapping over an array of fruits (fruits) using the map() function. It generates an array of <li> elements for each fruit and then uses join('') to concatenate them into a single string. Finally, it sets the innerHTML property of the element with the ID myList to display the generated list."
+  },
+  {
+    "id": 98,
+    "lang": "javascript",
+    "code": "fetch('https://api.example.com/data')\n .then(response => response.json())\n .then(data => {\n console.log(data);\n })\n .catch(error => console.log(error));",
+    "score": 2,
+    "explanation": "This code fetches JSON data from the specified URL (https://api.example.com/data) using the Fetch API. The response is then converted to JSON format using the response.json() method. Finally, the retrieved JSON data is logged to the console."
+  },
+  {
+    "id": 99,
+    "lang": "javascript",
+    "code": "if (typeof value === 'number' && !isNaN(value)) {\n }",
+    "score": 2,
+    "explanation": "This code checks if a value is a number using the typeof operator and ensures it is not NaN using the isNaN() function."
+  },
+  {
+    "id": 100,
+    "lang": "javascript",
+    "code": "const elementExists = document.querySelector('.element-class') !== null;",
+    "score": 2,
+    "explanation": "This code checks if an element with a specific class exists in the DOM using the querySelector() method and comparing the result to null."
   }
 ]
 

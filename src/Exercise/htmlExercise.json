@@ -1,701 +1,687 @@
 [
+  {
+      "id": 1,
+      "lang": "html",
+      "code": "<h5>Hello, World!</h5>",
+      "score": 2,
+      "explanation": "This HTML code displays the text 'Hello, World!' as a heading level 5."
+    },
     {
-        "id": 1,
-        "lang": "html",
-        "code": "<h5>Hello, World!</h5>",
-        "score": 2,
-        "explanation": "This HTML code displays the text 'Hello, World!' as a heading level 5."
-      },
-      {
-        "id": 2,
-        "lang": "html",
-        "code": "<p>This is a paragraph.</p>",
-        "score": 2,
-        "explanation": "This HTML code creates a paragraph containing the text 'This is a paragraph.'."
-      },
-      {
-        "id": 3,
-        "lang": "html",
-        "code": "<ul class=\"list\" >\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
-        "score": 2,
-        "explanation": "This HTML code defines an unordered list with a class 'list' and contains three list items: 'Item 1', 'Item 2', and 'Item 3'."
-      },
-      {
-        "id": 4,
-        "lang": "html",
-        "code": "<a href=\"https://www.example.com\">Visit Example</a>",
-        "score": 2,
-        "explanation": "This HTML code creates a hyperlink with the text 'Visit Example' that points to the URL 'https://www.example.com'."
-      },
-      {
-        "id": 5,
-        "lang": "html",
-        "code": "<img src=\"image.webp\" alt=\"Image\">",
-        "score": 2,
-        "explanation": "This HTML code inserts an image with the source 'image.webp' and the alternate text 'Image'."
-      },{
-        "id": 6,
-        "lang": "html",
-        "code": "<h2>Welcome to My Website</h2>",
-        "score": 2,
-        "explanation": "This HTML code represents a level 2 heading element (<h2>) displaying the text 'Welcome to My Website'."
-      },
-      {
-        "id": 7,
-        "lang": "html",
-        "code": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
-        "score": 2,
-        "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'."
-      },
-      {
-        "id": 8,
-        "lang": "html",
-        "code": "<div class=\"container\">\n  <h3>Content</h3>\n  <p>This is some content.</p>\n</div>",
-        "score": 2,
-        "explanation": "This HTML code represents a <div> element with the class 'container'. It contains a level 3 heading element (<h3>) displaying the text 'Content', and a paragraph element (<p>) containing the text 'This is some content'."
-      },
-      {
-        "id": 9,
-        "lang": "html",
-        "code": "<a href=\"#\">Click Me</a>",
-        "score": 2,
-        "explanation": "This HTML code represents a hyperlink element (<a>) with the 'href' attribute set to '#' and displaying the text 'Click Me'."
-      },
-      {
-        "id": 10,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"Image\">",
-        "score": 2,
-        "explanation": "This HTML code represents an image element (<img>) with the 'src' attribute set to 'image.jpg' and the 'alt' attribute set to 'Image'."
-      },
-      {
-        "id": 11,
-        "lang": "html",
-        "code": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
-        "score": 2,
-        "explanation": "This HTML code represents an unordered list element (<ul>) containing three list item elements (<li>) with the texts 'Item 1', 'Item 2', and 'Item 3'."
-      },
-      {
-        "id": 12,
-        "lang": "html",
-        "code": "<input type=\"text\" placeholder=\"Enter your name\">",
-        "score": 2,
-        "explanation": "This HTML code represents an input element (<input>) with the 'type' attribute set to 'text' and the 'placeholder' attribute set to 'Enter your name'."
-      },
-      {
-        "id": 13,
-        "lang": "html",
-        "code": "<h4>About Us</h4>\n<p>We are a team of developers.</p>",
-        "score": 2,
-        "explanation": "This HTML code represents a level 4 heading element (<h4>) displaying the text 'About Us', followed by a paragraph element (<p>) containing the text 'We are a team of developers'."
-      },
-      {
-        "id": 14,
-        "lang": "html",
-        "code": "<table>\n\t<tr>\n\t\t<th>Name</th>\n\t\t<th>Age</th>\n\t</tr>\n\t<tr>\n\t\t<td>John</td>\n\t\t<td>25</td>\n\t</tr>\n</table>",
-        "score": 2,
-        "explanation": "This HTML code represents a table element (<table>) with two table rows (<tr>). The first row contains two table header cells (<th>) with the texts 'Name' and 'Age'. The second row contains two table data cells (<td>) with the texts 'John' and '25'."
-      },      
-      {
-        "id": 15,
-        "lang": "html",
-        "code": "<form action=\"/submit\" method=\"POST\">\n  <input type=\"text\" name=\"username\" placeholder=\"Enter your username\">\n  <input type=\"password\" name=\"password\" placeholder=\"Enter your password\">\n  <button type=\"submit\">Submit</button>\n</form>",
-        "score": 2,
-        "explanation": "This HTML code represents a form element (<form>) with the 'action' attribute set to '/submit' and the 'method' attribute set to 'POST'. Inside the form, there are two input elements (<input>) - one with 'type' set to 'text' and 'name' set to 'username', and the other with 'type' set to 'password' and 'name' set to 'password'. Both inputs have placeholder attributes. Lastly, there is a button element (<button>) with 'type' set to 'submit' and displaying the text 'Submit'."
-      },
-      {
-        "id": 16,
-        "lang": "html",
-        "code": "<nav>\n  <a href=\"#\">Home</a>\n  <a href=\"#\">About</a>\n  <a href=\"#\">Contact</a>\n</nav>",
-        "score": 2,
-        "explanation": "This HTML code represents a navigation element (<nav>). Inside the navigation element, there are three hyperlink elements (<a>) with 'href' attributes set to '#' and displaying the texts 'Home', 'About', and 'Contact'."
-      },
-      {
-        "id": 17,
-        "lang": "html",
-        "code": "<label for=\"name\">Name:</label>\n<input type=\"text\" id=\"name\" name=\"name\">",
-        "score": 2,
-        "explanation": "This HTML code represents a label element (<label>) with the 'for' attribute set to 'name' and displaying the text 'Name:'. It is followed by an input element (<input>) with the 'type' attribute set to 'text', the 'id' attribute set to 'name', and the 'name' attribute set to 'name'."
-      },
-      {
-        "id": 18,
-        "lang": "html",
-        "code": "<header>\n  <h1>My Website</h1>\n</header>",
-        "score": 2,
-        "explanation": "This HTML code represents a header element (<header>) containing a level 1 heading element (<h1>) displaying the text 'My Website'."
-      },
-      {
-        "id": 19,
-        "lang": "html",
-        "code": "<section>\n  <h2>Section Title</h2>\n  <p>This is some content in a section.</p>\n</section>",
-        "score": 2,
-        "explanation": "This HTML code represents a section element (<section>) containing a level 2 heading element (<h2>) displaying the text 'Section Title', followed by a paragraph element (<p>) containing the text 'This is some content in a section'."
-      },
-      {
-        "id": 20,
-        "lang": "html",
-        "code": "<footer>\n  <p>&copy; 2023 My Website</p>\n</footer>",
-        "score": 2,
-        "explanation": "This HTML code represents a footer element (<footer>) containing a paragraph element (<p>) displaying the text '&copy; 2023 My Website'."
-      },
-      {
-        "id": 21,
-        "lang": "html",
-        "code": "<p>Hello, World!</p>",
-        "score": 2,
-        "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Hello, World!'. It is a commonly used phrase in programming tutorials and examples to illustrate basic output."
-      },
-      {
-        "id": 22,
-        "lang": "html",
-        "code": "<a href=\"https://www.example.com\">Visit Example.com</a>",
-        "score": 2,
-        "explanation": "This HTML code represents an anchor element (<a>) with a hyperlink reference attribute (href) set to 'https://www.example.com'. The anchor text 'Visit Example.com' will be displayed on the webpage, and clicking on it will redirect the user to the specified URL."
-      },
-      {
-        "id": 23,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"A beautiful landscape\">",
-        "score": 2,
-        "explanation": "This HTML code represents an image element (<img>) with a source attribute (src) set to \"image.jpg\". The alt attribute provides alternative text \"A beautiful landscape\" that is displayed when the image cannot be loaded or for accessibility purposes."
-      },
-      {
-        "id": 24,
-        "lang": "html",
-        "code": "<ul>\n <li>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</li>\n </ul>",
-        "score": 2,
-        "explanation": "This HTML code represents an unordered list element (<ul>) with three list item elements (<li>). Each list item displays a different item: \"Item 1\", \"Item 2\", and \"Item 3\". This structure creates a bulleted list on the webpage."
-      },
-      {
-        "id": 25,
-        "lang": "html",
-        "code": "<blockquote>\n <p>\"Repetition is the mother of all skills.\"</p>\n <footer>- Founder</footer>\n </blockquote>",
-        "score": 2,
-        "explanation": "This code encapsulates a testimonial quote within a <blockquote> element. The quote is wrapped in a <p> element, and the source of the quote is specified in the <footer> element. It is a visually distinct way to highlight positive feedback or endorsements."
-      },
-      {
-        "id": 26,
-        "lang": "html",
-        "code": "<form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n <input type=\"submit\" value=\"Submit\">\n </form>",
-        "score": 2,
-        "explanation": "This HTML code represents a form element (<form>) containing a label element (<label>) and two input elements (<input>). The label \"Name:\" is associated with the input field using the for attribute. The first input field is a text input, and the second one is a submit button. Users can enter their name in the text field and submit the form using the button."
-      },
-      {
-        "id": 27,
-        "lang": "html",
-        "code": "<table>\n <tr>\n <th>Name</th>\n <th>Age</th>\n </tr>\n <tr>\n <td>John</td>\n <td>25</td>\n </tr>\n <tr>\n <td>Jane</td>\n <td>25</td>\n </tr>\n </table>",
-        "score": 2,
-        "explanation": "This HTML code represents a table element (<table>) with three table row elements (<tr>). The first row contains table header cells (<th>) specifying the columns' names: \"Name\" and \"Age\". The subsequent rows contain table data cells (<td>) with corresponding values. This structure creates a tabular representation of data."
-      },
-      {
-        "id": 28,
-        "lang": "html",
-        "code": "<div class=\"container\">\n <h2>About Us</h2>\n <p>Welcome to our website! We provide top-notch services and strive to meet your needs.</p>\n </div>",
-        "score": 2,
-        "explanation": "This HTML code represents a div element (<div>) with the CSS class \"container\". It contains a heading element (<h2>) with the text \"About Us\" and a paragraph element (<p>) with a welcoming message. The div element is commonly used for grouping and styling purposes, allowing the content within it to be styled or positioned as a unit."
-      },
-      {
-        "id": 29,
-        "lang": "html",
-        "code": "<nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"contact.html\">Contact</a></li>\n </ul>\n </nav>",
-        "score": 2,
-        "explanation": "This HTML code represents a navigation element (<nav>) containing an unordered list (<ul>) of navigation links. Each list item (<li>) contains an anchor element (<a>) with a specific href attribute, representing different pages of a website. Clicking on these links will navigate the user to the corresponding pages."
-      },
-      {
-        "id": 30,
-        "lang": "html",
-        "code": "<header>\n <h1>My Website</h1>\n <nav>\n <a href=\"home.html\">Home</a>\n <a href=\"about.html\">About</a>\n <a href=\"contact.html\">Contact</a>\n </nav>\n </header>",
-        "score": 2,
-        "explanation": "This HTML code represents a header element (<header>) containing a heading element (<h1>) with the text \"My Website\" and a navigation section. The navigation section consists of multiple anchor elements (<a>) representing links to different pages. The header element is commonly used to define the top section of a webpage, typically containing the site's logo, main heading, and primary navigation menu."
-      },
-      {
-        "id": 31,
-        "lang": "html",
-        "code": "<ol>\n <li>First step</li>\n <li>Second step</li>\n <li>Third step</li>\n </ol>",
-        "score": 2,
-        "explanation": "This HTML code represents an ordered list element (<ol>) with three list item elements (<li>). Each list item represents a step or item in a sequence. The numbers (or other symbols) are automatically generated and displayed by the browser, indicating the order of the items."
-      },
-      {
-        "id": 32,
-        "lang": "html",
-        "code": "<textarea rows=\"4\" cols=\"50\">\n Enter your message here...\n </textarea>",
-        "score": 2,
-        "explanation": "This HTML code represents a textarea element (<textarea>) with specified rows and columns. The rows attribute sets the visible number of lines, while the cols attribute sets the visible width in characters. Users can enter text or messages within the textarea, and the specified dimensions define the display area."
-      },
-      {
-        "id": 33,
-        "lang": "html",
-        "code": "<aside>\n <h3>Related Links</h3>\n <ul>\n <li><a href=\"article1.html\">Article 1</a></li>\n <li><a href=\"article2.html\">Article 2</a></li>\n <li><a href=\"article3.html\">Article 3</a></li>\n </ul>\n </aside>",
-        "score": 2,
-        "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
-      },
-      {
-        "id": 34,
-        "lang": "html",
-        "code": "<blockquote>\n <p\"Every expert was once a beginner..\"</p>\n <cite>- Rutherford B.Hayes</cite>\n </blockquote>",
-        "score": 2,
-        "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
-      },
-      {
-        "id": 35,
-        "lang": "html",
-        "code": "<video src=\"video.mp4\" controls>\n </video>",
-        "score": 2,
-        "explanation": "This HTML code represents a video element (<video>) with a source attribute (src) set to \"video.mp4\". The controls attribute enables the default video controls, allowing users to play, pause, and adjust the playback. The text within the video element serves as a fallback message for browsers that do not support the video tag."
-      },
-      {
-        "id": 36,
-        "lang": "html",
-        "code": "<select>\n <option value=\"bmw\">BMW</option>\n  <option value=\"Mercedes\">Mercedes</option>\n <option value=\"audi\">Audi</option>\n </select>",
-        "score": 2,
-        "explanation": "The HTML code you provided represents a select element, which is used to create a dropdown menu on a webpage. The select element is denoted by the <select> tags.       Inside the select element, you can have multiple option elements, which are represented by the <option> tags. Each option element represents a choice that the user can select from the dropdown menu. The text between the opening and closing option tags defines the visible text that the user sees in the dropdown menu."
-      },
-      {
-        "id": 37,
-        "lang": "html",
-        "code": "<article>\n <h2>Article Title</h2>\n <p>You can write sentences/paragprahs between these 'p' tags.</p> </article>",
-        "score": 2,
-        "explanation": "The <article> element in HTML is used to wrap self-contained content on a webpage, like blog posts or news articles. It typically includes an <h2> for the title and a <p> for the main text. It helps organize and identify independent sections of content."
-      },
-      {
-        "id": 38,
-        "lang": "html",
-        "code": "<progress value=\"50\" max=\"100\"></progress>",
-        "score": 2,
-        "explanation": "This HTML code represents a progress element (<progress>) used to display the progress of a task. The value attribute represents the current progress, and the max attribute sets the maximum value. In this example, the progress bar is filled halfway (50%) to represent the completion of the task."
-      },
-      {
-        "id": 39,
-        "lang": "html",
-        "code": "<details>\n <summary>Click to expand</summary>\n <p>Additional details or information can be revealed here.</p>\n </details>",
-        "score": 2,
-        "explanation": "This HTML code represents a details element (<details>) used to create a collapsible section on a webpage. The summary element (<summary>) provides a clickable heading for the section. When clicked, the section expands or collapses, revealing or hiding the enclosed content, in this case, the paragraph element (<p>) with additional details or information."
-      },
-      {
-        "id": 40,
-        "lang": "html",
-        "code": "<time datetime=\"2023-06-21\">June 21, 2023</time>",
-        "score": 2,
-        "explanation": "This HTML code represents a time element (<time>) used to mark up a specific time or date. The datetime attribute provides the date and time in a machine-readable format for browsers and search engines. The text within the time element represents the human-readable date or time display for users."
-      },
-      {
-        "id": 41,
-        "lang": "html",
-        "code": "<blockquote>\n <p>\"The greatest glory in living lies not in never falling, but in rising every time we fall.\"</p>\n  <footer> - Nelson Mandela</footer>\n </blockquote>",
-        "score": 2,
-        "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
-      },
-      {
-        "id": 42,
-        "lang": "html",
-        "code": "<dl>\n <dt>HTML</dt>\n <dd>A markup language for creating web pages.</dd>\n <dt>CSS</dt>\n <dd>A stylesheet language used for styling web pages.</dd>\n <dt>JavaScript</dt>\n <dd>A programming language used for adding interactivity to web pages.</dd>\n </dl>",
-        "score": 2,
-        "explanation": "This HTML code represents a definition list element (<dl>) used to present a list of terms and their corresponding descriptions. The term is defined using the definition term element (<dt>), and the description is provided using the definition description element (<dd>). This structure is useful for creating glossaries or lists of definitions."
-      },
-      {
-        "id": 43,
-        "lang": "html",
-        "code": "<aside>\n <h3>Advertisement</h3>\n <img src=\"ad.jpg\" alt=\"Advertisement\">\n <p>Check out our latest products!</p>\n </aside>",
-        "score": 2,
-        "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
-      },
-      {
-        "id": 44,
-        "lang": "html",
-        "code": "<div>\n <h1>Welcome to My Website</h1>\n <p>This is the homepage of my website.</p>\n </div>",
-        "score": 2,
-        "explanation": "This HTML code represents a div element (<div>) used as a container or a division within the webpage. It contains a heading element (<h1>) for the website title and a paragraph element (<p>) for the introductory text. The div element is a versatile and commonly used element for grouping and styling content."
-      },
-      {
-        "id": 45,
-        "lang": "html",
-        "code": "<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"email\", indicating that it is specifically for capturing email addresses. It can help enforce email validation and provide a specific keyboard layout on mobile devices."
-      },
-      {
-        "id": 46,
-        "lang": "html",
-        "code": "<input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Enter your password\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"password\", indicating that it is intended for capturing sensitive information like passwords. The characters entered in this field are usually masked or hidden for security reasons."
-      },
-      {
-        "id": 47,
-        "lang": "html",
-        "code": "<input type=\"date\" id=\"birthdate\" name=\"birthdate\" placeholder=\"Enter your birthdate\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"date\", allowing users to select a date from a calendar or enter it manually. It helps ensure that the input follows a specific date format."
-      },
-      {
-        "id": 48,
-        "lang": "html",
-        "code": "<input type=\"number\" id=\"age\" name=\"age\" placeholder=\"Enter your age\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"number\", indicating that it is used for capturing numeric values. It may include additional attributes like min, max, or step to define constraints or increment/decrement rules."
-      },
-      {
-        "id": 49,
-        "lang": "html",
-        "code": "<input type=\"checkbox\" id=\"subscribe\" name=\"subscribe\">\n <label for=\"subscrib\">Subscribe to our newsletter</label>",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"checkbox\", allowing users to select or deselect a particular option. The associated <label> element provides a visible description or label for the checkbox, enhancing usability and accessibility. "
-      },
-      {
-        "id": 50,
-        "lang": "html",
-        "code": "<input type=\"range\" id=\"volume\" name=\"volume\" min=\"0\" max=\"100\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"range\", providing a slider control for selecting a value within a specified range. In this example, the range is set from 0 to 100. It is often used for settings like volume or brightness adjustments."
-      },
-      {
-        "id": 51,
-        "lang": "html",
-        "code": "<select id=\"country\" name=\"country\">\n <option value=\"uk\">United Kingdom</option>\n <option value=\"de\">Germany</option>\n <option value=\"es\">Spain</option>\n </select>",
-        "score": 2,
-        "explanation": "This <select> element creates a dropdown select menu. Users can choose one option from the list. Each option is defined using the <option> element, where the value attribute represents the selected value and the text content represents the visible option."
-      },
-      {
-        "id": 52,
-        "lang": "html",
-        "code": "<textarea id=\"message\" name=\"message\" placeholder=\"Enter your message\"></textarea>",
-        "score": 2,
-        "explanation": "This <textarea> element allows users to enter multi-line text. It is useful for capturing longer messages or comments. The placeholder attribute provides a hint or example text to guide the user's input."
-      },
-      {
-        "id": 53,
-        "lang": "html",
-        "code": "<input type=\"color\" id=\"favorite-color\" name=\"favorite-color\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"color\", allowing users to select a color using a color picker. It displays a color swatch and a picker interface to choose a specific color value."
-      },
-      {
-        "id": 54,
-        "lang": "html",
-        "code": "<input type=\"url\" id=\"website-url\" name=\"website-url\" placeholder=\"Enter website URL\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"url\", intended for capturing a valid URL. It can help with URL validation and may provide specific validation feedback to users."
-      },
-      {
-        "id": 55,
-        "lang": "html",
-        "code": "<input type=\"search\" id=\"search-term\" name=\"search-term\" placeholder=\"Search...\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"search\", designed for search queries. It can have specific browser behavior, such as displaying a clear button or providing search suggestions."
-      },
-      {
-        "id": 56,
-        "lang": "html",
-        "code": "<input type=\"time\" id=\"meeting-time\" name=\"meeting-time\" placeholder=\"Enter meeting time\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"time\", allowing users to select or enter a specific time. It provides a time picker interface and enforces time format constraints."
-      },
-      {
-        "id": 57,
-        "lang": "html",
-        "code": "<input type=\"checkbox\" id=\"hobby1\" name=\"hobby[]\" value=\"reading\">\n <label for=\"hobby1\">Reading</label>\n\n <input type=\"checkbox\" id=\"hobby2\" name=\"hobby[]\" value=\"painting\">\n <label for=\"hobby2\">Painting</label>\n\n <input type=\"checkbox\" id=\"hobby3\" name=\"hobby[]\" value=\"gardening\">\n <label for=\"hobby3\">Gardening</label>",
-        "score": 2,
-        "explanation": "These input elements have the type attribute set to \"checkbox\" and the same name attribute with an additional empty pair of square brackets (name=\"hobby[]\"). This creates a group of checkboxes where users can select multiple options. The selected values are submitted as an array in the form data."
-      },
-      {
-        "id": 58,
-        "lang": "html",
-        "code": "<input type=\"tel\" id=\"phone-number\" name=\"phone-number\" placeholder=\"Enter your phone number\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"tel\", designed for capturing telephone numbers. It can help enforce input validation and may provide specific keyboard layouts on mobile devices."
-      },
-      {
-        "id": 59,
-        "lang": "html",
-        "code": "<label>\n <input type=\"checkbox\" id=\"agree-terms\" name=\"agree-terms\">\n I agree to the terms and conditions\n </label>",
-        "score": 2,
-        "explanation": "This input element is wrapped in a <label> element to associate the text with the checkbox. It allows users to check or uncheck a specific option, such as agreeing to terms and conditions. Clicking on the label will also toggle the checkbox state."
-      },
-      {
-        "id": 60,
-        "lang": "html",
-        "code": "<input type=\"submit\" value=\"Submit\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"submit\", creating a button that submits the form data to the server when clicked. It is commonly used as the final step in a form to trigger form submission."
-      },
-      {
-        "id": 61,
-        "lang": "html",
-        "code": "<input type=\"image\" src=\"submit-button.png\" alt=\"Submit\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"image\" and includes an image file as the source (src) attribute. It creates a clickable image that submits the form when clicked. The image serves as the button representation."
-      },
-      {
-        "id": 62,
-        "lang": "html",
-        "code": "<input type=\"range\" id=\"slider\" name=\"slider\" min=\"0\" max=\"100\" value=\"50\">\n <output for=\"slider\"></output>",
-        "score": 2,
-        "explanation": "This input element is a range slider (type=\"range\") with minimum and maximum values specified by the min and max attributes. The initial value is set to 50 using the value attribute. The <output> element, associated with the slider through the for attribute, displays the current value of the slider."
-      },
-      {
-        "id": 63,
-        "lang": "html",
-        "code": "<select id=\"colors\" name=\"colors\" multiple>\n <option value=\"red\">Red</option>\n <option value=\"blue\">Blue</option>\n <option value=\"green\">Green</option>\n </select>",
-        "score": 2,
-        "explanation": "This <select> element has the multiple attribute, allowing users to select multiple options simultaneously. They can hold down the Ctrl key (or Command key on macOS) to make multiple selections. The selected values are submitted as an array in the form data."
-      },
-      {
-        "id": 64,
-        "lang": "html",
-        "code": "<input type=\"datetime-local\" id=\"meeting-time\" name=\"meeting-time\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"datetime-local\", providing a combined date and time picker for selecting a specific date and time. It allows users to choose a date and time using a graphical interface."
-      },
-      {
-        "id": 65,
-        "lang": "html",
-        "code": "<label for=\"password\">Password:</label>\n <input type=\"password\" id=\"password\" name=\"password\">\n <label for=\"confirm-password\">Confirm Password:</label>\n <input type=\"password\" id=\"confirm-password\" name=\"confirm-password\">",
-        "score": 2,
-        "explanation": "This example includes two password input fields. The first password input (type=\"password\") allows users to enter their password, while the second input serves as a confirmation field to re-enter the password. The labels associated with each input provide descriptive text for the respective fields."
-      },
-      {
-        "id": 66,
-        "lang": "html",
-        "code": "<input type=\"timerange\" id=\"working-hours\" name=\"working-hours\">",
-        "score": 2,
-        "explanation": "This input element has the type attribute set to \"timerange\". It provides a range picker specifically designed for selecting a time range, such as working hours or availability slots. Similar to the \"gradient\" type, the \"timerange\" input type may not be supported in all browsers."
-      },
-      {
-        "id": 67,
-        "lang": "html",
-        "code": "<input type=\"text\" id=\"city\" name=\"city\" list=\"city-list\">\n <datalist id=\"city-list\">\n <option value=\"London\">\n <option value=\"New York\">\n <option value=\"Rome\"></datalist>",
-        "score": 2,
-        "explanation": "This input element has an associated <datalist> element that provides a list of predefined options for autocomplete. When users type in the input field, matching options from the datalist will be displayed as suggestions. In this example, the datalist suggests cities: London, New York, and Rome."
-      },
-      {
-        "id": 68,
-        "lang": "html",
-        "code": "<table>\n <tr>\n <th>Name</th>\n <th>Age</th>\n <th>Country</th>\n </tr>\n <tr>\n <td>John Doe</td>\n <td>30</td>\n <td>USA</td>\n </tr>\n  <tr>\n <td>Jane Smith</td>\n <td>25</td>\n <td>Canada</td>\n </tr>\n </table>",
-        "score": 2,
-        "explanation": "The given HTML code represents a table structure with three columns: \"Name,\" \"Age,\" and \"Country.\" The <table> element defines the table, and the <tr> element is used to create a table row. Within the first row, the <th> elements represent table headers, specifying the column names. The subsequent rows are defined using <tr> elements, and the <td> elements contain the actual data for each column, representing the names, ages, and countries of two individuals. This table structure allows for organized display and presentation of tabular data on a webpage."
-      },
-      {
-        "id": 69,
-        "lang": "html",
-        "code": "<table>\n <tr>\n <th colspan=\"2\">Personal Information</th>\n </tr>\n <tr>\n <td rowspan=\"2\">John Doe</td>\n <td>30</td>\n </tr>\n <tr>\n <td>USA</td>\n </tr>\n </table>",
-        "score": 2,
-        "explanation": "This table showcases the usage of rowspan and colspan attributes. The first row has a header cell that spans across two columns using colspan=\"2\". The second row has a data cell with rowspan=\"2\", causing it to span two rows. It represents the personal information of John Doe, including his age and country."
-      },
-      {
-        "id": 70,
-        "lang": "html",
-        "code": "<table>\n <caption>Employee Information</caption>\n <tr>\n <th>Name</th>\n <th>Age</th>\n </tr>\n <tr>\n <td>John Doe</td>\n <td>30</td>\n </tr>\n <tr>\n <td>Jane Smith</td>\n <td>25</td>\n </tr>\n </table>",
-        "score": 2,
-        "explanation": "The provided HTML code represents a table structure displaying \"Employee Information.\" The <table> element defines the table, and the <caption> element provides a caption or title for the table. The table consists of two columns specified by the <th> elements: \"Name\" and \"Age.\" Each subsequent row, defined by the <tr> element, contains data cells represented by the <td> elements. In this case, the table displays information about two employees, including their names and ages. This table structure allows for clear presentation and organization of employee data within a webpage."
-      },  
-      {
-        "id": 71,
-        "lang": "html",
-        "code": "<form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\">\n <button type=\"submit\">Submit</button>\n</form>",
-        "score": 2,
-        "explanation": "This code represents a form structure using the <form> element. It includes a label for the input field and an input element of type \"text\" for users to enter their name. The submit button triggers form submission when clicked."
-      },
-      {
-        "id": 72,
-        "lang": "html",
-        "code": "<h3>Our Mission</h3>\n <p>We strive to make a positive impact by creating innovative solutions and fostering sustainable practices.</p>",
-        "score": 2,
-        "explanation": "This code represents a section heading (<h3>) that introduces a specific aspect or goal of the company. The accompanying paragraph (<p>) provides a description or statement related to the mission, giving more information or context."
-      },
-      {
-        "id": 73,
-        "lang": "html",
-        "code": "<h3>Contact Us</h3>\n <address>\n <p>123 Main Street, City, State</p>\n <p>Phone: 777-123-4567</p>\n <p>Email: info@example.com</p>\n </address>",
-        "score": 2,
-        "explanation": "This code displays a section heading (<h3>) indicating contact information. The <address> element wraps the company's address, phone number, and email. It is a semantic element in HTML used to mark up contact details."
-      },
-      {
-        "id": 74,
-        "lang": "html",
-        "code": "<h3>Key Features</h3>\n <ul>\n <li>Advanced security measures</li>\n <li>User-friendly interface</li>\n <li>Seamless integration</li>\n </ul>",
-        "score": 2,
-        "explanation": "This code presents a section heading (<h3>) for key features and uses an unordered list (<ul>) to list each feature as a list item (<li>). It provides a concise and organized way to showcase the notable features of a product or service."
-      },
-      {
-        "id": 75,
-        "lang": "html",
-        "code": "<h1>Welcome to My Website</h1>",
-        "score": 2,
-        "explanation": "This HTML code represents a heading element (<h1>) displaying the text \"Welcome to My Website\". The <h1> element is commonly used as the main heading on a webpage, indicating its importance and prominence."
-      },
-      {
-        "id": 76,
-        "lang": "html",
-        "code": "<div class=\"team-member\">\n <img src=\"profile.jpg\" alt=\"Profile Picture\">\n <h3>John Doe</h3>\n <p>Lead Developer</p>\n </div>",
-        "score": 2,
-        "explanation": "This code creates a container using the <div> element to represent a team member profile. It includes an image (<img>) for the team member's profile picture, their name (<h3>), and their role or designation (<p>). It can be used to display team member information in a structured manner."
-      },
-      {
-        "id": 77,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"Image Description\">",
-        "score": 2,
-        "explanation": "This code embeds an image (image.jpg) into a web page, with the alt attribute providing alternative text for the image."
-      },
-      {
-        "id": 78,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"Image Description\" width=\"300\" height=\"200\">",
-        "score": 2,
-        "explanation": "This code displays an image using the <img> element. The src attribute specifies the URL or file path of the image file. The alt attribute provides alternative text that describes the image. In this example, the image's width is set to 300 pixels and height to 200 pixels using the width and height attributes, respectively. This helps control the image's dimensions on the webpage."
-      },
-      {
-        "id": 79,
-        "lang": "html",
-        "code": "<a href=\"details.html\">\n <img src=\"image.jpg\" alt=\"Image Description\">\n </a>",
-        "score": 2,
-        "explanation": "This code creates a clickable image link using the <a> element. The href attribute specifies the destination URL or file path to which the link leads. The <img> element within the anchor tag represents the image. Clicking on the image will navigate the user to the specified destination. It is commonly used for creating image-based navigation or linking to a larger version of the image."
-      },
-      {
-        "id": 80,
-        "lang": "html",
-        "code": "<figure>\n <img src=\"image.jpg\" alt=\"Image Description\">\n <figcaption>Caption for the image</figcaption>\n </figure>",
-        "score": 2,
-        "explanation": "This code wraps the image and its caption using the <figure> element. The <img> element displays the image, and the alt attribute provides alternative text. The <figcaption> element is used to add a caption for the image. It is useful for providing additional context or describing the image in more detail."
-      },
-      {
-        "id": 81,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"Image Description\" style=\"border-radius: 50%;\">",
-        "score": 2,
-        "explanation": "This code displays an image with rounded corners using inline CSS. The src attribute specifies the image file, while the alt attribute provides alternative text. The style attribute is used to apply CSS rules directly to the <img> element. In this example, the border-radius property is set to 50%, resulting in a circular shape for the image."
-      },
-      {
-        "id": 82,
-        "lang": "html",
-        "code": "<a href=\"image.jpg\" target=\"_blank\">\n <img src=\"thumbnail.jpg\" alt=\"Image Description\">\n </a>",
-        "score": 2,
-        "explanation": "This code creates an image that serves as a download link for a file. The <a> element represents the anchor tag and specifies the file path using the href attribute. In this example, the file is set to \"file.pdf\". The download attribute indicates that the file should be downloaded when the link is clicked. Inside the anchor tag, the <img> element displays the image, with the src attribute specifying the image file and the alt attribute providing alternative text. When the user clicks on the image, the specified file will be downloaded to their device."
-      },
-      {
-        "id": 83,
-        "lang": "html",
-        "code": "<a href=\"index.html\">\n <img src=\"logo.png\" alt=\"\">\n </a>",
-        "score": 2,
-        "explanation": "This code creates an image that acts as a clickable link to the website's home page. The <a> tag specifies the destination using the href attribute, typically set to \"index.html\". The <img> tag displays the website's logo with the src attribute for the image file and the alt attribute for alternative text. When clicked, the image directs the user to the home page, serving as a convenient way to access the main content and navigation options. This demonstrates how the <a> tag with an image creates a link to the home page, enhancing user experience and website navigation."
-      },
-      {
-        "id": 84,
-        "lang": "html",
-        "code": "<a href=\"contact.html\">\n <img src=\"contact-icon.png\" alt=\"Contact Us\">\n </a>",
-        "score": 2,
-        "explanation": "The code creates an image that acts as a clickable link to the contact us page. The <a> tag specifies the destination using the href attribute, which can be replaced with the actual contact page file path or URL. The <img> tag displays the image using the src attribute for the image file (\"contact-icon.png\" in this example) and the alt attribute for alternative text. When clicked, the image serves as a link that directs users to the specified contact us page. Ensure to replace \"contact-icon.png\" with your actual contact icon image filename and extension."
-      },
-      {
-        "id": 85,
-        "lang": "html",
-        "code": "<header>\n <nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"services.html\">Services</a></li>\n </ul>\n </nav>\n </header>",
-        "score": 2,
-        "explanation": "This code represents a header section with a navigation menu. The navigation menu consists of an unordered list with three list items, each containing a link (<a>) to a different page."
-      },
-      {
-        "id": 86,
-        "lang": "html",
-        "code": "<header>\n <nav>\n <ul>\n <li><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"https://example.com\" target=\"_blank\">External Link</a></li>\n </ul>\n </nav>\n </header>",
-        "score": 2,
-        "explanation": "This code snippet includes an external link in the navigation menu. The third menu item has an absolute URL in the href attribute and uses the target=\"_blank\" attribute to open the link"
-      },
-      {
-        "id": 87,
-        "lang": "html",
-        "code": "<div>\n <h2>Section Title</h2>\n <p>This is the content of the section.</p>\n </div>",
-        "score": 2,
-        "explanation": "This code uses the <div> element as a container for grouping content, including a heading (<h2>) and a paragraph (<p>). The <div> element is a versatile and commonly used container in HTML that allows developers to group and organize content, apply styling, and manipulate sections of a webpage using CSS and JavaScript. The div is useful for structuring and dividing content into logical sections for better organization and styling purposes."
-      },
-      {
-        "id": 88,
-        "lang": "html",
-        "code": "<div>\n <img src=\"image.jpg\" alt=\"Image Description\">\n <p>This is a caption for the image.</p>\n </div>",
-        "score": 2,
-        "explanation": "This code snippet combines an image and a caption within a <div> element. The <img> tag is used to display the image, and the <p> tag contains the caption text."
-      },
-      {
-        "id": 89,
-        "lang": "html",
-        "code": "<div>\n <h3>List Title</h3>\n <ul>\n <li>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</li>\n </ul>\n </div>",
-        "score": 2,
-        "explanation": "This code snippet represents a <div> element containing a list. The list is created using the <ul> tag, and each list item is represented by an <li> tag."
-      },
-      {
-        "id": 90,
-        "lang": "html",
-        "code": "<div>\n <h4>Contact Information</h4>\n <form>\n <label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n <label for=\"email\">Email:</label>\n <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">\n <button type=\"submit\">Submit</button>\n </form>\n </div>",
-        "score": 2,
-        "explanation": "This code snippet demonstrates a <div> element containing a form. The form includes input fields for name and email, along with corresponding <label> tags. The form also has a submit button represented by the <button> tag."
-      },
-      {
-        "id": 91,
-        "lang": "html",
-        "code": "<div>\n <h3>Steps</h3>\n <ol>\n <li>Step 1</li>\n <li>Step 2</li>\n <li>Step 3</li>\n </ol>\n </div>",
-        "score": 2,
-        "explanation": "This code snippet represents a <div> element containing an ordered list. The list is created using the <ol> tag, and each item is represented by an <li> tag. This can be used to provide a sequence of steps or instructions."
-      },
-      {
-        "id": 92,
-        "lang": "html",
-        "code": "<a href=\"#section\">Jump to Section</a>",
-        "score": 2,
-        "explanation": "This HTML code represents an anchor element (<a>) used to create a hyperlink that allows users to jump to a specific section within the same webpage. The href attribute contains the identifier (#section) of the target section to which the link will navigate when clicked."
-      },
-      {
-        "id": 93,
-        "lang": "html",
-        "code": "<footer>\n <p>&copy; 2023 My Website</p>\n </footer>",
-        "score": 2,
-        "explanation": "This HTML code represents a footer element (<footer>) used to define the footer section of a webpage. In this example, it contains a paragraph element (<p>) displaying the copyright symbol followed by the year and the name of the website."
-      },
-      {
-        "id": 94,
-        "lang": "html",
-        "code": "<footer>\n <ul>\n <li><a href=\"https://facebook.com\">Facebook</a></li>\n <li><a href=\"https://twitter.com\">Twitter</a></li>\n <li><a href=\"https://instagram.com\">Instagram</a></li>\n </ul>\n <p>&copy; 2023 My Website</p>\n </footer>",
-        "score": 2,
-        "explanation": "This code snippet showcases a <footer> element with links to social media profiles. Each link is represented by an <a> tag and can direct users to the respective social media platforms."
-      },
-      {
-        "id": 95,
-        "lang": "html",
-        "code": "<mark>This text is highlighted.</mark>",
-        "score": 2,
-        "explanation": "This HTML code represents a mark element (<mark>) used to highlight or mark specific text within a document. It is often used to draw attention to important or significant information."
-      },
-      {
-        "id": 96,
-        "lang": "html",
-        "code": "<nav>\n <ul>\n <li class=\"active\"><a href=\"home.html\">Home</a></li>\n <li><a href=\"about.html\">About</a></li>\n <li><a href=\"services.html\">Services</a></li>\n </ul>\n </nav>",
-        "score": 2,
-        "explanation": "This code snippet highlights the active menu item by adding the active class to the corresponding <li> element. This can be useful for indicating the current page or section."
-      },
-      {
-        "id": 97,
-        "lang": "html",
-        "code": "<main>\n <h1>Welcome to My Website</h1>\n <p>This is the main content of the webpage.</p>\n </main>",
-        "score": 2,
-        "explanation": "This HTML code represents a main element (<main>) used to identify the main content section of a webpage. It typically includes important content that is unique to the page and excludes content such as navigation menus or footers."
-      },
-      {
-        "id": 98,
-        "lang": "html",
-        "code": "<img src=\"image.jpg\" alt=\"Image Description\" onclick=\"console.log('Image clicked!')\">",
-        "score": 2,
-        "explanation": "This code snippet displays an image and logs a message to the console when the image is clicked. The onclick attribute triggers the console.log() statement."
-      },
-      {
-        "id": 99,
-        "lang": "html",
-        "code": "",
-        "score": 2,
-        "explanation": ""
-      },
-      {
-        "id": 100,
-        "lang": "html",
-        "code": "",
-        "score": 2,
-        "explanation": ""
-      }
+      "id": 2,
+      "lang": "html",
+      "code": "<p>This is a paragraph.</p>",
+      "score": 2,
+      "explanation": "This HTML code creates a paragraph containing the text 'This is a paragraph.'."
+    },
+    {
+      "id": 3,
+      "lang": "html",
+      "code": "<ul class=\"list\">\n \t  <li>Item 1</li>\n \t <li>Item 2</li>\n \t <li>Item 3</li>\n</ul>",
+      "score": 2,
+      "explanation": "This HTML code defines an unordered list with a class 'list' and contains three list items: 'Item 1', 'Item 2', and 'Item 3'."
+    },
+    {
+      "id": 4,
+      "lang": "html",
+      "code": "<a href=\"https://www.example.com\">Visit Example</a>",
+      "score": 2,
+      "explanation": "This HTML code creates a hyperlink with the text 'Visit Example' that points to the URL 'https://www.example.com'."
+    },
+    {
+      "id": 5,
+      "lang": "html",
+      "code": "<img src=\"image.webp\" alt=\"Image\">",
+      "score": 2,
+      "explanation": "This HTML code inserts an image with the source 'image.webp' and the alternate text 'Image'."
+    },{
+      "id": 6,
+      "lang": "html",
+      "code": "<h2>Welcome to My Website</h2>",
+      "score": 2,
+      "explanation": "This HTML code represents a level 2 heading element (<h2>) displaying the text 'Welcome to My Website'."
+    },
+    {
+      "id": 7,
+      "lang": "html",
+      "code": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+      "score": 2,
+      "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'."
+    },
+    {
+      "id": 8,
+      "lang": "html",
+      "code": "<div class=\"container\">\n \t <h3>Content</h3>\n \t <p>This is some content.</p>\n</div>",
+      "score": 2,
+      "explanation": "This HTML code represents a <div> element with the class 'container'. It contains a level 3 heading element (<h3>) displaying the text 'Content', and a paragraph element (<p>) containing the text 'This is some content'."
+    },
+    {
+      "id": 9,
+      "lang": "html",
+      "code": "<a href=\"#\">Click Me</a>",
+      "score": 2,
+      "explanation": "This HTML code represents a hyperlink element (<a>) with the 'href' attribute set to '#' and displaying the text 'Click Me'."
+    },
+    {
+      "id": 10,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"Image\">",
+      "score": 2,
+      "explanation": "This HTML code represents an image element (<img>) with the 'src' attribute set to 'image.jpg' and the 'alt' attribute set to 'Image'."
+    },
+    {
+      "id": 11,
+      "lang": "html",
+      "code": "<ul>\n  \t<li>Item 1</li>\n  \t<li>Item 2</li>\n  \t<li>Item 3</li>\n</ul>",
+      "score": 2,
+      "explanation": "This HTML code represents an unordered list element (<ul>) containing three list item elements (<li>) with the texts 'Item 1', 'Item 2', and 'Item 3'."
+    },
+    {
+      "id": 12,
+      "lang": "html",
+      "code": "<input type=\"text\" placeholder=\"Enter your name\">",
+      "score": 2,
+      "explanation": "This HTML code represents an input element (<input>) with the 'type' attribute set to 'text' and the 'placeholder' attribute set to 'Enter your name'."
+    },
+    {
+      "id": 13,
+      "lang": "html",
+      "code": "<h4>About Us</h4>\n<p>We are a team of developers.</p>",
+      "score": 2,
+      "explanation": "This HTML code represents a level 4 heading element (<h4>) displaying the text 'About Us', followed by a paragraph element (<p>) containing the text 'We are a team of developers'."
+    },
+    {
+      "id": 14,
+      "lang": "html",
+      "code": "<table>\n\t<tr>\n\t\t<th>Name</th>\n\t\t<th>Age</th>\n\t</tr>\n\t<tr>\n\t\t<td>John</td>\n\t\t<td>25</td>\n\t</tr>\n</table>",
+      "score": 2,
+      "explanation": "This HTML code represents a table element (<table>) with two table rows (<tr>). The first row contains two table header cells (<th>) with the texts 'Name' and 'Age'. The second row contains two table data cells (<td>) with the texts 'John' and '25'."
+    },      
+    {
+      "id": 15,
+      "lang": "html",
+      "code": "<form action=\"/submit\" method=\"POST\">\n  \t<input type=\"text\" name=\"username\" placeholder=\"Enter your username\">\n  \t<input type=\"password\" name=\"password\" placeholder=\"Enter your password\">\n  \t<button type=\"submit\">Submit</button>\n</form>",
+      "score": 2,
+      "explanation": "This HTML code represents a form element (<form>) with the 'action' attribute set to '/submit' and the 'method' attribute set to 'POST'. Inside the form, there are two input elements (<input>) - one with 'type' set to 'text' and 'name' set to 'username', and the other with 'type' set to 'password' and 'name' set to 'password'. Both inputs have placeholder attributes. Lastly, there is a button element (<button>) with 'type' set to 'submit' and displaying the text 'Submit'."
+    },
+    {
+      "id": 16,
+      "lang": "html",
+      "code": "<nav>\n  \t<a href=\"#\">Home</a>\n \t <a href=\"#\">About</a>\n  \t<a href=\"#\">Contact</a>\n</nav>",
+      "score": 2,
+      "explanation": "This HTML code represents a navigation element (<nav>). Inside the navigation element, there are three hyperlink elements (<a>) with 'href' attributes set to '#' and displaying the texts 'Home', 'About', and 'Contact'."
+    },
+    {
+      "id": 17,
+      "lang": "html",
+      "code": "<label for=\"name\">Name:</label>\n <input type=\"text\" id=\"name\" name=\"name\">",
+      "score": 2,
+      "explanation": "This HTML code represents a label element (<label>) with the 'for' attribute set to 'name' and displaying the text 'Name:'. It is followed by an input element (<input>) with the 'type' attribute set to 'text', the 'id' attribute set to 'name', and the 'name' attribute set to 'name'."
+    },
+    {
+      "id": 18,
+      "lang": "html",
+      "code": "<header>\n \t <h1>My Website</h1>\n</header>",
+      "score": 2,
+      "explanation": "This HTML code represents a header element (<header>) containing a level 1 heading element (<h1>) displaying the text 'My Website'."
+    },
+    {
+      "id": 19,
+      "lang": "html",
+      "code": "<section>\n  \t<h2>Section Title</h2>\n  \t<p>This is some content in a section.</p>\n</section>",
+      "score": 2,
+      "explanation": "This HTML code represents a section element (<section>) containing a level 2 heading element (<h2>) displaying the text 'Section Title', followed by a paragraph element (<p>) containing the text 'This is some content in a section'."
+    },
+    {
+      "id": 20,
+      "lang": "html",
+      "code": "<footer>\n  \t<p>&copy; 2023 My Website</p>\n</footer>",
+      "score": 2,
+      "explanation": "This HTML code represents a footer element (<footer>) containing a paragraph element (<p>) displaying the text '&copy; 2023 My Website'."
+    },
+    {
+      "id": 21,
+      "lang": "html",
+      "code": "<p>Hello, World!</p>",
+      "score": 2,
+      "explanation": "This HTML code represents a paragraph element (<p>) containing the text 'Hello, World!'. It is a commonly used phrase in programming tutorials and examples to illustrate basic output."
+    },
+    {
+      "id": 22,
+      "lang": "html",
+      "code": "<a href=\"https://www.example.com\">Visit Example.com</a>",
+      "score": 2,
+      "explanation": "This HTML code represents an anchor element (<a>) with a hyperlink reference attribute (href) set to 'https://www.example.com'. The anchor text 'Visit Example.com' will be displayed on the webpage, and clicking on it will redirect the user to the specified URL."
+    },
+    {
+      "id": 23,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"A beautiful landscape\">",
+      "score": 2,
+      "explanation": "This HTML code represents an image element (<img>) with a source attribute (src) set to \"image.jpg\". The alt attribute provides alternative text \"A beautiful landscape\" that is displayed when the image cannot be loaded or for accessibility purposes."
+    },
+    {
+      "id": 24,
+      "lang": "html",
+      "code": "<ul>\n \t<li>Item 1</li>\n \t<li>Item 2</li>\n \t<li>Item 3</li>\n </ul>",
+      "score": 2,
+      "explanation": "This HTML code represents an unordered list element (<ul>) with three list item elements (<li>). Each list item displays a different item: \"Item 1\", \"Item 2\", and \"Item 3\". This structure creates a bulleted list on the webpage."
+    },
+    {
+      "id": 25,
+      "lang": "html",
+      "code": "<blockquote>\n\t <p>\"Repetition is the mother of all skills.\"</p>\n \t<footer>- Founder</footer>\n </blockquote>",
+      "score": 2,
+      "explanation": "This code encapsulates a testimonial quote within a <blockquote> element. The quote is wrapped in a <p> element, and the source of the quote is specified in the <footer> element. It is a visually distinct way to highlight positive feedback or endorsements."
+    },
+    {
+      "id": 26,
+      "lang": "html",
+      "code": "<form>\n \t<label for=\"name\">Name:</label>\n \t<input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n\t <input type=\"submit\" value=\"Submit\">\n</form>",
+      "score": 2,
+      "explanation": "This HTML code represents a form element (<form>) containing a label element (<label>) and two input elements (<input>). The label \"Name:\" is associated with the input field using the for attribute. The first input field is a text input, and the second one is a submit button. Users can enter their name in the text field and submit the form using the button."
+    },
+    {
+      "id": 27,
+      "lang": "html",
+      "code": "<table>\n \t<tr>\n \t<th>Name</th>\n \t<th>Age</th>\n \t</tr>\n \t<tr>\n \t<td>John</td>\n \t<td>25</td>\n\t </tr>\n\t <tr>\n \t<td>Jane</td>\n \t<td>25</td>\n \t</tr>\n </table>",
+      "score": 2,
+      "explanation": "This HTML code represents a table element (<table>) with three table row elements (<tr>). The first row contains table header cells (<th>) specifying the columns' names: \"Name\" and \"Age\". The subsequent rows contain table data cells (<td>) with corresponding values. This structure creates a tabular representation of data."
+    },
+    {
+      "id": 28,
+      "lang": "html",
+      "code": "<div class=\"container\">\n \t<h2>About Us</h2>\n \t<p>Welcome to our website! We provide top-notch services and strive to meet your needs.</p>\n </div>",
+      "score": 2,
+      "explanation": "This HTML code represents a div element (<div>) with the CSS class \"container\". It contains a heading element (<h2>) with the text \"About Us\" and a paragraph element (<p>) with a welcoming message. The div element is commonly used for grouping and styling purposes, allowing the content within it to be styled or positioned as a unit."
+    },
+    {
+      "id": 29,
+      "lang": "html",
+      "code": "<nav>\n\t <ul>\n \t<li><a href=\"home.html\">Home</a></li>\n\t <li><a href=\"about.html\">About</a></li>\n\t <li><a href=\"contact.html\">Contact</a></li>\n \t</ul>\n </nav>",
+      "score": 2,
+      "explanation": "This HTML code represents a navigation element (<nav>) containing an unordered list (<ul>) of navigation links. Each list item (<li>) contains an anchor element (<a>) with a specific href attribute, representing different pages of a website. Clicking on these links will navigate the user to the corresponding pages."
+    },
+    {
+      "id": 30,
+      "lang": "html",
+      "code": "<header>\n\t<h1>My Website</h1>\n\t<nav>\n\t\t<a href=\"home.html\">Home</a>\n\t\t<a href=\"about.html\">About</a>\n\t\t<a href=\"contact.html\">Contact</a>\n\t</nav>\n</header>",
+      "score": 2,
+      "explanation": "This HTML code represents a header element (<header>) containing a heading element (<h1>) with the text \"My Website\" and a navigation section. The navigation section consists of multiple anchor elements (<a>) representing links to different pages. The header element is commonly used to define the top section of a webpage, typically containing the site's logo, main heading, and primary navigation menu."
+    },
+    {
+      "id": 31,
+      "lang": "html",
+      "code": "<ol>\n \t<li>First step</li>\n\t <li>Second step</li>\n \t<li>Third step</li>\n </ol>",
+      "score": 2,
+      "explanation": "This HTML code represents an ordered list element (<ol>) with three list item elements (<li>). Each list item represents a step or item in a sequence. The numbers (or other symbols) are automatically generated and displayed by the browser, indicating the order of the items."
+    },
+    {
+      "id": 32,
+      "lang": "html",
+      "code": "<textarea rows=\"4\" cols=\"50\">\n\t Enter your message here...\n </textarea>",
+      "score": 2,
+      "explanation": "This HTML code represents a textarea element (<textarea>) with specified rows and columns. The rows attribute sets the visible number of lines, while the cols attribute sets the visible width in characters. Users can enter text or messages within the textarea, and the specified dimensions define the display area."
+    },
+    {
+      "id": 33,
+      "lang": "html",
+      "code": "<aside>\n \t<h3>Related Links</h3>\n \t<ul>\n \t<li><a href=\"article1.html\">Article 1</a></li>\n\t <li><a href=\"article2.html\">Article 2</a></li>\n \t<li><a href=\"article3.html\">Article 3</a></li>\n \t</ul>\n </aside>",
+      "score": 2,
+      "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
+    },
+    {
+      "id": 34,
+      "lang": "html",
+      "code": "<blockquote>\n \t<p\"Every expert was once a beginner..\"</p>\n\t <cite>- Rutherford B.Hayes</cite>\n </blockquote>",
+      "score": 2,
+      "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
+    },
+    {
+      "id": 35,
+      "lang": "html",
+      "code": "<video src=\"video.mp4\" controls>\n </video>",
+      "score": 2,
+      "explanation": "This HTML code represents a video element (<video>) with a source attribute (src) set to \"video.mp4\". The controls attribute enables the default video controls, allowing users to play, pause, and adjust the playback. The text within the video element serves as a fallback message for browsers that do not support the video tag."
+    },
+    {
+      "id": 36,
+      "lang": "html",
+      "code": "<select>\n\t <option value=\"bmw\">BMW</option>\n \t <option value=\"Mercedes\">Mercedes</option>\n \t<option value=\"audi\">Audi</option>\n </select>",
+      "score": 2,
+      "explanation": "The HTML code you provided represents a select element, which is used to create a dropdown menu on a webpage. The select element is denoted by the <select> tags.       Inside the select element, you can have multiple option elements, which are represented by the <option> tags. Each option element represents a choice that the user can select from the dropdown menu. The text between the opening and closing option tags defines the visible text that the user sees in the dropdown menu."
+    },
+    {
+      "id": 37,
+      "lang": "html",
+      "code": "<article>\n\t <h2>Article Title</h2>\n \t<p>You can write sentences/paragprahs between these 'p' tags.</p> </article>",
+      "score": 2,
+      "explanation": "The <article> element in HTML is used to wrap self-contained content on a webpage, like blog posts or news articles. It typically includes an <h2> for the title and a <p> for the main text. It helps organize and identify independent sections of content."
+    },
+    {
+      "id": 38,
+      "lang": "html",
+      "code": "<progress value=\"50\" max=\"100\"></progress>",
+      "score": 2,
+      "explanation": "This HTML code represents a progress element (<progress>) used to display the progress of a task. The value attribute represents the current progress, and the max attribute sets the maximum value. In this example, the progress bar is filled halfway (50%) to represent the completion of the task."
+    },
+    {
+      "id": 39,
+      "lang": "html",
+      "code": "<details>\n\t <summary>Click to expand</summary>\n\t <p>Additional details or information can be revealed here.</p>\n </details>",
+      "score": 2,
+      "explanation": "This HTML code represents a details element (<details>) used to create a collapsible section on a webpage. The summary element (<summary>) provides a clickable heading for the section. When clicked, the section expands or collapses, revealing or hiding the enclosed content, in this case, the paragraph element (<p>) with additional details or information."
+    },
+    {
+      "id": 40,
+      "lang": "html",
+      "code": "<time datetime=\"2023-06-21\">June 21, 2023</time>",
+      "score": 2,
+      "explanation": "This HTML code represents a time element (<time>) used to mark up a specific time or date. The datetime attribute provides the date and time in a machine-readable format for browsers and search engines. The text within the time element represents the human-readable date or time display for users."
+    },
+    {
+      "id": 41,
+      "lang": "html",
+      "code": "<blockquote>\n\t <p>\"The greatest glory in living lies not in never falling, but in rising every time we fall.\"</p>\n \t <footer> - Nelson Mandela</footer>\n </blockquote>",
+      "score": 2,
+      "explanation": "This HTML code represents a blockquote element (<blockquote>) containing a paragraph element (<p>) with a quote. The cite element (<cite>) is used to provide attribution to the quote's author. This structure is commonly used to display a quotation on a webpage."
+    },
+    {
+      "id": 42,
+      "lang": "html",
+      "code": "<dl>\n\t <dt>HTML</dt>\n \t<dd>A markup language for creating web pages.</dd>\n \t<dt>CSS</dt>\n \t<dd>A stylesheet language used for styling web pages.</dd>\n \t<dt>JavaScript</dt>\n \t<dd>A programming language used for adding interactivity to web pages.</dd>\n </dl>",
+      "score": 2,
+      "explanation": "This HTML code represents a definition list element (<dl>) used to present a list of terms and their corresponding descriptions. The term is defined using the definition term element (<dt>), and the description is provided using the definition description element (<dd>). This structure is useful for creating glossaries or lists of definitions."
+    },
+    {
+      "id": 43,
+      "lang": "html",
+      "code": "<aside>\n \t<h3>Advertisement</h3>\n \t<img src=\"ad.jpg\" alt=\"Advertisement\">\n \t<p>Check out our latest products!</p>\n </aside>",
+      "score": 2,
+      "explanation": "This HTML code represents an aside element (<aside>) used for content that is tangentially related to the main content of the page. It contains a heading element (<h3>) with the text \"Related Links\" and an unordered list (<ul>) with multiple list items. Each list item contains an anchor element (<a>) representing links to related articles or resources."
+    },
+    {
+      "id": 44,
+      "lang": "html",
+      "code": "<div>\n \t<h1>Welcome to My Website</h1>\n\t <p>This is the homepage of my website.</p>\n </div>",
+      "score": 2,
+      "explanation": "This HTML code represents a div element (<div>) used as a container or a division within the webpage. It contains a heading element (<h1>) for the website title and a paragraph element (<p>) for the introductory text. The div element is a versatile and commonly used element for grouping and styling content."
+    },
+    {
+      "id": 45,
+      "lang": "html",
+      "code": "<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"email\", indicating that it is specifically for capturing email addresses. It can help enforce email validation and provide a specific keyboard layout on mobile devices."
+    },
+    {
+      "id": 46,
+      "lang": "html",
+      "code": "<input type=\"password\" id=\"password\" name=\"password\" placeholder=\"Enter your password\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"password\", indicating that it is intended for capturing sensitive information like passwords. The characters entered in this field are usually masked or hidden for security reasons."
+    },
+    {
+      "id": 47,
+      "lang": "html",
+      "code": "<input type=\"date\" id=\"birthdate\" name=\"birthdate\" placeholder=\"Enter your birthdate\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"date\", allowing users to select a date from a calendar or enter it manually. It helps ensure that the input follows a specific date format."
+    },
+    {
+      "id": 48,
+      "lang": "html",
+      "code": "<input type=\"number\" id=\"age\" name=\"age\" placeholder=\"Enter your age\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"number\", indicating that it is used for capturing numeric values. It may include additional attributes like min, max, or step to define constraints or increment/decrement rules."
+    },
+    {
+      "id": 49,
+      "lang": "html",
+      "code": "<input type=\"checkbox\" id=\"subscribe\" name=\"subscribe\">\n <label for=\"subscrib\">Subscribe to our newsletter</label>",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"checkbox\", allowing users to select or deselect a particular option. The associated <label> element provides a visible description or label for the checkbox, enhancing usability and accessibility. "
+    },
+    {
+      "id": 50,
+      "lang": "html",
+      "code": "<input type=\"range\" id=\"volume\" name=\"volume\" min=\"0\" max=\"100\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"range\", providing a slider control for selecting a value within a specified range. In this example, the range is set from 0 to 100. It is often used for settings like volume or brightness adjustments."
+    },
+    {
+      "id": 51,
+      "lang": "html",
+      "code": "<select id=\"country\" name=\"country\">\n \t<option value=\"uk\">United Kingdom</option>\n \t<option value=\"de\">Germany</option>\n \t<option value=\"es\">Spain</option>\n</select>",
+      "score": 2,
+      "explanation": "This <select> element creates a dropdown select menu. Users can choose one option from the list. Each option is defined using the <option> element, where the value attribute represents the selected value and the text content represents the visible option."
+    },
+    {
+      "id": 52,
+      "lang": "html",
+      "code": "<textarea id=\"message\" name=\"message\" placeholder=\"Enter your message\"></textarea>",
+      "score": 2,
+      "explanation": "This <textarea> element allows users to enter multi-line text. It is useful for capturing longer messages or comments. The placeholder attribute provides a hint or example text to guide the user's input."
+    },
+    {
+      "id": 53,
+      "lang": "html",
+      "code": "<input type=\"color\" id=\"favorite-color\" name=\"favorite-color\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"color\", allowing users to select a color using a color picker. It displays a color swatch and a picker interface to choose a specific color value."
+    },
+    {
+      "id": 54,
+      "lang": "html",
+      "code": "<input type=\"url\" id=\"website-url\" name=\"website-url\" placeholder=\"Enter website URL\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"url\", intended for capturing a valid URL. It can help with URL validation and may provide specific validation feedback to users."
+    },
+    {
+      "id": 55,
+      "lang": "html",
+      "code": "<input type=\"search\" id=\"search-term\" name=\"search-term\" placeholder=\"Search...\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"search\", designed for search queries. It can have specific browser behavior, such as displaying a clear button or providing search suggestions."
+    },
+    {
+      "id": 56,
+      "lang": "html",
+      "code": "<input type=\"time\" id=\"meeting-time\" name=\"meeting-time\" placeholder=\"Enter meeting time\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"time\", allowing users to select or enter a specific time. It provides a time picker interface and enforces time format constraints."
+    },
+    {
+      "id": 57,
+      "lang": "html",
+      "code": "<input type=\"checkbox\" id=\"hobby1\" name=\"hobby[]\" value=\"reading\">\n <label for=\"hobby1\">Reading</label>\n\n <input type=\"checkbox\" id=\"hobby2\" name=\"hobby[]\" value=\"painting\">\n <label for=\"hobby2\">Painting</label>\n\n <input type=\"checkbox\" id=\"hobby3\" name=\"hobby[]\" value=\"gardening\">\n <label for=\"hobby3\">Gardening</label>",
+      "score": 2,
+      "explanation": "These input elements have the type attribute set to \"checkbox\" and the same name attribute with an additional empty pair of square brackets (name=\"hobby[]\"). This creates a group of checkboxes where users can select multiple options. The selected values are submitted as an array in the form data."
+    },
+    {
+      "id": 58,
+      "lang": "html",
+      "code": "<input type=\"tel\" id=\"phone-number\" name=\"phone-number\" placeholder=\"Enter your phone number\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"tel\", designed for capturing telephone numbers. It can help enforce input validation and may provide specific keyboard layouts on mobile devices."
+    },
+    {
+      "id": 59,
+      "lang": "html",
+      "code": "<label>\n \t<input type=\"checkbox\" id=\"agree-terms\" name=\"agree-terms\">\n\t I agree to the terms and conditions\n </label>",
+      "score": 2,
+      "explanation": "This input element is wrapped in a <label> element to associate the text with the checkbox. It allows users to check or uncheck a specific option, such as agreeing to terms and conditions. Clicking on the label will also toggle the checkbox state."
+    },
+    {
+      "id": 60,
+      "lang": "html",
+      "code": "<input type=\"submit\" value=\"Submit\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"submit\", creating a button that submits the form data to the server when clicked. It is commonly used as the final step in a form to trigger form submission."
+    },
+    {
+      "id": 61,
+      "lang": "html",
+      "code": "<input type=\"image\" src=\"submit-button.png\" alt=\"Submit\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"image\" and includes an image file as the source (src) attribute. It creates a clickable image that submits the form when clicked. The image serves as the button representation."
+    },
+    {
+      "id": 62,
+      "lang": "html",
+      "code": "<input type=\"range\" id=\"slider\" name=\"slider\" min=\"0\" max=\"100\" value=\"50\">\n <output for=\"slider\"></output>",
+      "score": 2,
+      "explanation": "This input element is a range slider (type=\"range\") with minimum and maximum values specified by the min and max attributes. The initial value is set to 50 using the value attribute. The <output> element, associated with the slider through the for attribute, displays the current value of the slider."
+    },
+    {
+      "id": 63,
+      "lang": "html",
+      "code": "<select id=\"colors\" name=\"colors\" multiple>\n <option value=\"red\">Red</option>\n\t <option value=\"blue\">Blue</option>\n\t <option value=\"green\">Green</option>\n </select>",
+      "score": 2,
+      "explanation": "This <select> element has the multiple attribute, allowing users to select multiple options simultaneously. They can hold down the Ctrl key (or Command key on macOS) to make multiple selections. The selected values are submitted as an array in the form data."
+    },
+    {
+      "id": 64,
+      "lang": "html",
+      "code": "<input type=\"datetime-local\" id=\"meeting-time\" name=\"meeting-time\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"datetime-local\", providing a combined date and time picker for selecting a specific date and time. It allows users to choose a date and time using a graphical interface."
+    },
+    {
+      "id": 65,
+      "lang": "html",
+      "code": "<label for=\"password\">Password:</label>\n <input type=\"password\" id=\"password\" name=\"password\">\n <label for=\"confirm-password\">Confirm Password:</label>\n \t<input type=\"password\" id=\"confirm-password\" name=\"confirm-password\">",
+      "score": 2,
+      "explanation": "This example includes two password input fields. The first password input (type=\"password\") allows users to enter their password, while the second input serves as a confirmation field to re-enter the password. The labels associated with each input provide descriptive text for the respective fields."
+    },
+    {
+      "id": 66,
+      "lang": "html",
+      "code": "<input type=\"timerange\" id=\"working-hours\" name=\"working-hours\">",
+      "score": 2,
+      "explanation": "This input element has the type attribute set to \"timerange\". It provides a range picker specifically designed for selecting a time range, such as working hours or availability slots. Similar to the \"gradient\" type, the \"timerange\" input type may not be supported in all browsers."
+    },
+    {
+      "id": 67,
+      "lang": "html",
+      "code": "<input type=\"text\" id=\"city\" name=\"city\" list=\"city-list\">\n\t <datalist id=\"city-list\">\n \t<option value=\"London\">\n \t<option value=\"New York\">\n \t<option value=\"Rome\">\n</datalist>",
+      "score": 2,
+      "explanation": "This input element has an associated <datalist> element that provides a list of predefined options for autocomplete. When users type in the input field, matching options from the datalist will be displayed as suggestions. In this example, the datalist suggests cities: London, New York, and Rome."
+    },
+    {
+      "id": 68,
+      "lang": "html",
+      "code": "<table>\n\t<tr>\n\t\t<th>Name</th>\n\t\t<th>Age</th>\n\t\t<th>Country</th>\n\t</tr>\n\t<tr>\n\t\t<td>John Doe</td>\n\t\t<td>30</td>\n\t\t<td>USA</td>\n\t</tr>\n\t<tr>\n\t\t<td>Jane Smith</td>\n\t\t<td>25</td>\n\t\t<td>Canada</td>\n\t</tr>\n</table>",
+      "score": 2,
+      "explanation": "The given HTML code represents a table structure with three columns: \"Name,\" \"Age,\" and \"Country.\" The <table> element defines the table, and the <tr> element is used to create a table row. Within the first row, the <th> elements represent table headers, specifying the column names. The subsequent rows are defined using <tr> elements, and the <td> elements contain the actual data for each column, representing the names, ages, and countries of two individuals. This table structure allows for organized display and presentation of tabular data on a webpage."
+    },
+    {
+      "id": 69,
+      "lang": "html",
+      "code": "<table>\n\t<tr>\n\t\t<th colspan=\"2\">Personal Information</th>\n\t</tr>\n\t<tr>\n\t\t<td rowspan=\"2\">John Doe</td>\n\t\t<td>30</td>\n\t</tr>\n\t<tr>\n\t\t<td>USA</td>\n\t</tr>\n</table>",
+      "score": 2,
+      "explanation": "This table showcases the usage of rowspan and colspan attributes. The first row has a header cell that spans across two columns using colspan=\"2\". The second row has a data cell with rowspan=\"2\", causing it to span two rows. It represents the personal information of John Doe, including his age and country."
+    },
+    {
+      "id": 70,
+      "lang": "html",
+      "code": "<table>\n \t<caption>Employee Information</caption>\n \t<tr>\n \t<th>Name</th>\n \t<th>Age</th>\n \t</tr>\n\t <tr>\n \t<td>John Doe</td>\n \t<td>30</td>\n\t</tr>\n \t<tr>\n \t<td>Jane Smith</td>\n \t<td>25</td>\n \t</tr>\n </table>",
+      "score": 2,
+      "explanation": "The provided HTML code represents a table structure displaying \"Employee Information.\" The <table> element defines the table, and the <caption> element provides a caption or title for the table. The table consists of two columns specified by the <th> elements: \"Name\" and \"Age.\" Each subsequent row, defined by the <tr> element, contains data cells represented by the <td> elements. In this case, the table displays information about two employees, including their names and ages. This table structure allows for clear presentation and organization of employee data within a webpage."
+    },  
+    {
+      "id": 71,
+      "lang": "html",
+      "code": "<form>\n \t<label for=\"name\">Name:</label>\n\t <input type=\"text\" id=\"name\" name=\"name\">\n \t<button type=\"submit\">Submit</button>\n</form>",
+      "score": 2,
+      "explanation": "This code represents a form structure using the <form> element. It includes a label for the input field and an input element of type \"text\" for users to enter their name. The submit button triggers form submission when clicked."
+    },
+    {
+      "id": 72,
+      "lang": "html",
+      "code": "<h3>Our Mission</h3>\n <p>We strive to make a positive impact by creating innovative solutions and fostering sustainable practices.</p>",
+      "score": 2,
+      "explanation": "This code represents a section heading (<h3>) that introduces a specific aspect or goal of the company. The accompanying paragraph (<p>) provides a description or statement related to the mission, giving more information or context."
+    },
+    {
+      "id": 73,
+      "lang": "html",
+      "code": "<h3>Contact Us</h3>\n\t<address>\n\t\t<p>123 Main Street, City, State</p>\n\t\t<p>Phone: 777-123-4567</p>\n\t\t<p>Email: info@example.com</p>\n\t</address>",
+      "score": 2,
+      "explanation": "This code displays a section heading (<h3>) indicating contact information. The <address> element wraps the company's address, phone number, and email. It is a semantic element in HTML used to mark up contact details."
+    },
+    {
+      "id": 74,
+      "lang": "html",
+      "code": "<h3>Key Features</h3>\n\t <ul>\n\t <li>Advanced security measures</li>\n \t<li>User-friendly interface</li>\n\t <li>Seamless integration</li>\n </ul>",
+      "score": 2,
+      "explanation": "This code presents a section heading (<h3>) for key features and uses an unordered list (<ul>) to list each feature as a list item (<li>). It provides a concise and organized way to showcase the notable features of a product or service."
+    },
+    {
+      "id": 75,
+      "lang": "html",
+      "code": "<h1>Welcome to My Website</h1>",
+      "score": 2,
+      "explanation": "This HTML code represents a heading element (<h1>) displaying the text \"Welcome to My Website\". The <h1> element is commonly used as the main heading on a webpage, indicating its importance and prominence."
+    },
+    {
+      "id": 76,
+      "lang": "html",
+      "code": "<div class=\"team-member\">\n \t<img src=\"profile.jpg\" alt=\"Profile Picture\">\n \t<h3>John Doe</h3>\n\t <p>Lead Developer</p>\n </div>",
+      "score": 2,
+      "explanation": "This code creates a container using the <div> element to represent a team member profile. It includes an image (<img>) for the team member's profile picture, their name (<h3>), and their role or designation (<p>). It can be used to display team member information in a structured manner."
+    },
+    {
+      "id": 77,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"Image Description\">",
+      "score": 2,
+      "explanation": "This code embeds an image (image.jpg) into a web page, with the alt attribute providing alternative text for the image."
+    },
+    {
+      "id": 78,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"Image Description\" width=\"300\" height=\"200\">",
+      "score": 2,
+      "explanation": "This code displays an image using the <img> element. The src attribute specifies the URL or file path of the image file. The alt attribute provides alternative text that describes the image. In this example, the image's width is set to 300 pixels and height to 200 pixels using the width and height attributes, respectively. This helps control the image's dimensions on the webpage."
+    },
+    {
+      "id": 79,
+      "lang": "html",
+      "code": "<a href=\"details.html\">\n <img src=\"image.jpg\" alt=\"Image Description\">\n </a>",
+      "score": 2,
+      "explanation": "This code creates a clickable image link using the <a> element. The href attribute specifies the destination URL or file path to which the link leads. The <img> element within the anchor tag represents the image. Clicking on the image will navigate the user to the specified destination. It is commonly used for creating image-based navigation or linking to a larger version of the image."
+    },
+    {
+      "id": 80,
+      "lang": "html",
+      "code": "<figure>\n\t <img src=\"image.jpg\" alt=\"Image Description\">\n \t<figcaption>Caption for the image</figcaption>\n </figure>",
+      "score": 2,
+      "explanation": "This code wraps the image and its caption using the <figure> element. The <img> element displays the image, and the alt attribute provides alternative text. The <figcaption> element is used to add a caption for the image. It is useful for providing additional context or describing the image in more detail."
+    },
+    {
+      "id": 81,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"Image Description\" style=\"border-radius: 50%;\">",
+      "score": 2,
+      "explanation": "This code displays an image with rounded corners using inline CSS. The src attribute specifies the image file, while the alt attribute provides alternative text. The style attribute is used to apply CSS rules directly to the <img> element. In this example, the border-radius property is set to 50%, resulting in a circular shape for the image."
+    },
+    {
+      "id": 82,
+      "lang": "html",
+      "code": "<a href=\"image.jpg\" target=\"_blank\">\n \t<img src=\"thumbnail.jpg\" alt=\"Image Description\">\n </a>",
+      "score": 2,
+      "explanation": "This code creates an image that serves as a download link for a file. The <a> element represents the anchor tag and specifies the file path using the href attribute. In this example, the file is set to \"file.pdf\". The download attribute indicates that the file should be downloaded when the link is clicked. Inside the anchor tag, the <img> element displays the image, with the src attribute specifying the image file and the alt attribute providing alternative text. When the user clicks on the image, the specified file will be downloaded to their device."
+    },
+    {
+      "id": 83,
+      "lang": "html",
+      "code": "<a href=\"index.html\">\n \t<img src=\"logo.png\" alt=\"\">\n </a>",
+      "score": 2,
+      "explanation": "This code creates an image that acts as a clickable link to the website's home page. The <a> tag specifies the destination using the href attribute, typically set to \"index.html\". The <img> tag displays the website's logo with the src attribute for the image file and the alt attribute for alternative text. When clicked, the image directs the user to the home page, serving as a convenient way to access the main content and navigation options. This demonstrates how the <a> tag with an image creates a link to the home page, enhancing user experience and website navigation."
+    },
+    {
+      "id": 84,
+      "lang": "html",
+      "code": "<a href=\"contact.html\">\n\t <img src=\"contact-icon.png\" alt=\"Contact Us\">\n </a>",
+      "score": 2,
+      "explanation": "The code creates an image that acts as a clickable link to the contact us page. The <a> tag specifies the destination using the href attribute, which can be replaced with the actual contact page file path or URL. The <img> tag displays the image using the src attribute for the image file (\"contact-icon.png\" in this example) and the alt attribute for alternative text. When clicked, the image serves as a link that directs users to the specified contact us page. Ensure to replace \"contact-icon.png\" with your actual contact icon image filename and extension."
+    },
+    {
+      "id": 85,
+      "lang": "html",
+      "code": "<header>\n\t<nav>\n\t\t<ul>\n\t\t\t<li><a href=\"home.html\">Home</a></li>\n\t\t\t<li><a href=\"about.html\">About</a></li>\n\t\t\t<li><a href=\"services.html\">Services</a></li>\n\t\t</ul>\n\t</nav>\n</header>",
+      "score": 2,
+      "explanation": "This code represents a header section with a navigation menu. The navigation menu consists of an unordered list with three list items, each containing a link (<a>) to a different page."
+    },
+    {
+      "id": 86,
+      "lang": "html",
+      "code": "<header>\n \t<nav>\n \t<ul>\n \t<li><a href=\"home.html\">Home</a></li>\n\t <li><a href=\"about.html\">About</a></li>\n\t <li><a href=\"https://example.com\" target=\"_blank\">External Link</a></li>\n \t</ul>\n\t </nav>\n </header>",
+      "score": 2,
+      "explanation": "This code snippet includes an external link in the navigation menu. The third menu item has an absolute URL in the href attribute and uses the target=\"_blank\" attribute to open the link"
+    },
+    {
+      "id": 87,
+      "lang": "html",
+      "code": "<div>\n \t<h2>Section Title</h2>\n\t <p>This is the content of the section.</p>\n </div>",
+      "score": 2,
+      "explanation": "This code uses the <div> element as a container for grouping content, including a heading (<h2>) and a paragraph (<p>). The <div> element is a versatile and commonly used container in HTML that allows developers to group and organize content, apply styling, and manipulate sections of a webpage using CSS and JavaScript. The div is useful for structuring and dividing content into logical sections for better organization and styling purposes."
+    },
+    {
+      "id": 88,
+      "lang": "html",
+      "code": "<div>\n \t<img src=\"image.jpg\" alt=\"Image Description\">\n \t<p>This is a caption for the image.</p>\n </div>",
+      "score": 2,
+      "explanation": "This code snippet combines an image and a caption within a <div> element. The <img> tag is used to display the image, and the <p> tag contains the caption text."
+    },
+    {
+      "id": 89,
+      "lang": "html",
+      "code": "<div>\n\t<h3>List Title</h3>\n\t<ul>\n\t\t<li>Item 1</li>\n\t\t<li>Item 2</li>\n\t\t<li>Item 3</li>\n\t</ul>\n</div>",
+      "score": 2,
+      "explanation": "This code snippet represents a <div> element containing a list. The list is created using the <ul> tag, and each list item is represented by an <li> tag."
+    },
+    {
+      "id": 90,
+      "lang": "html",
+      "code": "<div>\n \t<h4>Contact Information</h4>\n\t<form>\n <label for=\"name\">Name:</label>\n \t<input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Enter your name\">\n \t<label for=\"email\">Email:</label>\n \t<input type=\"email\" id=\"email\" name=\"email\" placeholder=\"Enter your email\">\n \t<button type=\"submit\">Submit</button>\n \t</form>\n </div>",
+      "score": 2,
+      "explanation": "This code snippet demonstrates a <div> element containing a form. The form includes input fields for name and email, along with corresponding <label> tags. The form also has a submit button represented by the <button> tag."
+    },
+    {
+      "id": 91,
+      "lang": "html",
+      "code": "<div>\n\t <h3>Steps</h3>\n \t<ol>\n \t<li>Step 1</li>\n\t<li>Step 2</li>\n\t <li>Step 3</li>\n\t </ol>\n </div>",
+      "score": 2,
+      "explanation": "This code snippet represents a <div> element containing an ordered list. The list is created using the <ol> tag, and each item is represented by an <li> tag. This can be used to provide a sequence of steps or instructions."
+    },
+    {
+      "id": 92,
+      "lang": "html",
+      "code": "<a href=\"#section\">Jump to Section</a>",
+      "score": 2,
+      "explanation": "This HTML code represents an anchor element (<a>) used to create a hyperlink that allows users to jump to a specific section within the same webpage. The href attribute contains the identifier (#section) of the target section to which the link will navigate when clicked."
+    },
+    {
+      "id": 93,
+      "lang": "html",
+      "code": "<footer>\n \t<p>&copy; 2023 My Website</p>\n </footer>",
+      "score": 2,
+      "explanation": "This HTML code represents a footer element (<footer>) used to define the footer section of a webpage. In this example, it contains a paragraph element (<p>) displaying the copyright symbol followed by the year and the name of the website."
+    },
+    {
+      "id": 94,
+      "lang": "html",
+      "code": "<footer>\n\t<ul>\n\t\t<li>\n\t\t\t<a href=\"https://facebook.com\">Facebook</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"https://twitter.com\">Twitter</a>\n\t\t</li>\n\t</ul>\n\t<p>&copy; 2023 My Website</p>\n</footer>",
+      "score": 2,
+      "explanation": "This code snippet showcases a <footer> element with links to social media profiles. Each link is represented by an <a> tag and can direct users to the respective social media platforms."
+    }  ,
+    {
+      "id": 95,
+      "lang": "html",
+      "code": "<mark>This text is highlighted.</mark>",
+      "score": 2,
+      "explanation": "This HTML code represents a mark element (<mark>) used to highlight or mark specific text within a document. It is often used to draw attention to important or significant information."
+    },
+    {
+      "id": 96,
+      "lang": "html",
+      "code": "<nav>\n\t<ul>\n\t\t<li class=\"active\"><a href=\"home.html\">Home</a></li>\n\t\t<li><a href=\"about.html\">About</a></li>\n\t\t<li><a href=\"services.html\">Services</a></li>\n\t</ul>\n</nav>",
+      "score": 2,
+      "explanation": "This code snippet highlights the active menu item by adding the active class to the corresponding <li> element. This can be useful for indicating the current page or section."
+    },
+    {
+      "id": 97,
+      "lang": "html",
+      "code": "<main>\n\t <h1>Welcome to My Website</h1>\n\t <p>This is the main content of the webpage.</p>\n </main>",
+      "score": 2,
+      "explanation": "This HTML code represents a main element (<main>) used to identify the main content section of a webpage. It typically includes important content that is unique to the page and excludes content such as navigation menus or footers."
+    },
+    {
+      "id": 98,
+      "lang": "html",
+      "code": "<img src=\"image.jpg\" alt=\"Image Description\" onclick=\"console.log('Image clicked!')\">",
+      "score": 2,
+      "explanation": "This code snippet displays an image and logs a message to the console when the image is clicked. The onclick attribute triggers the console.log() statement."
+    }
 ]

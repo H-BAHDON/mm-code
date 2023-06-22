@@ -1,0 +1,9 @@
+.placeholder-color .ace_placeholder {
+    color: rgba(255, 255, 255, 0.262); 
+    font-size: 17px;
+  }
+
+  .editor {
+    width: 80%;
+    padding-top: 48px;
+  }
