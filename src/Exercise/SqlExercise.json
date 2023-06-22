@@ -16,10 +16,72 @@
     "explanation": "SQL Statement:"
   },
   {
+    "id": 3,
+    "lang": "sql",
+    "code": "SELECT FirstName, LastName, Age FROM Customers;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },{
     "id": 4,
-    "lang": "sql    ",
-    "code": "SELECT * FROM Customers;",
+    "lang": "sql",
+    "code": "SELECT City, Country FROM Customers WHERE Country = 'USA';",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },
+  {
+    "id": 5,
+    "lang": "sql",
+    "code": "SELECT * FROM Orders WHERE OrderDate BETWEEN '2022-01-01' AND '2022-12-31';",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 6,
+    "lang": "sql",
+    "code": "SELECT CategoryName, COUNT(*) as TotalProducts FROM Products GROUP BY CategoryName;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 7,
+    "lang": "sql",
+    "code": "SELECT AVG(Price) as AveragePrice FROM Products;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },{
+    "id": 8,
+    "lang": "sql",
+    "code": "SELECT SupplierName, COUNT(*) as TotalProducts FROM Products GROUP BY SupplierName HAVING COUNT(*) > 5;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 9,
+    "lang": "sql",
+    "code": "SELECT FirstName, LastName FROM Employees WHERE Salary > 50000 ORDER BY LastName ASC;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 10,
+    "lang": "sql",
+    "code": "SELECT DISTINCT City FROM Customers;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 11,
+    "lang": "sql",
+    "code": "SELECT ProductName, Price FROM Products WHERE Price > 50 AND Price < 100;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },{
+    "id": 12,
+    "lang": "sql",
+    "code": "SELECT * FROM Orders ORDER BY OrderDate DESC LIMIT 10;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }, {
+    "id": 13,
+    "lang": "sql",
+    "code": "SELECT CategoryName FROM Categories WHERE CategoryName LIKE 'F%';",
     "score": 2,
     "explanation": "SQL Statement:"
   }
+
 ]
