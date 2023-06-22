@@ -1,0 +1,25 @@
+[
+
+  {
+    "id": 1,
+    "lang": "sql",
+    "code": "SELECT CustomerName,City FROM Customers; ",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },
+
+  {
+    "id": 2,
+    "lang": "sql",
+    "code": "SELECT * FROM Customers;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  },
+  {
+    "id": 4,
+    "lang": "sql    ",
+    "code": "SELECT * FROM Customers;",
+    "score": 2,
+    "explanation": "SQL Statement:"
+  }
+]

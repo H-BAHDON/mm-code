@@ -36,7 +36,7 @@ function CodeEditor({
        // Clear the editor when exerciseLanguage changes
        setUserCode("");
      }
-   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //  eslint-disable-next-line react-hooks/exhaustive-deps
    }, [exerciseLanguage]);
 
   const handleCodeChange = (value) => {
@@ -61,7 +61,7 @@ function CodeEditor({
 
   return (
     <div className="editor">
-    
+
       <AceEditor
         mode={exerciseLanguage === 'react' ? 'javascript' : exerciseLanguage}
         theme="twilight"
