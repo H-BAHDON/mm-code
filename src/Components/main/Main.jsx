@@ -10,7 +10,7 @@ import cssData from "../../Exercise/cssExercise.json"
 import reactData from "../../Exercise/reactExercise.json"
 import javascriptData from "../../Exercise/javascriptExercise.json"
 import SQLData from "../../Exercise/SqlExercise.json"
-
+import testData from "../../Exercise/testExercise.json"
 // ---------------------------
 
 function Main({ exerciseLanguage }) {
@@ -84,20 +84,29 @@ function Main({ exerciseLanguage }) {
   };
   //
 
+
   const generateRandomCode = () => {
     let filteredData;
     let data;
 
-    if (exerciseLanguage === "javascript" || exerciseLanguage === "react") {
-      data = exerciseLanguage === "javascript" ? javascriptData : reactData;
+    if (exerciseLanguage === "javascript" || exerciseLanguage === "react" || exerciseLanguage === "test") {
+      if (exerciseLanguage === "test") {
+        data = testData;
+      } else {
+        data = exerciseLanguage === "javascript" ? javascriptData : reactData;
+      }
       filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
     } else if (exerciseLanguage === "html") {
       filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else if (exerciseLanguage === "css") {
       filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
-    }else if (exerciseLanguage === "sql") {
+    } else if (exerciseLanguage === "sql") {
       filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
     } else {
+      return;
+    }
+
+    if (!filteredData || filteredData.length === 0) {
       return;
     }
 
@@ -106,15 +115,21 @@ function Main({ exerciseLanguage }) {
       randomIndex = Math.floor(Math.random() * filteredData.length);
     } while (randomIndex === currentExerciseIndex);
 
-    const randomCode = filteredData[randomIndex].code;
-    const randomCodeScore = filteredData[randomIndex].score;
-    const randomCodeExplanation = filteredData[randomIndex].explanation;
+    const randomExercise = filteredData[randomIndex];
+    if (!randomExercise || typeof randomExercise.code !== 'string') {
+      return;
+    }
+
+    const randomCode = randomExercise.code;
+    const randomCodeScore = randomExercise.score;
+    const randomCodeExplanation = randomExercise.explanation;
 
     setInitialCode(randomCode);
     setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
     setCurrentExerciseExplanation(randomCodeExplanation);
   };
+
 
 
   const handleCheckCode = () => {
@@ -132,6 +147,9 @@ function Main({ exerciseLanguage }) {
       expectedCode = filteredData[currentExerciseIndex].code;
     }else if (exerciseLanguage === "sql") {
       const filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    }else if (exerciseLanguage === "test") {
+      const filteredData = testData.filter((exercise) => exercise.lang === exerciseLanguage);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else {
       return;

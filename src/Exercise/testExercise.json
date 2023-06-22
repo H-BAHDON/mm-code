@@ -1,0 +1,25 @@
+[
+
+
+    {
+        "id": 1,
+        "lang": "test",
+        "code": "Test: Verify login with valid credentials",
+        "score": 2,
+        "explanation": "Testing Scenario:"
+      },{
+        "id": 2,
+        "lang": "test",
+        "code": "Test: Verify error message for invalid email format",
+        "score": 2,
+        "explanation": "Testing Scenario:"
+      },{
+        "id": 3,
+        "lang": "test",
+        "code": "Test: Verify successful checkout process",
+        "score": 2,
+        "explanation": "Testing Scenario:"
+      }
+
+
+]
