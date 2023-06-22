@@ -141,299 +141,397 @@
       {
         "id": 21,
         "lang": "css",
-        "code": "",
+        "code": ".center {\n display: flex;\n justify-content: center;\n align-items: center;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet uses flexbox to center an element both horizontally and vertically. By setting display to flex on the container, and using justify-content: center and align-items: center, the element will be centered within its container."
       },
       {
         "id": 22,
         "lang": "css",
-        "code": "",
+        "code": ".gradient-bg {\n background: linear-gradient(to right, #ff0000, #00ff00);\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a gradient background for an element using the linear-gradient property. In this example, the gradient goes from red (#ff0000) on the left to green (#00ff00) on the right. You can adjust the colors and the direction of the gradient to fit your needs."
       },
       {
         "id": 23,
         "lang": "css",
-        "code": "",
+        "code": "a {\n color: #0000ff;\n text-decoration: none;\n }\n\n a:hover {\n text-decoration: underline;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles links by setting their color to blue (#0000ff) and removing the underline (text-decoration: none). When hovering over a link (:hover), the underline is added back to provide a visual indication to the user."
       },
       {
         "id": 24,
         "lang": "css",
-        "code": "",
+        "code": ".box {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds a subtle box shadow effect to an element. The box-shadow property takes four values: horizontal offset, vertical offset, blur radius, and color. In this example, the shadow is 2 pixels to the right, 2 pixels down, has a blur radius of 4 pixels, and a color with 40% opacity."
       },
       {
         "id": 25,
         "lang": "css",
-        "code": "",
+        "code": ".center {\n margin-left: auto;\n margin-right: auto;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet centers an element horizontally by setting both the left and right margins to \"auto\"."
       },
       {
         "id": 26,
         "lang": "css",
-        "code": "",
+        "code": ".bold {\n font-weight: bold;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet makes text bold by setting the font-weight property to \"bold\"."
       },
       {
         "id": 27,
         "lang": "css",
-        "code": "",
+        "code": ".with-border {\n border: 1px solid #000;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds a 1-pixel solid border to an element using the border shorthand property. The border color is set to black (#000)."
       },
       {
         "id": 28,
         "lang": "css",
-        "code": "",
+        "code": ".shadow {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet applies a box shadow effect to an element using the box-shadow property. The shadow has a horizontal offset of 2 pixels, a vertical offset of 2 pixels, a blur radius of 4 pixels, and a color with 40% opacity."
       },
       {
         "id": 29,
         "lang": "css",
-        "code": "",
+        "code": ".transparent-bg {\n background-color: transparent;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet sets the background color of an element to transparent, making it fully see-through."
       },
       {
         "id": 30,
         "lang": "css",
-        "code": "",
+        "code": ".hide {\n display: none;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet hides an element by setting its display property to none, effectively removing it from the layout."
       },
       {
         "id": 31,
         "lang": "css",
-        "code": "",
+        "code": ".italic {\n font-style: italic;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet makes text italic by setting the font-style property to italic."
       },
       {
         "id": 32,
         "lang": "css",
-        "code": "",
+        "code": ".center-text {\n text-align: center;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet centers the text within an element by setting its text-align property to center."
       },
       {
         "id": 33,
         "lang": "css",
-        "code": "",
+        "code": ".header {\n position: sticky;\n top: 0;\n  }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a sticky header by setting the position property to sticky and specifying top: 0, ensuring the header remains fixed at the top of the viewport when scrolling."
       },
       {
         "id": 34,
         "lang": "css",
-        "code": "",
+        "code": ".text-hover:hover {\n color: red;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet changes the color of text to red when hovered over by using the :hover pseudo-class and modifying the color property."
       },
       {
         "id": 35,
         "lang": "css",
-        "code": "",
+        "code": ".container {\n display: flex;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a flex container by setting the display property to flex. This allows child elements to be arranged using flexbox properties."
       },
       {
         "id": 36,
         "lang": "css",
-        "code": "",
+        "code": ".uppercase {\n text-transform: uppercase;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet transforms text to uppercase by setting the text-transform property to uppercase."
       },
       {
         "id": 37,
         "lang": "css",
-        "code": "",
+        "code": ".fixed-width {\n width: 200px;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet sets a fixed width of 200 pixels for an element using the width property. Adjust the value to fit your desired width."
       },
       {
         "id": 38,
         "lang": "css",
-        "code": "",
+        "code": ".rounded {\n border-radius: 5px;\n   }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds rounded corners to an element by setting the border-radius property to 5px. Adjust the value to control the roundness."
       },
       {
         "id": 39,
         "lang": "css",
-        "code": "",
+        "code": ".text-color {\n color: #ff0000;\n  }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet changes the text color to red by setting the color property to #ff0000. Adjust the color value to achieve your desired text color."
       },
       {
         "id": 40,
         "lang": "css",
-        "code": "",
+        "code": ".padding {\n padding: 10px;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds 10 pixels of padding to all sides of an element using the padding shorthand property. Adjust the value as needed."
       },
       {
         "id": 41,
         "lang": "css",
-        "code": "",
+        "code": ".no-bullets {\n list-style: none;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet removes the default bullet points from a list by setting the list-style property to none."
       },
       {
         "id": 42,
         "lang": "css",
-        "code": "",
+        "code": ".underline {\n text-decoration: underline;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds an underline to text by setting the text-decoration property to underline."
       },
       {
         "id": 43,
         "lang": "css",
-        "code": "",
+        "code": ".bg-color {\n background-color: #f0f0f0;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet changes the background color of an element to #f0f0f0. Adjust the color value to your desired background color."
       },
       {
         "id": 44,
         "lang": "css",
-        "code": "",
+        "code": ".responsive-text {\n max-width: 100%;\n overflow: hidden;\n text-overflow: ellipsis;\n white-space: nowrap;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "The .responsive-text class ensures that the text within its container behaves responsively. It achieves this through the following styles: max-width: 100%; prevents the text from exceeding the container's width, overflow: hidden; hides any overflowing text that goes beyond the specified width, text-overflow: ellipsis; adds an ellipsis (...) at the end of the text if it exceeds the container's width, and white-space: nowrap; prevents the text from wrapping onto multiple lines, keeping it on a single line."
       },
       {
         "id": 45,
         "lang": "css",
-        "code": "",
+        "code": "a:hover {\n text-decoration: underline;\n color: red;\n  }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles links when hovered over. It adds an underline (text-decoration: underline) and changes the color to red (color: red)."
       },
       {
         "id": 46,
         "lang": "css",
-        "code": "",
+        "code": ".footer {\n position: fixed;\n left: 0;\n bottom: 0;\n width: 100%;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a sticky footer by setting the footer element's position to fixed and positioning it at the bottom of the viewport (bottom: 0). The footer spans the entire width of the page (width: 100%) and remains fixed even when scrolling."
       },
       {
         "id": 47,
         "lang": "css",
-        "code": "",
+        "code": ".box-shadow {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds a drop shadow effect to an element using the box-shadow property. The values 2px 2px 4px represent the horizontal offset, vertical offset, and blur radius of the shadow, respectively. The last value (rgba(0, 0, 0, 0.4)) sets the color and transparency of the shadow."
       },
       {
         "id": 48,
         "lang": "css",
-        "code": "",
+        "code": ".rotate {\n transform: rotate(45deg);\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet rotates an element by 45 degrees clockwise using the transform property. Adjust the degree value to rotate the element by a different angle."
       },
       {
         "id": 49,
         "lang": "css",
-        "code": "",
+        "code": ".transition {\n transition: background-color 0.3s ease;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet adds a transition effect to the background-color property of an element. When the background color changes, it smoothly transitions over a duration of 0.3 seconds with an easing function applied."
       },
       {
         "id": 50,
         "lang": "css",
-        "code": "",
+        "code": ".navbar {\n position: sticky;\n top: 0;\n z-index: 100;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a sticky navigation bar by setting the position property to sticky and positioning it at the top of the viewport using top: 0. The z-index property ensures that the navigation bar remains above other elements on the page."
       },
       {
         "id": 51,
         "lang": "css",
-        "code": "",
+        "code": ".grid-container {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 20px;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive grid layout using CSS Grid. It sets the container to a grid layout, specifies three columns with equal width using repeat(3, 1fr), and adds a gap of 20 pixels between grid items."
       },
       {
         "id": 52,
         "lang": "css",
-        "code": "",
+        "code": ".flex-container {\n display: flex;\n flex-wrap: wrap;\n justify-content: space-between;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive layout using Flexbox. It sets the container to a flex layout, wraps flex items when they exceed the container width, and distributes the items with space between them."
       },
       {
         "id": 53,
         "lang": "css",
-        "code": "",
+        "code": ".circle-image {\n border-radius: 50%;\n width: 200px;\n height: 200px;\n object-fit: cover;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles an image as a circle by setting the border-radius property to 50%, giving it equal width and height of 200 pixels, and using object-fit: cover to ensure the image fills the circular shape."
       },
       {
         "id": 54,
         "lang": "css",
-        "code": "",
+        "code": ".nav-menu {\n display: flex;\n justify-content: space-between;\n align-items: center;\n }\n\n .nav-menu a {\n margin-right: 10px;\n text-decoration: none;\n color: #333;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive navigation menu using Flexbox. The .nav-menu class sets the container to a flex layout with items spaced evenly using justify-content: space-between and vertically aligned using align-items: center. The nested a elements are styled with margin, text decoration, and color."
       },
       {
         "id": 55,
         "lang": "css",
-        "code": "",
+        "code": ".image-gallery {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n grid-gap: 10px;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive image gallery using CSS Grid. The .image-gallery class sets the container to a grid layout with columns that automatically adjust based on available space. Each column has a minimum width of 200px and a maximum width of 1fr. The grid-gap property adds a 10px gap between gallery items."
       },
       {
         "id": 56,
         "lang": "css",
-        "code": "",
+        "code": ".card-container {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n grid-gap: 20px;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive card layout using CSS Grid. The .card-container class sets the container to a grid layout with columns that automatically adjust based on available space. Each column has a minimum width of 300px and a maximum width of 1fr. The grid-gap property adds a 20px gap between cards."
       },
       {
         "id": 57,
         "lang": "css",
-        "code": "",
+        "code": ".button {\n display: inline-block;\n padding: 10px 20px;\n background-color: #333;\n color: #fff;\n text-decoration: none;\n border-radius: 4px;\n cursor: pointer;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles a button element with a background color, text color, padding, border radius, and cursor style."
       },
       {
         "id": 58,
         "lang": "css",
-        "code": "",
+        "code": ".center {\n display: flex;\n justify-content: center;\n align-items: center;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet centers an element both horizontally and vertically within its parent container using flexbox."
       },
       {
         "id": 59,
         "lang": "css",
-        "code": "",
+        "code": ".container {\n width: 100%;\n max-width: 1200px;\n margin: 0 auto;\n }\n\n  @media (max-width: 768px) {\n .container {\n padding: 20px;\n }\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet creates a responsive layout using media queries. The .container class sets the maximum width of the container and centers it horizontally. The media query applies additional styling, such as padding, when the viewport width is 768 pixels or less."
       },
       {
         "id": 60,
         "lang": "css",
-        "code": "",
+        "code": ".nav-menu {\n list-style: none;\n display: flex;\n justify-content: space-between;\n }\n\n .nav-menu li {\n margin-right: 10px;\n }\n\n .nav-menu a {\n text-decoration: none;\n color: #333;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles a navigation menu using an unordered list (ul) and li elements. It sets the list style to none, displays the menu items in a flex layout with space between them, and styles the link text."
       },
       {
         "id": 61,
         "lang": "css",
-        "code": "",
+        "code": ".button {\n display: block;\n width: 100%;\n padding: 10px 20px;\n background-color: #333;\n color: #fff;\n text-decoration: none;\n border-radius: 4px;\n cursor: pointer;\n }",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code snippet styles a block button that spans the full width of its container. The display: block property ensures that the button takes up the entire width available."
       },
       {
         "id": 62,
         "lang": "css",
-        "code": "",
+        "code": "h1 {\n font-size: 2rem;\n }\n\n @media (max-width: 768px) {\n h1 {\n font-size: 1.5rem;\n }\n }",
         "score": 2,
         "explanation": ""
       },
       {
         "id": 63,
+        "lang": "css",
+        "code": "img {\n max-width: 100%;\n height: auto;\n }\n\n @media (max-width: 768px) {\n img {\n max-width: 50%;\n }\n }",
+        "score": 2,
+        "explanation": "This code snippet makes images responsive. The img element has a maximum width of 100% and auto height. In the @media query, the maximum width is reduced to 50% for screens with a maximum width of 768px."
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": ".nav {\ndisplay: flex;\n justify-content: space-between;\n}\n\n @media (max-width: 768px) {\n.nav {\nflex-direction: column;\n}\n}",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive navigation menu using flexbox. The .nav container displays flex items with space between them. When the screen width is 768px or less, the @media query changes the flex direction to column, stacking the items vertically."
+      },
+      {
+        "id": 65,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
         "lang": "css",
         "code": "",
         "score": 2,
