@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./header.css";
 
-function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick, handleSqlClick, handleTestClick}) {>>>>>>> Current_version_main_v1.1
+function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handleReactClick, handleSqlClick, handleTestClick}) {
   const [activeTab, setActiveTab] = useState("html");
 
   const handleTabClick = (tabName) => {
