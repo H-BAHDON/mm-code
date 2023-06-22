@@ -1,141 +1,708 @@
 [
     {
-        "id": 11,
+        "id": 1,
         "lang": "css",
         "code": "body {\n    background-color: #f2f2f2;\n}",
         "score": 2,
         "explanation": "This CSS code sets the background color of the body element to '#f2f2f2'."
       },
       {
-        "id": 12,
+        "id": 2,
         "lang": "css",
         "code": "h1 {\n    color: red;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of all h1 elements to red."
       },
       {
-        "id": 13,
+        "id": 3,
         "lang": "css",
         "code": "p {\n    font-size: 18px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font size of all p elements to 18 pixels."
       },
       {
-        "id": 14,
+        "id": 4,
         "lang": "css",
         "code": "div {\n    border: 1px solid black;\n}",
         "score": 2,
         "explanation": "This CSS code adds a 1-pixel solid black border to all div elements."
       },
       {
-        "id": 15,
+        "id": 5,
         "lang": "css",
         "code": ".container {\n    width: 100%;\n    height: 300px;\n    background-color: lightblue;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'container' and sets their width to 100%, height to 300 pixels, and background color to lightblue."
       },{
-        "id": 46,
+        "id": 6,
         "lang": "css",
         "code": "body {\n    font-family: Arial, sans-serif;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font family of the body element to Arial or a sans-serif font."
       },
       {
-        "id": 47,
+        "id": 7,
         "lang": "css",
         "code": "h1 {\n    color: blue;\n    font-size: 24px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of h1 headings to blue and the font size to 24 pixels."
       },
       {
-        "id": 48,
+        "id": 8,
         "lang": "css",
         "code": "p {\n    margin-bottom: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code adds a bottom margin of 10 pixels to paragraphs (p elements)."
       },
       {
-        "id": 49,
+        "id": 9,
         "lang": "css",
         "code": ".container {\n    width: 100%;\n    max-width: 800px;\n    margin: 0 auto;\n    padding: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'container' and sets their width to 100%, maximum width to 800 pixels, centers them horizontally with auto margins, and adds 20 pixels of padding."
       },
       {
-        "id": 50,
+        "id": 10,
         "lang": "css",
         "code": "a {\n    color: #337ab7;\n    text-decoration: none;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of links (a elements) to a specific shade of blue (#337ab7) and removes the underline text decoration."
       },
       {
-        "id": 51,
+        "id": 11,
         "lang": "css",
         "code": "ul li {\n    list-style-type: disc;\n    margin-left: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the list-style type of list items (li elements) within unordered lists (ul elements) to a disc shape and adds a left margin of 20 pixels."
       },
       {
-        "id": 52,
+        "id": 12,
         "lang": "css",
         "code": "input[type=\"text\"] {\n    width: 200px;\n    padding: 5px;\n}",
         "score": 2,
         "explanation": "This CSS code targets text input fields (input elements with the type attribute set to 'text') and sets their width to 200 pixels and adds 5 pixels of padding."
       },
       {
-        "id": 53,
+        "id": 13,
         "lang": "css",
         "code": "h2 {\n    font-size: 20px;\n    font-weight: bold;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font size of h2 headings to 20 pixels and makes them bold by adjusting the font weight."
       },
       {
-        "id": 54,
+        "id": 14,
         "lang": "css",
         "code": "table {\n    border-collapse: collapse;\n    width: 100%;\n}",
         "score": 2,
         "explanation": "This CSS code sets the table element to collapse its borders (remove the space between cells) and occupy 100% of its parent's width."
       },
       {
-        "id": 55,
+        "id": 15,
         "lang": "css",
         "code": ".header {\n    background-color: #f2f2f2;\n    padding: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'header' and sets their background color to a specific shade of gray (#f2f2f2) and adds 10 pixels of padding."
       },
       {
-        "id": 56,
+        "id": 16,
         "lang": "css",
         "code": "form {\n    margin-top: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code adds a top margin of 10 pixels to form elements."
       },
       {
-        "id": 57,
+        "id": 17,
         "lang": "css",
         "code": ".btn {\n    background-color: #337ab7;\n    color: #fff;\n    padding: 5px 10px;\n    border-radius: 3px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'btn' and sets their background color to a specific shade of blue (#337ab7), text color to white (#fff), padding to 5 pixels vertically and 10 pixels horizontally, and adds a border radius of 3 pixels."
       },
       {
-        "id": 58,
+        "id": 18,
         "lang": "css",
         "code": "footer {\n    background-color: #f2f2f2;\n    padding: 10px;\n    text-align: center;\n}",
         "score": 2,
         "explanation": "This CSS code targets footer elements and sets their background color to a specific shade of gray (#f2f2f2), adds 10 pixels of padding, and aligns the text in the center."
       },
       {
-        "id": 59,
+        "id": 19,
         "lang": "css",
         "code": ".section {\n    margin-bottom: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'section' and adds a bottom margin of 20 pixels."
       },
       {
-        "id": 60,
+        "id": 20,
         "lang": "css",
         "code": ".error {\n    color: red;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'error' and sets their text color to red."
+      },
+      {
+        "id": 21,
+        "lang": "css",
+        "code": ".center {\n display: flex;\n justify-content: center;\n align-items: center;\n }",
+        "score": 2,
+        "explanation": "This code snippet uses flexbox to center an element both horizontally and vertically. By setting display to flex on the container, and using justify-content: center and align-items: center, the element will be centered within its container."
+      },
+      {
+        "id": 22,
+        "lang": "css",
+        "code": ".gradient-bg {\n background: linear-gradient(to right, #ff0000, #00ff00);\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a gradient background for an element using the linear-gradient property. In this example, the gradient goes from red (#ff0000) on the left to green (#00ff00) on the right. You can adjust the colors and the direction of the gradient to fit your needs."
+      },
+      {
+        "id": 23,
+        "lang": "css",
+        "code": "a {\n color: #0000ff;\n text-decoration: none;\n }\n\n a:hover {\n text-decoration: underline;\n }",
+        "score": 2,
+        "explanation": "This code snippet styles links by setting their color to blue (#0000ff) and removing the underline (text-decoration: none). When hovering over a link (:hover), the underline is added back to provide a visual indication to the user."
+      },
+      {
+        "id": 24,
+        "lang": "css",
+        "code": ".box {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
+        "score": 2,
+        "explanation": "This code snippet adds a subtle box shadow effect to an element. The box-shadow property takes four values: horizontal offset, vertical offset, blur radius, and color. In this example, the shadow is 2 pixels to the right, 2 pixels down, has a blur radius of 4 pixels, and a color with 40% opacity."
+      },
+      {
+        "id": 25,
+        "lang": "css",
+        "code": ".center {\n margin-left: auto;\n margin-right: auto;\n }",
+        "score": 2,
+        "explanation": "This code snippet centers an element horizontally by setting both the left and right margins to \"auto\"."
+      },
+      {
+        "id": 26,
+        "lang": "css",
+        "code": ".bold {\n font-weight: bold;\n }",
+        "score": 2,
+        "explanation": "This code snippet makes text bold by setting the font-weight property to \"bold\"."
+      },
+      {
+        "id": 27,
+        "lang": "css",
+        "code": ".with-border {\n border: 1px solid #000;\n }",
+        "score": 2,
+        "explanation": "This code snippet adds a 1-pixel solid border to an element using the border shorthand property. The border color is set to black (#000)."
+      },
+      {
+        "id": 28,
+        "lang": "css",
+        "code": ".shadow {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
+        "score": 2,
+        "explanation": "This code snippet applies a box shadow effect to an element using the box-shadow property. The shadow has a horizontal offset of 2 pixels, a vertical offset of 2 pixels, a blur radius of 4 pixels, and a color with 40% opacity."
+      },
+      {
+        "id": 29,
+        "lang": "css",
+        "code": ".transparent-bg {\n background-color: transparent;\n }",
+        "score": 2,
+        "explanation": "This code snippet sets the background color of an element to transparent, making it fully see-through."
+      },
+      {
+        "id": 30,
+        "lang": "css",
+        "code": ".hide {\n display: none;\n }",
+        "score": 2,
+        "explanation": "This code snippet hides an element by setting its display property to none, effectively removing it from the layout."
+      },
+      {
+        "id": 31,
+        "lang": "css",
+        "code": ".italic {\n font-style: italic;\n }",
+        "score": 2,
+        "explanation": "This code snippet makes text italic by setting the font-style property to italic."
+      },
+      {
+        "id": 32,
+        "lang": "css",
+        "code": ".center-text {\n text-align: center;\n }",
+        "score": 2,
+        "explanation": "This code snippet centers the text within an element by setting its text-align property to center."
+      },
+      {
+        "id": 33,
+        "lang": "css",
+        "code": ".header {\n position: sticky;\n top: 0;\n  }",
+        "score": 2,
+        "explanation": "This code snippet creates a sticky header by setting the position property to sticky and specifying top: 0, ensuring the header remains fixed at the top of the viewport when scrolling."
+      },
+      {
+        "id": 34,
+        "lang": "css",
+        "code": ".text-hover:hover {\n color: red;\n }",
+        "score": 2,
+        "explanation": "This code snippet changes the color of text to red when hovered over by using the :hover pseudo-class and modifying the color property."
+      },
+      {
+        "id": 35,
+        "lang": "css",
+        "code": ".container {\n display: flex;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a flex container by setting the display property to flex. This allows child elements to be arranged using flexbox properties."
+      },
+      {
+        "id": 36,
+        "lang": "css",
+        "code": ".uppercase {\n text-transform: uppercase;\n }",
+        "score": 2,
+        "explanation": "This code snippet transforms text to uppercase by setting the text-transform property to uppercase."
+      },
+      {
+        "id": 37,
+        "lang": "css",
+        "code": ".fixed-width {\n width: 200px;\n }",
+        "score": 2,
+        "explanation": "This code snippet sets a fixed width of 200 pixels for an element using the width property. Adjust the value to fit your desired width."
+      },
+      {
+        "id": 38,
+        "lang": "css",
+        "code": ".rounded {\n border-radius: 5px;\n   }",
+        "score": 2,
+        "explanation": "This code snippet adds rounded corners to an element by setting the border-radius property to 5px. Adjust the value to control the roundness."
+      },
+      {
+        "id": 39,
+        "lang": "css",
+        "code": ".text-color {\n color: #ff0000;\n  }",
+        "score": 2,
+        "explanation": "This code snippet changes the text color to red by setting the color property to #ff0000. Adjust the color value to achieve your desired text color."
+      },
+      {
+        "id": 40,
+        "lang": "css",
+        "code": ".padding {\n padding: 10px;\n }",
+        "score": 2,
+        "explanation": "This code snippet adds 10 pixels of padding to all sides of an element using the padding shorthand property. Adjust the value as needed."
+      },
+      {
+        "id": 41,
+        "lang": "css",
+        "code": ".no-bullets {\n list-style: none;\n }",
+        "score": 2,
+        "explanation": "This code snippet removes the default bullet points from a list by setting the list-style property to none."
+      },
+      {
+        "id": 42,
+        "lang": "css",
+        "code": ".underline {\n text-decoration: underline;\n }",
+        "score": 2,
+        "explanation": "This code snippet adds an underline to text by setting the text-decoration property to underline."
+      },
+      {
+        "id": 43,
+        "lang": "css",
+        "code": ".bg-color {\n background-color: #f0f0f0;\n }",
+        "score": 2,
+        "explanation": "This code snippet changes the background color of an element to #f0f0f0. Adjust the color value to your desired background color."
+      },
+      {
+        "id": 44,
+        "lang": "css",
+        "code": ".responsive-text {\n max-width: 100%;\n overflow: hidden;\n text-overflow: ellipsis;\n white-space: nowrap;\n }",
+        "score": 2,
+        "explanation": "The .responsive-text class ensures that the text within its container behaves responsively. It achieves this through the following styles: max-width: 100%; prevents the text from exceeding the container's width, overflow: hidden; hides any overflowing text that goes beyond the specified width, text-overflow: ellipsis; adds an ellipsis (...) at the end of the text if it exceeds the container's width, and white-space: nowrap; prevents the text from wrapping onto multiple lines, keeping it on a single line."
+      },
+      {
+        "id": 45,
+        "lang": "css",
+        "code": "a:hover {\n text-decoration: underline;\n color: red;\n  }",
+        "score": 2,
+        "explanation": "This code snippet styles links when hovered over. It adds an underline (text-decoration: underline) and changes the color to red (color: red)."
+      },
+      {
+        "id": 46,
+        "lang": "css",
+        "code": ".footer {\n position: fixed;\n left: 0;\n bottom: 0;\n width: 100%;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a sticky footer by setting the footer element's position to fixed and positioning it at the bottom of the viewport (bottom: 0). The footer spans the entire width of the page (width: 100%) and remains fixed even when scrolling."
+      },
+      {
+        "id": 47,
+        "lang": "css",
+        "code": ".box-shadow {\n box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);\n }",
+        "score": 2,
+        "explanation": "This code snippet adds a drop shadow effect to an element using the box-shadow property. The values 2px 2px 4px represent the horizontal offset, vertical offset, and blur radius of the shadow, respectively. The last value (rgba(0, 0, 0, 0.4)) sets the color and transparency of the shadow."
+      },
+      {
+        "id": 48,
+        "lang": "css",
+        "code": ".rotate {\n transform: rotate(45deg);\n }",
+        "score": 2,
+        "explanation": "This code snippet rotates an element by 45 degrees clockwise using the transform property. Adjust the degree value to rotate the element by a different angle."
+      },
+      {
+        "id": 49,
+        "lang": "css",
+        "code": ".transition {\n transition: background-color 0.3s ease;\n }",
+        "score": 2,
+        "explanation": "This code snippet adds a transition effect to the background-color property of an element. When the background color changes, it smoothly transitions over a duration of 0.3 seconds with an easing function applied."
+      },
+      {
+        "id": 50,
+        "lang": "css",
+        "code": ".navbar {\n position: sticky;\n top: 0;\n z-index: 100;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a sticky navigation bar by setting the position property to sticky and positioning it at the top of the viewport using top: 0. The z-index property ensures that the navigation bar remains above other elements on the page."
+      },
+      {
+        "id": 51,
+        "lang": "css",
+        "code": ".grid-container {\n display: grid;\n grid-template-columns: repeat(3, 1fr);\n gap: 20px;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive grid layout using CSS Grid. It sets the container to a grid layout, specifies three columns with equal width using repeat(3, 1fr), and adds a gap of 20 pixels between grid items."
+      },
+      {
+        "id": 52,
+        "lang": "css",
+        "code": ".flex-container {\n display: flex;\n flex-wrap: wrap;\n justify-content: space-between;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive layout using Flexbox. It sets the container to a flex layout, wraps flex items when they exceed the container width, and distributes the items with space between them."
+      },
+      {
+        "id": 53,
+        "lang": "css",
+        "code": ".circle-image {\n border-radius: 50%;\n width: 200px;\n height: 200px;\n object-fit: cover;\n }",
+        "score": 2,
+        "explanation": "This code snippet styles an image as a circle by setting the border-radius property to 50%, giving it equal width and height of 200 pixels, and using object-fit: cover to ensure the image fills the circular shape."
+      },
+      {
+        "id": 54,
+        "lang": "css",
+        "code": ".nav-menu {\n display: flex;\n justify-content: space-between;\n align-items: center;\n }\n\n .nav-menu a {\n margin-right: 10px;\n text-decoration: none;\n color: #333;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive navigation menu using Flexbox. The .nav-menu class sets the container to a flex layout with items spaced evenly using justify-content: space-between and vertically aligned using align-items: center. The nested a elements are styled with margin, text decoration, and color."
+      },
+      {
+        "id": 55,
+        "lang": "css",
+        "code": ".image-gallery {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n grid-gap: 10px;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive image gallery using CSS Grid. The .image-gallery class sets the container to a grid layout with columns that automatically adjust based on available space. Each column has a minimum width of 200px and a maximum width of 1fr. The grid-gap property adds a 10px gap between gallery items."
+      },
+      {
+        "id": 56,
+        "lang": "css",
+        "code": ".card-container {\n display: grid;\n grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n grid-gap: 20px;\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive card layout using CSS Grid. The .card-container class sets the container to a grid layout with columns that automatically adjust based on available space. Each column has a minimum width of 300px and a maximum width of 1fr. The grid-gap property adds a 20px gap between cards."
+      },
+      {
+        "id": 57,
+        "lang": "css",
+        "code": ".button {\n display: inline-block;\n padding: 10px 20px;\n background-color: #333;\n color: #fff;\n text-decoration: none;\n border-radius: 4px;\n cursor: pointer;\n }",
+        "score": 2,
+        "explanation": "This code snippet styles a button element with a background color, text color, padding, border radius, and cursor style."
+      },
+      {
+        "id": 58,
+        "lang": "css",
+        "code": ".center {\n display: flex;\n justify-content: center;\n align-items: center;\n }",
+        "score": 2,
+        "explanation": "This code snippet centers an element both horizontally and vertically within its parent container using flexbox."
+      },
+      {
+        "id": 59,
+        "lang": "css",
+        "code": ".container {\n width: 100%;\n max-width: 1200px;\n margin: 0 auto;\n }\n\n  @media (max-width: 768px) {\n .container {\n padding: 20px;\n }\n }",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive layout using media queries. The .container class sets the maximum width of the container and centers it horizontally. The media query applies additional styling, such as padding, when the viewport width is 768 pixels or less."
+      },
+      {
+        "id": 60,
+        "lang": "css",
+        "code": ".nav-menu {\n list-style: none;\n display: flex;\n justify-content: space-between;\n }\n\n .nav-menu li {\n margin-right: 10px;\n }\n\n .nav-menu a {\n text-decoration: none;\n color: #333;\n }",
+        "score": 2,
+        "explanation": "This code snippet styles a navigation menu using an unordered list (ul) and li elements. It sets the list style to none, displays the menu items in a flex layout with space between them, and styles the link text."
+      },
+      {
+        "id": 61,
+        "lang": "css",
+        "code": ".button {\n display: block;\n width: 100%;\n padding: 10px 20px;\n background-color: #333;\n color: #fff;\n text-decoration: none;\n border-radius: 4px;\n cursor: pointer;\n }",
+        "score": 2,
+        "explanation": "This code snippet styles a block button that spans the full width of its container. The display: block property ensures that the button takes up the entire width available."
+      },
+      {
+        "id": 62,
+        "lang": "css",
+        "code": "h1 {\n font-size: 2rem;\n }\n\n @media (max-width: 768px) {\n h1 {\n font-size: 1.5rem;\n }\n }",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 63,
+        "lang": "css",
+        "code": "img {\n max-width: 100%;\n height: auto;\n }\n\n @media (max-width: 768px) {\n img {\n max-width: 50%;\n }\n }",
+        "score": 2,
+        "explanation": "This code snippet makes images responsive. The img element has a maximum width of 100% and auto height. In the @media query, the maximum width is reduced to 50% for screens with a maximum width of 768px."
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": ".nav {\ndisplay: flex;\n justify-content: space-between;\n}\n\n @media (max-width: 768px) {\n.nav {\nflex-direction: column;\n}\n}",
+        "score": 2,
+        "explanation": "This code snippet creates a responsive navigation menu using flexbox. The .nav container displays flex items with space between them. When the screen width is 768px or less, the @media query changes the flex direction to column, stacking the items vertically."
+      },
+      {
+        "id": 65,
+        "lang": "css",
+        "code": "@media (max-width: 767px) {\n.logo { width: 150px; }\n}",
+        "score": 2,
+        "explanation": "This media query targets screens with a maximum width of 767 pixels. Inside the media query, the .logo class is selected, and its width property is set to 150 pixels. This means that when the screen width is 767 pixels or less, the logo element will have a width of 150 pixels."
+      },
+      {
+        "id": 66,
+        "lang": "css",
+        "code": "@media (768px <= width <= 991px) {\n.logo { width: 180px; }\n}",
+        "score": 2,
+        "explanation": "This media query targets screens with a minimum width of 768 pixels and a maximum width of 991 pixels. The range is defined using the syntax 768px <= width <= 991px. Inside this media query, the .logo class is selected, and its width property is set to 180 pixels."
+      },
+      {
+        "id": 67,
+        "lang": "css",
+        "code": "p {\nfont-size: 16px;\n}\n\n@media (max-width: 767px) {\n p {\nfont-size: 14px;\n}\n}",
+        "score": 2,
+        "explanation": "This media query adjusts the font size of <p> elements. The default font size is set to 16 pixels, but for screens with a maximum width of 767 pixels, the font size is reduced to 14 pixels for better readability on smaller devices."
+      },
+      {
+        "id": 68,
+        "lang": "css",
+        "code": ".container {\nmax-width: 1200px;\n margin: 0 auto;\n padding: 20px;\n }\n\n @media (max-width: 767px) {\n.container {\npadding: 10px;\n}\n}",
+        "score": 2,
+        "explanation": "This snippet creates a responsive layout with a container element. The .container class sets a maximum width of 1200 pixels, centers the container horizontally (margin: 0 auto), and adds padding of 20 pixels. Inside the media query, for screens with a maximum width of 767 pixels, the padding is reduced to 10 pixels to adjust the layout for smaller devices."
+      },
+      {
+        "id": 69,
+        "lang": "css",
+        "code": "div {\n display: block;\n display: inline-block;\n display: inline;\n display: none;\n }",
+        "score": 2,
+        "explanation": "'display: block'; occupies the full width and creates line breaks. 'display: inline-block'; flows with content, allows specified width and height. 'display: inline'; flows with content, no line breaks. 'display: none'; co'mpletely hidden, not rendered."
+      },
+      {
+        "id":70,
+        "lang": "css",
+        "code": ".element {\nwidth: 200px;\nheight: 150px;\n  }",
+        "score": 2,
+        "explanation": "The piece of code sets the width of the targeted element to 200 pixels and the height to 150 pixels."
+      },
+      {
+        "id": 71,
+        "lang": "css",
+        "code": ".element {\nwidth: 12em;\nheight: 8em;\n}",
+        "score": 2,
+        "explanation": "The provided code snippet sets the width of the element to 12 times the current font size (em) and the height to 8 times the current font size (em)."
+      },
+      {
+        "id": 72,
+        "lang": "css",
+        "code": ".element {\n width: 50%;\n height: 300px;\n }",
+        "score": 2,
+        "explanation": "The code snippet sets the width of the element to 50% of its parent container's width and fixes the height at 300 pixels."
+      },
+      {
+        "id": 73,
+        "lang": "css",
+        "code": ".element {\n width: auto;\n height: auto;\n }",
+        "score": 2,
+        "explanation": "In this case, the element's width and height will automatically adjust based on its content. The width will expand to fit the content horizontally, and the height will adjust to fit the content vertically."
+      },
+      {
+        "id": 74,
+        "lang": "css",
+        "code": ".element {\n margin-top: 10px;\n margin-right: 20px;\n margin-bottom: 15px;\n margin-left: 5px;\n}",
+        "score": 2,
+        "explanation": "In this case, the margin is specified individually for the top, right, bottom, and left sides of the element."
+      },
+      {
+        "id": 75,
+        "lang": "css",
+        "code": ".element {\nmargin: 20px auto;\n}",
+        "score": 2,
+        "explanation": "Here, the margin is set to 20 pixels on the top and bottom, and the left and right margins are automatically calculated to center the element horizontally."
+      },
+      {
+        "id": 76,
+        "lang": "css",
+        "code": ".element {\nmargin: 5%;\n}",
+        "score": 2,
+        "explanation": "This example sets a margin of 5% on all sides of the element, relative to its parent container."
+      },
+      {
+        "id": 77,
+        "lang": "css",
+        "code": ".element {\nmargin: 10px 20px 15px 5px;\n}",
+        "score": 2,
+        "explanation": "In this example, the margin property sets the margin for the element in a clockwise direction starting from the top and going to the right, bottom, and left sides respectively. The values represent the margin in the following order: top (10px), right (20px), bottom (15px), and left (5px)."
+      },
+      {
+        "id": 78,
+        "lang": "css",
+        "code": ".element {\nborder: 2px solid #000000;\n}",
+        "score": 2,
+        "explanation": "This example sets a border with a width of 2 pixels and a solid black color (#000000) around the element."
+      },
+      {
+        "id": 79,
+        "lang": "css",
+        "code": ".element {\nborder-style: dotted;\nborder-width: 3px;\nborder-color: red;\n}",
+        "score": 2,
+        "explanation": "In this case, the border style is set to dotted, the border width is set to 3 pixels, and the border color is set to red."
+      },
+      {
+        "id": 80,
+        "lang": "css",
+        "code": ".element {\nborder-top: 1px solid blue;\nborder-right: 2px dashed green;\nborder-bottom: 3px dotted red;\nborder-left: 4px double orange;\n}",
+        "score": 2,
+        "explanation": "Here, each side of the element has a different border style. The top border is 1 pixel solid blue, the right border is 2 pixels dashed green, the bottom border is 3 pixels dotted red, and the left border is 4 pixels double orange."
+      },
+      {
+        "id": 81,
+        "lang": "css",
+        "code": ".element {\n border: 2px solid #000000;\n border-radius: 10px;\n }",
+        "score": 2,
+        "explanation": "This example sets a border with a width of 2 pixels and a solid black color, along with a border radius of 10 pixels. The border radius creates rounded corners for the element."
+      },
+      {
+        "id": 82,
+        "lang": "css",
+        "code": ".element {\n border: 2px solid #000000;\n box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);\n }",
+        "score": 2,
+        "explanation": "In this case, the border is set with a width of 2 pixels and a solid black color. Additionally, a box shadow is applied to create an inset shadow effect, with a blur radius of 10 pixels and a black color with 20% opacity."
+      },
+      {
+        "id": 83,
+        "lang": "css",
+        "code": ".element {\nfloat: right;\n}",
+        "score": 2,
+        "explanation": "In this case, the element is floated to the right, allowing other content to flow around it on the left side."
+      },
+      {
+        "id": 84,
+        "lang": "css",
+        "code": ".element {\n float: left;\n width: 200px;\n}",
+        "score": 2,
+        "explanation": "In this example, the element is floated to the left, and a width of 200 pixels is specified. This allows the floated element to take up a specific width, and other content flows around it on the right side."
+      },
+      {
+        "id": 85,
+        "lang": "css",
+        "code": ".clearfix::after {\n content: \"\";\n display: table;\n clear: both;\n }",
+        "score": 2,
+        "explanation": "This example demonstrates how to clear a float. By using a clearfix technique, elements following the floated element are forced to appear below it, rather than beside it."
+      },
+      {
+        "id": 86,
+        "lang": "css",
+        "code": ".element {\nfloat: right;\nclear: right;\n} ",
+        "score": 2,
+        "explanation": "Here, the clear: right property is used to clear any floats that appear to the right of the element."
+      },
+      {
+        "id": 87,
+        "lang": "css",
+        "code": ".container::after {\n content: \"\";\n display: table;\n clear: left;\n }",
+        "score": 2,
+        "explanation": "By applying the clear: left property within the .container element, any floats appearing to the left of the container will be cleared.  "
+      },
+      {
+        "id": 88,
+        "lang": "css",
+        "code": ".element {\ncolor: blue;\n }",
+        "score": 2,
+        "explanation": "In this example, the text color of the element is set to red using the named color 'blue'."
+      },
+      {
+        "id": 89,
+        "lang": "css",
+        "code": ".element {\ncolor: hsl(240, 100%, 50%);\n}",
+        "score": 2,
+        "explanation": "This example sets the text color of the element to a blue hue using the HSL color model with a hue of 240 degrees, full saturation (100%), and 50% lightness."
+      },
+      {
+        "id": 90,
+        "lang": "css",
+        "code": ".element {\nbackground-image: url('image.jpg');\n}",
+        "score": 2,
+        "explanation": "In this case, the background image of the element is set using the 'url()' function, specifying the path to the desired image file."
+      },
+      {
+        "id": 91,
+        "lang": "css",
+        "code": ".element {\n background-image: url('pattern.png');\n background-repeat: repeat;\n}",
+        "score": 2,
+        "explanation": "Here, the background image is set to repeat horizontally and vertically within the element using the 'background-repeat' property."
+      },
+      {
+        "id": 92,
+        "lang": "css",
+        "code": ".element {\nbackground-image: url('image.jpg');\nbackground-position: fixed;\n}",
+        "score": 2,
+        "explanation": "This example sets the background image to have a fixed position within the viewport, meaning it stays in place while the content scrolls."
+      },
+      {
+        "id": 78,
+        "lang": "css",
+        "code": ".element {\n background-image: url('image.jpg');\n background-position: center top;\n }",
+        "score": 2,
+        "explanation": "Here, the background image is positioned at the center horizontally and at the top vertically within the element."
+      },
+      {
+        "id": 93,
+        "lang": "css",
+        "code": ".element {\n font-family: Arial, sans-serif;\n }",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 94,
+        "lang": "css",
+        "code": ".element {\nfont-size: 16px;\n}",
+        "score": 2,
+        "explanation": "In this case, the font size of the element is set to 16 pixels."
+      },
+      {
+        "id": 95,
+        "lang": "css",
+        "code": ".element {\n font-weight: bold;\n}",
+        "score": 2,
+        "explanation": "Here, the font weight of the element is set to bold, creating a thicker and more pronounced text appearance."
+      },
+      {
+        "id": 96,
+        "lang": "css",
+        "code": ".element {\nfont-style: italic;\n}",
+        "score": 2,
+        "explanation": "This example applies an italic style to the font of the element, creating a slanted appearance."
+      },
+      {
+        "id": 97,
+        "lang": "css",
+        "code": ".element {\ntext-align: center;\n}",
+        "score": 2,
+        "explanation": "In this case, the text within the element is horizontally centered using the text-align property."
+      },
+      {
+        "id": 98,
+        "lang": "css",
+        "code": ".element {\n font: italic small-caps bold 20px/1.5 'Roboto', sans-serif;\n}",
+        "score": 2,
+        "explanation": "Here, the font style is set to italic, small-caps are applied, the font weight is set to bold, the font size is set to 20 pixels, the line height is set to 1.5, and the font family is specified as 'Roboto' with a fallback to sans-serif."
+      },
+      {
+        "id": 99,
+        "lang": "css",
+        "code": ".element {\nfont-family: 'Proxima Nova', Helvetica, Arial, sans-serif;\nfont-style: italic;\nfont-variant: small-caps;\nfont-size: 20px;\nfont-weight: bold;\nline-height: 1.5;\n}",
+        "score": 2,
+        "explanation": "The provided CSS code styles an element with the class .element using the following font properties: It sets the font family to 'Proxima Nova', followed by Helvetica, Arial, and finally a generic sans-serif font as a fallback. The font style is set to italic, giving the text a slanted appearance. The font variant is set to small-caps, rendering the lowercase letters as smaller capital letters. The font size is set to 20 pixels, and the font weight is set to bold, making the text appear thicker. The line height is set to 1.5 times the font size, determining the spacing between lines of text."
+      },
+      {
+        "id": 100,
+        "lang": "css",
+        "code": "@keyframes typing {\nfrom { width: 0; }\nto { width: 100%; }\n}\n\n .element {\n overflow: hidden;\n white-space: nowrap;\n animation: typing 5s steps(20) infinite;\n}",
+        "score": 2,
+        "explanation": "This code snippet defines the typing keyframe animation, which gradually increases the width of an element from 0% to 100%. The animation is applied to an element with the class .element and loops indefinitely. The overflow and white-space properties ensure that the text within the element remains on a single line and clips any overflowing content."
       }
 ]
