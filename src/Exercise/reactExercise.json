@@ -191,9 +191,9 @@
   {
     "id": 28,
     "lang": "react",
-    "code": "import React, { useState } from \"react\";\n\n function App() {\n     const [state, setState] = useState(2703);",
+    "code": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <h2>Count: {count}</h2>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <button onClick={() => setCount(count - 1)}>Decrement</button>\n    </div>\n  );\n}\n\nexport default Counter;",
     "score": 2,
-    "explanation": "This code uses the useState hook in a React functional component called App. The useState function is called with an initial value of 2703 and returns an array with two elements: the current state value and a function to update the state. The line const state = useState(2703); declares a variable state to store these two elements. By using useState, the App component can keep track of its own state and modify it when needed using the provided function."
+    "explanation": "This code demonstrates the usage of state in a React functional component. The `useState` hook is used to define a state variable `count` with an initial value of 0 and a function `setCount` to update the state. The JSX code displays the current count, provides buttons to increment and decrement the count, and utilizes the `onClick` event handlers to call `setCount` with the updated value. This allows the component to keep track of its own count and update the displayed count dynamically."
   },
   {
     "id": 29,
@@ -236,5 +236,19 @@
     "code": "{address.map((item, index) => <li key={index}>{item}</li>)}",
     "score": 2,
     "explanation": "The code snippet uses the map function to iterate over the address array. For each element in the address array, it generates a <li> element with a unique key attribute set to the index of the element. The content of each <li> element is set to the corresponding item from the address array. This code dynamically creates a list of <li> elements based on the address array."
-  }
+  },
+  {
+    "id": 35,
+    "lang": "react",
+    "code": "import React, { useState, useEffect } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const timer = setInterval(() => {\n      setSeconds(prevSeconds => prevSeconds + 1);\n    }, 1000);\n\n    return () => {\n      clearInterval(timer);\n    };\n  }, []);\n\n  return (\n    <div>\n      <h2>Timer: {seconds} seconds</h2>\n    </div>\n  );\n}\n\nexport default Timer;",
+    "score": 2,
+    "explanation": "This code demonstrates the usage of the useEffect hook in a React functional component. The component defines a state variable 'seconds' initialized with 0 and a function 'setSeconds' to update the state. The useEffect hook is used to start a timer that increments the 'seconds' value every second using setInterval. The cleanup function returned by useEffect clears the timer using clearInterval to prevent memory leaks. The component renders the current 'seconds' value in JSX, displaying a timer that updates every second."
+},
+{
+  "id": 36,
+  "lang": "react",
+  "code": "import React, { useState, useEffect } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n\n  return (\n    <div>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n      <p>Count: {count}</p>\n    </div>\n  );\n}\n\nexport default Counter;",
+  "score": 2,
+  "explanation": "This code demonstrates the usage of the useEffect hook in a React functional component. The component defines a state variable 'count' initialized with 0 and a function 'setCount' to update the state. The useEffect hook is used to update the document title with the current 'count' value. By passing [count] as the second argument to useEffect, the effect will only run when the 'count' value changes. The component renders a button to increment the count and displays the current count value in a paragraph."
+}
 ]
