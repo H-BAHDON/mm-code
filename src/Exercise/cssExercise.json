@@ -1,141 +1,450 @@
 [
     {
-        "id": 11,
+        "id": 1,
         "lang": "css",
         "code": "body {\n    background-color: #f2f2f2;\n}",
         "score": 2,
         "explanation": "This CSS code sets the background color of the body element to '#f2f2f2'."
       },
       {
-        "id": 12,
+        "id": 2,
         "lang": "css",
         "code": "h1 {\n    color: red;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of all h1 elements to red."
       },
       {
-        "id": 13,
+        "id": 3,
         "lang": "css",
         "code": "p {\n    font-size: 18px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font size of all p elements to 18 pixels."
       },
       {
-        "id": 14,
+        "id": 4,
         "lang": "css",
         "code": "div {\n    border: 1px solid black;\n}",
         "score": 2,
         "explanation": "This CSS code adds a 1-pixel solid black border to all div elements."
       },
       {
-        "id": 15,
+        "id": 5,
         "lang": "css",
         "code": ".container {\n    width: 100%;\n    height: 300px;\n    background-color: lightblue;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'container' and sets their width to 100%, height to 300 pixels, and background color to lightblue."
       },{
-        "id": 46,
+        "id": 6,
         "lang": "css",
         "code": "body {\n    font-family: Arial, sans-serif;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font family of the body element to Arial or a sans-serif font."
       },
       {
-        "id": 47,
+        "id": 7,
         "lang": "css",
         "code": "h1 {\n    color: blue;\n    font-size: 24px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of h1 headings to blue and the font size to 24 pixels."
       },
       {
-        "id": 48,
+        "id": 8,
         "lang": "css",
         "code": "p {\n    margin-bottom: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code adds a bottom margin of 10 pixels to paragraphs (p elements)."
       },
       {
-        "id": 49,
+        "id": 9,
         "lang": "css",
         "code": ".container {\n    width: 100%;\n    max-width: 800px;\n    margin: 0 auto;\n    padding: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'container' and sets their width to 100%, maximum width to 800 pixels, centers them horizontally with auto margins, and adds 20 pixels of padding."
       },
       {
-        "id": 50,
+        "id": 10,
         "lang": "css",
         "code": "a {\n    color: #337ab7;\n    text-decoration: none;\n}",
         "score": 2,
         "explanation": "This CSS code sets the color of links (a elements) to a specific shade of blue (#337ab7) and removes the underline text decoration."
       },
       {
-        "id": 51,
+        "id": 11,
         "lang": "css",
         "code": "ul li {\n    list-style-type: disc;\n    margin-left: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code sets the list-style type of list items (li elements) within unordered lists (ul elements) to a disc shape and adds a left margin of 20 pixels."
       },
       {
-        "id": 52,
+        "id": 12,
         "lang": "css",
         "code": "input[type=\"text\"] {\n    width: 200px;\n    padding: 5px;\n}",
         "score": 2,
         "explanation": "This CSS code targets text input fields (input elements with the type attribute set to 'text') and sets their width to 200 pixels and adds 5 pixels of padding."
       },
       {
-        "id": 53,
+        "id": 13,
         "lang": "css",
         "code": "h2 {\n    font-size: 20px;\n    font-weight: bold;\n}",
         "score": 2,
         "explanation": "This CSS code sets the font size of h2 headings to 20 pixels and makes them bold by adjusting the font weight."
       },
       {
-        "id": 54,
+        "id": 14,
         "lang": "css",
         "code": "table {\n    border-collapse: collapse;\n    width: 100%;\n}",
         "score": 2,
         "explanation": "This CSS code sets the table element to collapse its borders (remove the space between cells) and occupy 100% of its parent's width."
       },
       {
-        "id": 55,
+        "id": 15,
         "lang": "css",
         "code": ".header {\n    background-color: #f2f2f2;\n    padding: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'header' and sets their background color to a specific shade of gray (#f2f2f2) and adds 10 pixels of padding."
       },
       {
-        "id": 56,
+        "id": 16,
         "lang": "css",
         "code": "form {\n    margin-top: 10px;\n}",
         "score": 2,
         "explanation": "This CSS code adds a top margin of 10 pixels to form elements."
       },
       {
-        "id": 57,
+        "id": 17,
         "lang": "css",
         "code": ".btn {\n    background-color: #337ab7;\n    color: #fff;\n    padding: 5px 10px;\n    border-radius: 3px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'btn' and sets their background color to a specific shade of blue (#337ab7), text color to white (#fff), padding to 5 pixels vertically and 10 pixels horizontally, and adds a border radius of 3 pixels."
       },
       {
-        "id": 58,
+        "id": 18,
         "lang": "css",
         "code": "footer {\n    background-color: #f2f2f2;\n    padding: 10px;\n    text-align: center;\n}",
         "score": 2,
         "explanation": "This CSS code targets footer elements and sets their background color to a specific shade of gray (#f2f2f2), adds 10 pixels of padding, and aligns the text in the center."
       },
       {
-        "id": 59,
+        "id": 19,
         "lang": "css",
         "code": ".section {\n    margin-bottom: 20px;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'section' and adds a bottom margin of 20 pixels."
       },
       {
-        "id": 60,
+        "id": 20,
         "lang": "css",
         "code": ".error {\n    color: red;\n}",
         "score": 2,
         "explanation": "This CSS code targets elements with the class 'error' and sets their text color to red."
+      },
+      {
+        "id": 21,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 22,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 23,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 24,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 25,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 26,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 27,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 28,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 29,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 30,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 31,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 32,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 33,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 34,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 35,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 36,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 37,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 38,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 39,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 40,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 41,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 42,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 43,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 44,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 45,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 46,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 47,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 48,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 49,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 50,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 51,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 52,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 53,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 54,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 55,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 56,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 57,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 58,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 59,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 60,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 61,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 62,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 63,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 64,
+        "lang": "css",
+        "code": "",
+        "score": 2,
+        "explanation": ""
       }
+    
 ]
