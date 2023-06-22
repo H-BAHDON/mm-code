@@ -59,7 +59,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
               React
             </p>
             <p
-              className={`nav-item-react nav-link ${
+              className={`nav-item-sql nav-link ${
                 activeTab === "sql" ? "active" : ""
               }`}
               onClick={() => {
@@ -70,7 +70,7 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
               SQL
             </p>
             <p
-              className={`nav-item-react nav-link ${
+              className={`nav-item-test nav-link ${
                 activeTab === "test" ? "active" : ""
               }`}
               onClick={() => {

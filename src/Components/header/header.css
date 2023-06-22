@@ -62,4 +62,18 @@
     color: #61DBFB;
     border: 1px solid #61DBFB;
   }
+
+  .nav-item-sql:hover,
+  .navbar .nav-item-sql.active {
+    color: #0072c6;
+    border: 1px solid #0072c6;
+  }
+   
+
+  .nav-item-test:hover,
+  .navbar .nav-item-test.active {
+    color: #944058;
+    border: 1px solid #944058;
+  }
+   
    
