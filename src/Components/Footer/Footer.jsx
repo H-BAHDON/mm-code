@@ -1,12 +1,13 @@
   // import { getSelectionRange } from '@testing-library/user-event/dist/utils';
 import React from 'react';
  
-  function Footer() {
+  function Footer({id}) {
 
     let thisYear = new Date().getFullYear();
     
     return (
-      <footer>
+      <div id={id}>
+      <footer className='footero'>
   <div className="container footer-content">
     <footer className="d-flex flex-wrap justify-content-center align-items-center py-3 border-top">
       <div className="d-flex align-items-center">
@@ -28,6 +29,7 @@ import React from 'react';
     </footer>
   </div>
 </footer>
+</div>
 
     );
 

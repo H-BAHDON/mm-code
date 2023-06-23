@@ -4,7 +4,7 @@ import Data from "../../test.json";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../buttons/ButtonOfPage";
 
-function Main({ exerciseLanguage }) {
+function Main({ exerciseLanguage , id}) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
   
@@ -181,7 +181,8 @@ function Main({ exerciseLanguage }) {
     setShowConfetti(false); // Hide confetti after it completes
   };
   return (
-    <main>
+    <div id={id}>
+    <main className="hero">
       <div className="guide-button">
         <ButtonOfPage
           nameButton="Guide Me!"
@@ -220,6 +221,7 @@ function Main({ exerciseLanguage }) {
             skipButton={skipButton}
             showGuide={showGuide}
             checkButton={checkButton}
+            id={id}
           />
         </div>
         <div className="main-bottom">
@@ -303,6 +305,7 @@ function Main({ exerciseLanguage }) {
         )}
       </div>
     </main>
+    </div>
   );
 }
 

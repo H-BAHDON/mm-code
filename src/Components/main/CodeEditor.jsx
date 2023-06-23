@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef } from "react";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
+import 'brace/theme/tomorrow';
+
+
 import "ace-builds/src-noconflict/ext-language_tools";
 
 function CodeEditor({
@@ -14,9 +17,10 @@ function CodeEditor({
   skipButton,
   showGuide,
   checkButton,
+  id
 }) {
   const editorRef = useRef(null);
-
+  const [mode,setMode]=useState("dracula");
   useEffect(() => {
     if (!showModal) {
       // Focus the editor when the modal is closed
@@ -43,6 +47,10 @@ function CodeEditor({
       setUserCode(value);
     }
   };
+  useEffect(()=>{
+    const modesetup=id==='light'?'tomorrow':'dracula'
+    setMode(modesetup)
+  },[id])
 
   useEffect(() => {
     const stop = (e) => {
@@ -59,10 +67,11 @@ function CodeEditor({
   }, []);
 
   return (
-    <div className="editor">
+    <div className="editor" >
+    
       <AceEditor
         mode={exerciseLanguage}
-        theme="dracula"
+        theme={mode}
         fontSize={17}
         width="100%"
         placeholder={initialCode}

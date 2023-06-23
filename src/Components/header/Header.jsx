@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import "../../css/style.css";
 
-function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
+function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick ,id}) {
   const [activeTab, setActiveTab] = useState("html");
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
+  
 
   return (
-    <header>
+    <div id={id}>
+    <header  class="headero">
+  
       <div id="logo">
         <h1 className="logo-title">MM-Code</h1>
       </div>
@@ -48,7 +51,8 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick }) {
               javascript
             </p>
           </nav>
-    </header>
+      </header>
+    </div>
   );
 }
 
