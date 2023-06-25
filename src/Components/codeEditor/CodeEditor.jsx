@@ -5,6 +5,8 @@ import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
 import 'ace-builds/src-noconflict/mode-jsx';
 
+import "./codeEditor.css"
+
 function CodeEditor({
   userCode,
   setUserCode,
