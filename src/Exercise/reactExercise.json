@@ -65,21 +65,21 @@
   {
     "id": 10,
     "lang": "react",
-    "code": "import React from 'react';\n\n function MyComponent() {\n return <div>Hello, World!</div>;\n }\n\n export default MyComponent;",
+    "code": "import React from 'react';\n\n function MyComponent() {\n     return <div>Hello, World!</div>;\n }\n\n export default MyComponent;",
     "score": 2,
     "explanation": "In this example, we define a function component called MyComponent, and then export it as the default export using the export default syntax. When importing this module, the default export will be the MyComponent function component."
   },
   {
     "id": 11,
     "lang": "react",
-    "code": "import React from 'react';\n\n function MyComponent() {\n const name = 'John';\n\n return <div>Hello, {name}!</div>;\n }\n\n export default MyComponent;",
+    "code": "import React from 'react';\n\n function MyComponent() {\n     const name = 'John';\n\n     return <div>Hello, {name}!</div>;\n }\n\n export default MyComponent;",
     "score": 2,
     "explanation": "In this example, we import the React module, which is required to define and render React components. We then define a function component called MyComponent using the function keyword. Inside the component, we declare a variable name and assign it the value 'John'."
   },
   {
     "id": 12,
     "lang": "react",
-    "code": "import React from 'react';\n\n const Message = () => {\n return <div>This is a message.</div>;\n };\n\n export default Message;",
+    "code": "import React from 'react';\n\n const Message = () => {\n     return <div>This is a message.</div>;\n };\n\n export default Message;",
     "score": 2,
     "explanation": "In this example, we import the React module, define an arrow function component called Message that returns a div with the text \"This is a message.\", and export it as the default export using export default Message;. When importing this module, the default export will be the Message arrow function component."
   },
@@ -93,63 +93,63 @@
   {
     "id": 14,
     "lang": "react",
-    "code": "import React from 'react';\n\n function InternalComponent() {\n return <div>Hello, World!</div>;\n }\n\n export { InternalComponent as MyComponent };",
+    "code": "import React from 'react';\n\n function InternalComponent() {\n     return <div>Hello, World!</div>;\n }\n\n export { InternalComponent as MyComponent };",
     "score": 2,
     "explanation": "In this example, we define a function component called InternalComponent, and then we export it with a different name MyComponent. This allows us to provide a different name for the component when it is imported in other modules."
   },
   {
     "id": 15,
     "lang": "react",
-    "code": "import React from 'react';\n\n function Counter() {\n const count = 0;\n\n return <div>Count: {count}</div>;\n }\n\n export default Counter;",
+    "code": "import React from 'react';\n\n function Counter() {\n     const count = 0;\n\n     return <div>Count: {count}</div>;\n }\n\n export default Counter;",
     "score": 2,
     "explanation": "In this example, we import the React module, define a function component called Counter that declares a count variable and renders a div with the text \"Count: \" followed by the value of the count variable, and export it as the default export using export default Counter;. When importing this module, the default export will be the Counter function component."
   },
   {
     "id": 16,
     "lang": "react",
-    "code": "import React from 'react';\n import Header from './Header';\n import Content from './Content';\n import Footer from './Footer';\n\n function App() {\n return (\n <div className=\"app\">\n <Header />\n <Content />\n <Footer />\n </div>\n );\n }\n\n export default App;",
+    "code": "import React from 'react';\n import Header from './Header';\n import Content from './Content';\n import Footer from './Footer';\n\n function App() {\n     return <div className=\"app\">\n         <Header />\n         <Content />\n         <Footer />\n     </div>;\n }\n\n export default App;",
     "score": 2,
     "explanation": "The code is an App.js file in a React application that imports the React module and three custom components (Header, Content, and Footer). The App function component represents the main component, rendering a div with the class name \"app\" and including the Header, Content, and Footer components. It's exported as the default export for use in other files, serving as the entry point and providing the application's structure and layout."
   },
   {
     "id": 17,
     "lang": "react",
-    "code": "import React from 'react';\n\n function MyComponent() {\n const name = 'John';\n const age = 25;\n\n return <div>{name} is {age} years old.</div>;\n }",
+    "code": "import React from 'react';\n\n function MyComponent() {\n     const name = 'John';\n     const age = 25;\n\n     return <div>{name} is {age} years old.</div>;\n }",
     "score": 2,
     "explanation": "In this example, we define variables name and age and use them within the JSX expression by wrapping them with curly braces {}. The rendered output will be \"John is 25 years old.\""
   },
   {
     "id": 18,
     "lang": "react",
-    "code": "import React from 'react';\n\n function MyComponent() {\n const getName = () => 'John Doe';\n\n return <div>{getName()} is a developer.</div>;\n }",
+    "code": "import React from 'react';\n\n function MyComponent() {\n     const getName = () => 'John Doe';\n\n     return <div>{getName()} is a developer.</div>;\n }",
     "score": 2,
     "explanation": "In this example, we define an inline arrow function getName that returns a name. We directly invoke the function within the JSX expression ({getName()}) to display the name. The rendered output will be \"John Doe is a developer.\""
   },
   {
     "id": 19,
     "lang": "react",
-    "code": "import React from 'react';\n import Navbar from './Navbar';\n\n function App() {\n return (\n <div>\n <Navbar />\n  </div>\n );\n }",
+    "code": "import React from 'react';\n import Navbar from './Navbar';\n\n function App() {\n     return <div>\n         <Navbar />\n     </div>;\n }",
     "score": 2,
     "explanation": "In this example, the <Navbar /> component is imported and rendered within the <App /> component. The <Navbar /> component can contain navigation links, a logo, or any other elements related to the navigation menu of your application."
   },
   {
     "id": 20,
     "lang": "react",
-    "code": "import React from 'react';\n import Button from './Button';\n\n function App() {\n return (\n <div>\n <Button label=\"Click me\" />\n </div>\n );\n }",
+    "code": "import React from 'react';\n import Button from './Button';\n\n function App() {\n     return <div>\n         <Button label=\"Click me\" />\n     </div>;\n }",
     "score": 2,
     "explanation": "In this example, the <Button /> component is imported and rendered within the <App /> component. The <Button /> component can have various functionalities such as handling click events or triggering specific actions when clicked. The label prop is used to customize the text displayed on the button."
   },
   {
     "id": 21,
     "lang": "react",
-    "code": "import React from 'react';\n\n const Footer = () => {\n const currentYear = new Date().getFullYear();\n\n return <footer>&copy; {currentYear} My Website</footer>;\n };\n\n  export default Footer;",
+    "code": "import React from 'react';\n\n const Footer = () => {\n     const currentYear = new Date().getFullYear();\n     return <footer>&copy; {currentYear} My Website</footer>;\n };\n\n export default Footer;",
     "score": 2,
     "explanation": "In this code snippet, the Footer component remains a functional component. Inside the component, the currentYear variable is assigned the value of the current year using new Date().getFullYear(). This ensures that the year is always up to date. The currentYear variable is then interpolated within the JSX, dynamically displaying the current year in the footer."
   },
   {
     "id": 22,
     "lang": "react",
-    "code": "import React from \"react\";\n\n function Note() {\n return (\n <div>\n <h1>This is the title</h1>\n <p>This is the content</p>\n </div>\n );\n }\n\n export default Note;",
+    "code": "import React from \"react\";\n\n function Note() {\n     return <div>\n         <h1>This is the title</h1>\n         <p>This is the content</p>\n     </div>;\n }\n\n export default Note;",
     "score": 2,
     "explanation": "In this code, we import the React library, which is necessary for writing React components. We define a functional component called \"Note\" using the function keyword. Inside the component, we use JSX to return a <div> element that contains an <h1> element with the text \"This is the title\" and a <p> element with the text \"This is the content\". The component is then exported using export default Note; to make it accessible for other parts of the application."
   },
@@ -163,21 +163,21 @@
   {
     "id": 24,
     "lang": "react",
-    "code": "import React from \"react\";\n\n function Card() {\n return (\n <div className=\"card\">\n  <h2>Title</h2>\n  <p>Content</p>\n </div>\n );\n }\n\n export default Card;",
+    "code": "import React from \"react\";\n\n function Card() {\n     return <div className=\"card\">\n         <h2>Title</h2>\n         <p>Content</p>\n     </div>;\n }\n\n export default Card;",
     "score": 2,
     "explanation": "This example defines a functional component named \"Card\" that renders a card element. The card element consists of a <div> with a CSS class of \"card\". Inside the <div>, there is an <h2> element for the title and a <p> element for the content. The content is hard-coded in this example."
   },
   {
     "id": 25,
     "lang": "react",
-    "code": "import React from \"react\";\n\n function Card({ title, content }) {\nreturn (\n <div className=\"card\">\n <h2>{title}</h2>\n <p>{content}</p>\n </div>\n );\n }\n\n export default Card;",
+    "code": "import React from \"react\";\n\n function Card({ title, content }) {\n     return <div className=\"card\">\n         <h2>{title}</h2>\n         <p>{content}</p>\n     </div>;\n }\n\n export default Card;",
     "score": 2,
     "explanation": "In this example, the card component receives title and content as props. It utilizes destructuring to access those props and dynamically render the values inside the <h2> and <p> elements."
   },
   {
     "id": 26,
     "lang": "react",
-    "code": "import React from \"react\";\n\n function MyComponent() {\n return (\n <div>\n <div className=\"my-class\">Content</div>\n </div>\n );\n }\n\n export default MyComponent;",
+    "code": "import React from \"react\";\n\n function MyComponent() {\n     return <div>\n         <div className=\"my-class\">Content</div>\n     </div>;\n }\n\n export default MyComponent;",
     "score": 2,
     "explanation": "In this example, the <div> element with the class name \"my-class\" is placed inside the functional component \"MyComponent\"."
   },
@@ -191,92 +191,50 @@
   {
     "id": 28,
     "lang": "react",
-    "code": "import React, { useState } from \"react\";\n\n function App() {\n const [state, setState] = useState(2703);",
+    "code": "import React, { useState } from \"react\";\n\n function App() {\n     const [state, setState] = useState(2703);",
     "score": 2,
     "explanation": "This code uses the useState hook in a React functional component called App. The useState function is called with an initial value of 2703 and returns an array with two elements: the current state value and a function to update the state. The line const state = useState(2703); declares a variable state to store these two elements. By using useState, the App component can keep track of its own state and modify it when needed using the provided function."
   },
   {
     "id": 29,
     "lang": "react",
-    "code": "import React from 'react';\n\n const List = () => (\n <>\n <h2>Items:</h2>\n <ul>\n <li>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</li>\n </ul>\n </>\n );\n\n export default List;",
+    "code": "import React from 'react';\n\n const List = () => <><h2>Items:</h2><ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul></>;\n\n export default List;",
     "score": 2,
     "explanation": "The code defines a functional component called List. It uses JSX to render a heading with the text \"Items:\" (<h2>Items:</h2>) and an unordered list (<ul>) with three list items (<li>Item 1</li>, <li>Item 2</li>, <li>Item 3</li>). The component utilizes the React fragment syntax (<>...</>) to group the elements without introducing an additional DOM node. Finally, the component is exported as the default export (export default List;) to make it available for use in other parts of the application."
   },
   {
     "id": 30,
     "lang": "react",
-    "code": "import React from 'react';\n\n const MyComponent = () => {\n return <div>Hello, World!</div>;\n };\n\n export default MyComponent;",
+    "code": "import React from 'react';\n\n const MyComponent = () => <div>Hello, World!</div>;\n\n export default MyComponent;",
     "score": 2,
     "explanation": "This code creates a functional component called MyComponent. It uses the React import to define a function that returns JSX (in this case, a <div> element containing \"Hello, World!\"). The component is then exported for use in other files."
   },
   {
     "id": 31,
     "lang": "react",
-    "code": "import React from 'react';\n\n const Greeting = (props) => {\n return <div>Hello, {props.name}!</div>;\n };\n\n export default Greeting;",
+    "code": "import React from 'react';\n\n const Greeting = (props) => <div>Hello, {props.name}!</div>;\n\n export default Greeting;",
     "score": 2,
     "explanation": "This code defines a functional component called Greeting that accepts a name prop. Inside the JSX, the value of the name prop is rendered by wrapping it with curly braces ({props.name}). This allows you to pass different names as props when using the component."
   },
   {
     "id": 32,
     "lang": "react",
-    "code": "import React from 'react';\n\n const Text = () => {\n return <p>This is a simple text component.</p>;\n };\n\n export default Text;",
+    "code": "import React from 'react';\n\n const Text = () => <p>This is a simple text component.</p>;\n\n export default Text;",
     "score": 2,
     "explanation": "This example creates a functional component called Text that returns a <p> element containing the text \"This is a simple text component.\" It showcases the basic structure of a functional component."
   },
   {
     "id": 33,
     "lang": "react",
-    "code": "import React from 'react';\n\n const Button = (props) => {\n return <button>{props.label}</button>;\n };\n\n export default Button;",
+    "code": "import React from 'react';\n\n const Button = (props) => <button>{props.label}</button>;\n\n export default Button;",
     "score": 2,
     "explanation": "This example creates a basic Button component that accepts a label prop. It renders a <button> element with the label passed as the prop value. This component can be used to create buttons with different labels throughout your application."
   },
   {
     "id": 34,
     "lang": "react",
-    "code": "{address.map((item, index) => (\n <li key={index}>{item}</li>\n ))}",
+    "code": "{address.map((item, index) => <li key={index}>{item}</li>)}",
     "score": 2,
     "explanation": "The code snippet uses the map function to iterate over the address array. For each element in the address array, it generates a <li> element with a unique key attribute set to the index of the element. The content of each <li> element is set to the corresponding item from the address array. This code dynamically creates a list of <li> elements based on the address array."
-  },
-  {
-    "id": 35,
-    "lang": "react",
-    "code": "const Order = ({ orderType }) => {\n const [orders, setOrders] = useState(0);\n\n const orderOne = () => {\n setOrders(orders + 1);\n }",
-    "score": 2,
-    "explanation": "The code defines a functional component called Order that receives a prop called orderType. Inside the component, it uses the useState hook to declare a state variable orders and its corresponding setter function setOrders, initialized with a default value of 0. The orderOne function is defined, which, when called, increments the orders state value by 1 using the setOrders function. This code allows tracking the number of orders and provides a way to increase the count by one. The rest of the component code can be added below this section."
-  },
-  {
-    "id": 36,
-    "lang": "react",
-    "code": "return (\n <div>\n {orderType} <RestaurantButton handleClick={orderOne} />\n </div>\n );",
-    "score": 2,
-    "explanation": "Inside the <div>, it displays the value of the orderType prop. Additionally, it renders a <RestaurantButton> component with a handleClick prop set to the orderOne function. The <RestaurantButton> component likely represents a button component specific to a restaurant, allowing users to place an order. This code snippet combines the order type information and a button to create a user interface element related to placing an order in a restaurant context."
-  },
-  {
-    "id": 37,
-    "lang": "react",
-    "code": "function Note(props) {\n function handleClick() {\n props.onDelete(props.id);\n }",
-    "score": 2,
-    "explanation": "The code defines a functional component called Note that receives a prop object called props. Inside the component, a function called handleClick is defined. When invoked, it calls the onDelete function passed as a prop to the component, with the id property from the props object as an argument. This code snippet allows for handling a click event and triggering the onDelete function with the corresponding id value when the click occurs. The rest of the component code can be added below this section."
-  },
-  {
-    "id": 38,
-    "lang": "react",
-    "code": "return (\n <div className=\"note\">\n <h1>{props.title}</h1>\n <p>{props.content}</p>\n <button onClick={handleClick}>DELETE</button>\n </div>\n );",
-    "score": 2,
-    "explanation": "The code returns a JSX block that represents a note component. It renders a <div> element with the CSS class \"note\". Inside the <div>, it displays the value of the title prop as an <h1> element, the value of the content prop as a <p> element, and a \"DELETE\" button. When the button is clicked, it triggers the handleClick function. This code creates a reusable note component with dynamic title, content, and a delete functionality represented by the button."
-  },
-  {
-    "id": 39,
-    "lang": "react",
-    "code": "function CreateArea(props) {\n const [note, setNote] = useState({\n title: \"\",\n content: \"\"\n });\n ",
-    "score": 2,
-    "explanation": "The code defines a functional component called CreateArea that receives a prop object called props. Inside the component, it uses the useState hook to declare a state variable note and its corresponding setter function setNote, initialized with an object containing empty strings for the title and content properties. This allows the component to track the state of a note's title and content. The rest of the component code can be added below this section. This code snippet sets up the initial state for a note and provides a way to update its properties using the setNote function."
-  },
-  {
-    "id": 40,
-    "lang": "react",
-    "code": "<script src=\"../src/index.js\" type=\"text/jsx\"></script>",
-    "score": 2,
-    "explanation": "The code is an HTML <script> tag that includes a JavaScript file index.js from the ../src directory. The type attribute is set to text/jsx, indicating that the JavaScript code inside the file is written using JSX syntax. This code snippet is used to include and execute the JavaScript code written in index.js, which is likely a React application entry point or component file."
   }
 ]
