@@ -26,6 +26,9 @@ function App() {
   const handleSqlClick = () =>{
     setExerciseLanguage("sql")
   }
+  const handleTestClick = () =>{
+    setExerciseLanguage("test")
+  }
 
   return (
     <>
@@ -35,6 +38,7 @@ function App() {
         handleCSSClick={handleCSSClick}
         handleReactClick={handleReactClick}
         handleSqlClick={handleSqlClick}
+        handleTestClick={handleTestClick}
       />
       <Main exerciseLanguage={exerciseLanguage} />
       <Footer />

@@ -1,0 +1,351 @@
+[
+    {
+        "id": 1,
+        "lang": "test",
+        "code": "test('fetches data asynchronously', async () => {\n    const data = await fetchData();\n    expect(data).toBe('Data');\n});",
+        "score": 2,
+        "explanation": "This test case asserts that the sum of 1 and 2 should be equal to 3 using the 'expect' function and the 'toBe' matcher."
+      },{
+        "id": 2,
+        "lang": "test",
+        "code": "test('the sum of 2 and 2 is equal to 4', () => {\n    expect(sum(2, 2)).toBe(4);\n});",
+        "score": 2,
+        "explanation": "This example tests the function squareRoot with the input 25. It expects the result to be equal to 5."
+      },
+      {
+        "id": 3,
+        "lang": "test",
+        "code": "test('the length of \"Hello, World!\" is 13', () => {\n    expect(getStringLength(\"Hello, World!\")).toBe(13);\n});",
+        "score": 2,
+        "explanation": "This example tests the function getStringLength with the input \"Hello, World!\". It expects the result to be equal to 13, which is the length of the string."
+      },
+      {
+        "id": 4,
+        "lang": "test",
+        "code": "test('the element \"apple\" exists in the fruits array', () => {\n    expect(fruits.includes(\"apple\")).toBe(true);\n});",
+        "score": 2,
+        "explanation": "This example tests whether the string \"apple\" exists in the fruits array. It expects the result to be true if the element is found."
+      },
+      {
+        "id": 5,
+        "lang": "test",
+        "code": "test('the email address \"test@example.com\" is valid', () => {\n    expect(validateEmail(\"test@example.com\")).toBe(true);\n});",
+        "score": 2,
+        "explanation": "This example tests the function validateEmail with the input \"test@example.com\". It expects the result to be true if the email address is valid."
+      },
+      {
+        "id": 6,
+        "lang": "test",
+        "code": "test('the file \"example.txt\" is not empty', () => {\n    expect(fileManager.getFileSize(\"example.txt\")).toBeGreaterThan(0);\n});",
+        "score": 2,
+        "explanation": "This example tests the function getFileSize with the input \"example.txt\". It expects the result to be greater than 0 if the file is not empty."
+      },
+      {
+        "id": 7,
+        "lang": "test",
+        "code": "test('the user is logged in successfully', () => {\n    expect(login(username, password)).toBeTruthy();\n});",
+        "score": 2,
+        "explanation": "This example tests the function login with the provided username and password. It expects the result to be truthy if the user is logged in successfully."
+      },
+      {
+        "id": 8,
+        "lang": "test",
+        "code": "test('the array [1, 2, 3] contains the number 2', () => {\n    expect([1, 2, 3]).toContain(2);\n}); ",
+        "score": 2,
+        "explanation": "This example tests whether the array [1, 2, 3] contains the number 2. It expects the result to be true if the number is found in the array."
+      },
+      {
+        "id": 9,
+        "lang": "test",
+        "code": "test('the object has a property named \"name\"', () => {\n    expect(object).toHaveProperty('name');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the object has a property named \"name\". It expects the result to be true if the property exists."
+      },
+      {
+        "id": 10,
+        "lang": "test",
+        "code": "test('the function throws an error when called without arguments', () => {\n    expect(() => myFunction()).toThrow();\n});",
+        "score": 2,
+        "explanation": " This example tests whether the function myFunction throws an error when called without any arguments. It expects the function to throw an error."
+      },
+      {
+        "id": 11,
+        "lang": "test",
+        "code": "test('the string \"hello world\" starts with \"hello\"', () => {\n    expect(\"hello world\").toMatch(/^hello/);\n});",
+        "score": 2,
+        "explanation": "This example tests whether the string \"hello world\" starts with the word \"hello\". It expects the string to match the regular expression pattern /^hello/."
+      },
+      {
+        "id": 12,
+        "lang": "test",
+        "code": "ttest('the variable is a number', () => {\n    expect(typeof variable).toBe('number');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the variable is of type \"number\". It expects the result to be true if the variable is a number."
+      },
+      {
+        "id": 13,
+        "lang": "test",
+        "code": "test('the user has administrative privileges', () => {\n    expect(user.isAdmin).toBeTruthy();\n});",
+        "score": 2,
+        "explanation": "This example tests whether the user has administrative privileges. It expects the isAdmin property of the user object to be truthy."
+      },
+      {
+        "id": 14,
+        "lang": "test",
+        "code": "test('the variable has a length of 10', () => {\n    expect(variable.length).toBe(10);\n});",
+        "score": 2,
+        "explanation": "This example tests whether the variable has a length of 10. It expects the result to be true if the length is equal to 10."
+      },
+      {
+        "id": 15,
+        "lang": "test",
+        "code": "test('the class instance has a method named \"calculate\"', () => {\n    expect(instance).toHaveMethod('calculate');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the instance of a class has a method named \"calculate\". It expects the result to be true if the method exists."
+      },
+      {
+        "id": 16,
+        "lang": "test",
+        "code": "test('the function throws a specific error message', () => {\n    expect(() => myFunction()).toThrowError('Specific error message');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the function myFunction throws an error with a specific error message."
+      },
+      {
+        "id": 17,
+        "lang": "test",
+        "code": "test('the number is not equal to zero', () => {\n    expect(number).not.toBe(0);\n});",
+        "score": 2,
+        "explanation": "This example tests whether the number is not equal to zero. It expects the result to be true if the number is not zero."
+      },
+      {
+        "id": 18,
+        "lang": "test",
+        "code": "test('the string does not contain \"hello\"', () => {\n    expect(string).not.toContain('hello');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the string does not contain the substring \"hello\". It expects the result to be true if the string does not contain \"hello\"."
+      },
+      {
+        "id": 19,
+        "lang": "test",
+        "code": "test('the object does not have a property named \"age\"', () => {\n    expect(object).not.toHaveProperty('age');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the object does not have a property named \"age\". It expects the result to be true if the property does not exist."
+      },
+      {
+        "id": 20,
+        "lang": "test",
+        "code": "test('the variable is not null', () => {\n    expect(variable).not.toBeNull();\n});",
+        "score": 2,
+        "explanation": "This example tests whether the variable is not null. It expects the result to be true if the variable is not null."
+      },
+      {
+        "id": 21,
+        "lang": "test",
+        "code": "test('the array does not contain a specific element', () => {\n    expect(array).not.toContainElement('specific element');\n});",
+        "score": 2,
+        "explanation": "This example tests whether the array does not contain a specific element. It expects the result to be true if the element is not found in the array."
+      },
+      {
+        "id": 22,
+        "lang": "test",
+        "code": "test('resolves to a specific number', () => {\n    return expect(Promise.resolve(42)).resolves.toBe(42);\n});",
+        "score": 2,
+        "explanation": "In the given code, a test case is defined to check whether a promise resolves to a specific number. A promise is an object in JavaScript that represents the eventual completion or failure of an asynchronous operation and its resulting value. The Promise.resolve(42) creates a promise that immediately resolves with the value 42. The expect function is used to create an expectation object for the resolved value of the promise. The .resolves property asserts that the promise resolves successfully, and the .toBe(42) matcher checks that the resolved value is exactly equal to 42. If the expectation is met, the test passes; otherwise, it fails."
+      },
+      {
+        "id": 23,
+        "lang": "test",
+        "code": "test('resolves to an array containing a specific element', () => {\n    return expect(Promise.resolve([1, 2, 3])).resolves.toContain(2);\n});",
+        "score": 2,
+        "explanation": "The given code represents a test case where we want to verify if a promise resolves to an array containing a specific element. Inside the test case, we create a promise using Promise.resolve([1, 2, 3]), which immediately resolves with an array [1, 2, 3]. Then, the expect function is used to create an expectation object for the resolved value of the promise. The .resolves property ensures that the promise resolves successfully. Finally, the .toContain(2) matcher asserts that the resolved array contains the element 2. If the expectation is met, indicating that the promise resolves to an array containing the specified element, the test passes; otherwise, it fails."
+      },
+      {
+        "id": 24,
+        "lang": "test",
+        "code": "test('does not invoke a callback function', () => {\n    const callback = jest.fn();\n    performAsyncTask(callback);\n    expect(callback).not.toHaveBeenCalled();\n});",
+        "score": 2,
+        "explanation": "This example creates a mock callback function callback using jest.fn(). It executes an asynchronous task using performAsyncTask that should not invoke the callback. The expectation is that the callback function should not have been called."
+      },
+      {
+        "id": 25,
+        "lang": "test",
+        "code": "test('does not execute a specific block of code', () => {\n    const myFunction = jest.fn();\n    runConditionalCode(myFunction, false);\n    expect(myFunction).not.toHaveBeenCalled();\n});",
+        "score": 2,
+        "explanation": "This example creates a mock function myFunction using jest.fn(). It runs a conditional code block using runConditionalCode with a false condition that should not execute myFunction. The expectation is that myFunction should not have been called."
+      },
+      {
+        "id": 26,
+        "lang": "test",
+        "code": "test('processEach processes each item', () => {\n    const processFunc = jest.fn();\n    processEach(processFunc, [item1, item2, item3]);\n    expect(processFunc).toHaveBeenCalledTimes(3);\n});",
+        "score": 2,
+        "explanation": ""
+      },
+      {
+        "id": 27,
+        "lang": "test",
+        "code": "test('getUserInfo returns an object', () => {\n    const getUserInfo = jest.fn(() => ({ name: 'John', age: 25 }));\n\n    getUserInfo();\n\n    expect(getUserInfo).toHaveReturned();\n});",
+        "score": 2,
+        "explanation": "This example creates a mock function getUserInfo using jest.fn() that returns an object with a name and age. It calls the getUserInfo function and expects it to have returned a value."
+      },
+      {
+        "id": 28,
+        "lang": "test",
+        "code": "test('getRandomNumber returns a number', () => {\n    const getRandomNumber = jest.fn(() => Math.random());\n\n    getRandomNumber();\n\n    expect(getRandomNumber).toHaveReturned();\n});",
+        "score": 2,
+        "explanation": "This example creates a mock function getRandomNumber using jest.fn() that returns a random number. It calls the getRandomNumber function and expects it to have returned a value."
+      },
+      {
+        "id": 29,
+        "lang": "test",
+        "code": "test('getUsers returns an array', () => {\n    const getUsers = jest.fn(() => ['John', 'Jane', 'Mike']);\n\n    getUsers();\n\n    expect(getUsers).toHaveReturned();\n});",
+        "score": 2,
+        "explanation": "This example creates a mock function getUsers using jest.fn() that returns an array of user names. It calls the getUsers function and expects it to have returned a value."
+      },
+      {
+        "id": 30,
+        "lang": "test",
+        "code": "const array = [1, 2, 3];\nexpect(array).toHaveLength(3);",
+        "score": 2,
+        "explanation": "This example asserts that the length of the array is 3 using the toHaveLength() matcher. The expectation passes since the length of the array is indeed 3."
+      },
+      {
+        "id": 31,
+        "lang": "test",
+        "code": "const string = 'abc';\nexpect(string).toHaveLength(3);",
+        "score": 2,
+        "explanation": "This example checks whether the length of the string is 3 using the toHaveLength() matcher. The expectation is met as the length of the string is indeed 3."
+      },
+      {
+        "id": 32,
+        "lang": "test",
+        "code": "const emptyString = '';\nexpect(emptyString).not.toHaveLength(5);",
+        "score": 2,
+        "explanation": "This example verifies that the emptyString does not have a length of 5 using the toHaveLength() matcher combined with not. The expectation passes because the length of the empty string is not 5."
+      },
+      {
+        "id": 33,
+        "lang": "test",
+        "code": "const names = ['John', 'Jane', 'Mike'];\nexpect(names).toHaveLength(3);",
+        "score": 2,
+        "explanation": "This example validates that the names array has a length of 3 using the toHaveLength() matcher. The expectation is fulfilled since the array contains 3 elements."
+      },
+      {
+        "id": 34,
+        "lang": "test",
+        "code": "const emptyArray = [];\nexpect(emptyArray).toHaveLength(0);",
+        "score": 2,
+        "explanation": "This example verifies that the emptyArray has a length of 0 using the toHaveLength() matcher. The expectation passes as the array is empty."
+      },
+      {
+        "id": 35,
+        "lang": "test",
+        "code": "test('maximumSpeed is greater than 100 mph', () => {\n    expect(maximumSpeed()).toBeGreaterThan(100);\n});",
+        "score": 2,
+        "explanation": "This example asserts that the value returned by maximumSpeed() is greater than 100 using the toBeGreaterThan() matcher. The expectation passes if the value is indeed greater than 100."
+      },
+      {
+        "id": 36,
+        "lang": "test",
+        "code": "test('numberOfItems is greater than 50', () => {\n    expect(numberOfItems()).toBeGreaterThan(50);\n});",
+        "score": 2,
+        "explanation": "This example checks whether the value returned by numberOfItems() is greater than 50 using the toBeGreaterThan() matcher. The expectation is met if the value is indeed greater than 50."
+      },
+      {
+        "id": 37,
+        "lang": "test",
+        "code": "test('salary is higher than £50000', () => {\n    expect(salary()).toBeGreaterThan(50000);\n});",
+        "score": 2,
+        "explanation": "This example checks whether the value returned by salary() is greater than £50000 using the toBeGreaterThan() matcher. The expectation is met if the value is indeed higher than £50000."
+      },
+      {
+        "id": 38,
+        "lang": "test",
+        "code": "test('score is greater than 90', () => {\n    expect(score()).toBeGreaterThan(90);\n});",
+        "score": 2,
+        "explanation": "This example asserts that the value returned by score() is greater than 90 using the toBeGreaterThan() matcher. The expectation is met if the value is indeed greater than 90."
+      },
+      {
+        "id": 39,
+        "lang": "test",
+        "code": "test('distance is greater than 1000 meters', () => {\n    expect(distance()).toBeGreaterThan(1000);\n});",
+        "score": 2,
+        "explanation": "This example asserts that the value returned by distance() is greater than 1000 using the toBeGreaterThan() matcher. The expectation is met if the value is indeed greater than 1000."
+      },
+      {
+        "id": 40,
+        "lang": "test",
+        "code": "test('temperature is lower than 30 degrees', () => {\n    expect(temperature()).toBeLessThan(30);\n});",
+        "score": 2,
+        "explanation": "This example verifies that the value returned by temperature() is less than 30 using the toBeLessThan() matcher. The expectation is fulfilled if the value is indeed lower than 30."
+      },
+      {
+        "id": 41,
+        "lang": "test",
+        "code": "test('the fruits list contains apple', () => {\n    expect(getAllFruits()).toContain('apple');\n});",
+        "score": 2,
+        "explanation": "This example asserts that the array returned by getAllFruits() contains the element 'apple' using the toContain() matcher. The expectation passes if the array indeed includes 'apple'."
+      },
+      {
+        "id": 42,
+        "lang": "test",
+        "code": "test('the ingredients list contains sugar', () => {\n    expect(getAllIngredients()).toContain('sugar');\n});",
+        "score": 2,
+        "explanation": "This example verifies that the array returned by getAllIngredients() contains the element 'sugar' using the toContain() matcher. The expectation is fulfilled if the array indeed includes 'sugar'."
+      },
+      {
+        "id": 43,
+        "lang": "test",
+        "code": "test('the animals list contains lion', () => {\n    expect(getAllAnimals()).toContain('lion');\n});",
+        "score": 2,
+        "explanation": "This example ensures that the array returned by getAllAnimals() contains the element 'lion' using the toContain() matcher. The expectation passes if the array indeed includes 'lion'."
+      },
+      {
+        "id": 44,
+        "lang": "test",
+        "code": "test('check if a value is within a specific range', () => {\n    expect(7).toBeInRange(5, 10);\n});",
+        "score": 2,
+        "explanation": "This example tests whether the value 7 is within the range of 5 to 10 using a custom toBeInRange() matcher."
+      },
+      {
+        "id": 45,
+        "lang": "test",
+        "code": "test('check if an array contains a specific element', () => {\n    expect([1, 2, 3]).toContain(2);\n});",
+        "score": 2,
+        "explanation": "This example asserts that the array [1, 2, 3] contains the element 2 using the toContain() matcher."
+      },
+      {
+        "id": 46,
+        "lang": "test",
+        "code": "test('check if an object does not have a specific property', () => {\n    const person = { name: 'John', age: 30 };\n    expect(person).not.toHaveProperty('address');\n});",
+        "score": 2,
+        "explanation": "This example ensures that the person object does not have the property 'address' using the not.toHaveProperty() matcher."
+      },
+      {
+        "id": 47,
+        "lang": "test",
+        "code": "test('check if a function does not throw an error', () => {\n    expect(() => someFunction()).not.toThrow();\n});",
+        "score": 2,
+        "explanation": "This example tests the someFunction() by asserting that it should not throw an error using the not.toThrow() matcher."
+      },
+      {
+        "id": 48,
+        "lang": "test",
+        "code": "test('check if an array is sorted in ascending order', () => {\n    expect([1, 2, 3]).toBeSortedAscending();\n});",
+        "score": 2,
+        "explanation": "This example asserts that the array [1, 2, 3] is sorted in ascending order using a custom toBeSortedAscending() matcher."
+      },
+      {
+        "id": 49,
+        "lang": "test",
+        "code": "test('check if a value is of a specific type', () => {\n    expect(42).toBeNumber();\n});",
+        "score": 2,
+        "explanation": "This example asserts that the value 42 is of the number type using the toBeNumber() matcher."
+      },
+      {
+        "id": 50,
+        "lang": "test",
+        "code": "test('check if a value is a valid URL', () => {\n    expect('https://www.example.com').",
+        "score": 2,
+        "explanation": "This example verifies that a value is a valid URL using the toBeValidURL() matcher."
+      }
+]
