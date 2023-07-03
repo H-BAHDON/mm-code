@@ -1,0 +1,79 @@
+.mainHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232931;
+    padding: 0.5rem;
+    padding-bottom: 0;
+  }
+  
+  .logo-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Rowdies", cursive;
+    letter-spacing: 6px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+  }
+  
+  .nav-item-html:hover,
+  .navbar .nav-item-html.active {
+    color: #f06529;
+    border: 1px solid #f06529;
+  }
+  
+  .nav-item-css:hover,
+  .navbar .nav-item-css.active {
+    color: #2965f1;
+    border: 1px solid #2965f1;
+  }
+  
+  .nav-item-javascript:hover,
+  .navbar .nav-item-javascript.active {
+    color: #f7df1e;
+    border: 1px solid #f7df1e;
+  }
+  .nav-item-react:hover,
+  .navbar .nav-item-react.active {
+    color: #61DBFB;
+    border: 1px solid #61DBFB;
+  }
+
+  .nav-item-sql:hover,
+  .navbar .nav-item-sql.active {
+    color: #0072c6;
+    border: 1px solid #0072c6;
+  }
+   
+
+  .nav-item-test:hover,
+  .navbar .nav-item-test.active {
+    color: #944058;
+    border: 1px solid #944058;
+  }
+   
+   

@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "lang": "sql",
+    "code": "SELECT CustomerName, City FROM Customers;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and City columns from the Customers table."
+  },
+  {
+    "id": 2,
+    "lang": "sql",
+    "code": "SELECT * FROM Customers;",
+    "score": 2,
+    "explanation": "Retrieve all columns from the Customers table."
+  },
+  {
+    "id": 3,
+    "lang": "sql",
+    "code": "SELECT ProductName, Price FROM Products WHERE Price > 50;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and Price columns from the Products table where the Price is greater than 50."
+  },
+  {
+    "id": 4,
+    "lang": "sql",
+    "code": "SELECT AVG(Quantity) FROM Orders;",
+    "score": 2,
+    "explanation": "Calculate the average quantity from the Orders table."
+  },
+  {
+    "id": 5,
+    "lang": "sql",
+    "code": "SELECT DISTINCT Country FROM Customers;",
+    "score": 2,
+    "explanation": "Retrieve distinct values from the Country column of the Customers table."
+  },
+  {
+    "id": 6,
+    "lang": "sql",
+    "code": "SELECT CustomerName, OrderDate FROM Customers JOIN Orders ON Customers.CustomerID = Orders.CustomerID;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and OrderDate columns from the Customers and Orders tables using the CustomerID as a join condition."
+  },
+  {
+    "id": 7,
+    "lang": "sql",
+    "code": "SELECT COUNT(*) FROM Employees WHERE Salary > 50000;",
+    "score": 2,
+    "explanation": "Count the number of employees from the Employees table where the Salary is greater than 50000."
+  },
+  {
+    "id": 8,
+    "lang": "sql",
+    "code": "SELECT MAX(Price) FROM Products;",
+    "score": 2,
+    "explanation": "Retrieve the maximum price from the Products table."
+  },
+  {
+    "id": 9,
+    "lang": "sql",
+    "code": "SELECT MIN(Quantity) FROM Orders;",
+    "score": 2,
+    "explanation": "Retrieve the minimum quantity from the Orders table."
+  },
+  {
+    "id": 10,
+    "lang": "sql",
+    "code": "SELECT CustomerName, SUM(Total) FROM Customers JOIN Orders ON Customers.CustomerID = Orders.CustomerID GROUP BY Customers.CustomerID;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and the sum of the Total column from the Customers and Orders tables, grouped by the CustomerID."
+  },
+  {
+    "id": 11,
+    "lang": "sql",
+    "code": "SELECT * FROM Customers WHERE City = 'London';",
+    "score": 2,
+    "explanation": "Retrieve all columns from the Customers table where the City is 'London'."
+  },
+  {
+    "id": 12,
+    "lang": "sql",
+    "code": "SELECT ProductName FROM Products WHERE ProductName LIKE 'A%';",
+    "score": 2,
+    "explanation": "Retrieve the ProductName from the Products table where the ProductName starts with 'A'."
+  },
+  {
+    "id": 13,
+    "lang": "sql",
+    "code": "SELECT CustomerName, OrderDate FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and OrderDate columns from the Customers and Orders tables using the CustomerID as a left join condition."
+  },
+  {
+    "id": 14,
+    "lang": "sql",
+    "code": "SELECT COUNT(DISTINCT Category) FROM Products;",
+    "score": 2,
+    "explanation": "Count the number of distinct categories from the Category column of the Products table."
+  },
+  {
+    "id": 15,
+    "lang": "sql",
+    "code": "SELECT * FROM Orders WHERE OrderDate BETWEEN '2022-01-01' AND '2022-12-31';",
+    "score": 2,
+    "explanation": "Retrieve all columns from the Orders table where the OrderDate is between '2022-01-01' and '2022-12-31'."
+  },
+  {
+    "id": 16,
+    "lang": "sql",
+    "code": "SELECT EmployeeID, CONCAT(FirstName, ' ', LastName) AS FullName FROM Employees;",
+    "score": 2,
+    "explanation": "Retrieve the EmployeeID and a concatenated FullName column combining the FirstName and LastName columns from the Employees table."
+  },
+  {
+    "id": 17,
+    "lang": "sql",
+    "code": "SELECT ProductName, Price FROM Products ORDER BY Price DESC;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and Price columns from the Products table and order the result by Price in descending order."
+  },
+  {
+    "id": 18,
+    "lang": "sql",
+    "code": "SELECT AVG(Salary) FROM Employees WHERE Department = 'IT';",
+    "score": 2,
+    "explanation": "Calculate the average Salary of employees from the Employees table where the Department is 'IT'."
+  },
+  {
+    "id": 19,
+    "lang": "sql",
+    "code": "SELECT CustomerName, COUNT(OrderID) AS OrderCount FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID GROUP BY Customers.CustomerID;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and the count of OrderID as OrderCount from the Customers and Orders tables, grouped by the CustomerID using a left join."
+  },
+  {
+    "id": 20,
+    "lang": "sql",
+    "code": "SELECT DISTINCT Country FROM Customers WHERE City = 'New York';",
+    "score": 2,
+    "explanation": "Retrieve distinct values from the Country column of the Customers table where the City is 'New York'."
+  },
+  {
+    "id": 21,
+    "lang": "sql",
+    "code": "SELECT OrderID, SUM(Quantity * Price) AS TotalCost FROM OrderDetails GROUP BY OrderID;",
+    "score": 2,
+    "explanation": "Retrieve the OrderID and the sum of the total cost (Quantity * Price) from the OrderDetails table, grouped by the OrderID."
+  },
+  {
+    "id": 22,
+    "lang": "sql",
+    "code": "SELECT CustomerName FROM Customers WHERE CustomerName LIKE '%John%' AND Country = 'USA';",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName from the Customers table where the CustomerName contains 'John' and the Country is 'USA'."
+  },
+  {
+    "id": 23,
+    "lang": "sql",
+    "code": "SELECT COUNT(*) AS TotalOrders FROM Orders;",
+    "score": 2,
+    "explanation": "Count the total number of orders from the Orders table and rename the count column as TotalOrders."
+  },
+  {
+    "id": 24,
+    "lang": "sql",
+    "code": "SELECT ProductName, CASE WHEN UnitsInStock > 0 THEN 'In Stock' ELSE 'Out of Stock' END AS StockStatus FROM Products;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and a custom column StockStatus that shows 'In Stock' if UnitsInStock > 0, and 'Out of Stock' otherwise."
+  },
+  {
+    "id": 25,
+    "lang": "sql",
+    "code": "SELECT EmployeeID, COUNT(*) AS TotalOrders FROM Orders GROUP BY EmployeeID HAVING COUNT(*) > 10;",
+    "score": 2,
+    "explanation": "Retrieve the EmployeeID and the count of orders as TotalOrders from the Orders table, grouped by EmployeeID, and filter the result to only include employees with more than 10 orders."
+  },
+  {
+    "id": 26,
+    "lang": "sql",
+    "code": "SELECT Category, MAX(Price) AS MaxPrice FROM Products GROUP BY Category;",
+    "score": 2,
+    "explanation": "Retrieve the Category and the maximum Price as MaxPrice for each category from the Products table."
+  },
+  {
+    "id": 27,
+    "lang": "sql",
+    "code": "SELECT CustomerName, CASE WHEN Country = 'USA' THEN 'Local' ELSE 'Foreign' END AS CustomerType FROM Customers;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and a custom column CustomerType that shows 'Local' if the Country is 'USA', and 'Foreign' otherwise."
+  },
+  {
+    "id": 28,
+    "lang": "sql",
+    "code": "SELECT SupplierName, COUNT(*) AS TotalProducts FROM Suppliers LEFT JOIN Products ON Suppliers.SupplierID = Products.SupplierID GROUP BY SupplierName;",
+    "score": 2,
+    "explanation": "Retrieve the SupplierName and the count of products as TotalProducts from the Suppliers and Products tables using a left join, grouped by SupplierName."
+  },
+  {
+    "id": 29,
+    "lang": "sql",
+    "code": "SELECT * FROM Employees WHERE YEAR(HireDate) = 2022;",
+    "score": 2,
+    "explanation": "Retrieve all columns from the Employees table where the year of the HireDate is 2022."
+  },
+  {
+    "id": 30,
+    "lang": "sql",
+    "code": "SELECT ProductName, Price FROM Products WHERE Category = 'Electronics' ORDER BY Price ASC LIMIT 5;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and Price columns from the Products table where the Category is 'Electronics', order the result by Price in ascending order, and limit the result to the first 5 rows."
+  },
+  {
+    "id": 31,
+    "lang": "sql",
+    "code": "SELECT OrderDate, COUNT(*) AS TotalOrders FROM Orders WHERE YEAR(OrderDate) = 2023 GROUP BY OrderDate;",
+    "score": 2,
+    "explanation": "Retrieve the OrderDate and the count of orders as TotalOrders from the Orders table where the year of the OrderDate is 2023, grouped by OrderDate."
+  },
+  {
+    "id": 32,
+    "lang": "sql",
+    "code": "SELECT DISTINCT City FROM Customers WHERE Country = 'Germany';",
+    "score": 2,
+    "explanation": "Retrieve distinct values from the City column of the Customers table where the Country is 'Germany'."
+  },
+  {
+    "id": 33,
+    "lang": "sql",
+    "code": "SELECT Category, AVG(Price) AS AveragePrice FROM Products GROUP BY Category HAVING AVG(Price) > 100;",
+    "score": 2,
+    "explanation": "Retrieve the Category and the average Price as AveragePrice from the Products table, grouped by Category, and filter the result to only include categories with an average price greater than 100."
+  },
+  {
+    "id": 34,
+    "lang": "sql",
+    "code": "SELECT EmployeeID, FirstName, LastName FROM Employees WHERE LastName LIKE 'S%';",
+    "score": 2,
+    "explanation": "Retrieve the EmployeeID, FirstName, and LastName columns from the Employees table where the LastName starts with 'S'."
+  },
+  {
+    "id": 35,
+    "lang": "sql",
+    "code": "SELECT ProductName, (UnitsInStock * Price) AS TotalValue FROM Products;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and a calculated column TotalValue which multiplies the UnitsInStock by the Price for each product in the Products table."
+  },
+  {
+    "id": 36,
+    "lang": "sql",
+    "code": "SELECT COUNT(DISTINCT Country) AS TotalCountries FROM Customers;",
+    "score": 2,
+    "explanation": "Count the total number of distinct countries from the Country column of the Customers table and rename the count column as TotalCountries."
+  },
+  {
+    "id": 37,
+    "lang": "sql",
+    "code": "SELECT CustomerName, FORMAT(OrderDate, 'yyyy-MM-dd') AS FormattedDate FROM Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName from the Customers table and format the OrderDate column as 'yyyy-MM-dd' from the Orders table using an inner join."
+  },
+  {
+    "id": 38,
+    "lang": "sql",
+    "code": "SELECT SupplierName, COUNT(DISTINCT Category) AS UniqueCategories FROM Suppliers LEFT JOIN Products ON Suppliers.SupplierID = Products.SupplierID GROUP BY SupplierName;",
+    "score": 2,
+    "explanation": "Retrieve the SupplierName and the count of unique categories as UniqueCategories from the Suppliers and Products tables using a left join, grouped by SupplierName."
+  },
+  {
+    "id": 39,
+    "lang": "sql",
+    "code": "SELECT ProductName, (Price * (1 - Discount)) AS DiscountedPrice FROM Products WHERE Discount > 0;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and a calculated column DiscountedPrice which applies the discount to the original price for products in the Products table where the Discount is greater than 0."
+  },
+  {
+    "id": 40,
+    "lang": "sql",
+    "code": "SELECT CustomerName, COUNT(*) AS TotalOrders FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID GROUP BY CustomerName HAVING COUNT(*) > 5;",
+    "score": 2,
+    "explanation": "Retrieve the CustomerName and the count of orders as TotalOrders from the Customers and Orders tables using a left join, grouped by CustomerName, and filter the result to only include customers with more than 5 orders."
+  },
+  {
+    "id": 41,
+    "lang": "sql",
+    "code": "SELECT Category, COUNT(*) AS TotalProducts FROM Products GROUP BY Category ORDER BY TotalProducts DESC LIMIT 3;",
+    "score": 2,
+    "explanation": "Retrieve the Category and the count of products as TotalProducts from the Products table, grouped by Category, order the result by TotalProducts in descending order, and limit the result to the top 3 categories."
+  },
+  {
+    "id": 42,
+    "lang": "sql",
+    "code": "SELECT ProductName, Quantity FROM OrderDetails WHERE OrderID = 10248;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and Quantity columns from the OrderDetails table where the OrderID is 10248."
+  },
+  {
+    "id": 43,
+    "lang": "sql",
+    "code": "SELECT COUNT(*) AS TotalCustomers FROM Customers WHERE City = 'London' OR City = 'Paris';",
+    "score": 2,
+    "explanation": "Count the total number of customers from the Customers table where the City is either 'London' or 'Paris' and rename the count column as TotalCustomers."
+  },
+  {
+    "id": 44,
+    "lang": "sql",
+    "code": "SELECT ProductName, (SELECT AVG(Price) FROM Products) AS AveragePrice FROM Products;",
+    "score": 2,
+    "explanation": "Retrieve the ProductName and a subquery column AveragePrice which calculates the average Price from the Products table for each product in the Products table."
+  },
+  {
+    "id": 45,
+    "lang": "sql",
+    "code": "SELECT SupplierName, ProductName FROM Suppliers INNER JOIN Products ON Suppliers.SupplierID = Products.SupplierID WHERE Suppliers.Country = 'Germany' AND Products.UnitsInStock < 10;",
+    "score": 2,
+    "explanation": "Retrieve the SupplierName and ProductName columns from the Suppliers and Products tables using an inner join, and filter the result to include suppliers from Germany and products with less than 10 units in stock."
+  }
+]

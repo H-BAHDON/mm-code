@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
-import CodeEditor from "./CodeEditor";
-import Data from "../../test.json";
+import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
-import ButtonOfPage from "../buttons/ButtonOfPage";
+import ButtonOfPage from "../common/buttons/ButtonOfPage";
+import "./main.css"
+// ---------------------------
+// import exercises
+import htmlData from "../../Exercise/htmlExercise.json"
+import cssData from "../../Exercise/cssExercise.json"
+import reactData from "../../Exercise/reactExercise.json"
+import javascriptData from "../../Exercise/javascriptExercise.json"
+import SQLData from "../../Exercise/SqlExercise.json"
+import testData from "../../Exercise/testExercise.json"
+// ---------------------------
 
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
-  
+
 
   const [resultText, setResultText] = useState("");
   const [resultTextVisible, setResultTextVisible] = useState(true);
@@ -48,24 +57,24 @@ function Main({ exerciseLanguage }) {
       document.addEventListener('keydown', handleKeyPress);
       return () => {
         document.removeEventListener('keydown', handleKeyPress);
-      };    
+      };
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [exerciseLanguage]);
 
     useEffect(() => {
       localStorage.setItem("score", score.toString());
     }, [score]);
-  
+
 
   // useEffect(() => {
   //   // handleResetCode();
   // }, [exerciseLanguage]);
 
   const sentences = [
-    `Bravo! You did it. ${currentExerciseScore} points for you!`,
-    `Great job! You earned ${currentExerciseScore} points!`,
-    `Congratulations! You completed the exercise and scored ${currentExerciseScore} points!`,
-    `Well done! You got ${currentExerciseScore} more points! Keep it up!`,
+    `Good stuff! Improving your muscle memory could be one of the most important things in learning. You have earned ${currentExerciseScore} points!`,
+    `Outstanding performance! You have gained ${currentExerciseScore} points!`,
+    `Do you feel like you're improving!? Keep going and you definitely will be! ${currentExerciseScore} points achieved!`,
+    `Admirable job! You have added ${currentExerciseScore} more points to your score. Keep going!`,
   ];
 
 
@@ -73,27 +82,78 @@ function Main({ exerciseLanguage }) {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
   };
+  //
+
 
   const generateRandomCode = () => {
-    const filteredData = Data.filter(
-      (exercise) => exercise.lang === exerciseLanguage
-    );
+    let filteredData;
+    let data;
+
+    if (exerciseLanguage === "javascript" || exerciseLanguage === "react" || exerciseLanguage === "test") {
+      if (exerciseLanguage === "test") {
+        data = testData;
+      } else {
+        data = exerciseLanguage === "javascript" ? javascriptData : reactData;
+      }
+      filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "html") {
+      filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "css") {
+      filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "sql") {
+      filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else {
+      return;
+    }
+
+    if (!filteredData || filteredData.length === 0) {
+      return;
+    }
+
     let randomIndex;
     do {
       randomIndex = Math.floor(Math.random() * filteredData.length);
     } while (randomIndex === currentExerciseIndex);
-    const randomCode = filteredData[randomIndex].code;
-    const randomCodeScore = filteredData[randomIndex].score;
-    const randomCodeExplanation = filteredData[randomIndex].explanation;
+
+    const randomExercise = filteredData[randomIndex];
+    if (!randomExercise || typeof randomExercise.code !== 'string') {
+      return;
+    }
+
+    const randomCode = randomExercise.code;
+    const randomCodeScore = randomExercise.score;
+    const randomCodeExplanation = randomExercise.explanation;
+
     setInitialCode(randomCode);
     setCurrentExerciseScore(randomCodeScore);
     setCurrentExerciseIndex(randomIndex);
-    setCurrentExerciseExplanation(randomCodeExplanation)
+    setCurrentExerciseExplanation(randomCodeExplanation);
   };
 
+
+
   const handleCheckCode = () => {
-    // Define the expected code
-    const expectedCode = initialCode;
+    let expectedCode;
+    if (exerciseLanguage === "javascript") {
+      expectedCode = initialCode;
+    } else if (exerciseLanguage === "react") {
+      const filteredData = reactData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    } else if (exerciseLanguage === "html") {
+      const filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    } else if (exerciseLanguage === "css") {
+      const filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    }else if (exerciseLanguage === "sql") {
+      const filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    }else if (exerciseLanguage === "test") {
+      const filteredData = testData.filter((exercise) => exercise.lang === exerciseLanguage);
+      expectedCode = filteredData[currentExerciseIndex].code;
+    } else {
+      return;
+    }
 
     // Remove spaces, convert to lowercase, and replace quotes for comparison
     const formattedUserCode = userCode
@@ -136,6 +196,7 @@ function Main({ exerciseLanguage }) {
       setCheckButton(false);
     }
   };
+
 
   // const handleResetCode = () => {
   //   setUserCode("");
@@ -206,7 +267,7 @@ function Main({ exerciseLanguage }) {
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
-            
+
           />
         </div>
         <div className="main-center">
@@ -286,7 +347,7 @@ function Main({ exerciseLanguage }) {
                 🔳 To view the code again, click on the 'What's The Code' button.
                 <br />
                 <br />
-                🔳 Once your code has been verified by using the 'Check Code' button, it will 
+                🔳 Once your code has been verified by using the 'Check Code' button, it will
                 automatically change to a 'Next Exercise' button.
                 <br />
                 <br />

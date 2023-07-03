@@ -3,6 +3,9 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
+import 'ace-builds/src-noconflict/mode-jsx';
+
+import "./codeEditor.css"
 
 function CodeEditor({
   userCode,
@@ -35,7 +38,7 @@ function CodeEditor({
        // Clear the editor when exerciseLanguage changes
        setUserCode("");
      }
-   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //  eslint-disable-next-line react-hooks/exhaustive-deps
    }, [exerciseLanguage]);
 
   const handleCodeChange = (value) => {
@@ -60,9 +63,10 @@ function CodeEditor({
 
   return (
     <div className="editor">
+
       <AceEditor
-        mode={exerciseLanguage}
-        theme="dracula"
+        mode={exerciseLanguage === 'react' ? 'javascript' : exerciseLanguage}
+        theme="twilight"
         fontSize={17}
         width="100%"
         placeholder={initialCode}
