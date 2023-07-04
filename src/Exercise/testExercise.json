@@ -4,14 +4,14 @@
         "lang": "test",
         "code": "test('fetches data asynchronously', async () => {\n    const data = await fetchData();\n    expect(data).toBe('Data');\n});",
         "score": 2,
-        "explanation": ""
+        "explanation": "This code is a unit test that verifies if the function 'fetchData' correctly fetches data asynchronously and expects the returned data to be equal to the string 'Data'."
       },
       {
         "id": 2,
         "lang": "test",
         "code": "test('the sum of 2 and 2 is equal to 4', () => {\n    expect(sum(2, 2)).toBe(4);\n});",
         "score": 2,
-        "explanation": "."
+        "explanation": "This code is a unit test that checks if the function sum correctly adds '2' and '2' together and expects the result to be equal to '4'."
       },
       {
         "id": 3,
