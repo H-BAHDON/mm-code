@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./login.css";
 import { useNavigate } from 'react-router-dom';
+import { apiUrl } from '../../config/config';
 
 axios.defaults.withCredentials = true;
 
@@ -15,25 +16,25 @@ export default function Signup({ onSigninClick }) {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await axios.post('http://localhost:3001/signup', {
+      const response = await axios.post(`${apiUrl}/signup`, {
         username,
         email,
         password,
         fullName
       });
-
+  
       if (response.status === 200) {
         console.log('Signup successful');
-
+  
         // Save user information in session storage
         sessionStorage.setItem('username', username);
         sessionStorage.setItem('fullName', fullName);
-
+  
         // Set the login time in session storage
         sessionStorage.setItem('loginTime', new Date().getTime());
-
+  
         // Redirect to the /platform page
         navigate('/platform');
       } else {
@@ -44,12 +45,13 @@ export default function Signup({ onSigninClick }) {
       console.error('Signup failed:', error);
       // Handle signup error
     }
-
+  
     setUsername("");
     setEmail("");
     setPassword("");
     setFullName("");
   };
+  
 
   useEffect(() => {
     // Check if user is already logged in
