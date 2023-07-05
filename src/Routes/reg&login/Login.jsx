@@ -4,6 +4,7 @@ import Signup from './Signup';
 import "./login.css";
 import Header from '../../Components/header/Header';
 import { useNavigate } from 'react-router-dom';
+import { apiUrl } from '../../config/config';
 
 axios.defaults.withCredentials = true;
 
@@ -31,26 +32,26 @@ export default function Login({ onLogin, isLoggedIn }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await axios.post('http://localhost:3001/login', {
+      const response = await axios.post(`${apiUrl}/login`, {
         username,
         password
       });
-
+  
       if (response.data.message === 'Login successful') {
         const { username, fullName } = response.data;
         console.log(`User ${username} logged in`);
-
+  
         // Save user information in session storage
         sessionStorage.setItem('username', username);
         sessionStorage.setItem('fullName', fullName);
-
+  
         // Set the login time in session storage
         sessionStorage.setItem('loginTime', new Date().getTime());
-
+  
         onLogin(); // Update login status
-
+  
         // Redirect to /platform
         navigate('/platform');
       } else {
@@ -61,10 +62,11 @@ export default function Login({ onLogin, isLoggedIn }) {
       console.error('Login failed:', error);
       // Handle login error
     }
-
+  
     setUsername('');
     setPassword('');
   };
+  
 
   return (
     <>
