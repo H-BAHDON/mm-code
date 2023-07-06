@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Platform from "./Routes/Platform/Platform";
-import Home from "./Routes/Home/Home";
-import Login from "./Routes/reg&login/Login"
-import SignUp from "./Routes/reg&login/Signup"
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { routes } from './Routes/index';
+import { getSessionData } from "./Helpers/session";
 
 import "./assets/style.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
+  useEffect(() => {
+    // Check if a session exists (e.g., by checking if the session data exists in local storage or cookies)
+    const sessionData = getSessionData(); // Implement this function to retrieve session data
+
+    if (sessionData) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = (sessionData) => {
+    // Perform login logic here and set the session data
     setIsLoggedIn(true);
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
 
   return (
     <>
-    <BrowserRouter>
+   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/platform"
-          element={<Platform isLoggedIn={isLoggedIn} />}
-        />
-        <Route
-          path="/login"
-          element={<Login onLogin={handleLogin} isLoggedIn={isLoggedIn} />}
-        />
-        <Route
-          path="/signup"
-          element={<SignUp onSignup={handleLogin} />}
-        />
-         {/* <Route path="/userprofile" element={<UserProfile/>}/> */}
+        {routes.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={React.cloneElement(route.element, { onLogin: handleLogin })}
+          />
+        ))}
       </Routes>
     </BrowserRouter>
     </>
