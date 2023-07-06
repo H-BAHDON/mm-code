@@ -4,7 +4,6 @@ import "./userProfile.css";
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/header/Header';
 import Footer from '../../Components/Footer/Footer';
-
 export default function UserProfile() {
     const navigate = useNavigate();
     const fullName = sessionStorage.getItem('fullName');
