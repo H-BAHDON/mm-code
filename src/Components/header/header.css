@@ -75,5 +75,11 @@
     color: #944058;
     border: 1px solid #944058;
   }
-   
+  
+
+  .userName{
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+  }
    
