@@ -2,10 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import "./userProfile.css";
 import { useNavigate } from 'react-router-dom';
-import Contribution from './Contribution';
-import Header from '../header/Header';
-
-import Footer from '../Footer/Footer';
+import Header from '../../Components/header/Header';
+import Footer from '../../Components/Footer/Footer';
 
 export default function UserProfile() {
     const navigate = useNavigate();
@@ -232,7 +230,6 @@ export default function UserProfile() {
                   <div className="card-header">
                     <h5 className="mb-0">Contribution</h5>
                   </div>
-                  <Contribution/>
 
                   <div className="card-footer border-0 py-5">
                     <span className="text-muted text-sm">The contribution Panel</span>
