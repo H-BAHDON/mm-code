@@ -5,13 +5,18 @@ import "./login.css";
 import Header from '../../Components/header/Header';
 import { useNavigate, Route, Navigate } from 'react-router-dom';
 import { apiUrl } from '../../config/config';
-
-axios.defaults.withCredentials = true;
+import { useCookies } from 'react-cookie';
+import { hasRememberLoginCookie } from '../../Helpers/cookie';
+import Footer from '../../Components/Footer/Footer';
 
 export default function Login({ onLogin, isLoggedIn }) {
+
+  axios.defaults.withCredentials = true;
+
   const [showSignup, setShowSignup] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [cookies, setCookie] = useCookies(['rememberLogin']);
 
   const navigate = useNavigate();
 
@@ -45,7 +50,18 @@ export default function Login({ onLogin, isLoggedIn }) {
       const response = await axios.post(`${apiUrl}/login`, {
         username,
         password
+      }, {
+        withCredentials: true // Include the cookie in the request
       });
+      if (hasRememberLoginCookie()) {
+        // User has the rememberLogin cookie
+        // Proceed to the platform page
+        navigate('/platform');
+      } else {
+        // User doesn't have the rememberLogin cookie
+        // Redirect to the login page
+        navigate('/login');
+      }
 
       if (response.data.message === 'Login successful') {
         const { username, fullName } = response.data;
@@ -58,10 +74,16 @@ export default function Login({ onLogin, isLoggedIn }) {
         // Set the login time in session storage
         sessionStorage.setItem('loginTime', new Date().getTime());
 
+        // Set the remember-me cookie
+        setCookie('rememberLogin', true, {
+          path: '/',
+          maxAge: 30 * 24 * 60 * 60, // Expires in 30 days
+        });
+
         onLogin(); // Update login status
 
         // Redirect to /platform
-        navigate('/platform');
+        navigate('/UserProfile');
       } else {
         console.error('Login failed:', response.data.message);
         // Handle login error
@@ -104,7 +126,7 @@ export default function Login({ onLogin, isLoggedIn }) {
           </div>
           <div className="links">
             <a href="#">Forgot password</a>
-            <a href="#" onClick={handleSignupLinkClick}>Sign up</a>
+            <a href="#" style={{fontSize: "15px"}} onClick={handleSignupLinkClick}>Sign up</a>
           </div>
           <input type="submit" value="Login" autoComplete="off" />
         </form>
@@ -113,6 +135,7 @@ export default function Login({ onLogin, isLoggedIn }) {
           <Signup onSignup={handleSignup} onSigninClick={handleSigninClick} />
         )}
       </div>
+
     </>
   );
 }

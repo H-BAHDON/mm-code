@@ -27,8 +27,8 @@ overflow: hidden; */
 
 .box {
     position: relative;
-    width: 380px;
-    height: 575px;
+    width: 470px;
+    height: 713px;
     background-color: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
@@ -39,13 +39,13 @@ overflow: hidden; */
 .box::before{
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
+    top: -29%;
+    left: -29%;
+    width: 470px;
+    height: 713px;
     background: linear-gradient(0deg, transparent,#45f3ff,#45f3ff);
     transform-origin: bottom right;
-    animation: animate 6s linear infinite;
+    animation: animate 4s linear infinite;
 }
 .box::after{
     content: '';
@@ -78,6 +78,7 @@ overflow: hidden; */
     padding: 50px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 .form h2{
     color: #45f3ff;
@@ -85,6 +86,8 @@ overflow: hidden; */
     text-align: center;
     letter-spacing: 0.1em;
 }
+
+
 .inputBox{
     position: relative;
     width: 100%;
@@ -94,7 +97,7 @@ overflow: hidden; */
 .inputBox input{
     position: relative;
     width: 100%;
-    padding: 20px 10px 10px;
+    padding: 13px;
     background: transparent;
     border: none;
     outline: none;
@@ -102,13 +105,14 @@ overflow: hidden; */
     font-size: 1em;
     letter-spacing: 0.05em;
     z-index: 10;
+    /* background-color: #45f3ff; */
 }
 .inputBox span{
     position: absolute;
     left: 0;
-    padding: 20px 0px 10px;
+    padding: 13px;
     font-size: 1em;
-    color: #8f8f8f;
+    color: #45f3ff;
     pointer-events: none;
     letter-spacing: 0.05em;
     transition: 0.5s;
@@ -152,6 +156,7 @@ overflow: hidden; */
 .links a:nth-child(2){
     color: #45f3ff;
 }
+
 
 input[type="submit"]{
     border: none;
