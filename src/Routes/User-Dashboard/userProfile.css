@@ -7,3 +7,19 @@
 /* Bootstrap Icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
 
+
+.build-more-mm{
+    display: flex;
+justify-content: space-around;
+}
+
+
+.buildmoremmButton {
+    padding: 30px 30px 30px;
+    font-size: 2rem;
+}
+
+.buildmoremmButton :hover{
+    border: 3px solid #232931;
+}
+
