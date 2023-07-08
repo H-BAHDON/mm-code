@@ -129,7 +129,7 @@ export default function Signup({ onSigninClick }) {
             Sign in
           </a>
         </div>
-        <input type="submit" value="Sign Up" />
+        <input type="submit" value="Sign Up" style={{paddingLeft: "20px" }}/>
       </form>
     </div>
   );
