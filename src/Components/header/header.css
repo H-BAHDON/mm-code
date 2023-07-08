@@ -81,5 +81,15 @@
     position: absolute;
     right: 3rem;
     top: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .userName i {
+    padding: 13px;
+    cursor: pointer;
   }
    

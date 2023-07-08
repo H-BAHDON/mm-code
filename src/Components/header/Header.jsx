@@ -23,6 +23,10 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
   };
   const shouldShowNav = !!fullName && location.pathname !== "/login";
 
+  const handleUserProfile = ()=> {
+    navigate("/UserProfile")
+  }
+
   return (
     <header className="mainHeader">
       <div id="logo">
@@ -30,12 +34,16 @@ function Header({ handleHTMLClick, handleJavaScriptClick, handleCSSClick, handle
         {shouldShowNav && (
           <>    
           <div className="userName">
-            {fullName && <p>Welcome, {fullName}</p>}
+            {fullName && <p></p>}
             <ButtonOfPage
             nameButton="Logout"
             handle={handleLogout}
-            styleButton={"btn-success"}
+            styleButton={"btn btn-light p-2"}
             />
+           
+              <i class="bi bi-person fs-3" onClick={handleUserProfile}></i>
+           
+           
           </div>
             <nav className="navbar">
               <p
