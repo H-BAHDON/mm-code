@@ -11,7 +11,7 @@ const PrivateRoute = ({ element, path }) => {
   const sessionData = getSessionData(); // Retrieve the session data
   const isLoggedIn = sessionData != null; // Check if user is logged in
 
-  return isLoggedIn ? element : <Navigate to="/login" />;
+  return isLoggedIn ? element : <Navigate to="/UserProfile" />;
 };
 
 export const routes = [
