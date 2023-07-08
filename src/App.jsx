@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './Routes/index';
 import { getSessionData } from "./Helpers/session";
+import { hasRememberLoginCookie  } from "./Helpers/cookie";
 
 import "./assets/style.css";
 
