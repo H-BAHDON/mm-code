@@ -223,6 +223,8 @@ function Main({ exerciseLanguage }) {
   };
 
   const handleShowModal = () => {
+    // console.log("handleShowModal called");
+
     setShowModal(true);
   };
 
@@ -241,6 +243,8 @@ function Main({ exerciseLanguage }) {
   const handleConfettiComplete = () => {
     setShowConfetti(false); // Hide confetti after it completes
   };
+
+  // console.log("Rendering Main component");
   return (
     <main>
       <div className="guide-button">
@@ -308,20 +312,20 @@ function Main({ exerciseLanguage }) {
           />
         )}
         {showModal && (
-          <div className="modal">
-            <div className="modal-overlay" onClick={handleCloseModal}></div>
-            <div className="modal-content">
-              <div className="modal-header">
+          <div className="modals">
+            <div className="modals-overlay" onClick={handleCloseModal}></div>
+            <div className="modals-content">
+              <div className="modals-header">
                 <h3>Code</h3>
               </div>
-              <div className="modal-body">
+              <div className="modals-body">
                 <pre>{initialCode}</pre>
-                <div className="modal-header">
+                <div className="modals-header">
                   <h3>Explanation</h3>
                 </div>
                 <p>{currentExerciseExplanation}</p>
               </div>
-              <div className="modal-footer">
+              <div className="modals-footer">
                 <button
                   className="btn btn-secondary"
                   onClick={handleCloseModal}
@@ -333,9 +337,9 @@ function Main({ exerciseLanguage }) {
           </div>
         )}
         {showGuide && (
-          <div className="modal" onClick={handleCloseGuide}>
-            <div className="modal-overlay" onClick={handleCloseGuide}></div>
-            <div className="modal-content">
+          <div className="modals" onClick={handleCloseGuide}>
+            <div className="modals-overlay" onClick={handleCloseGuide}></div>
+            <div className="modals-content">
               <h2>Your Guide 📜</h2>
               <p>
                 🔳 Select a language from the navbar to enhance your muscle memory.
