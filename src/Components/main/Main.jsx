@@ -2,21 +2,20 @@ import React, { useState, useEffect } from "react";
 import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
-import "./main.css"
+import "./main.css";
 // ---------------------------
 // import exercises
-import htmlData from "../../Exercise/htmlExercise.json"
-import cssData from "../../Exercise/cssExercise.json"
-import reactData from "../../Exercise/reactExercise.json"
-import javascriptData from "../../Exercise/javascriptExercise.json"
-import SQLData from "../../Exercise/SqlExercise.json"
-import testData from "../../Exercise/testExercise.json"
+import htmlData from "../../Exercise/htmlExercise.json";
+import cssData from "../../Exercise/cssExercise.json";
+import reactData from "../../Exercise/reactExercise.json";
+import javascriptData from "../../Exercise/javascriptExercise.json";
+import SQLData from "../../Exercise/SqlExercise.json";
+import testData from "../../Exercise/testExercise.json";
 // ---------------------------
 
 function Main({ exerciseLanguage }) {
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
-
 
   const [resultText, setResultText] = useState("");
   const [resultTextVisible, setResultTextVisible] = useState(true);
@@ -29,7 +28,8 @@ function Main({ exerciseLanguage }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
   const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
-  const [currentExerciseExplanation, setCurrentExerciseExplanation] = useState("")
+  const [currentExerciseExplanation, setCurrentExerciseExplanation] =
+    useState("");
 
   const [showModal, setShowModal] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
@@ -38,33 +38,32 @@ function Main({ exerciseLanguage }) {
   const [confettiShown, setConfettiShown] = useState(false);
 
   const handleKeyPress = (event) => {
-    if (event.altKey && event.key === 'Shift') {
+    if (event.altKey && event.key === "Shift") {
       setShowModal((prevShowModal) => !prevShowModal);
     }
   };
 
-    useEffect(() => {
-      generateRandomCode()
-      setResultTextVisible(false);
-      setNextButton(false)
-      setCheckButton(false)
+  useEffect(() => {
+    generateRandomCode();
+    setResultTextVisible(false);
+    setNextButton(false);
+    setCheckButton(false);
 
-      let scores = localStorage.getItem("score");
-      if (scores) {
-        setScores(parseInt(scores));
-      }
+    let scores = localStorage.getItem("score");
+    if (scores) {
+      setScores(parseInt(scores));
+    }
 
-      document.addEventListener('keydown', handleKeyPress);
-      return () => {
-        document.removeEventListener('keydown', handleKeyPress);
-      };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [exerciseLanguage]);
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exerciseLanguage]);
 
-    useEffect(() => {
-      localStorage.setItem("score", score.toString());
-    }, [score]);
-
+  useEffect(() => {
+    localStorage.setItem("score", score.toString());
+  }, [score]);
 
   // useEffect(() => {
   //   // handleResetCode();
@@ -77,31 +76,37 @@ function Main({ exerciseLanguage }) {
     `Admirable job! You have added ${currentExerciseScore} more points to your score. Keep going!`,
   ];
 
-
   const getRandomSentence = () => {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
   };
+  //Optimization of code is a good practice so we need to create a helper function for filtering of language data
+  function filterExerciseData(data) {
+    return data.filter((exercise) => exercise.lang === exerciseLanguage);
+  }
   //
-
 
   const generateRandomCode = () => {
     let filteredData;
     let data;
 
-    if (exerciseLanguage === "javascript" || exerciseLanguage === "react" || exerciseLanguage === "test") {
+    if (
+      exerciseLanguage === "javascript" ||
+      exerciseLanguage === "react" ||
+      exerciseLanguage === "test"
+    ) {
       if (exerciseLanguage === "test") {
         data = testData;
       } else {
         data = exerciseLanguage === "javascript" ? javascriptData : reactData;
       }
-      filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = filterExerciseData(data);
     } else if (exerciseLanguage === "html") {
-      filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = filterExerciseData(htmlData);
     } else if (exerciseLanguage === "css") {
-      filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = filterExerciseData(cssData);
     } else if (exerciseLanguage === "sql") {
-      filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = filterExerciseData(SQLData);
     } else {
       return;
     }
@@ -116,7 +121,7 @@ function Main({ exerciseLanguage }) {
     } while (randomIndex === currentExerciseIndex);
 
     const randomExercise = filteredData[randomIndex];
-    if (!randomExercise || typeof randomExercise.code !== 'string') {
+    if (!randomExercise || typeof randomExercise.code !== "string") {
       return;
     }
 
@@ -130,26 +135,24 @@ function Main({ exerciseLanguage }) {
     setCurrentExerciseExplanation(randomCodeExplanation);
   };
 
-
-
   const handleCheckCode = () => {
     let expectedCode;
     if (exerciseLanguage === "javascript") {
       expectedCode = initialCode;
     } else if (exerciseLanguage === "react") {
-      const filteredData = reactData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = filterExerciseData(reactData);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "html") {
-      const filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = filterExerciseData(htmlData);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "css") {
-      const filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = filterExerciseData(cssData);
       expectedCode = filteredData[currentExerciseIndex].code;
-    }else if (exerciseLanguage === "sql") {
-      const filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "sql") {
+      const filteredData = filterExerciseData(SQLData);
       expectedCode = filteredData[currentExerciseIndex].code;
-    }else if (exerciseLanguage === "test") {
-      const filteredData = testData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "test") {
+      const filteredData = filterExerciseData(testData);
       expectedCode = filteredData[currentExerciseIndex].code;
     } else {
       return;
@@ -197,7 +200,6 @@ function Main({ exerciseLanguage }) {
     }
   };
 
-
   // const handleResetCode = () => {
   //   setUserCode("");
   //   setResultText("");
@@ -218,7 +220,7 @@ function Main({ exerciseLanguage }) {
     generateRandomCode();
     setUserCode("");
     setNextButton(false);
-    setCheckButton(false)
+    setCheckButton(false);
     setSkipButton(!skipButton);
   };
 
@@ -271,7 +273,6 @@ function Main({ exerciseLanguage }) {
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
-
           />
         </div>
         <div className="main-center">
@@ -342,17 +343,20 @@ function Main({ exerciseLanguage }) {
             <div className="modals-content">
               <h2>Your Guide 📜</h2>
               <p>
-                🔳 Select a language from the navbar to enhance your muscle memory.
+                🔳 Select a language from the navbar to enhance your muscle
+                memory.
                 <br />
                 <br />
                 🔳 For every successful exercise, you will gain 2 points!
                 <br />
                 <br />
-                🔳 To view the code again, click on the 'What's The Code' button.
+                🔳 To view the code again, click on the 'What's The Code'
+                button.
                 <br />
                 <br />
-                🔳 Once your code has been verified by using the 'Check Code' button, it will
-                automatically change to a 'Next Exercise' button.
+                🔳 Once your code has been verified by using the 'Check Code'
+                button, it will automatically change to a 'Next Exercise'
+                button.
                 <br />
                 <br />
                 🔳 Use the 'Skip' button to skip any exercise.
