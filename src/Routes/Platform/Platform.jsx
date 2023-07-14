@@ -42,7 +42,6 @@ const [exerciseLanguage, setExerciseLanguage] = useState("html");
       />
       <Main exerciseLanguage={exerciseLanguage} />
       <Footer />
-
    </>
   )
 }

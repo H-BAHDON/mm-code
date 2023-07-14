@@ -6,8 +6,7 @@ import Header from '../../Components/header/Header';
 import { useNavigate, Route, Navigate } from 'react-router-dom';
 import { apiUrl } from '../../config/config';
 import { useCookies } from 'react-cookie';
-import { hasRememberLoginCookie } from '../../Helpers/cookie';
-import Footer from '../../Components/Footer/Footer';
+import { createSession, clearSession, hasRememberLoginCookie } from '../../Helpers/authHelpers';
 
 export default function Login({ onLogin, isLoggedIn }) {
 
@@ -45,44 +44,24 @@ export default function Login({ onLogin, isLoggedIn }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.post(`${apiUrl}/login`, {
         username,
-        password
+        password,
       }, {
-        withCredentials: true // Include the cookie in the request
+        withCredentials: true, // Include the cookie in the request
       });
-      if (hasRememberLoginCookie()) {
-        // User has the rememberLogin cookie
-        // Proceed to the platform page
-        navigate('/platform');
-      } else {
-        // User doesn't have the rememberLogin cookie
-        // Redirect to the login page
-        navigate('/login');
-      }
-
+  
       if (response.data.message === 'Login successful') {
         const { username, fullName } = response.data;
         console.log(`User ${username} logged in`);
-
-        // Save user information in session storage
-        sessionStorage.setItem('username', username);
-        sessionStorage.setItem('fullName', fullName);
-
-        // Set the login time in session storage
-        sessionStorage.setItem('loginTime', new Date().getTime());
-
-        // Set the remember-me cookie
-        setCookie('rememberLogin', true, {
-          path: '/',
-          maxAge: 30 * 24 * 60 * 60, // Expires in 30 days
-        });
-
+  
+        createSession(username, fullName, setCookie);
+  
         onLogin(); // Update login status
-
-        // Redirect to /platform
+  
+        // Redirect to /UserProfile
         navigate('/UserProfile');
       } else {
         console.error('Login failed:', response.data.message);
@@ -92,7 +71,7 @@ export default function Login({ onLogin, isLoggedIn }) {
       console.error('Login failed:', error);
       // Handle login error
     }
-
+  
     setUsername('');
     setPassword('');
   };
