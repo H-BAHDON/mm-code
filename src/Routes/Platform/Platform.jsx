@@ -39,9 +39,9 @@ const [exerciseLanguage, setExerciseLanguage] = useState("html");
         handleReactClick={handleReactClick}
         handleSqlClick={handleSqlClick}
         handleTestClick={handleTestClick}
+        showLogoBar={true}
       />
       <Main exerciseLanguage={exerciseLanguage} />
-      <Footer />
    </>
   )
 }

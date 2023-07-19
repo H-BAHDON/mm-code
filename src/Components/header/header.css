@@ -78,15 +78,13 @@
   
 
   .userName{
-    position: absolute;
-    right: 3rem;
-    top: 3rem;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-  }
-
+    position: absolute;
+    right: 100px;
+    top: 0px;
+}
 
   .userName i {
     padding: 13px;

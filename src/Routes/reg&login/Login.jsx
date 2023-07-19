@@ -78,7 +78,7 @@ export default function Login({ onLogin, isLoggedIn }) {
 
   return (
     <>
-      <Header />
+      <Header showNavigation={false}/>
       <div className="box">
         <form className="form" onSubmit={handleSubmit}>
           <h2>SIGN IN</h2>

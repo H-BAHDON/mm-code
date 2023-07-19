@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './Routes/index';
 import { getSessionData } from "./Helpers/authHelpers";
-
+import Footer from './Components/Footer/Footer';
 import "./assets/style.css";
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
           />
         ))}
       </Routes>
+      <Footer />
     </BrowserRouter>
     </>
   );

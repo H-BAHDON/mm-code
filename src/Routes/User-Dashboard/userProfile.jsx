@@ -59,7 +59,7 @@ export default function UserProfile() {
     return (
         <>
      <div>
-   <Header/>
+     <Header showNavigation={false} />
         {/* Dashboard */}
         <div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
           {/* Vertical Navbar */}
@@ -196,7 +196,6 @@ export default function UserProfile() {
           </div>
         </div>
       </div>
-      <Footer/>
                     </>
                     )
                     }
