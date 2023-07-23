@@ -17,6 +17,8 @@ function CodeEditor({
   skipButton,
   showGuide,
   checkButton,
+  theme,
+  fontSize
 }) {
   const editorRef = useRef(null);
 
@@ -66,8 +68,8 @@ function CodeEditor({
 
       <AceEditor
         mode={exerciseLanguage === 'react' ? 'javascript' : exerciseLanguage}
-        theme="twilight"
-        fontSize={17}
+        theme={theme}
+        fontSize={fontSize}
         width="100%"
         placeholder={initialCode}
         className="placeholder-color"

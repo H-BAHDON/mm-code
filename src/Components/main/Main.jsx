@@ -3,6 +3,7 @@ import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
+import ThemeSelector from "../themeSelector/themeSelector";
 // ---------------------------
 // import exercises
 import htmlData from "../../Exercise/htmlExercise.json"
@@ -37,6 +38,9 @@ function Main({ exerciseLanguage }) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
 
+  const [theme, setTheme] = useState("monokai");
+  const [fontSize, setFontSize] = useState(17);
+  
   const handleKeyPress = (event) => {
     if (event.altKey && event.key === 'Shift') {
       setShowModal((prevShowModal) => !prevShowModal);
@@ -275,6 +279,7 @@ function Main({ exerciseLanguage }) {
           />
         </div>
         <div className="main-center">
+          <ThemeSelector setTheme={setTheme} setFontSize={setFontSize}/>
           <CodeEditor
             userCode={userCode}
             setUserCode={setUserCode}
@@ -285,6 +290,8 @@ function Main({ exerciseLanguage }) {
             skipButton={skipButton}
             showGuide={showGuide}
             checkButton={checkButton}
+            theme={theme}
+            fontSize={fontSize}
           />
         </div>
         <div className="main-bottom">
