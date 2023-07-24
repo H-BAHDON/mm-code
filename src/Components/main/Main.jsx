@@ -3,6 +3,8 @@ import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
+
+import ThemeSelector from "../themeSelector/themeSelector";
 // ---------------------------
 // import exercises
 import htmlData from "../../Exercise/htmlExercise.json"
@@ -36,6 +38,9 @@ function Main({ exerciseLanguage }) {
 
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
+
+  const [theme, setTheme] = useState("monokai");
+  const [fontSize, setFontSize] = useState(17);
 
 
   const handleKeyPress = (event) => {
@@ -263,6 +268,8 @@ function Main({ exerciseLanguage }) {
           skipButton={skipButton}
           showGuide={showGuide}
           checkButton={checkButton}
+          theme={theme}
+          fontSize={fontSize}
         />
       </div>
 
@@ -286,6 +293,9 @@ function Main({ exerciseLanguage }) {
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
           />
+        </div>
+        <div>
+        <ThemeSelector setTheme={setTheme} setFontSize={setFontSize}/>
         </div>
       
         <div className="guide-button">

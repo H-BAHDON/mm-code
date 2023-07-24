@@ -1,0 +1,4 @@
+.choose-theme {
+    display: flex;
+    flex-direction: column;
+}
