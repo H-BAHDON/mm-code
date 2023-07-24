@@ -40,7 +40,8 @@ function Main({ exerciseLanguage }) {
 
   const [theme, setTheme] = useState("monokai");
   const [fontSize, setFontSize] = useState(17);
-  
+
+
   const handleKeyPress = (event) => {
     if (event.altKey && event.key === 'Shift') {
       setShowModal((prevShowModal) => !prevShowModal);
@@ -252,11 +253,23 @@ function Main({ exerciseLanguage }) {
   // console.log("Rendering Main component");
   return (
     <main>
-      <div className="guide-button">
-        <ButtonOfPage
-          nameButton="Guide Me!"
-          handle={handleShowGuide}
-          styleButton={"btn-warning"}
+    <div className="out-Main">
+    <div className="main-container">
+    
+      {/* Left Box (Main Center) */}
+      <div className="main-center">
+        <CodeEditor
+          userCode={userCode}
+          setUserCode={setUserCode}
+          initialCode={initialCode}
+          exerciseLanguage={exerciseLanguage}
+          showModal={showModal}
+          nextButton={nextButton}
+          skipButton={skipButton}
+          showGuide={showGuide}
+          checkButton={checkButton}
+          theme={theme}
+          fontSize={fontSize}
         />
       </div>
       <div className="editor-container">
@@ -279,20 +292,15 @@ function Main({ exerciseLanguage }) {
 
           />
         </div>
-        <div className="main-center">
-          <ThemeSelector setTheme={setTheme} setFontSize={setFontSize}/>
-          <CodeEditor
-            userCode={userCode}
-            setUserCode={setUserCode}
-            initialCode={initialCode}
-            exerciseLanguage={exerciseLanguage}
-            showModal={showModal}
-            nextButton={nextButton}
-            skipButton={skipButton}
-            showGuide={showGuide}
-            checkButton={checkButton}
-            theme={theme}
-            fontSize={fontSize}
+        <div>
+        <ThemeSelector setTheme={setTheme} setFontSize={setFontSize}/>
+        </div>
+      
+        <div className="guide-button">
+          <ButtonOfPage
+            nameButton="Guide Me!"
+            handle={handleShowGuide}
+            styleButton={"btn-warning"}
           />
         </div>
         <div className="main-bottom">
