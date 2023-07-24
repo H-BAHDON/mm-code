@@ -3,7 +3,6 @@ import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
-
 import ThemeSelector from "../themeSelector/themeSelector";
 // ---------------------------
 // import exercises
@@ -84,6 +83,7 @@ function Main({ exerciseLanguage }) {
   ];
 
 
+  
   const getRandomSentence = () => {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
@@ -272,10 +272,7 @@ function Main({ exerciseLanguage }) {
           fontSize={fontSize}
         />
       </div>
-
-      {/* Right Box */}
-      <div className="main-right-box">
-        {/* Main Top */}
+      <div className="editor-container">
         <div className="main-top">
           <ButtonOfPage
             nameButton="What's The Code"
@@ -292,6 +289,7 @@ function Main({ exerciseLanguage }) {
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
+
           />
         </div>
         <div>
@@ -305,11 +303,7 @@ function Main({ exerciseLanguage }) {
             styleButton={"btn-warning"}
           />
         </div>
-        {/* Main Bottom */}
-       
-      </div>
-    </div>
-    <div className="main-bottom">
+        <div className="main-bottom">
           {/* <ButtonOfPage nameButton="Reset" handle={handleResetCode} /> */}
 
           <p
@@ -322,7 +316,6 @@ function Main({ exerciseLanguage }) {
           </p>
           <p className="score">Your Score: {score}</p>
         </div>
-    </div>
         {showConfetti && (
           <Confetti
             width={window.innerWidth}
@@ -356,9 +349,8 @@ function Main({ exerciseLanguage }) {
                   Close
                 </button>
               </div>
-              </div> 
-              </div> 
-
+            </div>
+          </div>
         )}
         {showGuide && (
           <div className="modals" onClick={handleCloseGuide}>
@@ -390,7 +382,7 @@ function Main({ exerciseLanguage }) {
             </div>
           </div>
         )}
-     
+      </div>
     </main>
   );
 }

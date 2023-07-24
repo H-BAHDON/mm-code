@@ -4,5 +4,6 @@
   } */
 
   .editor {
-    width: 52%;
+    width: 80%;
+    padding-top: 48px;
   }
