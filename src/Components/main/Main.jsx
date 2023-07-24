@@ -37,6 +37,7 @@ function Main({ exerciseLanguage }) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
 
+
   const handleKeyPress = (event) => {
     if (event.altKey && event.key === 'Shift') {
       setShowModal((prevShowModal) => !prevShowModal);
@@ -247,14 +248,27 @@ function Main({ exerciseLanguage }) {
   // console.log("Rendering Main component");
   return (
     <main>
-      <div className="guide-button">
-        <ButtonOfPage
-          nameButton="Guide Me!"
-          handle={handleShowGuide}
-          styleButton={"btn-warning"}
+    <div className="out-Main">
+    <div className="main-container">
+    
+      {/* Left Box (Main Center) */}
+      <div className="main-center">
+        <CodeEditor
+          userCode={userCode}
+          setUserCode={setUserCode}
+          initialCode={initialCode}
+          exerciseLanguage={exerciseLanguage}
+          showModal={showModal}
+          nextButton={nextButton}
+          skipButton={skipButton}
+          showGuide={showGuide}
+          checkButton={checkButton}
         />
       </div>
-      <div className="editor-container">
+
+      {/* Right Box */}
+      <div className="main-right-box">
+        {/* Main Top */}
         <div className="main-top">
           <ButtonOfPage
             nameButton="What's The Code"
@@ -271,23 +285,21 @@ function Main({ exerciseLanguage }) {
             nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
             handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
             styleButton={nextButton ? "btn-primary" : "btn-success"}
-
           />
         </div>
-        <div className="main-center">
-          <CodeEditor
-            userCode={userCode}
-            setUserCode={setUserCode}
-            initialCode={initialCode}
-            exerciseLanguage={exerciseLanguage}
-            showModal={showModal}
-            nextButton={nextButton}
-            skipButton={skipButton}
-            showGuide={showGuide}
-            checkButton={checkButton}
+      
+        <div className="guide-button">
+          <ButtonOfPage
+            nameButton="Guide Me!"
+            handle={handleShowGuide}
+            styleButton={"btn-warning"}
           />
         </div>
-        <div className="main-bottom">
+        {/* Main Bottom */}
+       
+      </div>
+    </div>
+    <div className="main-bottom">
           {/* <ButtonOfPage nameButton="Reset" handle={handleResetCode} /> */}
 
           <p
@@ -300,6 +312,7 @@ function Main({ exerciseLanguage }) {
           </p>
           <p className="score">Your Score: {score}</p>
         </div>
+    </div>
         {showConfetti && (
           <Confetti
             width={window.innerWidth}
@@ -333,8 +346,9 @@ function Main({ exerciseLanguage }) {
                   Close
                 </button>
               </div>
-            </div>
-          </div>
+              </div> 
+              </div> 
+
         )}
         {showGuide && (
           <div className="modals" onClick={handleCloseGuide}>
@@ -366,7 +380,7 @@ function Main({ exerciseLanguage }) {
             </div>
           </div>
         )}
-      </div>
+     
     </main>
   );
 }

@@ -30,7 +30,6 @@ export default function LogoBar() {
         {shouldShowNav && (
           <>
             <div className="userName">
-              {fullName && <p>{fullName}</p>}
               <ButtonOfPage
                 nameButton="Logout"
                 handle={handleLogout}
