@@ -82,6 +82,7 @@ function Main({ exerciseLanguage }) {
   ];
 
 
+  
   const getRandomSentence = () => {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
