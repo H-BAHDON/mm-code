@@ -87,9 +87,7 @@ function Footer() {
           <span className="json-key">notes</span>:{' '}
           <span className="json-value">
             added{' '}
-            <a href="#">
-              Davinci•003
-            </a>
+            
           </span>
           <br />
         </span>

@@ -79,6 +79,7 @@ export default function Login({ onLogin, isLoggedIn }) {
   return (
     <>
       <Header showNavigation={false}/>
+      <div className="outer-box">
       <div className="box">
         <form className="form" onSubmit={handleSubmit}>
           <h2>SIGN IN</h2>
@@ -113,6 +114,7 @@ export default function Login({ onLogin, isLoggedIn }) {
         {showSignup && (
           <Signup onSignup={handleSignup} onSigninClick={handleSigninClick} />
         )}
+      </div>
       </div>
 
     </>

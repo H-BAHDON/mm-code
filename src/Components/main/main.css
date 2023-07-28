@@ -9,6 +9,10 @@ main {
   justify-content: center;
 }
 
+.out-Main{
+  padding: 3rem;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
