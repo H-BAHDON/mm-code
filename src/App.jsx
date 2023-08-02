@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './Routes/index';
 import { getSessionData } from "./Helpers/authHelpers";
 import Footer from './Components/Footer/Footer';
-import "./assets/style.css";
+import "./app.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
