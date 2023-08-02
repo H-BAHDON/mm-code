@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from "../../Components/header/LogoBar"
 
 function Home() {
-  return (
+  return (<>
+    <Header/>
     <div>Home</div>
+    </>
   )
 }
 
