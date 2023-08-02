@@ -23,10 +23,14 @@ export default function LogoBar() {
     navigate("/UserProfile");
   };
 
+  const handlLogoClick = () =>{
+    navigate("/")
+  }
+
   return (
     <>
       <div id="logo">
-        <h1 className="logo-title">MM-Code</h1>
+        <h1 onClick={handlLogoClick} className="logo-title">MM-Code</h1>
         {shouldShowNav && (
           <>
             <div className="userName">
