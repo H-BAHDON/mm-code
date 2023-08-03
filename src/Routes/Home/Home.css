@@ -1,0 +1,63 @@
+.stars-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .stars-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* Styles for the content container */
+  .content-container {
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Additional styles for the heading */
+  .display-3 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Additional styles for the "Get Started" button */
+  .btn {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Additional styles for the lead text */
+  .lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Additional styles for the arrow icon */
+  i.fas.fa-arrow-right {
+    font-size: 1.2rem;
+  }
+  
+  /* Additional styles for the container background */
+  /* Customize the background as needed */
+
+  
+  /* Additional styles for the canvas background */
+  /* Customize the stars animation background as needed */
