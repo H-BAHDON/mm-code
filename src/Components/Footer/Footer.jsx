@@ -5,212 +5,35 @@ function Footer() {
   
   const [version, setVersion] = useState("0.1.9")
   const [beta, setBETA] = useState("6.25")
-    // let thisYear = new Date().getFullYear();
+    let thisYear = new Date().getFullYear();
 
     return (
 
       <>
-      <div className="horizontal-line"></div>
+       <footer className="footer-16371">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-9 text-center">
+            <div className="social mb-4">
+              <h3>MM-Code</h3>
+              <ul className="list-unstyled">
+                <li className="in"><a href="#"><span className="icon-instagram"></span></a></li>
+                <li className="fb"><a href="#"><span className="icon-facebook"></span></a></li>
+                <li className="tw"><a href="#"><span className="icon-twitter"></span></a></li>
+                <li className="pin"><a href="#"><span className="icon-pinterest"></span></a></li>
+                <li className="dr"><a href="#"><span className="icon-dribbble"></span></a></li>
+              </ul>
+            </div>
 
-        <footer className='mainFooter'>
-        <div className="under-the-hood-content">
-        <span>about</span>:{' '}{'('}
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">version</span>:{' '}
-        <span className="json-value">{version} <small>—</small> BETA 6.25</span>,
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">whats_new</span>:{' '}
-        <span className="json-value">community page</span>,
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">up_next</span>:{' '}
-        <span className="json-value">more <a href="">MMcode•003</a> tasks</span>,
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">coming_soon</span>:{' '}
-        <span className="json-value">events calendar</span>,
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">social</span>:{' '}
-        <span className="json-value">
-          <a href="">@MM-code</a>
-        </span>
-        {React.createElement('br', null)}
-        {'};'}
-        {React.createElement('br', null)}
-        {React.createElement('br', null)}
-        <span>legal</span>:{' '}{'{'}
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">terms</span>:{' '}
-        <span className="json-value">
-          <a href="#">of use</a>
-        </span>,
-        {React.createElement('br', null)}
-        <span style={{ display: 'inline-block', width: '32px' }}></span>
-        <span className="json-key">privacy</span>:{' '}
-        <span className="json-value">
-          <a href="#">policy</a>
-        </span>
-        {React.createElement('br', null)}
-        {');'}
-      </div>
-
-      {/* second */}
-    
-      <div className="under-the-hood-content">
-      <span>changelog</span>: {'('}
-      <span className="arrays-container">
-        <span className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">version</span>:{' '}
-          <span className="json-value">{version}</span>,
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">notes</span>:{' '}
-          <span className="json-value">
-            added{' '}
-            <a href="#">community page</a>
-          </span>
-          <br />
-        </span>
-        <span className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">version</span>:{' '}
-          <span className="json-value">{version}</span>,
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">notes</span>:{' '}
-          <span className="json-value">
-            added{' '}
-            
-          </span>
-          <br />
-        </span>
-        <span className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">version</span>:{' '}
-          <span className="json-value">0.1.7</span>,
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">notes</span>:{' '}
-          <span className="json-value">
-            upvote answers to{' '}
-            <a href="">bounties</a>
-          </span>
-          <br />
-        </span>
-        <span className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">version</span>:{' '}
-          <span className="json-value">0.1.6</span>,
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">notes</span>:{' '}
-          <span className="json-value">article editor refresh</span>
-          <br />
-        </span>
-      </span>
-      {');'}...
-      <br />
-    </div>
+            <div className="copyright">
+              <p className="mb-0"><small>&copy; MMCode. All Rights Reserved. {thisYear}</small></p>
+            </div>
 
 
-    {/* third */}
-
-    <div className="under-the-hood-content">
-    
-      <span>recent_tips</span>: (
-      <span className="arrays-container">
-        <span data-post-type="post" className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipper</span>:{' '}
-          <span className="json-value">
-            <a href="#">@Change</a>
-          </span>
-          ,<br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipped</span>:{' '}
-          <span className="json-value">
-            <a href="#">article</a>
-          </span>
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">amount</span>:{' '}
-          <span className="json-value">
-            1000 <a href="#">SATS</a>
-          </span>
-          ,<br />
-        </span>
-        <span data-post-type="post" className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipper</span>:{' '}
-          <span className="json-value">
-            <a href="#">@Change</a>
-          </span>
-          ,<br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipped</span>:{' '}
-          <span className="json-value">
-            <a href="#">article</a>
-          </span>
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">amount</span>:{' '}
-          <span className="json-value">
-            1000 <a href="#">SATS</a>
-          </span>
-          ,<br />
-        </span>
-        <span data-post-type="page" className="array-item">
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipper</span>:{' '}
-          <span className="json-value">
-            <a href="#">@Change</a>
-          </span>
-          ,<br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">tipped</span>:{' '}
-          <span className="json-value">
-            <a href="#">live stream</a>
-          </span>
-          <br />
-          <span style={{ display: 'inline-block', width: '32px' }}></span>
-          <span className="json-key">amount</span>:{' '}
-          <span className="json-value">
-            1000 <a href="#">SATS</a>
-          </span>
-          ,<br />
-        </span>
-      </span>
-      )...
-      <br />
-      <div id="inner-hood">
-        <div id="right-side-footer" style={{ float: 'right', textAlign: 'right' }}>
-          <h5>Social</h5>
-          <p>
-            <a target="_blank" rel="nofollow">@MM-Code</a>
-          </p>
-        </div>
-        <div id="left-side-footer">
-          <h5>Version</h5>
-          <p>
-            {version} <small>—</small> BETA {beta}
-          </p>
+          </div>
         </div>
       </div>
-    </div>
-
-</footer>
+    </footer>
 </>
     );
 

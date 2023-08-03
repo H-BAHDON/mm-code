@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #232931;
+    background-color: #f5f9fc;
     padding: 0.5rem;
     padding-bottom: 0;
   }
@@ -10,7 +10,7 @@
   .logo-title {
     font-weight: 600;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #c2e2f1;
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -89,5 +89,9 @@
   .userName i {
     padding: 13px;
     cursor: pointer;
+  }
+
+.fs-3 {
+    color:black;
   }
    
