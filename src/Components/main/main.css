@@ -1,7 +1,7 @@
 /* Main Container */
 
 main {
-  background-color: #393e46;
+  background-color: #f5f9fc;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ main {
 }
 .main-container {
   padding: 1% 1% 29px;
-  background-color: #393e46;
+  background-color: #f5f9fc;
   border-radius: 39px;
   box-shadow: 0px 1px 10px 0px rgb(117 191 225);
 }
@@ -36,7 +36,7 @@ main {
 }
 .main-right-box {
   width: 65%;
-  background: #393e46;
+  background: #f5f9fc;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -53,6 +53,7 @@ main {
   padding: 2rem 32px;
   width: 100%;
   align-items: center;
+  color: black;
 }
 .main-top {
   display: flex;
@@ -181,3 +182,4 @@ main {
     color: green;
   }
 }
+

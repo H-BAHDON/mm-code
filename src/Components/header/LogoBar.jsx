@@ -37,7 +37,7 @@ export default function LogoBar() {
               <ButtonOfPage
                 nameButton="Logout"
                 handle={handleLogout}
-                styleButton="btn btn-light p-2"
+                styleButton="btn  p-2"
               />
               <i className="bi bi-person fs-3" onClick={handleUserProfile}></i>
             </div>
