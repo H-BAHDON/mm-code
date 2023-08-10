@@ -39,6 +39,7 @@ function Platform() {
         handleSqlClick={handleSqlClick}
         handleTestClick={handleTestClick}
         showNavigation={false}
+        showLogoBar={true}
       />
       <Main exerciseLanguage={exerciseLanguage} setExerciseLanguage={setExerciseLanguage} />
     </>
