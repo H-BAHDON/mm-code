@@ -1,75 +1,137 @@
+
+
 /* Main Container */
+ .main-container {
 
-main {
-  background-color: #f5f9fc;
-  color: #fff;
+  width: auto;
+  height: auto;
+}
+
+/* Left Bar */
+.Leftbar {
+  width: 200px;
+  top: 0px;
+  bottom: 6px;
+  position: absolute;
+  background: #f6f6f6;
   display: flex;
+  border-right: 6px outset #bad9c8;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  font-weight: 500;
+  padding-top: 2px;
 }
 
-.out-Main{
-  padding: 3rem;
+  .leftbar-main {
+    flex: 5 4 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 35% 1px; */
+    font-size: 12px;
+    justify-content: space-around;
 }
 
-.main-container {
+.main-top  {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 1%;
-}
-.main-container {
-  padding: 1% 1% 29px;
-  background-color: #f5f9fc;
-  border-radius: 39px;
-  box-shadow: 0px 1px 10px 0px rgb(117 191 225);
+  gap: 17px;
+  width: max-content;
 }
 
-/* Main Center */
-.main-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 0.5rem;
-}
-.main-right-box {
-  width: 65%;
-  background: #f5f9fc;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-}
-.main-center {
-  display: contents;
+/* Right Bar (Text Editor) */
+.right-bar-textEditor {
+  position: absolute;
+  top: 12%;
+  width: auto;
+  left: 10.4%;;
+  right: 0px;
 }
 
-/* Main Top and Main Bottom */
-.main-bottom {
+/* Theme Selector */
+.themeSelector {
+  margin-top: 20px;
+}
+
+/* Guide Button */
+.guide-button {
+  margin-top: 79px;
+  width: max-content;
+
+}
+
+.editor{
+  width: 1720px;
+  height: 489px;
+} 
+
+.header {
   display: flex;
-  justify-content: space-evenly;
-  padding: 2rem 32px;
-  width: 100%;
+  flex-direction: row;
   align-items: center;
+  padding: 0px 10px;
+  font-size: 12px;
+  position: relative;
+  user-select: none;
+}
+
+.header .title {
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer-16371 {
+  padding: 3rem 0;
+  font-family: "Poppins", sans-serif;
+  background-color: aliceblue;
+  position: fixed;
+  bottom: 0;
+  left: 11%;
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.titlebar {
+  border-bottom-width: 0px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #202020;
+  height: 60px;
+}
+.titlebar .path {
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 500;
+  width: 28%;
+}
+
+
+.TitlebarView .tools {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tools .btn{
+  margin-left: 20px;
+}
+
+.main-bottom{
+  position: absolute;
+  top: 75%;
+  right: 4%;
   color: black;
-}
-.main-top {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-/* Editor Container */
-.editor-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-weight: bold;
 }
 
 
+
+/* model */
 
 /* Modals */
 .modals {

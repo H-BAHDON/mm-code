@@ -1,6 +1,6 @@
 
 body {
-    background-color: aliceblue;
+    background-color: #f5f5f5b8;
     font-family: "Montserrat", sans-serif;
     color: #fff;
     height: 100%;
@@ -21,9 +21,9 @@ body {
     display: none;
   }
 
-  .main-top{
+  /* .main-top{
     padding: 34px
-  }
+  } */
   .editor {
     width: 100%;
     padding-top: 48px;
