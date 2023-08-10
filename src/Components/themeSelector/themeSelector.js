@@ -19,45 +19,41 @@ import { useState } from "react";
     const fontSizeValues = [12, 14, 16, 17, 18, 20, 24]
 
     return (
-      <div className="choose-theme container"> 
-        <div className="row"> 
-          <div className="col-md-6"> 
-            <label className="form-label"> 
-              Theme:
-              <select
-                className="form-select" 
-                name="selectedTheme"
-                onClick={(e) => setTheme(e.target.value)}
-              >
-                {themesOptions.map((option) => (
-                  <option value={option} key={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
-          <div className="col-md-6"> 
-            <label className="form-label"> 
-              Font size:
-              <select
-                className="form-select" 
-                name="selectFontSize"
-                onClick={(e) => setFontSize(Number(e.target.value))}
-              >
-                {fontSizeValues.map((option) => (
-                  <option value={option} key={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+      <div className="choose-theme container">
+        <div className="mb-3">
+          <label className="form-label">
+            Theme:
+            <select
+              className="form-select form-select-sm"
+              name="selectedTheme"
+              onClick={(e) => setTheme(e.target.value)}
+            >
+              {themesOptions.map((option) => (
+                <option value={option} key={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <div className="mb-3">
+          <label className="form-label">
+            Font size:
+            <select
+              className="form-select form-select-sm"
+              name="selectFontSize"
+              onClick={(e) => setFontSize(Number(e.target.value))}
+            >
+              {fontSizeValues.map((option) => (
+                <option value={option} key={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       </div>
     );
-    
-    
 }
 
 export default ThemeSelector;

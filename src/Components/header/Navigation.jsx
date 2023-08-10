@@ -11,6 +11,7 @@ function Navigation({
   const [activeTab, setActiveTab] = useState("html");
 
   const handleTabClick = (tabName) => {
+    console.log("HTML button clicked"); 
     setActiveTab(tabName);
   };
 
