@@ -14,12 +14,8 @@ export default function UserProfile() {
   
     useEffect(() => {
       // Check if the user is logged in
-      const isLoggedIn = sessionStorage.getItem('username');
   
       // If the user is not logged in, redirect to the login page
-      if (!isLoggedIn) {
-        navigate('/login');
-      }
   
       // Get the score value from localStorage
       const storedScore = localStorage.getItem('score');
