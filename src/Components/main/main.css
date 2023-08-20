@@ -1,56 +1,57 @@
-
 main {
-    background-color: #393e46;
-    color: #fff;
-  }
-  
-  .main-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 0.5rem;
-  }
-  
-  .main-bottom,
-  .main-top {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-    width: 59%;
-  }
-  
-  .editor-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* buttons */
-  .guide-button {
-    position: absolute;
-    margin: 1rem 2rem;
-  }
-  /* ----------------------------------------------------------------------------------- */
-  /* Footer CSS */
-  
-  /* Footer styles */
-  
-  /* ----------------------------------------------------------------------------------- */
-  /* -------------Modal------------ */
-  
-  .modals {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-  }
-  
-  /* .modals-overlay {
+  background-color: #393e46;
+  color: #fff;
+}
+
+.main-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.main-bottom,
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 59%;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* buttons */
+.guide-button {
+  position: absolute;
+  margin: 1rem 2rem;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Footer CSS */
+
+/* Footer styles */
+
+/* ----------------------------------------------------------------------------------- */
+/* -------------Modal------------ */
+
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+/* .modals-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,107 +59,144 @@ main {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   } */
-  
-  .modals-content {
-    max-width: 800px;
-    background-color: #fff;
+
+.modals-content {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border: 10px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+.modals-header {
+  margin-bottom: 10px;
+}
+
+.modals-header h3 {
+  margin: 0;
+}
+
+.modals-body {
+  padding: 10px 0;
+  overflow: auto;
+}
+
+.modals-footer {
+  text-align: right;
+}
+
+.modals-footer button {
+  margin-left: 10px;
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* Scores */
+.scores-text {
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.scores-text.correct {
+  animation: celebrate 1.5s ease-in-out infinite,
+    blink-green 2s ease-in-out infinite;
+}
+
+.scores-text.wrong {
+  animation: blink-red 3s ease-in-out infinite;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  12.5% {
+    transform: rotateZ(-1deg);
+  }
+
+  37.5% {
+    transform: rotateZ(1deg);
+  }
+
+  62.5% {
+    transform: rotateZ(-1deg);
+  }
+
+  87.5% {
+    transform: rotateZ(1deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes blink-red {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@keyframes blink-green {
+  0% {
+    color: green;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: green;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+.message-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #ededf3;
+  color: #393e46;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .message-container {
     padding: 20px;
-    border: 10px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
   }
-  
-  .modals-header {
-    margin-bottom: 10px;
+
+  .image-container img {
+    width: 120px;
+    height: 120px;
   }
-  
-  .modals-header h3 {
-    margin: 0;
-  }
-  
-  .modals-body {
-    padding: 10px 0;
-    overflow: auto;
-  }
-  
-  .modals-footer {
-    text-align: right;
-  }
-  
-  .modals-footer button {
-    margin-left: 10px;
-  }
-  
-  /* ----------------------------------------------------------------------------------- */
-  /* Scores */
-  .scores-text {
-    font-weight: bold;
-  }
-  
-  .score{
-    font-weight: bold;
-  }
-  
-  .fade-in {
-    opacity: 1;
-    transition: opacity 1s ease-in;
-  }
-  
-  .fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-  }
-  
-  .scores-text.correct {
-    animation: celebrate 1.5s ease-in-out infinite,
-      blink-green 2s ease-in-out infinite;
-  }
-  
-  .scores-text.wrong {
-    animation: blink-red 3s ease-in-out infinite;
-  }
-  @keyframes celebrate {
-    0% {
-      transform: rotateZ(0deg);
-    }
-    12.5% {
-      transform: rotateZ(-1deg);
-    }
-    37.5% {
-      transform: rotateZ(1deg);
-    }
-    62.5% {
-      transform: rotateZ(-1deg);
-    }
-    87.5% {
-      transform: rotateZ(1deg);
-    }
-    100% {
-      transform: rotateZ(0deg);
-    }
-  }
-  
-  @keyframes blink-red {
-    0% {
-      color: red;
-    }
-    50% {
-      color: white;
-    }
-    100% {
-      color: red;
-    }
-  }
-  
-  @keyframes blink-green {
-    0% {
-      color: green;
-    }
-    50% {
-      color: white;
-    }
-    100% {
-      color: green;
-    }
-  }
+}

@@ -2,21 +2,24 @@ import React, { useState, useEffect } from "react";
 import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
-import "./main.css"
+import "./main.css";
+import PointerImage from "../../assets/pointer.svg";
 // ---------------------------
 // import exercises
-import htmlData from "../../Exercise/htmlExercise.json"
-import cssData from "../../Exercise/cssExercise.json"
-import reactData from "../../Exercise/reactExercise.json"
-import javascriptData from "../../Exercise/javascriptExercise.json"
-import SQLData from "../../Exercise/SqlExercise.json"
-import testData from "../../Exercise/testExercise.json"
+import htmlData from "../../Exercise/htmlExercise.json";
+import cssData from "../../Exercise/cssExercise.json";
+import reactData from "../../Exercise/reactExercise.json";
+import javascriptData from "../../Exercise/javascriptExercise.json";
+import SQLData from "../../Exercise/SqlExercise.json";
+import testData from "../../Exercise/testExercise.json";
 // ---------------------------
 
 function Main({ exerciseLanguage }) {
+  // State for getting the size of window
+  const [isWindowLarge, setIsWindowLarge] = useState(window.innerWidth >= 992);
+
   const [userCode, setUserCode] = useState("");
   const [initialCode, setInitialCode] = useState("");
-
 
   const [resultText, setResultText] = useState("");
   const [resultTextVisible, setResultTextVisible] = useState(true);
@@ -29,7 +32,8 @@ function Main({ exerciseLanguage }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(-1);
   const [score, setScores] = useState(0);
   const [currentExerciseScore, setCurrentExerciseScore] = useState(0);
-  const [currentExerciseExplanation, setCurrentExerciseExplanation] = useState("")
+  const [currentExerciseExplanation, setCurrentExerciseExplanation] =
+    useState("");
 
   const [showModal, setShowModal] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
@@ -37,34 +41,44 @@ function Main({ exerciseLanguage }) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [confettiShown, setConfettiShown] = useState(false);
 
+  // Check the size of window
+  useEffect(() => {
+    const handleWindowSize = () => {
+      setIsWindowLarge(window.innerWidth >= 992);
+    };
+    window.addEventListener("resize", handleWindowSize);
+    return () => {
+      window.removeEventListener("resize", handleWindowSize);
+    };
+  }, []);
+
   const handleKeyPress = (event) => {
-    if (event.altKey && event.key === 'Shift') {
+    if (event.altKey && event.key === "Shift") {
       setShowModal((prevShowModal) => !prevShowModal);
     }
   };
 
-    useEffect(() => {
-      generateRandomCode()
-      setResultTextVisible(false);
-      setNextButton(false)
-      setCheckButton(false)
+  useEffect(() => {
+    generateRandomCode();
+    setResultTextVisible(false);
+    setNextButton(false);
+    setCheckButton(false);
 
-      let scores = localStorage.getItem("score");
-      if (scores) {
-        setScores(parseInt(scores));
-      }
+    let scores = localStorage.getItem("score");
+    if (scores) {
+      setScores(parseInt(scores));
+    }
 
-      document.addEventListener('keydown', handleKeyPress);
-      return () => {
-        document.removeEventListener('keydown', handleKeyPress);
-      };
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [exerciseLanguage]);
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exerciseLanguage]);
 
-    useEffect(() => {
-      localStorage.setItem("score", score.toString());
-    }, [score]);
-
+  useEffect(() => {
+    localStorage.setItem("score", score.toString());
+  }, [score]);
 
   // useEffect(() => {
   //   // handleResetCode();
@@ -77,31 +91,41 @@ function Main({ exerciseLanguage }) {
     `Admirable job! You have added ${currentExerciseScore} more points to your score. Keep going!`,
   ];
 
-
   const getRandomSentence = () => {
     const randomIndex = Math.floor(Math.random() * sentences.length);
     return sentences[randomIndex];
   };
   //
 
-
   const generateRandomCode = () => {
     let filteredData;
     let data;
 
-    if (exerciseLanguage === "javascript" || exerciseLanguage === "react" || exerciseLanguage === "test") {
+    if (
+      exerciseLanguage === "javascript" ||
+      exerciseLanguage === "react" ||
+      exerciseLanguage === "test"
+    ) {
       if (exerciseLanguage === "test") {
         data = testData;
       } else {
         data = exerciseLanguage === "javascript" ? javascriptData : reactData;
       }
-      filteredData = data.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = data.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
     } else if (exerciseLanguage === "html") {
-      filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = htmlData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
     } else if (exerciseLanguage === "css") {
-      filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = cssData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
     } else if (exerciseLanguage === "sql") {
-      filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+      filteredData = SQLData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
     } else {
       return;
     }
@@ -116,7 +140,7 @@ function Main({ exerciseLanguage }) {
     } while (randomIndex === currentExerciseIndex);
 
     const randomExercise = filteredData[randomIndex];
-    if (!randomExercise || typeof randomExercise.code !== 'string') {
+    if (!randomExercise || typeof randomExercise.code !== "string") {
       return;
     }
 
@@ -130,26 +154,34 @@ function Main({ exerciseLanguage }) {
     setCurrentExerciseExplanation(randomCodeExplanation);
   };
 
-
-
   const handleCheckCode = () => {
     let expectedCode;
     if (exerciseLanguage === "javascript") {
       expectedCode = initialCode;
     } else if (exerciseLanguage === "react") {
-      const filteredData = reactData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = reactData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "html") {
-      const filteredData = htmlData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = htmlData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
       expectedCode = filteredData[currentExerciseIndex].code;
     } else if (exerciseLanguage === "css") {
-      const filteredData = cssData.filter((exercise) => exercise.lang === exerciseLanguage);
+      const filteredData = cssData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
       expectedCode = filteredData[currentExerciseIndex].code;
-    }else if (exerciseLanguage === "sql") {
-      const filteredData = SQLData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "sql") {
+      const filteredData = SQLData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
       expectedCode = filteredData[currentExerciseIndex].code;
-    }else if (exerciseLanguage === "test") {
-      const filteredData = testData.filter((exercise) => exercise.lang === exerciseLanguage);
+    } else if (exerciseLanguage === "test") {
+      const filteredData = testData.filter(
+        (exercise) => exercise.lang === exerciseLanguage
+      );
       expectedCode = filteredData[currentExerciseIndex].code;
     } else {
       return;
@@ -197,7 +229,6 @@ function Main({ exerciseLanguage }) {
     }
   };
 
-
   // const handleResetCode = () => {
   //   setUserCode("");
   //   setResultText("");
@@ -218,7 +249,7 @@ function Main({ exerciseLanguage }) {
     generateRandomCode();
     setUserCode("");
     setNextButton(false);
-    setCheckButton(false)
+    setCheckButton(false);
     setSkipButton(!skipButton);
   };
 
@@ -246,128 +277,150 @@ function Main({ exerciseLanguage }) {
 
   // console.log("Rendering Main component");
   return (
-    <main>
-      <div className="guide-button">
-        <ButtonOfPage
-          nameButton="Guide Me!"
-          handle={handleShowGuide}
-          styleButton={"btn-warning"}
-        />
-      </div>
-      <div className="editor-container">
-        <div className="main-top">
-          <ButtonOfPage
-            nameButton="What's The Code"
-            handle={handleShowModal}
-            styleButton={"btn-success"}
-          />
-          <ButtonOfPage
-            nameButton="Skip"
-            handle={handleSkipExercise}
-            styleButton={"btn-success"}
-            handleBoolean={checkButton}
-          />
-          <ButtonOfPage
-            nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
-            handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
-            styleButton={nextButton ? "btn-primary" : "btn-success"}
+    <>
+      {isWindowLarge ? (
+        <main>
+          <div className="guide-button">
+            <ButtonOfPage
+              nameButton="Guide Me!"
+              handle={handleShowGuide}
+              styleButton={"btn-warning"}
+            />
+          </div>
+          <div className="editor-container">
+            <div className="main-top">
+              <ButtonOfPage
+                nameButton="What's The Code"
+                handle={handleShowModal}
+                styleButton={"btn-success"}
+              />
+              <ButtonOfPage
+                nameButton="Skip"
+                handle={handleSkipExercise}
+                styleButton={"btn-success"}
+                handleBoolean={checkButton}
+              />
+              <ButtonOfPage
+                nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
+                handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
+                styleButton={nextButton ? "btn-primary" : "btn-success"}
+              />
+            </div>
+            <div className="main-center">
+              <CodeEditor
+                userCode={userCode}
+                setUserCode={setUserCode}
+                initialCode={initialCode}
+                exerciseLanguage={exerciseLanguage}
+                showModal={showModal}
+                nextButton={nextButton}
+                skipButton={skipButton}
+                showGuide={showGuide}
+                checkButton={checkButton}
+              />
+            </div>
+            <div className="main-bottom">
+              {/* <ButtonOfPage nameButton="Reset" handle={handleResetCode} /> */}
 
-          />
-        </div>
-        <div className="main-center">
-          <CodeEditor
-            userCode={userCode}
-            setUserCode={setUserCode}
-            initialCode={initialCode}
-            exerciseLanguage={exerciseLanguage}
-            showModal={showModal}
-            nextButton={nextButton}
-            skipButton={skipButton}
-            showGuide={showGuide}
-            checkButton={checkButton}
-          />
-        </div>
-        <div className="main-bottom">
-          {/* <ButtonOfPage nameButton="Reset" handle={handleResetCode} /> */}
-
-          <p
-            className={`scores-text ${
-              resultTextVisible ? "fade-in" : "fade-out"
-            }
+              <p
+                className={`scores-text ${
+                  resultTextVisible ? "fade-in" : "fade-out"
+                }
             ${resultTextClass}`}
-          >
-            {resultText}
-          </p>
-          <p className="score">Your Score: {score}</p>
-        </div>
-        {showConfetti && (
-          <Confetti
-            width={window.innerWidth}
-            height={window.innerHeight}
-            recycle={false}
-            numberOfPieces={300}
-            gravity={0.1}
-            confettiProps={{ run: 4 }}
-            onConfettiComplete={handleConfettiComplete}
-          />
-        )}
-        {showModal && (
-          <div className="modals">
-            <div className="modals-overlay" onClick={handleCloseModal}></div>
-            <div className="modals-content">
-              <div className="modals-header">
-                <h3>Code</h3>
-              </div>
-              <div className="modals-body">
-                <pre>{initialCode}</pre>
-                <div className="modals-header">
-                  <h3>Explanation</h3>
-                </div>
-                <p>{currentExerciseExplanation}</p>
-              </div>
-              <div className="modals-footer">
-                <button
-                  className="btn btn-secondary"
-                  onClick={handleCloseModal}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-        {showGuide && (
-          <div className="modals" onClick={handleCloseGuide}>
-            <div className="modals-overlay" onClick={handleCloseGuide}></div>
-            <div className="modals-content">
-              <h2>Your Guide 📜</h2>
-              <p>
-                🔳 Select a language from the navbar to enhance your muscle memory.
-                <br />
-                <br />
-                🔳 For every successful exercise, you will gain 2 points!
-                <br />
-                <br />
-                🔳 To view the code again, click on the 'What's The Code' button.
-                <br />
-                <br />
-                🔳 Once your code has been verified by using the 'Check Code' button, it will
-                automatically change to a 'Next Exercise' button.
-                <br />
-                <br />
-                🔳 Use the 'Skip' button to skip any exercise.
-                <br />
-                <br />
-                🔳 You will not be able to paste code on this editor! 👀
-                <br />
-                <br />
-                🔳 Your score will refresh like a new day every 24 hours!
+              >
+                {resultText}
               </p>
+              <p className="score">Your Score: {score}</p>
             </div>
+            {showConfetti && (
+              <Confetti
+                width={window.innerWidth}
+                height={window.innerHeight}
+                recycle={false}
+                numberOfPieces={300}
+                gravity={0.1}
+                confettiProps={{ run: 4 }}
+                onConfettiComplete={handleConfettiComplete}
+              />
+            )}
+            {showModal && (
+              <div className="modals">
+                <div
+                  className="modals-overlay"
+                  onClick={handleCloseModal}
+                ></div>
+                <div className="modals-content">
+                  <div className="modals-header">
+                    <h3>Code</h3>
+                  </div>
+                  <div className="modals-body">
+                    <pre>{initialCode}</pre>
+                    <div className="modals-header">
+                      <h3>Explanation</h3>
+                    </div>
+                    <p>{currentExerciseExplanation}</p>
+                  </div>
+                  <div className="modals-footer">
+                    <button
+                      className="btn btn-secondary"
+                      onClick={handleCloseModal}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+            {showGuide && (
+              <div className="modals" onClick={handleCloseGuide}>
+                <div
+                  className="modals-overlay"
+                  onClick={handleCloseGuide}
+                ></div>
+                <div className="modals-content">
+                  <h2>Your Guide 📜</h2>
+                  <p>
+                    🔳 Select a language from the navbar to enhance your muscle
+                    memory.
+                    <br />
+                    <br />
+                    🔳 For every successful exercise, you will gain 2 points!
+                    <br />
+                    <br />
+                    🔳 To view the code again, click on the 'What's The Code'
+                    button.
+                    <br />
+                    <br />
+                    🔳 Once your code has been verified by using the 'Check
+                    Code' button, it will automatically change to a 'Next
+                    Exercise' button.
+                    <br />
+                    <br />
+                    🔳 Use the 'Skip' button to skip any exercise.
+                    <br />
+                    <br />
+                    🔳 You will not be able to paste code on this editor! 👀
+                    <br />
+                    <br />
+                    🔳 Your score will refresh like a new day every 24 hours!
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    </main>
+        </main>
+      ) : (
+        <div className="message-container">
+          <h3>
+            "This app is designed for large screens, ensuring an optimal viewing
+            experience for code."
+          </h3>
+          <div className="image-container">
+            <img src={PointerImage} alt="Pointer image" />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
