@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Home from './Home/Home';
 import Platform from './Platform/Platform';
 import Login from './reg&login/Login';
-import Signup from './reg&login/Signup';
 import UserProfile from './User-Dashboard/userProfile';
-import { getSessionData } from "../Helpers/authHelpers";
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 
 const PrivateRoute = ({ element, path }) => {
-  const sessionData = getSessionData(); // Retrieve the session data
-  const isLoggedIn = sessionData != null; // Check if user is logged in
-  return isLoggedIn ? element : <Navigate to="/UserProfile" />;
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check for the existence of a session cookie
+    axios.get('http://localhost:3001/check-session', { withCredentials: true })
+      .then(response => {
+        setIsAuthenticated(true); // User is authenticated
+      })
+      .catch(error => {
+        setIsAuthenticated(false); // User is not authenticated
+        navigate('/login'); // Redirect to the login page
+      });
+  }, [navigate]);
+
+  return isAuthenticated ? element : null;
 };
 
 export const routes = [
@@ -27,11 +39,7 @@ export const routes = [
     element: <Login />,
   },
   {
-    path: '/signup',
-    element: <Signup />,
-  },
-  {
     path: '/UserProfile',
-    element: <UserProfile />,
+    element: <PrivateRoute element={<UserProfile />} />,
   },
 ];
