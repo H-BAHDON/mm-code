@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import ButtonOfPage from '../common/buttons/ButtonOfPage';
 import axios from 'axios';
 import './header.css';
-
+import { apiUrl } from '../../config/config';
 export default function LogoBar() {
   const [userData, setUserData] = useState(null); // State to store user data
   const [loading, setLoading] = useState(true); // State to track loading
@@ -12,7 +12,7 @@ export default function LogoBar() {
 
   useEffect(() => {
     // Fetch user data from the server
-    axios.get(`http://localhost:3001/user`, { withCredentials: true })
+    axios.get(`${apiUrl}/user`, { withCredentials: true })
     .then(response => {
         setUserData(response.data); // Set user data to state
         setLoading(false); // Set loading to false
@@ -25,7 +25,7 @@ export default function LogoBar() {
 
   const handleLogout = () => {
     // Make a request to log out on the server
-    axios.get(`http://localhost:3001/logout`, { withCredentials: true })
+    axios.get(`${apiUrl}/logout`, { withCredentials: true })
       .then(() => {
         setUserData(null);
         navigate('/login', { replace: true });

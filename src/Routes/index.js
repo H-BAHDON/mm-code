@@ -5,14 +5,14 @@ import Login from './reg&login/Login';
 import UserProfile from './User-Dashboard/userProfile';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; 
-
+import { apiUrl } from '../config/config';
 const PrivateRoute = ({ element, path }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     // Check for the existence of a session cookie
-    axios.get('http://localhost:3001/check-session', { withCredentials: true })
+    axios.get(`${apiUrl}/check-session`, { withCredentials: true })
       .then(response => {
         setIsAuthenticated(true); // User is authenticated
       })
