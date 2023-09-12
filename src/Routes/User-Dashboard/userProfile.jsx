@@ -4,6 +4,7 @@ import "./userProfile.css";
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/header/Header';
 import axios from 'axios';
+import { apiUrl } from '../../config/config';
 
 import ButtonOfPage from '../../Components/common/buttons/ButtonOfPage';
 
