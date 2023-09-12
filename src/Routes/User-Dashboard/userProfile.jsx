@@ -8,20 +8,28 @@ import ButtonOfPage from '../../Components/common/buttons/ButtonOfPage';
 
 export default function UserProfile() {
     const navigate = useNavigate();
-    const fullName = sessionStorage.getItem('fullName');
     const [score, setScore] = useState('');
     const [loginDuration, setLoginDuration] = useState('');
-  
+    const [fullName, setFullName] = useState(''); // Initialize fullName state
+
     useEffect(() => {
-      // Check if the user is logged in
-  
-      // If the user is not logged in, redirect to the login page
-  
-      // Get the score value from localStorage
+     
+
+      axios.get(`${apiUrl}/user`, { withCredentials: true })
+      .then(response => {
+        // Set the full name state with the retrieved data
+        setFullName(response.data.displayName);
+      })
+      .catch(error => {
+        console.error('Error fetching user data:', error);
+      });
+
       const storedScore = localStorage.getItem('score');
       if (storedScore) {
         setScore(storedScore);
       }
+
+
   const formatDuration = (durationInSeconds) => {
       const hours = Math.floor(durationInSeconds / 3600);
       const minutes = Math.floor((durationInSeconds % 3600) / 60);
@@ -38,11 +46,10 @@ export default function UserProfile() {
         setLoginDuration(durationFormatted);
       }
     }, [navigate]);
+
+
   
     const handleLogout = () => {
-      // Clear session storage
-    
-      // Redirect to the login page
       navigate('/platform');
     };
   
