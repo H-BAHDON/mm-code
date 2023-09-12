@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import "./userProfile.css";
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/header/Header';
-import Footer from '../../Components/Footer/Footer';
+import axios from 'axios';
+
 import ButtonOfPage from '../../Components/common/buttons/ButtonOfPage';
 
 export default function UserProfile() {
