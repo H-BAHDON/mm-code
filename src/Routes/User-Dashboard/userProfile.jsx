@@ -12,61 +12,52 @@ export default function UserProfile() {
     const navigate = useNavigate();
     const [score, setScore] = useState('');
     const [loginDuration, setLoginDuration] = useState('');
-    const [fullName, setFullName] = useState(''); // Initialize fullName state
+    const [fullName, setFullName] = useState(''); 
 
     useEffect(() => {
-     
-
-      axios.get(`${apiUrl}/user`, { withCredentials: true })
-      .then(response => {
-        // Set the full name state with the retrieved data
-        setFullName(response.data.displayName);
-      })
-      .catch(error => {
-        console.error('Error fetching user data:', error);
-      });
-
+      // Function to fetch user data
+      const fetchUserData = () => {
+        axios.get(`${apiUrl}/user`, { withCredentials: true })
+          .then(response => {
+            setFullName(response.data.displayName);
+          })
+          .catch(error => {
+            console.error('Error fetching user data:', error);
+          });
+      };
+  
+      // Function to calculate login duration
+      const calculateLoginDuration = () => {
+        const loginTime = sessionStorage.getItem('loginTime');
+        if (loginTime) {
+          const startTime = new Date(parseInt(loginTime, 10));
+          const endTime = new Date();
+          const durationInSeconds = Math.floor((endTime - startTime) / 1000);
+          const durationFormatted = formatDuration(durationInSeconds);
+          setLoginDuration(durationFormatted);
+        }
+      };
+  
+      // Fetch user data when the component mounts
+      fetchUserData();
+  
+      // Calculate login duration when the component mounts
+      calculateLoginDuration();
+  
+      // Fetch and update score if it's valid
       const storedScore = localStorage.getItem('score');
-      if (storedScore) {
+      if (!isNaN(storedScore)) {
         setScore(storedScore);
+  
+        axios.post(`${apiUrl}/save-score`, { score: storedScore }, { withCredentials: true })
+          .then(response => {
+            // Handle the response if needed
+          })
+          .catch(error => {
+            console.error('Error saving score:', error);
+          });
       }
-      axios.post(`${apiUrl}/save-score`, { score: storedScore }, { withCredentials: true })
-        .then(response => {
-          // Handle the response if needed
-        })
-        .catch(error => {
-          console.error('Error saving score:', error);
-        });
-    
-
-
-  const formatDuration = (durationInSeconds) => {
-      const hours = Math.floor(durationInSeconds / 3600);
-      const minutes = Math.floor((durationInSeconds % 3600) / 60);
-      const seconds = durationInSeconds % 60;
-      return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
-    };
-      const loginTime = sessionStorage.getItem('loginTime');
-      if (loginTime) {
-        const startTime = new Date(parseInt(loginTime, 10));
-        const endTime = new Date();
-        const durationInSeconds = Math.floor((endTime - startTime) / 1000);
-        const durationFormatted = formatDuration(durationInSeconds);
-        setLoginDuration(durationFormatted);
-      }
-    }, [navigate]);
-
-
-  
-    const handleLogout = () => {
-      navigate('/platform');
-    };
-  
-    
-  
-    const padZero = (number) => {
-      return number.toString().padStart(2, '0');
-    };
+    }, []);
   
     return (
         <>
