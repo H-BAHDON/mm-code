@@ -30,6 +30,14 @@ export default function UserProfile() {
       if (storedScore) {
         setScore(storedScore);
       }
+      axios.post(`${apiUrl}/save-score`, { score: storedScore }, { withCredentials: true })
+        .then(response => {
+          // Handle the response if needed
+        })
+        .catch(error => {
+          console.error('Error saving score:', error);
+        });
+    
 
 
   const formatDuration = (durationInSeconds) => {
@@ -38,7 +46,6 @@ export default function UserProfile() {
       const seconds = durationInSeconds % 60;
       return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     };
-      // Calculate the login duration
       const loginTime = sessionStorage.getItem('loginTime');
       if (loginTime) {
         const startTime = new Date(parseInt(loginTime, 10));
@@ -113,7 +120,7 @@ export default function UserProfile() {
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
-                            <span className="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
+                            <span className="h6 font-semibold text-muted text-sm d-block mb-2">Daily Score</span>
                             <span className="h3 font-bold mb-0">{loginDuration}</span>
                           </div>
                           <div className="col-auto">
@@ -136,7 +143,7 @@ export default function UserProfile() {
                       <div className="card-body">
                         <div className="row">
                           <div className="col">
-                            <span className="h6 font-semibold text-muted text-sm d-block mb-2">Daily Score</span>
+                            <span className="h6 font-semibold text-muted text-sm d-block mb-2">Total Score</span>
                             <span className="h3 font-bold mb-0">{score}</span>
                           </div>
                           <div className="col-auto">
