@@ -47,6 +47,22 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
             setShowModal((prevShowModal) => !prevShowModal);
         }
     };
+    useEffect(() => {
+        axios.get(`${apiUrl}/score`, { withCredentials: true })
+          .then((response) => {
+            setScores(response.data);
+    
+            axios.post(`${apiUrl}/save-score`, { score: response.data }, { withCredentials: true })
+              .then((response) => {
+              })
+              .catch(error => {
+                console.error('Error saving score:', error);
+              });
+          })
+          .catch(error => {
+            console.error('Error fetching score:', error);
+          });
+      }, []);
 
     useEffect(() => {
         generateRandomCode()
