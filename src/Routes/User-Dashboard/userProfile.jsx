@@ -12,7 +12,7 @@ export default function UserProfile() {
     const navigate = useNavigate();
     const [score, setScore] = useState('');
     const [loginDuration, setLoginDuration] = useState('');
-    const [fullName, setFullName] = useState(''); 
+    const [fullName, setFullName] = useState(''); // Initialize fullName state
 
     useEffect(() => {
       // Function to fetch user data
@@ -58,6 +58,14 @@ export default function UserProfile() {
           });
       }
     }, []);
+
+
+  
+    const handleLogout = () => {
+      navigate('/platform');
+    };
+  
+  
   
     return (
         <>
