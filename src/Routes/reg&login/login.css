@@ -1,0 +1,25 @@
+/* styles.css */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .margin-top {
+    margin-top: 19%;
+  }
+  
+  .margin-bottom {
+    margin-bottom: 18%;
+  }
+  
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    /* Define styles for smaller screens */
+    .center-container {
+      margin-top: 10%; /* Adjust as needed */
+      margin-bottom: 10%; /* Adjust as needed */
+    }
+  }
+  

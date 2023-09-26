@@ -4,16 +4,17 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Header from '../../Components/header/Header';
 import { apiUrl } from '../../config/config';
-
+import './login.css'; // Import the CSS file
 
 export default function Login() {
-  const classes = useStyles();
-
   return (
     <>
       <Header showNavigation={false} />
 
-      <Grid container >
+      <Grid
+        container
+        className="center-container margin-top margin-bottom" 
+      >
         <Grid item xs={12}>
           <Typography variant="h4" gutterBottom>
             Login with Social Media
@@ -23,7 +24,6 @@ export default function Login() {
           <Button
             variant="contained"
             color="primary"
-            className={classes.loginButton}
             href={`${apiUrl}/auth/google`}
           >
             Login with Google
@@ -33,7 +33,6 @@ export default function Login() {
           <Button
             variant="contained"
             color="secondary"
-            className={classes.loginButton}
             href={`${apiUrl}/auth/github`}
           >
             Login with GitHub
