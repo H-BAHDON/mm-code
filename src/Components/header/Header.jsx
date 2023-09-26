@@ -24,6 +24,7 @@ function Header({
           handleReactClick={handleReactClick}
           handleSqlClick={handleSqlClick}
           handleTestClick={handleTestClick}
+          
         />
       )}
     </header>

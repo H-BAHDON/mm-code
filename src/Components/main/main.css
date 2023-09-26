@@ -1,18 +1,26 @@
 
 
 /* Main Container */
- .main-container {
-
-  width: auto;
-  height: auto;
-}
 
 /* Left Bar */
-.Leftbar {
+/* .Leftbar {
   width: 200px;
-  top: 0px;
-  bottom: 6px;
-  position: absolute;
+  background: #eeeeee;
+  border-right: 6px outset #bad9c8;
+  align-items: stretch;
+  font-weight: 500;
+} */
+
+.navbar{
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Right Bar (Text Editor) */
+.Leftbar{
   background: #f6f6f6;
   display: flex;
   border-right: 6px outset #bad9c8;
@@ -20,79 +28,40 @@
   align-items: stretch;
   font-weight: 500;
   padding-top: 2px;
+  height: 100%;
 }
-
-  .leftbar-main {
-    flex: 5 4 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 35% 1px; */
-    font-size: 12px;
-    justify-content: space-around;
-}
-
-.main-top  {
+.leftbar-main {
+  flex: 5 4 auto;
   display: flex;
-  flex-direction: row;
-  gap: 17px;
-  width: max-content;
-}
-
-/* Right Bar (Text Editor) */
-.right-bar-textEditor {
-  position: absolute;
-  top: 12%;
-  width: auto;
-  left: 10.4%;;
-  right: 0px;
-}
-
-/* Theme Selector */
-.themeSelector {
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  justify-content: space-around;
 }
 
 /* Guide Button */
 .guide-button {
-  margin-top: 79px;
-  width: max-content;
-
-}
-
-.editor{
-  width: 100%;
-  height: 489px;
-} 
-
-.header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 0px 10px;
-  font-size: 12px;
-  position: relative;
-  user-select: none;
+  background-color: #f5f5f5b8;
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+.themeSelector{
+  display: flex;
+  justify-content: flex-end;
+  margin: 64px;
+  width: 68%;
 }
 
-.header .title {
-  margin-right: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+.right-bar-textEditor {
+  padding: 0 !important;
 }
 
-.footer-16371 {
-  padding: 3rem 0;
-  font-family: "Poppins", sans-serif;
-  background-color: aliceblue;
-  position: fixed;
-  bottom: 0;
-  left: 11%;
-  width: 100%;
-  padding-right: 50px;
-  padding-left: 50px;
-}
+
+
 
 .titlebar {
   border-bottom-width: 0px;

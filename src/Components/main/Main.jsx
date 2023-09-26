@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Grid } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+
 import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
+
+
 
 import ThemeSelector from "../themeSelector/themeSelector";
 import Header from "../header/Header";
@@ -257,40 +262,59 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
         setExerciseLanguage("test")
     }
 
+    const useStyles = makeStyles((theme) => ({
+        leftbar: {
+          backgroundColor: '#f7f7f7', // Customize the background color
+          color: 'white', // Customize the text color
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        },
+        guideButton: {
+            
+        },
+        themeSelector: {
+          marginTop: 'auto', // Push ThemeSelector to the bottom
+        },
+      }));
+    const classes = useStyles();
+
 
     return (
         <main>
-            <div className="main-container">
-                <div className="Leftbar">
 
-                    <div className="leftbar-main">
+        
+            <Grid container spacing={0}>
+            <Grid item xs={12} md={1.5} className="Leftbar makeStyles-leftbar-4">
+            <hr class="MuiDivider-root MuiDivider-fullWidth css-1uvfona"></hr>
 
-                        <Header
-                            showLogoBar={false}
-                            handleHTMLClick={handleHTMLClick}
-                            handleJavaScriptClick={handleJavaScriptClick}
-                            handleCSSClick={handleCSSClick}
-                            handleReactClick={handleReactClick}
-                            handleSqlClick={handleSqlClick}
-                            handleTestClick={handleTestClick}
-                        />
+         <div className="leftbar-main">
+        <div className="guide-button">
+          <ButtonOfPage
+            nameButton="Guide Me!"
+            handle={handleShowGuide}
+            styleButton="btn btn-outline-primary btn-sm"
+          />
+        </div>
 
-                        <div className="themeSelector">
-                            <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
-                        </div>
+        <Header
+          showLogoBar={false}
+          handleHTMLClick={handleHTMLClick}
+          handleJavaScriptClick={handleJavaScriptClick}
+          handleCSSClick={handleCSSClick}
+          handleReactClick={handleReactClick}
+          handleSqlClick={handleSqlClick}
+          handleTestClick={handleTestClick}
+        />
 
-                        <div className="guide-button">
-                            <ButtonOfPage
-                                nameButton="Guide Me!"
-                                handle={handleShowGuide}
-                                styleButton={"btn btn-outline-primary btn-sm"}
-                            />
+        <div className={classes.themeSelector}>
+          <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
+        </div>
+      </div>
+    </Grid>
 
-                        </div>
-                    </div>
-                </div>
 
-                <div className="right-bar-textEditor">
+                <Grid item xs={12} md={10.5}  className="right-bar-textEditor MuiBox-root css-13o7eu2">
 
                     <div className="InterfaceView TitlebarView titlebar enabled">
                         <div className="FilePath path">
@@ -332,9 +356,9 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                         theme={theme}
                         fontSize={fontSize}
                     />
-                </div>
+                 </Grid>
 
-            </div>
+                 </Grid>
 
             <div className="main-bottom">
                 <p
@@ -346,6 +370,8 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                 </p>
                 <p className="score">Your Score: {score}</p>
             </div>
+
+
             {showConfetti && (
                 <Confetti
                     width={window.innerWidth}
@@ -357,6 +383,7 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                     onConfettiComplete={handleConfettiComplete}
                 />
             )}
+
             {showModal && (
                 <div className="modals">
                     <div className="modals-overlay" onClick={handleCloseModal}></div>
@@ -383,6 +410,7 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                 </div>
 
             )}
+
             {showGuide && (
                 <div className="modals" onClick={handleCloseGuide}>
                     <div className="modals-overlay" onClick={handleCloseGuide}></div>
@@ -413,6 +441,7 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                     </div>
                 </div>
             )}
+
         </main>
     );
 }
