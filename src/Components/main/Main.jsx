@@ -262,31 +262,13 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
         setExerciseLanguage("test")
     }
 
-    const useStyles = makeStyles((theme) => ({
-        leftbar: {
-          backgroundColor: '#f7f7f7', // Customize the background color
-          color: 'white', // Customize the text color
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        },
-        guideButton: {
-            
-        },
-        themeSelector: {
-          marginTop: 'auto', // Push ThemeSelector to the bottom
-        },
-      }));
-    const classes = useStyles();
+
 
 
     return (
         <main>
-
-        
-            <Grid container spacing={0}>
-            <Grid item xs={12} md={1.5} className="Leftbar makeStyles-leftbar-4">
-            <hr class="MuiDivider-root MuiDivider-fullWidth css-1uvfona"></hr>
+        <Grid container spacing={0}>
+        <Grid item xs={12} md={1.5} className="Leftbar makeStyles-leftbar-4">
 
          <div className="leftbar-main">
         <div className="guide-button">
@@ -307,7 +289,7 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
           handleTestClick={handleTestClick}
         />
 
-        <div className={classes.themeSelector}>
+        <div >
           <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
         </div>
       </div>
