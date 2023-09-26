@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
-import { makeStyles } from '@mui/styles';
-
 import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";

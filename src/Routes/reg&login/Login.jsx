@@ -2,22 +2,9 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles';
 import Header from '../../Components/header/Header';
 import { apiUrl } from '../../config/config';
 
-const useStyles = makeStyles((theme) => ({
-  loginContainer: {
-    height: '100vh', // Make the container fill the viewport height
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  loginButton: {
-    margin: theme.spacing(2),
-  },
-}));
 
 export default function Login() {
   const classes = useStyles();
@@ -26,7 +13,7 @@ export default function Login() {
     <>
       <Header showNavigation={false} />
 
-      <Grid container className={classes.loginContainer}>
+      <Grid container >
         <Grid item xs={12}>
           <Typography variant="h4" gutterBottom>
             Login with Social Media
