@@ -3,14 +3,15 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './Routes/index';
 import { getSessionData } from "./Helpers/authHelpers";
 import Footer from './Components/Footer/Footer';
+import DemoPlatform from './Routes/DemoPlatform/DemoPlatform'
 import "./app.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // Check if a session exists (e.g., by checking if the session data exists in local storage or cookies)
-    const sessionData = getSessionData(); // Implement this function to retrieve session data
+    
+    const sessionData = getSessionData(); 
 
     if (sessionData) {
       setIsLoggedIn(true);
@@ -18,7 +19,7 @@ function App() {
   }, []);
 
   const handleLogin = (sessionData) => {
-    // Perform login logic here and set the session data
+
     setIsLoggedIn(true);
   };
 
@@ -26,15 +27,16 @@ function App() {
   return (
     <>
    <BrowserRouter>
-      <Routes>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={React.cloneElement(route.element, { onLogin: handleLogin })}
-          />
-        ))}
-      </Routes>
+   <Routes>
+  {routes.map((route, index) => (
+    <Route
+      key={index}
+      path={route.path}
+      element={React.cloneElement(route.element, { onLogin: handleLogin })}
+    />
+  ))}
+  <Route path="/demo" element={<DemoPlatform />} />
+</Routes>
       <Footer />
     </BrowserRouter>
     </>
