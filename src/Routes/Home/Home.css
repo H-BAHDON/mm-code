@@ -1,4 +1,4 @@
-/* Home.css */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -16,6 +16,26 @@
   margin-bottom: 50px;
 }
 
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  color: #222;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.05);
+}
+
+.intro {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin: 25px 0;
+  color: #34495e;  
+  position: relative;
+  background: none;
+}
+
+
 .content-container {
   margin-top: 40px;
   margin-bottom: 30px;
@@ -24,10 +44,9 @@
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Adds space between the buttons */
+  gap: 15px; 
 }
 
-/* Overriding Bootstrap styles for buttons */
 .btn {
   padding: 15px 30px;
   font-size: 1.1rem;

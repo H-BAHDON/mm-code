@@ -16,11 +16,11 @@ function Home() {
   return (
     <>
       <div className="container">
-          <h1 className="display-3 mb-4">MM-Code</h1>
-          <h2 className="lead mb-4">with its active real-time users, emphasizes repetition and targeted focus, drawing inspiration from
-the philosophy of deep practice and the path to expertise. Our aim is to nurture intuitive coding abilities and tackle the initial learning
-hurdles we recognized early in the programming journey.</h2>
-<div className="d-flex align-items-center justify-content-center flex-column min-vh-100 content-container"></div>
+          <h1 className="title">MM-Code</h1>
+          <h2 className="intro">Leveraging the power of real-time user activity, we embrace the philosophy of deep practice and the journey towards expertise.
+           Our mission is to cultivate intuitive coding abilities, providing solutions to the initial challenges 
+           faced at the start of one's programming journey.</h2>
+{/* <div className="d-flex align-items-center justify-content-center flex-column min-vh-100 content-container"></div> */}
 <div className="button-group">
           <button onClick={handleGetStartedClick} className="btn btn-success btn-lg">
             Get Started

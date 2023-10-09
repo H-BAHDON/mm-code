@@ -1,3 +1,7 @@
 .copyright p{
     color: black;
 }
+
+footer {
+    position: absolute;
+}
