@@ -1,0 +1,36 @@
+[{
+    "id": 1,
+    "lang": "javascript",
+    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)",
+    "score": 3,
+    "explanation": "This code defines a recursive function factorial that calculates the factorial of a number n. The function returns 1 when n is 0 and recursively calls itself with n-1 otherwise, multiplying the result with the current value of n."
+  },
+  {
+    "id": 2,
+    "lang": "javascript",
+    "code": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14 * self.radius ** 2",
+    "score": 3,
+    "explanation": "This code defines a class Circle with a constructor (__init__) that initializes the circle object with a given radius. The class has a method area() that calculates the area of the circle using the formula: π * radius^2."
+  },
+  {
+    "id": 3,
+    "lang": "javascript",
+    "code": "def fibonacci(n):\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence",
+    "score": 3,
+    "explanation": "This code defines a function fibonacci that generates the Fibonacci sequence up to the nth number. It initializes a list fib_sequence with the first two Fibonacci numbers and iteratively calculates the next Fibonacci numbers by adding the last two numbers in the list until the list reaches the desired length n."
+  },
+  {
+    "id": 4,
+    "lang": "javascript",
+    "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n    return merge(left_half, right_half)",
+    "score": 3,
+    "explanation": "This code defines a merge_sort function that implements the merge sort algorithm to sort a given list arr. The function recursively divides the list into halves, sorts each half, and then merges the sorted halves back together using a helper function merge()."
+  },
+  {
+    "id": 5,
+    "lang": "javascript",
+    "code": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+    "score": 3,
+    "explanation": "This code defines a binary_search function that searches for a target element in a sorted list arr using the binary search algorithm. It repeatedly divides the search interval in half until the target is found or the interval becomes empty. If the target is found, the function returns its index; otherwise, it returns -1."
+  }
+  ]
