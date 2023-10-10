@@ -1,36 +1,423 @@
-[{
-    "id": 1,
-    "lang": "javascript",
-    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)",
-    "score": 3,
-    "explanation": "This code defines a recursive function factorial that calculates the factorial of a number n. The function returns 1 when n is 0 and recursively calls itself with n-1 otherwise, multiplying the result with the current value of n."
-  },
-  {
-    "id": 2,
-    "lang": "javascript",
-    "code": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14 * self.radius ** 2",
-    "score": 3,
-    "explanation": "This code defines a class Circle with a constructor (__init__) that initializes the circle object with a given radius. The class has a method area() that calculates the area of the circle using the formula: π * radius^2."
-  },
-  {
-    "id": 3,
-    "lang": "javascript",
-    "code": "def fibonacci(n):\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence",
-    "score": 3,
-    "explanation": "This code defines a function fibonacci that generates the Fibonacci sequence up to the nth number. It initializes a list fib_sequence with the first two Fibonacci numbers and iteratively calculates the next Fibonacci numbers by adding the last two numbers in the list until the list reaches the desired length n."
-  },
-  {
-    "id": 4,
-    "lang": "javascript",
-    "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n    return merge(left_half, right_half)",
-    "score": 3,
-    "explanation": "This code defines a merge_sort function that implements the merge sort algorithm to sort a given list arr. The function recursively divides the list into halves, sorts each half, and then merges the sorted halves back together using a helper function merge()."
-  },
-  {
-    "id": 5,
-    "lang": "javascript",
-    "code": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
-    "score": 3,
-    "explanation": "This code defines a binary_search function that searches for a target element in a sorted list arr using the binary search algorithm. It repeatedly divides the search interval in half until the target is found or the interval becomes empty. If the target is found, the function returns its index; otherwise, it returns -1."
-  }
+[
+    {
+      "id": 1,
+      "lang": "python",
+      "code": "print('Hello, World!')",
+      "score": 2,
+      "explanation": "This code prints the message 'Hello, World!' to the console."
+    },
+    {
+      "id": 2,
+      "lang": "python",
+      "code": "name = 'John'",
+      "score": 2,
+      "explanation": "This code assigns the string 'John' to the variable name. Variables in Python can hold various data types, including strings."
+    },
+    {
+      "id": 3,
+      "lang": "python",
+      "code": "first_name, last_name, age = 'John', 'Doe', 25",
+      "score": 2,
+      "explanation": "This code snippet declares three variables: first_name, last_name, and age. The values 'John', 'Doe', and 25 are assigned to the respective variables. It allows you to declare and initialize multiple variables in a single statement."
+    },
+    {
+      "id": 4,
+      "lang": "python",
+      "code": "PI = 3.14159",
+      "score": 2,
+      "explanation": "Here, a constant variable named PI is declared with the value 3.14159. Constants in Python are variables whose values should not be changed during the program execution."
+    },
+    {
+      "id": 5,
+      "lang": "python",
+      "code": "count = 10\ncount = 20",
+      "score": 2,
+      "explanation": "This snippet first declares a variable count and assigns it the value 10. Later, the value of count is updated to 20, demonstrating how a variable's value can be changed or updated during the program execution."
+    },
+    {
+      "id": 6,
+      "lang": "python",
+      "code": "message = None\nmessage = 'Hello!'",
+      "score": 2,
+      "explanation": "In this code, a variable named message is declared and initially set to None, which represents the absence of a value. Later, the value 'Hello!' is assigned to the message variable. Python allows variables to be assigned None initially and then updated with a value."
+    },
+    {
+      "id": 7,
+      "lang": "python",
+      "code": "x = 5\ny = x + 3",
+      "score": 2,
+      "explanation": "In this snippet, a variable x is declared and assigned the value 5. Another variable y is declared and assigned the value of the expression x + 3, which evaluates to 8. Variables can be initialized with the result of an expression."
+    },
+    {
+      "id": 8,
+      "lang": "python",
+      "code": "def factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * factorial(n - 1)",
+      "score": 3,
+      "explanation": "This code defines a recursive function factorial that calculates the factorial of a number n. The function returns 1 when n is 0 and recursively calls itself with n-1 otherwise, multiplying the result with the current value of n."
+    },
+    {
+      "id": 9,
+      "lang": "python",
+      "code": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14 * self.radius ** 2",
+      "score": 3,
+      "explanation": "This code defines a class Circle with a constructor (__init__) that initializes the circle object with a given radius. The class has a method area() that calculates the area of the circle using the formula: π * radius^2."
+    },
+    {
+      "id": 10,
+      "lang": "python",
+      "code": "def fibonacci(n):\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence",
+      "score": 3,
+      "explanation": "This code defines a function fibonacci that generates the Fibonacci sequence up to the nth number. It initializes a list fib_sequence with the first two Fibonacci numbers and iteratively calculates the next Fibonacci numbers by adding the last two numbers in the list until the list reaches the desired length n."
+    },
+    {
+      "id": 11,
+      "lang": "python",
+      "code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left_half = merge_sort(arr[:mid])\n    right_half = merge_sort(arr[mid:])\n    return merge(left_half, right_half)",
+      "score": 3,
+      "explanation": "This code defines a merge_sort function that implements the merge sort algorithm to sort a given list arr. The function recursively divides the list into halves, sorts each half, and then merges the sorted halves back together using a helper function merge()."
+    },
+    {
+      "id": 12,
+      "lang": "python",
+      "code": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+      "score": 3,
+      "explanation": "This code defines a binary_search function that searches for a target element in a sorted list arr using the binary search algorithm. It repeatedly divides the search interval in half until the target is found or the interval becomes empty. If the target is found, the function returns its index; otherwise, it returns -1."
+    },
+    {
+      "id": 13,
+      "lang": "python",
+      "code": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "score": 3,
+      "explanation": "This code defines a bubble_sort function that implements the bubble sort algorithm to sort a given list arr. The function repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order until the list is sorted."
+    },
+    {
+      "id": 14,
+      "lang": "python",
+      "code": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1",
+      "score": 3,
+      "explanation": "This code defines a linear_search function that searches for a target element in a list arr using the linear search algorithm. It iterates through the list and compares each element with the target. If the target is found, the function returns its index; otherwise, it returns -1."
+    },
+    {
+      "id": 15,
+      "lang": "python",
+      "code": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    else:\n        pivot = arr[0]\n        left = []\n        right = []\n        for x in arr[1:]:\n            if x < pivot:\n                left.append(x)\n            else:\n                right.append(x)\n        return quick_sort(left) + [pivot] + quick_sort(right)",
+      "score": 3,
+      "explanation": "This code defines a quick_sort function that implements the quicksort algorithm to sort a given list arr. The function selects a pivot element from the list and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The function then recursively sorts the sub-arrays and concatenates them around the pivot."
+    },
+    {
+      "id": 16,
+      "lang": "python",
+      "code": "def power(base, exponent):\n    result = 1\n    for _ in range(exponent):\n        result *= base\n    return result",
+      "score": 3,
+      "explanation": "This code defines a power function that calculates the power of a number base raised to an exponent. It uses a loop to multiply the base by itself exponent times and returns the result."
+    },
+    {
+      "id": 17,
+      "lang": "python",
+      "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+      "score": 3,
+      "explanation": "This code defines an is_prime function that checks whether a given number n is prime or not. It iterates through numbers from 2 to the square root of n and checks if n is divisible by any of them. If n is divisible by any number in this range, it is not a prime number; otherwise, it is prime."
+    },
+    {
+      "id": 18,
+      "lang": "python",
+      "code": "def gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a",
+      "score": 3,
+      "explanation": "This code defines a gcd function that calculates the greatest common divisor (GCD) of two numbers a and b using the Euclidean algorithm. The function repeatedly replaces a with b and b with the remainder of a divided by b until b becomes 0. At that point, the GCD is stored in a."
+    },
+    {
+      "id": 19,
+      "lang": "python",
+      "code": "def reverse_string(s):\n    return s[::-1]",
+      "score": 3,
+      "explanation": "This code defines a reverse_string function that reverses a given string s using slicing. The function returns the reversed string by using the slice notation [::-1], which reverses the string from end to start."
+    },
+    {
+      "id": 20,
+      "lang": "python",
+      "code": "def unique_elements(arr):\n    return list(set(arr))",
+      "score": 3,
+      "explanation": "This code defines a unique_elements function that takes a list arr as input and returns a list of unique elements in the input list. It converts the input list to a set, which automatically removes duplicate elements, and then converts the set back to a list to return the unique elements."
+    },
+    {
+      "id": 21,
+      "lang": "python",
+      "code": "def calculate_factorial(n):\n    if n == 0:\n        return 1\n    else:\n        return n * calculate_factorial(n - 1)",
+      "score": 3,
+      "explanation": "This code defines a calculate_factorial function that calculates the factorial of a non-negative integer n using recursion. The function returns 1 when n is 0 and recursively calls itself with n-1 otherwise, multiplying the result with the current value of n."
+    },
+    {
+      "id": 22,
+      "lang": "python",
+      "code": "def check_palindrome(s):\n    return s == s[::-1]",
+      "score": 3,
+      "explanation": "This code defines a check_palindrome function that checks whether a given string s is a palindrome or not. It compares the string with its reverse using slicing and returns True if they are the same, indicating that the input string is a palindrome."
+    },
+    {
+      "id": 23,
+      "lang": "python",
+      "code": "def calculate_fibonacci(n):\n    fib_sequence = [0, 1]\n    while len(fib_sequence) < n:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n    return fib_sequence",
+      "score": 3,
+      "explanation": "This code defines a calculate_fibonacci function that generates the Fibonacci sequence up to the nth number using iteration. It initializes a list fib_sequence with the first two Fibonacci numbers and iteratively calculates the next Fibonacci numbers by adding the last two numbers in the list until the list reaches the desired length n."
+    },
+    {
+      "id": 24,
+      "lang": "python",
+      "code": "def find_lcm(a, b):\n    lcm = max(a, b)\n    while True:\n        if lcm % a == 0 and lcm % b == 0:\n            return lcm\n        lcm += 1",
+      "score": 3,
+      "explanation": "This code defines a find_lcm function that calculates the least common multiple (LCM) of two positive integers a and b using iteration. It starts with the maximum of a and b as the initial candidate for LCM and increments it until finding a number that is divisible by both a and b, indicating the LCM."
+    },
+    {
+      "id": 25,
+      "lang": "python",
+      "code": "def matrix_transpose(matrix):\n    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]",
+      "score": 3,
+      "explanation": "This code defines a matrix_transpose function that calculates the transpose of a given matrix. It uses a nested list comprehension to swap rows and columns, creating a new matrix where rows of the original matrix become columns in the transposed matrix."
+    },
+    {
+      "id": 26,
+      "lang": "python",
+      "code": "def calculate_average(nums):\n    return sum(nums) / len(nums)",
+      "score": 3,
+      "explanation": "This code defines a calculate_average function that calculates the average of a list of numbers nums. It computes the sum of the numbers using the sum() function and divides it by the length of the list to obtain the average."
+    },
+    {
+      "id": 27,
+      "lang": "python",
+      "code": "def find_max_subarray(nums):\n    max_sum = current_sum = nums[0]\n    for num in nums[1:]:\n        current_sum = max(num, current_sum + num)\n        max_sum = max(max_sum, current_sum)\n    return max_sum",
+      "score": 3,
+      "explanation": "This code defines a find_max_subarray function that finds the maximum sum of a subarray in a given list of integers nums using the Kadane's algorithm. It iterates through the list, updating the current_sum and max_sum variables to keep track of the maximum subarray sum encountered so far."
+    },
+    {
+      "id": 28,
+      "lang": "python",
+      "code": "def find_longest_common_prefix(strings):\n    if not strings:\n        return ''\n    prefix = strings[0]\n    for string in strings[1:]:\n        while not string.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return ''\n    return prefix",
+      "score": 3,
+      "explanation": "This code defines a find_longest_common_prefix function that finds the longest common prefix among a list of strings strings. It initializes the prefix variable with the first string in the list and iterates through the remaining strings, trimming the prefix from the end until finding the common prefix or an empty string."
+    },
+    {
+      "id": 29,
+      "lang": "python",
+      "code": "def is_anagram(word1, word2):\n    return sorted(word1) == sorted(word2)",
+      "score": 3,
+      "explanation": "This code defines an is_anagram function that checks whether two words word1 and word2 are anagrams or not. It sorts the characters in each word and compares the sorted lists. If the sorted lists are equal, the words are anagrams."
+    },
+    {
+      "id": 30,
+      "lang": "python",
+      "code": "def calculate_factorial_iterative(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result",
+      "score": 3,
+      "explanation": "This code defines a calculate_factorial_iterative function that calculates the factorial of a non-negative integer n using an iterative approach. It initializes a result variable to 1 and multiplies it with numbers from 1 to n using a loop, resulting in the factorial value."
+    },
+    {
+      "id": 31,
+      "lang": "python",
+      "code": "def find_missing_number(nums):\n    n = len(nums) + 1\n    total_sum = n * (n + 1) // 2\n    actual_sum = sum(nums)\n    return total_sum - actual_sum",
+      "score": 3,
+      "explanation": "This code defines a find_missing_number function that finds the missing number in a list of integers nums from 1 to n. It calculates the expected total_sum using the formula for the sum of natural numbers and finds the actual_sum of the given list. The missing number is the difference between total_sum and actual_sum."
+    },
+    {
+      "id": 32,
+      "lang": "python",
+      "code": "def find_duplicate(nums):\n    seen = set()\n    for num in nums:\n        if num in seen:\n            return num\n        seen.add(num)\n    return None",
+      "score": 3,
+      "explanation": "This code defines a find_duplicate function that finds the first duplicate number in a list of integers nums. It uses a set seen to keep track of visited numbers. When a number is encountered that is already in the set, it is a duplicate, and the function returns it."
+    },
+    {
+      "id": 33,
+      "lang": "python",
+      "code": "def find_majority_element(nums):\n    count = 0\n    candidate = None\n    for num in nums:\n        if count == 0:\n            candidate = num\n        count += 1 if num == candidate else -1\n    return candidate",
+      "score": 3,
+      "explanation": "This code defines a find_majority_element function that finds the majority element (element appearing more than n/2 times) in a list of integers nums using the Boyer-Moore majority vote algorithm. It iterates through the list, maintaining a count variable. When the count becomes zero, a new candidate element is chosen. If the current number is the candidate, the count is increased; otherwise, it is decreased. The candidate is the majority element."
+    },
+    {
+      "id": 34,
+      "lang": "python",
+      "code": "def find_peak_element(nums):\n    left, right = 0, len(nums) - 1\n    while left < right:\n        mid = (left + right) // 2\n        if nums[mid] > nums[mid + 1]:\n            right = mid\n        else:\n            left = mid + 1\n    return left",
+      "score": 3,
+      "explanation": "This code defines a find_peak_element function that finds a peak element in a list of integers nums. A peak element is an element that is greater than or equal to its neighbors. The function uses binary search to find the peak element by comparing the mid element with its neighbors and narrowing down the search interval until a peak is found."
+    },
+    {
+      "id": 35,
+      "lang": "python",
+      "code": "def generate_pascal_triangle(n):\n    triangle = []\n    for i in range(n):\n        row = [1] * (i + 1)\n        for j in range(1, i):\n            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]\n        triangle.append(row)\n    return triangle",
+      "score": 3,
+      "explanation": "This code defines a generate_pascal_triangle function that generates the first n rows of Pascal's triangle. It initializes an empty list triangle and iteratively constructs each row of the triangle by summing the appropriate elements from the previous row."
+    },
+    {
+      "id": 36,
+      "lang": "python",
+      "code": "def rotate_image(matrix):\n    n = len(matrix)\n    for i in range(n // 2):\n        for j in range(i, n - i - 1):\n            temp = matrix[i][j]\n            matrix[i][j] = matrix[n - j - 1][i]\n            matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]\n            matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]\n            matrix[j][n - i - 1] = temp",
+      "score": 3,
+      "explanation": "This code defines a rotate_image function that rotates an NxN matrix 90 degrees clockwise in place. It iterates through the matrix in layers, swapping elements in a cyclic manner until the entire matrix is rotated."
+    },
+    {
+      "id": 37,
+      "lang": "python",
+      "code": "def find_minimum_in_rotated_sorted_array(nums):\n    left, right = 0, len(nums) - 1\n    while left < right:\n        mid = (left + right) // 2\n        if nums[mid] > nums[right]:\n            left = mid + 1\n        else:\n            right = mid\n    return nums[left]",
+      "score": 3,
+      "explanation": "This code defines a find_minimum_in_rotated_sorted_array function that finds the minimum element in a rotated sorted array nums. It uses binary search to find the minimum element by comparing the mid element with the rightmost element and narrowing down the search interval accordingly."
+    },
+    {
+      "id": 38,
+      "lang": "python",
+      "code": "def generate_gray_code(n):\n    if n == 0:\n        return [0]\n    gray_code = [0, 1]\n    for i in range(1, n):\n        mask = 1 << i\n        for j in range(len(gray_code) - 1, -1, -1):\n            gray_code.append(gray_code[j] | mask)\n    return gray_code",
+      "score": 3,
+      "explanation": "This code defines a generate_gray_code function that generates the Gray code sequence of length n. Gray code is a binary numeral system where two successive values differ in only one bit. The function iteratively constructs the Gray code sequence by mirroring the existing sequence and adding a higher-order bit."
+    },
+    {
+      "id": 39,
+      "lang": "python",
+      "code": "def calculate_hamming_distance(x, y):\n    xor_result = x ^ y\n    hamming_distance = 0\n    while xor_result:\n        hamming_distance += xor_result & 1\n        xor_result >>= 1\n    return hamming_distance",
+      "score": 3,
+      "explanation": "This code defines a calculate_hamming_distance function that calculates the Hamming distance between two integers x and y. Hamming distance is the number of differing bits between two numbers. The function first calculates the XOR of x and y, then iterates through the bits of the XOR result, counting the differing bits."
+    },
+    {
+      "id": 40,
+      "lang": "python",
+      "code": "def calculate_power_of_two(n):\n    return n > 0 and (n & (n - 1)) == 0",
+      "score": 3,
+      "explanation": "This code defines a calculate_power_of_two function that checks whether a given positive integer n is a power of two. It uses bitwise AND to determine if n has only one bit set to 1. If so, n is a power of two; otherwise, it is not."
+    },
+    {
+      "id": 41,
+      "lang": "python",
+      "code": "def find_single_number(nums):\n    result = 0\n    for num in nums:\n        result ^= num\n    return result",
+      "score": 3,
+      "explanation": "This code defines a find_single_number function that finds the single number in a list of integers nums where every element appears twice except for one. It uses bitwise XOR to find the unique number. XORing a number with itself results in 0, so XORing all elements in the list cancels out the duplicates, leaving the unique number."
+    },
+    {
+      "id": 42,
+      "lang": "python",
+      "code": "def calculate_trailing_zeroes(n):\n    count = 0\n    while n > 0:\n        n //= 5\n        count += n\n    return count",
+      "score": 3,
+      "explanation": "This code defines a calculate_trailing_zeroes function that calculates the number of trailing zeroes in n! (n factorial). Trailing zeroes occur because factorial results include factors of 2 and 5, and the count of 5s determines the number of trailing zeroes. The function iteratively divides n by 5 and accumulates the count."
+    },
+    {
+      "id": 43,
+      "lang": "python",
+      "code": "def find_nth_ugly_number(n):\n    ugly_numbers = [1]\n    i2, i3, i5 = 0, 0, 0\n    while len(ugly_numbers) < n:\n        next_ugly = min(ugly_numbers[i2] * 2, ugly_numbers[i3] * 3, ugly_numbers[i5] * 5)\n        ugly_numbers.append(next_ugly)\n        if next_ugly == ugly_numbers[i2] * 2:\n            i2 += 1\n        if next_ugly == ugly_numbers[i3] * 3:\n            i3 += 1\n        if next_ugly == ugly_numbers[i5] * 5:\n            i5 += 1\n    return ugly_numbers[-1]",
+      "score": 3,
+      "explanation": "This code defines a find_nth_ugly_number function that finds the nth ugly number. Ugly numbers are positive integers whose prime factors are limited to 2, 3, and 5. The function maintains a list ugly_numbers containing the ugly numbers found so far and iteratively calculates the next ugly number by multiplying the existing ugly numbers with 2, 3, and 5 and selecting the smallest result."
+    },
+    {
+      "id": 44,
+      "lang": "python",
+      "code": "def check_valid_parentheses(s):\n    stack = []\n    mapping = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+      "score": 3,
+      "explanation": "This code defines a check_valid_parentheses function that checks whether a given string s containing parentheses is valid. It uses a stack to keep track of opening parentheses encountered and matches them with closing parentheses. If a mismatch is found, the function returns False; otherwise, it returns True if the stack is empty."
+    },
+    {
+      "id": 45,
+      "lang": "python",
+      "code": "def calculate_expression(expression):\n    stack = []\n    operators = set(['+', '-', '*', '/'])\n    for char in expression:\n        if char not in operators:\n            stack.append(int(char))\n        else:\n            num2 = stack.pop()\n            num1 = stack.pop()\n            if char == '+':\n                stack.append(num1 + num2)\n            elif char == '-':\n                stack.append(num1 - num2)\n            elif char == '*':\n                stack.append(num1 * num2)\n            elif char == '/':\n                stack.append(num1 / num2)\n    return stack[0]",
+      "score": 3,
+      "explanation": "This code defines a calculate_expression function that evaluates a given mathematical expression in reverse Polish notation (postfix notation) using a stack. It iterates through the expression and performs the corresponding operations when encountering operators, pushing operands onto the stack and evaluating the expression step by step."
+    },
+    {
+      "id": 46,
+      "lang": "python",
+      "code": "def calculate_expression_infix(expression):\n    def precedence(op):\n        if op == '+' or op == '-':\n            return 1\n        if op == '*' or op == '/':\n            return 2\n        return 0\n\n    def apply_operator(operators, values):\n        operator = operators.pop()\n        right = values.pop()\n        left = values.pop()\n        if operator == '+':\n            values.append(left + right)\n        elif operator == '-':\n            values.append(left - right)\n        elif operator == '*':\n            values.append(left * right)\n        elif operator == '/':\n            values.append(left / right)\n\n    operators = []\n    values = []\n    i = 0\n    while i < len(expression):\n        if expression[i].isdigit():\n            j = i\n            while j < len(expression) and (expression[j].isdigit() or expression[j] == '.'):\n                j += 1\n            values.append(float(expression[i:j]))\n            i = j\n        elif expression[i] in '+-*/':\n            while operators and operators[-1] in '+-*/' and precedence(operators[-1]) >= precedence(expression[i]):\n                apply_operator(operators, values)\n            operators.append(expression[i])\n        elif expression[i] == '(': \n            operators.append(expression[i])\n        elif expression[i] == ')':\n            while operators and operators[-1] != '(': \n                apply_operator(operators, values)\n            operators.pop()\n        i += 1\n    while operators:\n        apply_operator(operators, values)\n    return values[0]",
+      "score": 3,
+      "explanation": "This code defines a calculate_expression_infix function that evaluates a given mathematical expression in infix notation using the Shunting Yard algorithm. It iterates through the expression, using two stacks, operators, and values, to process operators and operands according to their precedence and associativity rules. The function returns the final result of the expression evaluation."
+    },
+    {
+      "id": 47,
+      "lang": "python",
+      "code": "def find_longest_increasing_subsequence(nums):\n    if not nums:\n        return 0\n    n = len(nums)\n    dp = [1] * n\n    for i in range(1, n):\n        for j in range(i):\n            if nums[i] > nums[j]:\n                dp[i] = max(dp[i], dp[j] + 1)\n    return max(dp)",
+      "score": 3,
+      "explanation": "This code defines a find_longest_increasing_subsequence function that finds the length of the longest increasing subsequence in a given list of integers nums. It uses dynamic programming to track the length of the longest increasing subsequence ending at each index i. The function iterates through the list, updating the dp array based on the increasing subsequence found so far and returns the maximum length."
+    },
+    {
+      "id": 48,
+      "lang": "python",
+      "code": "def find_longest_common_subsequence(str1, str2):\n    m, n = len(str1), len(str2)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    return dp[m][n]",
+      "score": 3,
+      "explanation": "This code defines a find_longest_common_subsequence function that finds the length of the longest common subsequence (LCS) of two strings str1 and str2. It uses dynamic programming to construct a 2D dp array, where dp[i][j] represents the length of the LCS of the first i characters of str1 and the first j characters of str2. The function iterates through the strings, updating the dp array based on matching characters and returns dp[m][n] as the length of the LCS."
+    },
+    {
+      "id": 49,
+      "lang": "python",
+      "code": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef is_same_tree(p, q):\n    if not p and not q:\n        return True\n    if not p or not q or p.val != q.val:\n        return False\n    return is_same_tree(p.left, q.left) and is_same_tree(p.right, q.right)",
+      "score": 3,
+      "explanation": "This code defines a TreeNode class representing a node in a binary tree and an is_same_tree function that checks whether two binary trees p and q are the same. The function uses recursion to compare nodes in both trees. If the current nodes are both None or their values are equal, the function continues to compare the left and right subtrees recursively. If any mismatch is found, the function returns False; otherwise, it returns True when both trees are exhausted, indicating that they are the same."
+    },
+    {
+      "id": 50,
+      "lang": "python",
+      "code": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef is_palindrome(head):\n    values = []\n    current = head\n    while current:\n        values.append(current.val)\n        current = current.next\n    return values == values[::-1]",
+      "score": 3,
+      "explanation": "This code defines a ListNode class representing a node in a linked list and an is_palindrome function that checks whether a linked list is a palindrome. The function iterates through the linked list, storing node values in a list, and then compares the list with its reverse. If they are the same, the linked list is a palindrome; otherwise, it is not."
+    },
+    {
+      "id": 51,
+      "lang": "python",
+      "code": "class MinStack:\n    def __init__(self):\n        self.stack = []\n        self.min_values = []\n\n    def push(self, val):\n        self.stack.append(val)\n        if not self.min_values or val <= self.min_values[-1]:\n            self.min_values.append(val)\n\n    def pop(self):\n        if self.stack:\n            if self.stack[-1] == self.min_values[-1]:\n                self.min_values.pop()\n            self.stack.pop()\n\n    def top(self):\n        return self.stack[-1] if self.stack else None\n\n    def get_min(self):\n        return self.min_values[-1] if self.min_values else None",
+      "score": 3,
+      "explanation": "This code defines a MinStack class that supports push, pop, top, and get_min operations in constant time. The class uses two stacks: one for storing values and another for tracking the minimum values. When pushing a value, it is added to the main stack, and if it is smaller than or equal to the current minimum, it is also added to the minimum stack. When popping a value, it is removed from both stacks. The top operation returns the top value from the main stack, and the get_min operation returns the top value from the minimum stack."
+    },
+    {
+      "id": 52,
+      "lang": "python",
+      "code": "class LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = {}\n        self.order = []\n\n    def get(self, key):\n        if key in self.cache:\n            self.order.remove(key)\n            self.order.insert(0, key)\n            return self.cache[key]\n        else:\n            return -1\n\n    def put(self, key, value):\n        if key in self.cache:\n            self.cache[key] = value\n            self.order.remove(key)\n            self.order.insert(0, key)\n        else:\n            if len(self.order) >= self.capacity:\n                removed_key = self.order.pop()\n                del self.cache[removed_key]\n            self.cache[key] = value\n            self.order.insert(0, key)",
+      "score": 3,
+      "explanation": "This code defines an LRUCache class implementing a Least Recently Used (LRU) cache with get and put operations. The class maintains a dictionary cache for key-value storage and a list order to track the order of keys based on their access. When getting a value, the key is moved to the front of the order list. When putting a new key-value pair, if the cache is full, the least recently used key is removed. The class ensures constant time complexity for both get and put operations."
+    },
+    {
+      "id": 53,
+      "lang": "python",
+      "code": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n\n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n\n    def search(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return node.is_end_of_word\n\n    def starts_with(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return True",
+      "score": 3,
+      "explanation": "This code defines a TrieNode class representing a node in a trie and a Trie class implementing a trie data structure. The Trie class supports insert, search, and starts_with operations. The insert operation adds a word to the trie, creating nodes for each character. The search operation checks if a word exists in the trie by following the characters' paths. The starts_with operation checks if a prefix exists in the trie, indicating the presence of words with that prefix."
+    },
+    {
+      "id": 54,
+      "lang": "python",
+      "code": "def generate_parentheses(n):\n    def backtrack(s='', left=0, right=0):\n        if len(s) == 2 * n:\n            parentheses.append(s)\n            return\n        if left < n:\n            backtrack(s + '(', left + 1, right)\n        if right < left:\n            backtrack(s + ')', left, right + 1)\n\n    parentheses = []\n    backtrack()\n    return parentheses",
+      "score": 3,
+      "explanation": "This code defines a generate_parentheses function that generates all valid combinations of n pairs of parentheses. It uses backtracking, maintaining counts of left and right parentheses. The function recursively explores adding a left parenthesis if there are remaining left parentheses, and adding a right parenthesis if it does not violate the balance condition. Valid combinations are added to the parentheses list, and the function returns the list of all valid combinations."
+    },
+    {
+      "id": 55,
+      "lang": "python",
+      "code": "def solve_n_queens(n):\n    def is_not_under_attack(row, col):\n        for prev_row in range(row):\n            if board[prev_row] == col or \\\n               board[prev_row] - prev_row == col - row or \\\n               board[prev_row] + prev_row == col + row:\n                return False\n        return True\n\n    def place_queen(row):\n        if row == n:\n            solutions.append(list(board))\n            return\n        for col in range(n):\n            if is_not_under_attack(row, col):\n                board[row] = col\n                place_queen(row + 1)\n                board[row] = 0\n\n    board = [0] * n\n    solutions = []\n    place_queen(0)\n    return solutions",
+      "score": 3,
+      "explanation": "This code defines a solve_n_queens function that finds all solutions to the N-Queens problem for a given board size n. The function uses backtracking to explore possible queen placements on the board. It checks if a queen can be placed in the current position without being under attack from other queens placed so far. Valid placements are explored recursively, and solutions are collected in the solutions list. The function returns a list of all solutions."
+    },
+    {
+      "id": 56,
+      "lang": "python",
+      "code": "def can_partition(nums):\n    total_sum = sum(nums)\n    if total_sum % 2 != 0:\n        return False\n    target_sum = total_sum // 2\n    n = len(nums)\n    dp = [[False] * (target_sum + 1) for _ in range(n + 1)]\n    for i in range(n + 1):\n        dp[i][0] = True\n    for i in range(1, n + 1):\n        for j in range(1, target_sum + 1):\n            dp[i][j] = dp[i - 1][j]\n            if j >= nums[i - 1]:\n                dp[i][j] = dp[i][j] or dp[i - 1][j - nums[i - 1]]\n    return dp[n][target_sum]",
+      "score": 3,
+      "explanation": "This code defines a can_partition function that determines if a given list of positive integers nums can be partitioned into two subsets with equal sum. The function uses dynamic programming with a 2D dp array, where dp[i][j] represents if there is a subset of the first i elements that sums up to j. The function iterates through the list, updating the dp array based on the possibility of including or excluding the current number. Finally, it returns whether there is a subset of nums that sums up to half of the total sum."
+    },
+    {
+      "id": 57,
+      "lang": "python",
+      "code": "def coin_change(coins, amount):\n    dp = [float('inf')] * (amount + 1)\n    dp[0] = 0\n    for coin in coins:\n        for i in range(coin, amount + 1):\n            dp[i] = min(dp[i], dp[i - coin] + 1)\n    return dp[amount] if dp[amount] != float('inf') else -1",
+      "score": 3,
+      "explanation": "This code defines a coin_change function that calculates the minimum number of coins needed to make up a given amount using the provided denominations in the coins list. The function uses dynamic programming with a dp array, where dp[i] represents the minimum number of coins needed to make up the amount i. The function iterates through the coins and updates the dp array based on the minimum number of coins needed for each amount from 0 to the target amount. Finally, it returns the value at dp[amount] if it is not infinity; otherwise, it returns -1, indicating that it is not possible to make up the amount with the given denominations."
+    },
+    {
+      "id": 58,
+      "lang": "python",
+      "code": "def can_cross(stones):\n    positions = {stone: set() for stone in stones}\n    positions[0].add(0)\n    for stone in stones[:-1]:\n        for jump in positions[stone]:\n            for step in range(jump - 1, jump + 2):\n                if step > 0 and stone + step in positions:\n                    positions[stone + step].add(step)\n    return bool(positions[stones[-1]])",
+      "score": 3,
+      "explanation": "This code defines a can_cross function that determines if a frog can cross a river of stones using a series of jumps. The function uses dynamic programming with a dictionary positions, where keys are stone positions, and values are sets of possible jump sizes. It iterates through the stones, jumps, and possible steps, updating the positions dictionary based on valid jumps. Finally, it checks if there are valid jumps from the last stone position, indicating that the frog can reach the other side of the river."
+    },
+    {
+      "id": 59,
+      "lang": "python",
+      "code": "def maximal_square(matrix):\n    if not matrix:\n        return 0\n    m, n = len(matrix), len(matrix[0])\n    dp = [[0] * n for _ in range(m)]\n    max_side = 0\n    for i in range(m):\n        for j in range(n):\n            if matrix[i][j] == '1':\n                if i == 0 or j == 0:\n                    dp[i][j] = 1\n                else:\n                    dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1\n                max_side = max(max_side, dp[i][j])\n    return max_side * max_side",
+      "score": 3,
+      "explanation": "This code defines a maximal_square function that finds the size of the largest square containing only 1s in a binary matrix. The function uses dynamic programming with a 2D dp array, where dp[i][j] represents the side length of the largest square ending at position (i, j). It iterates through the matrix, updating the dp array based on the minimum of the adjacent squares and the current position. The function keeps track of the maximum side length encountered so far and returns the area of the largest square."
+    },
+    {
+      "id": 60,
+      "lang": "python",
+      "code": "def num_decodings(s):\n    if not s or s[0] == '0':\n        return 0\n    n = len(s)\n    dp = [0] * (n + 1)\n    dp[0] = dp[1] = 1\n    for i in range(2, n + 1):\n        if 1 <= int(s[i - 1:i]) <= 9:\n            dp[i] += dp[i - 1]\n        if 10 <= int(s[i - 2:i]) <= 26:\n            dp[i] += dp[i - 2]\n    return dp[n]",
+      "score": 3,
+      "explanation": "This code defines a num_decodings function that counts the number of ways to decode a given string s containing digits from 1 to 26, where 'A' is represented as 1, 'B' as 2, ..., 'Z' as 26. The function uses dynamic programming with a dp array, where dp[i] represents the number of ways to decode the first i characters of the string. It iterates through the string, updating dp[i] based on the single-digit and two-digit possibilities. The function returns dp[n] as the final result, where n is the length of the input string."
+    }
   ]
+  
