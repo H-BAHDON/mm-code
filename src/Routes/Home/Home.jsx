@@ -15,27 +15,16 @@ function Home() {
 
     return (
         <div className="homePage">
-            <nav className="navbar">
-                <span className="logo">MM-Code</span>
-                <ul className="navLinks">
-                    {/* <li><a href="#courses">Courses</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li> */}
-                </ul>
-            </nav>
-
             <main className="content">
-              <div class="typewriter">
+              <div className="typewriter">
                 <h1>Welcome to MM-Code</h1>
                 <p>Embark on a journey of deep practice with us, overcoming initial challenges to attain coding expertise.</p>
                 </div>
                <div className="button-group">
           <button onClick={handleGetStartedClick} className="btn btn-success btn-lg">
             Get Started
-            <i className="ml-2 fas fa-arrow-right"></i>
           </button>
-          <button onClick={handleDemoClick} className="btn btn-info btn-lg">
-            Demo           </button>
+          <button onClick={handleDemoClick} className="btn btn-info btn-lg">Demo</button>
         </div>
             </main>
         </div>
