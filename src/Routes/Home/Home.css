@@ -1,4 +1,4 @@
-/* Basic Resets */
+
 body, h1, p, a {
   margin: 0;
   padding: 0;
@@ -8,8 +8,8 @@ body, h1, p, a {
 }
 
 @keyframes typing {
-  from { width: 0; opacity: 1; }  /* Added opacity transition */
-  to { width: 100%; opacity: 1; }  /* Ensured opacity stays at 1 */
+  from { width: 0; opacity: 1; }  
+  to { width: 100%; opacity: 1; }  
 }
 
 @keyframes blink {
@@ -28,10 +28,10 @@ body, h1, p, a {
 }
 
 .typewriter h1 {
-  max-width: 100%;  /* Restricting the maximum width */
+  max-width: 100%;  
   overflow: hidden;
   animation:
-    typing 3.5s steps(40, end) forwards,  /* Added forwards to retain the end state of the animation */
+    typing 3.5s steps(40, end) forwards,  
     blink .75s step-end infinite;
 }
 
@@ -42,8 +42,8 @@ body, h1, p, a {
   opacity: 0;
   animation-duration: 3s, .75s;
   animation-timing-function: steps(40, end), step-end;
-  animation-delay: 3.5s, 3.5s;
-  animation-fill-mode: forwards, forwards;  /* Ensures both animations' final state persists */
+  animation-delay: 2s, 3.5s;
+  animation-fill-mode: forwards, forwards;  
   animation-iteration-count: 1, infinite;
   margin-bottom: 2vh;
 }
