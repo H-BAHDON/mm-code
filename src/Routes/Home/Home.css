@@ -7,6 +7,16 @@ body, h1, p, a {
   color: inherit;
 }
 
+
+span {
+  text-transform: Uppercase;
+margin-bottom: .5em;
+font-family: 'Rubik', sans-serif;
+font-size: 6rem;
+color: #E4E5E6;
+position: relative;
+}
+
 @keyframes typing {
   from { width: 0; opacity: 1; }  
   to { width: 100%; opacity: 1; }  
@@ -53,44 +63,3 @@ body, h1, p, a {
   height: 100vh;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: #f4f4f4;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.navLinks {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navLinks li a {
-  color: #666;
-  transition: color 0.3s;
-}
-
-.navLinks li a:hover {
-  color: #333;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
-
-.content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
