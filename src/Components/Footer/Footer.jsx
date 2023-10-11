@@ -13,7 +13,7 @@ function Footer() {
           <div className="row justify-content-center">
             <div className="col-md-9 text-center">
               <div className="social mb-4">
-                <h3>MM-Code</h3>
+                {/* <h3>MM-Code</h3> */}
                 <ul className="list-unstyled">
                   <li className="in">
                     <a href="#">
