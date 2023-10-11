@@ -21,7 +21,7 @@ body, h1, p, a {
   justify-content: center;
   align-items: center;
   flex-direction: column; 
-  height: 100vh;
+  height: 90vh;
   margin: 0;
 }
 /* /* h1 & p ----------------------------------------------------------------------------------------------  */
