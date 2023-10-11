@@ -44,7 +44,7 @@ body, h1, p, a {
   max-width: 100%;  
   overflow: hidden;
   animation:
-    typing 3.5s steps(40, end) forwards,  
+    typing 4.5s steps(40, end) forwards,  
     blink .75s step-end infinite;
 }
 
@@ -52,7 +52,7 @@ body, h1, p, a {
   color: black;
   width: fit-content;
   opacity: 0;
-  animation-duration: 3s, .75s;
+  animation-duration: 4s, .75s;
   animation-timing-function: steps(40, end), step-end;
   animation-delay: 2s, 3.5s;
   animation-fill-mode: forwards, forwards;  
