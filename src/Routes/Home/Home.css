@@ -7,11 +7,9 @@ body, h1, p, a {
   color: inherit;
 }
 
-
-
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0; opacity: 1; }  /* Added opacity transition */
+  to { width: 100%; opacity: 1; }  /* Ensured opacity stays at 1 */
 }
 
 @keyframes blink {
@@ -24,16 +22,26 @@ body, h1, p, a {
   border-right: .15em solid black; 
   white-space: nowrap; 
   margin: 0 auto; 
-  letter-spacing: .15em;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink .75s step-end infinite;
+  letter-spacing: .15em; 
+  animation-name: typing, blink;
+}
+
+.typewriter h1 {
+  width: fit-content;
+  animation-duration: 3.5s, .75s;
+  animation-timing-function: steps(40, end), step-end;
+  animation-iteration-count: 1, infinite;
 }
 
 .typewriter p {
   color: black;
-  animation-delay: 3.5s; 
-  animation-duration: 3s; 
+  width: fit-content;
+  opacity: 0;
+  animation-duration: 3s, .75s;
+  animation-timing-function: steps(40, end), step-end;
+  animation-delay: 3.5s, 3.5s;
+  animation-fill-mode: forwards, forwards;  /* Ensures both animations' final state persists */
+  animation-iteration-count: 1, infinite;
 }
 
 .homePage {
