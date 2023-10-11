@@ -45,7 +45,7 @@ function Footer() {
 
               <div className="copyright">
                 <p className="mb-0">
-                  <small>&copy; MMCode. All Rights Reserved. {thisYear}</small>
+                  <small>&copy; MMCode™ All Rights Reserved. {thisYear}</small>
                 </p>
               </div>
             </div>
