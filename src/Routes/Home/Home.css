@@ -7,15 +7,17 @@ body, h1, p, a {
   color: inherit;
 }
 
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:700,900');
 
 span {
   text-transform: Uppercase;
 margin-bottom: .5em;
-font-family: 'Rubik', sans-serif;
+font-family: 'Raleway', sans-serif;
 font-size: 6rem;
-color: #E4E5E6;
+color: #E33E39;
 position: relative;
-}
+text-shadow: 0 2px 7px rgba(0,0,0,.5)
+} */
 
 @keyframes typing {
   from { width: 0; opacity: 1; }  
