@@ -19,19 +19,22 @@ body, h1, p, a {
 .typewriter h1,
 .typewriter p {
   overflow: hidden; 
-  border-right: .15em solid black; 
+ 
   white-space: nowrap; 
   margin: 0 auto; 
   letter-spacing: .15em; 
-  animation-name: typing, blink;
+  animation-name: typing;
+  text-align: center;
 }
 
 .typewriter h1 {
-  width: fit-content;
-  animation-duration: 3.5s, .75s;
-  animation-timing-function: steps(40, end), step-end;
-  animation-iteration-count: 1, infinite;
+  max-width: 100%;  /* Restricting the maximum width */
+  overflow: hidden;
+  animation:
+    typing 3.5s steps(40, end) forwards,  /* Added forwards to retain the end state of the animation */
+    blink .75s step-end infinite;
 }
+
 
 .typewriter p {
   color: black;
@@ -42,6 +45,7 @@ body, h1, p, a {
   animation-delay: 3.5s, 3.5s;
   animation-fill-mode: forwards, forwards;  /* Ensures both animations' final state persists */
   animation-iteration-count: 1, infinite;
+  margin-bottom: 2vh;
 }
 
 .homePage {
