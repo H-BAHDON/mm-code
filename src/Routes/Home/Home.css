@@ -7,6 +7,35 @@ body, h1, p, a {
   color: inherit;
 }
 
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter h1,
+.typewriter p {
+  overflow: hidden; 
+  border-right: .15em solid black; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink .75s step-end infinite;
+}
+
+.typewriter p {
+  color: black;
+  animation-delay: 3.5s; 
+  animation-duration: 3s; 
+}
+
 .homePage {
   background-color: #fafafa;
   height: 100vh;

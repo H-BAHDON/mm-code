@@ -25,8 +25,10 @@ function Home() {
             </nav>
 
             <main className="content">
-                <h1>Welcome to CodeLearn</h1>
-                <p>Start your coding journey with us today.</p>
+              <div class="typewriter">
+                <h1>Welcome to MM-Code</h1>
+                <p>Embark on a journey of deep practice with us, overcoming initial challenges to attain coding expertise.</p>
+                </div>
                <div className="button-group">
           <button onClick={handleGetStartedClick} className="btn btn-success btn-lg">
             Get Started
