@@ -1,80 +1,55 @@
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  text-align: center;
+/* Basic Resets */
+body, h1, p, a {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: inherit;
 }
 
-.display-3 {
-  font-size: 3rem;
-  font-weight: bold;
+.homePage {
+  background-color: #fafafa;
+  height: 100vh;
 }
 
-.lead {
-  font-size: 1.5rem;
-  margin-bottom: 50px;
-}
-
-.title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 4rem;
-  color: #222;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.05);
-}
-
-.intro {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.7rem;
-  line-height: 1.8;
-  margin: 25px 0;
-  color: #34495e;  
-  position: relative;
-  background: none;
-}
-
-
-.content-container {
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
-.button-group {
+.navbar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #f4f4f4;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li a {
+  color: #666;
+  transition: color 0.3s;
+}
+
+.navLinks li a:hover {
+  color: #333;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 15px; 
+  align-items: center;
+  height: 80vh;
 }
 
-.btn {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:hover, .btn:focus {
-  transform: scale(1.05);
-  outline: none; 
-}
-
-.btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
-}
-
-.btn-success:hover, .btn-success:focus {
-  background-color: #218838;
-  border-color: #218838;
-}
-
-.btn-info {
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-}
-
-.btn-info:hover, .btn-info:focus {
-  background-color: #138496;
-  border-color: #138496;
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
