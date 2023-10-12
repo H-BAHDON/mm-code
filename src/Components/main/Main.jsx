@@ -5,8 +5,6 @@ import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
 
-
-
 import ThemeSelector from "../themeSelector/themeSelector";
 import Header from "../header/Header";
 // ---------------------------
