@@ -6,6 +6,8 @@ import UserProfile from './User-Dashboard/userProfile';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; 
 import { apiUrl } from '../config/config';
+import DemoPlatform from '../Routes/DemoPlatform/DemoPlatform';
+
 
 const PrivateRoute = ({ element, path }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -49,5 +51,9 @@ export const routes = [
   {
     path: '/UserProfile',
     element: <PrivateRoute element={<UserProfile />} />,
+  },
+  {
+    path: '/demo',
+    element: <DemoPlatform />,
   },
 ];
