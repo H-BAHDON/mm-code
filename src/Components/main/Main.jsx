@@ -5,8 +5,8 @@ import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
 import "./main.css"
 
-import GuideModalContent from "./modal/GuideModalContent";
-import CodeModalContent from "./modal/CodeModalContent";
+
+
 import ThemeSelector from "../themeSelector/themeSelector";
 import Header from "../header/Header";
 // ---------------------------
@@ -231,7 +231,6 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
         setShowGuide(true);
     };
     const handleCloseGuide = () => {
-        console.log("Closing Guide Modal"); // Check if this log is displayed in the console
         setShowGuide(false);
     };
     const handleConfettiComplete = () => {
@@ -266,95 +265,80 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
 
     return (
         <main>
-        
-        <Grid container spacing={0} direction="row" justifyContent="space-between" alignItems="stretch">
-          <Grid
-            item
-            xs={12}
-            md={1.5}
-            className="Leftbar makeStyles-leftbar-4"
-            style={{ height: "100%" }}
-          >
-            <div className="leftbar-main" style={{ height: "100%" }}>
-              <div className="guide-button">
-                <ButtonOfPage
-                  nameButton="Guide Me!"
-                  handle={handleShowGuide}
-                  styleButton="btn btn-outline-primary btn-sm"
-                />
-              </div>
-  
-              <Header
-                showLogoBar={false}
-                handleHTMLClick={handleHTMLClick}
-                handleJavaScriptClick={handleJavaScriptClick}
-                handleCSSClick={handleCSSClick}
-                handleReactClick={handleReactClick}
-                handleSqlClick={handleSqlClick}
-                handleTestClick={handleTestClick}
-              />
-  
-              <div>
-                <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
-              </div>
-            </div>
-          </Grid>
-  
-          <Grid
-            item
-            xs={12}
-            md={10.5}
-            className="right-bar-textEditor MuiBox-root css-13o7eu2"
-            style={{ height: "100%" }}
-          >
-            <div
-              className="InterfaceView TitlebarView titlebar enabled"
-              style={{ height: "100%" }}
-            >
-              <div className="FilePath path">
-                <div className="part">Index - {exerciseLanguage}</div>
-              </div>
-              <div className="tools">
-                <ButtonOfPage
-                  nameButton="What's The Code"
-                  handle={handleShowModal}
-                  styleButton={"btn btn-outline-primary btn-sm"}
-                />
-                <ButtonOfPage
-                  nameButton={nextButton ? "Next Exercise" : "Check Code"}
-                  handle={nextButton ? handleNextExercise : handleCheckCode}
-                  styleButton={
-                    nextButton ? "btn-primary" : "btn btn-outline-success btn-sm"
-                  }
-                />
-                <ButtonOfPage
-                  nameButton="Skip"
-                  handle={handleSkipExercise}
-                  styleButton={"btn btn-outline-danger btn-sm"}
-                  handleBoolean={checkButton}
-                />
-              </div>
-            </div>
-  
-            <CodeEditor
-              userCode={userCode}
-              setUserCode={setUserCode}
-              initialCode={initialCode}
-              exerciseLanguage={exerciseLanguage}
-              showModal={showModal}
-              nextButton={nextButton}
-              skipButton={skipButton}
-              showGuide={showGuide}
-              checkButton={checkButton}
-              theme={theme}
-              fontSize={fontSize}
-            />
-          </Grid>
+        <Grid container spacing={0}>
+        <Grid item xs={12} md={1.5} className="Leftbar makeStyles-leftbar-4">
 
-          </Grid>
+         <div className="leftbar-main">
+        <div className="guide-button">
+          <ButtonOfPage
+            nameButton="Guide Me!"
+            handle={handleShowGuide}
+            styleButton="btn btn-outline-primary btn-sm"
+          />
+        </div>
+
+        <Header
+          showLogoBar={false}
+          handleHTMLClick={handleHTMLClick}
+          handleJavaScriptClick={handleJavaScriptClick}
+          handleCSSClick={handleCSSClick}
+          handleReactClick={handleReactClick}
+          handleSqlClick={handleSqlClick}
+          handleTestClick={handleTestClick}
+        />
+
+        <div >
+          <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
+        </div>
+      </div>
+    </Grid>
 
 
+                <Grid item xs={12} md={10.5}  className="right-bar-textEditor MuiBox-root css-13o7eu2">
 
+                    <div className="InterfaceView TitlebarView titlebar enabled">
+                        <div className="FilePath path">
+                            <div className="part">Index - {exerciseLanguage}</div>
+                        </div>
+                        <div className="tools">
+                            <div className="_shortcut shortcut-ctrl_s" data-shortcut="CTRLS"></div>
+                            <ButtonOfPage
+                                nameButton="What's The Code"
+                                handle={handleShowModal}
+                                styleButton={"btn btn-outline-primary btn-sm"}
+                            />
+
+
+                            <ButtonOfPage
+                                nameButton={nextButton ? "Next Exercise" : "Check Code"} // Change button text dynamically
+                                handle={nextButton ? handleNextExercise : handleCheckCode} // Toggle between handle functions
+                                styleButton={nextButton ? "btn-primary" : "btn btn-outline-success btn-sm"}
+                            />
+                            <ButtonOfPage
+                                nameButton="Skip"
+                                handle={handleSkipExercise}
+                                styleButton={"btn btn-outline-danger btn-sm"}
+                                handleBoolean={checkButton}
+                            />
+                        </div>
+                    </div>
+
+                    <CodeEditor
+                        userCode={userCode}
+                        setUserCode={setUserCode}
+                        initialCode={initialCode}
+                        exerciseLanguage={exerciseLanguage}
+                        showModal={showModal}
+                        nextButton={nextButton}
+                        skipButton={skipButton}
+                        showGuide={showGuide}
+                        checkButton={checkButton}
+                        theme={theme}
+                        fontSize={fontSize}
+                    />
+                 </Grid>
+
+                 </Grid>
 
             <div className="main-bottom">
                 <p
@@ -366,6 +350,8 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                 </p>
                 <p className="score">Your Score: {score}</p>
             </div>
+
+
             {showConfetti && (
                 <Confetti
                     width={window.innerWidth}
@@ -377,14 +363,64 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
                     onConfettiComplete={handleConfettiComplete}
                 />
             )}
-            {showModal &&  
-            <CodeModalContent
-                initialCode={initialCode}
-                currentExerciseExplanation={currentExerciseExplanation}
-                handleCloseModal={handleCloseModal}  
-            />}
-            {showGuide && <GuideModalContent handleCloseGuide={handleCloseGuide} />}
 
+            {showModal && (
+                <div className="modals">
+                    <div className="modals-overlay" onClick={handleCloseModal}></div>
+                    <div className="modals-content">
+                        <div className="modals-header">
+                            <h3>Code</h3>
+                        </div>
+                        <div className="modals-body">
+                            <pre>{initialCode}</pre>
+                            <div className="modals-header">
+                                <h3>Explanation</h3>
+                            </div>
+                            <p>{currentExerciseExplanation}</p>
+                        </div>
+                        <div className="modals-footer">
+                            <button
+                                className="btn btn-secondary"
+                                onClick={handleCloseModal}
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            )}
+
+            {showGuide && (
+                <div className="modals" onClick={handleCloseGuide}>
+                    <div className="modals-overlay" onClick={handleCloseGuide}></div>
+                    <div className="modals-content">
+                        <h2>Your Guide 📜</h2>
+                        <p>
+                            🔳 Select a language from the navbar to enhance your muscle memory.
+                            <br />
+                            <br />
+                            🔳 For every successful exercise, you will gain 2 points!
+                            <br />
+                            <br />
+                            🔳 To view the code again, click on the 'What's The Code' button.
+                            <br />
+                            <br />
+                            🔳 Once your code has been verified by using the 'Check Code' button, it will
+                            automatically change to a 'Next Exercise' button.
+                            <br />
+                            <br />
+                            🔳 Use the 'Skip' button to skip any exercise.
+                            <br />
+                            <br />
+                            🔳 You will not be able to paste code on this editor! 👀
+                            <br />
+                            <br />
+                            🔳 Your score will refresh like a new day every 24 hours!
+                        </p>
+                    </div>
+                </div>
+            )}
 
         </main>
     );
