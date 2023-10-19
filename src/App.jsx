@@ -35,7 +35,6 @@ function App() {
       element={React.cloneElement(route.element, { onLogin: handleLogin })}
     />
   ))}
-  <Route path="/demo" element={<DemoPlatform />} />
 </Routes>
       <Footer />
     </BrowserRouter>

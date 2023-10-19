@@ -265,6 +265,8 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
 
     return (
         <main>
+        
+
         <Grid container spacing={0}>
         <Grid item xs={12} md={1.5} className="Leftbar makeStyles-leftbar-4">
 
