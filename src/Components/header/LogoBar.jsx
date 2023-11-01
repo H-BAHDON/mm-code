@@ -11,16 +11,17 @@ export default function LogoBar() {
   const location = useLocation();
 
   useEffect(() => {
-    // Fetch user data from the server
-    axios.get(`${apiUrl}/user`, { withCredentials: true })
+    axios.get(`${apiUrl}/user`, {
+      withCredentials: true, 
+    })
     .then(response => {
-        setUserData(response.data); // Set user data to state
-        setLoading(false); // Set loading to false
-      })
-      .catch(error => {
-        console.error('Error fetching user data:', error);
-        setLoading(false); // Set loading to false
-      });
+      setUserData(response.data.userData);
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error('Error fetching user data:', error);
+      setLoading(false);
+    });
   }, []);
 
   const handleLogout = () => {
@@ -29,12 +30,12 @@ export default function LogoBar() {
       .then(() => {
         setUserData(null);
         navigate('/login', { replace: true });
-        window.location.reload();
       })
       .catch(error => {
         console.error('Error logging out:', error);
       });
   };
+
   
 
   const shouldShowNav = !!userData && location.pathname !== '/login';
