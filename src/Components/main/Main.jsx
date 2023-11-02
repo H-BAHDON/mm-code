@@ -17,8 +17,6 @@ import reactData from "../../Exercise/reactExercise.json"
 import javascriptData from "../../Exercise/javascriptExercise.json"
 import SQLData from "../../Exercise/SqlExercise.json"
 import testData from "../../Exercise/testExercise.json"
-import axios from 'axios';
-import { apiUrl } from '../../config/config';
 
 
 // ---------------------------

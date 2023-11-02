@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import "./login.css";
 import Header from '../../Components/header/Header';
-
-import { apiUrl } from '../../config/config';
-
+import { apiUrl } from '../../config/env_config';
 export default function Login() {
 
   
