@@ -13,16 +13,9 @@ export default function UserProfile() {
     calculateLoginDuration();
     const navigate = useNavigate();
     
-    useEffect(() => {
-        if (!user) {
-          navigate('/');
-        }
-      }, [user, navigate]);
-    
-      if (!user) {
-        return null; 
-      }
-    
+    const handlePlatformn = () => {
+        navigate('/platform');
+      };
     
     return (
         <>
@@ -163,7 +156,7 @@ export default function UserProfile() {
                                 <div className='build-more-mm'>
                                     <ButtonOfPage nameButton="Build more MM"
                                         styleButton={"btn-outline-dark btn-lg fs-4"}
-                                        handle={Logout}/>
+                                        handle={handlePlatformn}/>
 
                                 </div>
                             </div>
