@@ -4,12 +4,12 @@ import { routes } from './Routes/index';
 import Footer from './Components/Footer/Footer';
 import './app.css';
 import { AuthProvider, useAuth } from './hooks/useAuth';
+import withAuth from './hooks/withAuth'; // Import the withAuth HOC
 
 function App() {
 
-
   return (
-    <AuthProvider>
+    <AuthProvider> 
       <BrowserRouter>
         <Routes>
           {routes.map((route, index) => (
