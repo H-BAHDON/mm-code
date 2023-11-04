@@ -17,14 +17,6 @@ export default function LogoBar() {
     navigate('/');
   };
 
-    if (!user) {
-      navigate('/login');
-    }
-
-
-
-
-
   return (
     <>
       <div id="logo">
@@ -33,7 +25,7 @@ export default function LogoBar() {
         </h1>
         <div className="userName">
           {user && <h5>Hello, {user.displayName}</h5>}
-          {user && <ButtonOfPage nameButton="Logout" handle={Logout} styleButton="btn p-2" />}
+          {user && <ButtonOfPage nameButton="Logout" handle={() => Logout().then(() => navigate('/'))} styleButton="btn p-2" />}
           {user && <i className="bi bi-person fs-3" onClick={handleUserProfile}></i>}
         </div>
       </div>
