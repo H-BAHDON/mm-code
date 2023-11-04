@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
         setUser(res.data.userData);
         setLoading(false);
       })
-      .catch(err => {
+      .catch(err => { 
         console.error('Error loading user data: ', err);
         setLoading(false);
       });
