@@ -37,13 +37,7 @@ const ErrorPage = () => {
                 <div className="shadow" />
             </div>
             <div className="bottom">
-                <p>Boo, looks like a ghost stole this page!</p>
-                <form className="search">
-                    <input type="text" className="search-bar" placeholder="Search" />
-                    <button type="submit" className="search-btn">
-                        <i className="fa fa-search" />
-                    </button>
-                </form>
+               
                 <div className="buttons">
                     <button className="btn" onClick={handleBackClick}>
                         Back
