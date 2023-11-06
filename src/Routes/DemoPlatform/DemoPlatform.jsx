@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Header from '../../Components/header/Header';
 import Main from '../../Components/demoMain/demoMain';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth"
 
 function Platform() {
   const [exerciseLanguage, setExerciseLanguage] = useState("Javascript");
@@ -20,6 +23,17 @@ function Platform() {
   const handleSqlClick = noop;
 
   const handleTestClick = noop;
+
+  const navigate = useNavigate();
+  const {user} = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/platform");
+    } else {
+      navigate("/demo");
+    }
+  }, [user, navigate]);
 
   return (
     <> 
