@@ -7,7 +7,7 @@ import DemoPlatform from '../Routes/DemoPlatform/DemoPlatform';
 import axios from 'axios'; // Import Axios for API requests
 import {apiUrl} from "../config/env_config"; 
 import { useNavigate } from 'react-router-dom';
-
+import ErrorPage from "./404 page/errorPage"
 const AuthService = {
   checkSession: async () => {
     try {
@@ -35,19 +35,21 @@ const ProtectedRoute = ({ element }) => {
         }
       } catch (error) {
         console.error(error);
-        navigate('/login'); // Redirect to login page for any errors
+        navigate('/login'); 
       }
     };
-
     checkSession();
   }, [navigate]);
-
   return loading ? <div>Loading...</div> : element;
 };
 
 
 
 export const routes = [
+  {
+    path: "*",
+    element: <ErrorPage />,
+  },
   {
     path: '/',
     element: <Home />,
