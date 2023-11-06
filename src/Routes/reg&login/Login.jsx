@@ -2,9 +2,24 @@ import React from 'react';
 import { Button, Box, Typography, Container } from '@mui/material';
 import { apiUrl } from '../../config/env_config';
 import Header from '../../Components/header/Header';
+import { useAuth } from '../../hooks/useAuth'; 
+
 import "./login.css";
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function Login() {
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      navigate('/platform');
+    }
+  }, [user, navigate]);
+
+
   return (
     <>
       <div className="parent-container">
