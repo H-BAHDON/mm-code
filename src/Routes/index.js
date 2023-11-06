@@ -7,7 +7,7 @@ import DemoPlatform from '../Routes/DemoPlatform/DemoPlatform';
 import axios from 'axios'; // Import Axios for API requests
 import {apiUrl} from "../config/env_config"; 
 import { useNavigate } from 'react-router-dom';
-import ErrorPage from "./404 page/errorPage"
+import ErrorPage from "./404 page/errorPage";
 const AuthService = {
   checkSession: async () => {
     try {
@@ -68,6 +68,6 @@ export const routes = [
   },
   {
     path: '/demo',
-    element: <ProtectedRoute element={<DemoPlatform />} />,
+    element: <DemoPlatform />,
   },
 ];
