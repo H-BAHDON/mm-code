@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
   const Logout = async () => {
     try {
           await axios.get(`${apiUrl}/logout`, { withCredentials: true });
+          
           setUser(null);
           return true;
       } catch (error) {
