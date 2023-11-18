@@ -17,6 +17,7 @@ This web application is designed to help you build muscle memory by practicing e
 - HTML: Markup language for creating web pages
 - CSS: Stylesheet language for styling web pages
 - SQL: Query language for managing relational databases
+- Google Cloud: 
 - Testing frameworks (e.g., Jest, React Testing Library) for writing unit tests
 
 ## <span style="color:#3366ff">Installation</span>
