@@ -1,6 +1,6 @@
 # <span style="color:#3366ff">MM-Code</span> - Muscle Memory Web App
 
-This web application is designed to help you build muscle memory by practicing exercises for HTML, CSS, React, SQL, and testing. It provides a collection of exercises and interactive challenges to strengthen your skills and improve your proficiency in these areas.
+Inspired by deep practice, this project addresses programming challenges by fostering intuitive coding through repetition and focus. The platform features tailored exercises, prompting users to frequently write out code in various languages, enhancing visual familiarity with the syntax and embedding it into muscle memory.
 
 ## <span style="color:#3366ff">Features</span>
 
