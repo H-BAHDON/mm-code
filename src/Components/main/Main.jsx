@@ -17,6 +17,8 @@ import reactData from "../../Exercise/reactExercise.json"
 import javascriptData from "../../Exercise/javascriptExercise.json"
 import SQLData from "../../Exercise/SqlExercise.json"
 import testData from "../../Exercise/testExercise.json"
+import Button from '@mui/material/Button';
+
 
 
 // ---------------------------
@@ -236,104 +238,94 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
         setShowConfetti(false); // Hide confetti after it completes
     };
 
-    const handleHTMLClick = () => {
-        setExerciseLanguage("html");
-    };
-
-    const handleJavaScriptClick = () => {
-        setExerciseLanguage("javascript");
-    };
-
-    const handleCSSClick = () => {
-        setExerciseLanguage("css");
-    };
-
-    const handleReactClick = () => {
-        setExerciseLanguage("react")
-    }
-
-    const handleSqlClick = () => {
-        setExerciseLanguage("sql")
-    }
-    const handleTestClick = () => {
-        setExerciseLanguage("test")
-    }
-
-
-
 
     return (
-        <main>
-        
-        <Grid container spacing={0} direction="row" justifyContent="space-between" alignItems="stretch">
+        <main style={{ height: '100vh', overflow: 'hidden', position: 'relative' }}>
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justifyContent="space-between"
+          alignItems="stretch"
+          style={{ height: '100%' }}
+        >
+          {/* Left Bar */}
           <Grid
             item
             xs={12}
             md={1.5}
-            className="Leftbar makeStyles-leftbar-4"
-            style={{ height: "100%" }}
+            style={{
+              height: '100%',
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+            }}
           >
-            <div className="leftbar-main" style={{ height: "100%" }}>
-              <div className="guide-button">
-                <ButtonOfPage
-                  nameButton="Guide Me!"
-                  handle={handleShowGuide}
-                  styleButton="btn btn-outline-primary btn-sm"
-                />
-              </div>
-  
-              <Header
-                showLogoBar={false}
-                handleHTMLClick={handleHTMLClick}
-                handleJavaScriptClick={handleJavaScriptClick}
-                handleCSSClick={handleCSSClick}
-                handleReactClick={handleReactClick}
-                handleSqlClick={handleSqlClick}
-                handleTestClick={handleTestClick}
-              />
-  
-              <div>
+            <div style={{ height: '100%' }}>
+              <div style={{ marginBottom: '20px' }}>
+               
                 <ThemeSelector setTheme={setTheme} setFontSize={setFontSize} />
               </div>
             </div>
           </Grid>
-  
+    
+          {/* Right Bar */}
           <Grid
             item
             xs={12}
             md={10.5}
-            className="right-bar-textEditor MuiBox-root css-13o7eu2"
-            style={{ height: "100%" }}
+            style={{
+              height: '100%',
+              backgroundColor: 'white',
+              color: 'black',
+              padding: '20px',
+            }}
           >
-            <div
-              className="InterfaceView TitlebarView titlebar enabled"
-              style={{ height: "100%" }}
-            >
-              <div className="FilePath path">
-                <div className="part">Index - {exerciseLanguage}</div>
+            {/* Title Bar */}
+            <div style={{ height: '60px', display: 'flex', alignItems: 'center' }}>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: '16px', marginBottom: '5px' }}>
+                  Index - {exerciseLanguage}
+                </div>
               </div>
-              <div className="tools">
-                <ButtonOfPage
-                  nameButton="What's The Code"
-                  handle={handleShowModal}
-                  styleButton={"btn btn-outline-primary btn-sm"}
-                />
-                <ButtonOfPage
-                  nameButton={nextButton ? "Next Exercise" : "Check Code"}
-                  handle={nextButton ? handleNextExercise : handleCheckCode}
-                  styleButton={
-                    nextButton ? "btn-primary" : "btn btn-outline-success btn-sm"
-                  }
-                />
-                <ButtonOfPage
-                  nameButton="Skip"
-                  handle={handleSkipExercise}
-                  styleButton={"btn btn-outline-danger btn-sm"}
-                  handleBoolean={checkButton}
-                />
+              <div style={{ display: 'flex', gap: '10px' }}>
+              <Button
+                  variant="outlined"
+                  size="small"
+                  onClick={handleShowGuide}
+                  style={{ color: 'black' }}
+                >
+                  Guide Me!
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  onClick={handleShowModal}
+                  style={{ color: 'black' }}
+                >
+                  What's The Code
+                </Button>
+                <Button
+                  variant={nextButton ? 'contained' : 'outlined'}
+                  size="small"
+                  onClick={nextButton ? handleNextExercise : handleCheckCode}
+                  style={{ color: 'black' }}
+                >
+                  {nextButton ? 'Next Exercise' : 'Check Code'}
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="small"
+                  onClick={handleSkipExercise}
+                  style={{ color: 'black' }}
+                  disabled={checkButton}
+                >
+                  Skip
+                </Button>
               </div>
             </div>
-  
+    
+            {/* Code Editor */}
             <CodeEditor
               userCode={userCode}
               setUserCode={setUserCode}
@@ -347,44 +339,61 @@ function Main({ exerciseLanguage, setExerciseLanguage }) {
               theme={theme}
               fontSize={fontSize}
             />
+            <div
+          style={{
+            bottom: '0',
+            left: '0',
+            right: '0',
+            backgroundColor: '#282c34',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <p
+            className={`scores-text ${
+              resultTextVisible ? 'fade-in' : 'fade-out'
+            } ${resultTextClass}`}
+          >
+            {resultText}
+          </p>
+          <p style={{ color: '#fff', fontSize: '18px', marginTop: '10px' }}>
+            Your Score: {score}
+          </p>
+        </div>
           </Grid>
-
-          </Grid>
-
-
-
-
-            <div className="main-bottom">
-                <p
-                    className={`scores-text ${resultTextVisible ? "fade-in" : "fade-out"
-                        }
-            ${resultTextClass}`}
-                >
-                    {resultText}
-                </p>
-                <p className="score">Your Score: {score}</p>
-            </div>
-            {showConfetti && (
-                <Confetti
-                    width={window.innerWidth}
-                    height={window.innerHeight}
-                    recycle={false}
-                    numberOfPieces={300}
-                    gravity={0.1}
-                    confettiProps={{ run: 4 }}
-                    onConfettiComplete={handleConfettiComplete}
-                />
-            )}
-            {showModal &&  
-            <CodeModalContent
-                initialCode={initialCode}
-                currentExerciseExplanation={currentExerciseExplanation}
-                handleCloseModal={handleCloseModal}  
-            />}
-            {showGuide && <GuideModalContent handleCloseGuide={handleCloseGuide} />}
-
-
-        </main>
+          
+        </Grid>
+    
+        {/* Bottom Section */}
+        
+    
+        {/* Confetti Animation */}
+        {showConfetti && (
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            recycle={false}
+            numberOfPieces={300}
+            gravity={0.1}
+            confettiProps={{ run: 4 }}
+            onConfettiComplete={handleConfettiComplete}
+          />
+        )}
+    
+        {/* Code Modal */}
+        {showModal && (
+          <CodeModalContent
+            initialCode={initialCode}
+            currentExerciseExplanation={currentExerciseExplanation}
+            handleCloseModal={handleCloseModal}
+          />
+        )}
+    
+        {/* Guide Modal */}
+        {showGuide && <GuideModalContent handleCloseGuide={handleCloseGuide} />}
+      </main>
     );
 }
 

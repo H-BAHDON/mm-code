@@ -2,14 +2,13 @@
 .navbar{
     width: 67%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   
   
   
   /* Right Bar (Text Editor) */
  
-
   /* Guide Button */
   .guide-button {
     display: flex;
