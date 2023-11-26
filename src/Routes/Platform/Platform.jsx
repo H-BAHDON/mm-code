@@ -38,7 +38,7 @@ function Platform() {
         handleReactClick={handleReactClick}
         handleSqlClick={handleSqlClick}
         handleTestClick={handleTestClick}
-        showNavigation={false}
+        showNavigation={true}
         showLogoBar={true}
       />
       <Main exerciseLanguage={exerciseLanguage} setExerciseLanguage={setExerciseLanguage} />

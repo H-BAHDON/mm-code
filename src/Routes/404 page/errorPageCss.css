@@ -90,16 +90,7 @@
 	 left: 74.5%;
 	 border-radius: 0 0 30% 100%;
 }
- .shadow {
-	 position: absolute;
-	 width: 30%;
-	 height: 7%;
-	 background: #bfc0c0;
-	 left: 35%;
-	 top: 80%;
-	 border-radius: 50%;
-	 animation: scale 2s infinite;
-}
+
  @keyframes scale {
 	 0% {
 		 transform: scale(1);
@@ -184,16 +175,14 @@
 	 color: #bfc0c0;
 	 transition: all 0.2s ease;
 }
- .btn {
-	 background: #ededed;
-	 padding: 15px 20px;
-	 margin: 5px;
-	 color: #585959;
-	 font-family: 'Lato', sans-serif;
-	 text-transform: uppercase;
-	 font-size: 0.6em;
-	 letter-spacing: 1px;
-	 border: 0;
+.btn {
+    padding: 15px 20px;
+    margin: 5px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    letter-spacing: 1px;
+    border: 1;
 }
  .btn:hover {
 	 background: #bfc0c0;

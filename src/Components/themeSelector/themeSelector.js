@@ -19,7 +19,7 @@ import { useState } from "react";
     const fontSizeValues = [12, 14, 16, 17, 18, 20, 24]
 
     return (
-      <div className="choose-theme container">
+      <div className="choose-theme ">
         <div className="mb-3">
           <label className="form-label">
             Theme:
