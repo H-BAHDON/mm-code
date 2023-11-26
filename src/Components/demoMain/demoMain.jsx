@@ -3,7 +3,6 @@ import { Grid } from "@mui/material";
 import CodeEditor from "../codeEditor/CodeEditor";
 import Confetti from "react-confetti";
 import ButtonOfPage from "../common/buttons/ButtonOfPage";
-import "./demoMain.css"
 
 
 
