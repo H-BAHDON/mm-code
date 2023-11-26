@@ -1,11 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ButtonOfPage from '../common/buttons/ButtonOfPage';
-import './header.css';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box'; // Import Box component
 import { useAuth } from '../../hooks/useAuth';
-import { useEffect } from 'react';
 
-export default function LogoBar() {
+const LogoBar = () => {
   const navigate = useNavigate();
   const { user, Logout } = useAuth();
 
@@ -18,17 +21,59 @@ export default function LogoBar() {
   };
 
   return (
-    <>
-      <div id="logo">
-        <h1 onClick={handleLogoClick} className="logo-title">
-          MM-Code
-        </h1>
-        <div className="userName">
-          {user && <h5>Hello, {user.displayName}</h5>}
-          {user && <ButtonOfPage nameButton="Logout" handle={() => Logout().then(() => navigate('/'))} styleButton="btn p-2" />}
-          {user && <i className="bi bi-person fs-3" onClick={handleUserProfile}></i>}
-        </div>
-      </div>
-    </>
+    <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+      <Toolbar>
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              cursor: 'pointer',
+              color: 'black', 
+            }}
+            onClick={handleLogoClick}
+          >
+            MM-Code
+          </Typography>
+        </Box>
+
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {user && (
+            <>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  marginRight: 2,
+                  color: 'black', 
+                }}
+              >
+                Hello, {user.displayName}
+              </Typography>
+              <Button
+                variant="contained"
+                onClick={() => Logout().then(() => navigate('/'))}
+                sx={{
+                  marginRight: 2,
+                  color: 'inherit',
+                }}
+              >
+                Logout
+              </Button>
+              <Avatar
+                src={user.avatarUrl}
+                alt={user.displayName}
+                onClick={handleUserProfile}
+                sx={{
+                  cursor: 'pointer',
+                  color: 'inherit',
+                }}
+              />
+            </>
+          )}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
-}
+};
+
+export default LogoBar;

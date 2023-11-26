@@ -78,12 +78,7 @@
   
 
   .userName{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 100px;
-    top: 18px;
+   
 }
 
   .userName i {
