@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 function Navigation({
   handleHTMLClick,
@@ -8,82 +12,55 @@ function Navigation({
   handleSqlClick,
   handleTestClick,
 }) {
-  const [activeTab, setActiveTab] = useState("html");
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [activeTab, setActiveTab] = useState('html');
 
   const handleTabClick = (tabName) => {
-    console.log("HTML button clicked"); 
     setActiveTab(tabName);
   };
 
   return (
-    <nav className="navbar">
-      <p
-        className={`nav-item-html nav-link ${
-          activeTab === "html" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("html");
-          handleHTMLClick();
-        }}
-      >
-        html
-      </p>
-      <p
-        className={`nav-item-css nav-link ${
-          activeTab === "css" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("css");
-          handleCSSClick();
-        }}
-      >
-        css
-      </p>
-      <p
-        className={`nav-item-javascript nav-link ${
-          activeTab === "javascript" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("javascript");
-          handleJavaScriptClick();
-        }}
-      >
-        javascript
-      </p>
-      <p
-        className={`nav-item-react nav-link ${
-          activeTab === "react" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("react");
-          handleReactClick();
-        }}
-      >
-        React
-      </p>
-      <p
-        className={`nav-item-sql nav-link ${
-          activeTab === "sql" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("sql");
-          handleSqlClick();
-        }}
-      >
-        SQL
-      </p>
-      <p
-        className={`nav-item-test nav-link ${
-          activeTab === "test" ? "active" : ""
-        }`}
-        onClick={() => {
-          handleTabClick("test");
-          handleTestClick();
-        }}
-      >
-        Test
-      </p>
-    </nav>
+    <Tabs
+      value={activeTab}
+      onChange={(event, newValue) => {
+        handleTabClick(newValue);
+        switch (newValue) {
+          case 'html':
+            handleHTMLClick();
+            break;
+          case 'css':
+            handleCSSClick();
+            break;
+          case 'javascript':
+            handleJavaScriptClick();
+            break;
+          case 'react':
+            handleReactClick();
+            break;
+          case 'sql':
+            handleSqlClick();
+            break;
+          case 'test':
+            handleTestClick();
+            break;
+          default:
+            break;
+        }
+      }}
+      indicatorColor="primary"
+      textColor="primary"
+      centered={!isSmallScreen} 
+      orientation={isSmallScreen ? 'vertical' : 'horizontal'} 
+    >
+      <Tab label="HTML" value="html" />
+      <Tab label="CSS" value="css" />
+      <Tab label="JavaScript" value="javascript" />
+      <Tab label="React" value="react" />
+      <Tab label="SQL" value="sql" />
+      <Tab label="Test" value="test" />
+    </Tabs>
   );
 }
 
