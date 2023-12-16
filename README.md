@@ -4,7 +4,7 @@ Inspired by deep practice, this project addresses programming challenges by fost
 
 ## <span style="color:#3366ff">Features</span>
 
-- Exercises for HTML, CSS, React, SQL, and testing
+- Exercises for JavaScript, React, SQL, testing, CSS and HTML
 - Interactive challenges to practice and reinforce concepts
 - Progress tracking to monitor your improvement
 - Feedback and hints to guide you through the exercises
