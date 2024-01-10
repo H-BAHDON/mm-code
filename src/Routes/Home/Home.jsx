@@ -16,7 +16,7 @@ function Home() {
   return (
     <Container>
       <Grid container spacing={2} alignItems="center" justifyContent="center" style={{ minHeight: '100vh' }}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
           <Typography variant="h2" style={{ fontFamily: 'YourChosenFont', fontWeight: 'bold', color: '#333', textAlign: 'center' }}>
             Welcome to<br /> MM-Code
           </Typography>
@@ -26,7 +26,7 @@ function Home() {
           <Button
             onClick={handleGetStartedClick}
             variant="contained"
-            sx={{borderRadius: 20, marginTop: 2, marginRight: 2, marginBottom: 2, width: '100%', maxWidth: '200px', backgroundColor: '#4CAF50', color: 'white' }}
+            sx={{ borderRadius: 20, marginTop: 2, marginRight: 2, marginBottom: 2, width: '100%', maxWidth: '200px', backgroundColor: '#4CAF50', color: 'white' }}
           >
             Journey On
           </Button>
