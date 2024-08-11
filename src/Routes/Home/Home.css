@@ -46,17 +46,17 @@ body, h1, p, a {
   max-width: 100%;  
   overflow: hidden;
   animation:
-    typing 4.5s steps(40, end) forwards,  
-    blink .75s step-end infinite;
+    typing 2.9s steps(20, end) forwards,  
+    blink .2s step-end infinite;
 }
 
 .typewriter p {
   color: black;
   width: fit-content;
   opacity: 0;
-  animation-duration: 4s, .75s;
+  animation-duration: 3.2s, .45s;
   animation-timing-function: steps(40, end), step-end;
-  animation-delay: 2s, 3.5s;
+  animation-delay: 1.2s, 3.5s;
   animation-fill-mode: forwards, forwards;  
   animation-iteration-count: 1, infinite;
   margin-bottom: 2vh;
