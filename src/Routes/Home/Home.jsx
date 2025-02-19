@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography, Box } from '@mui/material';
+import logo from '../../Components/MMcode.png'; 
 
 function Home() {
   const navigate = useNavigate();
@@ -15,6 +16,11 @@ function Home() {
 
   return (
     <Container>
+      {/* Logo at the top left */}
+      <Box sx={{ position: 'absolute', top: 20, left: 20 }}>
+        <img src={logo} alt="MM-Code Logo" style={{ height: '50px' }} />
+      </Box>
+
       <Grid container spacing={2} alignItems="center" justifyContent="center" style={{ minHeight: '100vh' }}>
         <Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
           <Typography variant="h2" style={{ fontFamily: 'YourChosenFont', fontWeight: 'bold', color: '#333', textAlign: 'center' }}>
