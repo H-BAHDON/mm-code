@@ -18,7 +18,7 @@ function Home() {
     <Container>
       {/* Logo at the top left */}
       <Box sx={{ position: 'absolute', top: 20, left: 20 }}>
-        <img src={logo} alt="MM-Code Logo" style={{ height: '50px' }} />
+        <img src={logo} alt="MM-Code Logo" style={{ height: '150px' }} />
       </Box>
 
       <Grid container spacing={2} alignItems="center" justifyContent="center" style={{ minHeight: '100vh' }}>
